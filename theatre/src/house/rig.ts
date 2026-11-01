@@ -76,15 +76,19 @@ export class Rig {
   readonly group = new THREE.Group();
   private list: Instrument[] = [];
 
-  constructor() {
+  /**
+   * `lite` is the phone rig: only the front key light and the follow spot cast shadows, at a smaller map size.
+   * The set of shadow lights is fixed here, because changing it later recompiles every material.
+   */
+  constructor(lite = false) {
     const F = STAGE.floor;
     const spot = (name: string, color: number, power: number, pos: [number, number, number], target: [number, number, number], angle: number, penumbra: number, shadow: boolean, beam = 0) => {
       const l = new THREE.SpotLight(color, power, 0, angle, penumbra, 1.2);
       l.position.set(...pos);
       l.target.position.set(...target);
-      l.castShadow = shadow;
-      if (shadow) {
-        l.shadow.mapSize.set(2048, 2048);
+      l.castShadow = shadow && !(lite && name === 'foot');
+      if (l.castShadow) {
+        l.shadow.mapSize.setScalar(lite ? 1024 : 2048);
         l.shadow.bias = -0.0004;
         l.shadow.normalBias = 0.02;
         l.shadow.radius = 3;

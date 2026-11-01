@@ -44,7 +44,10 @@ export class Theatre {
   view = 0;
   private wall = { pos: new THREE.Vector3(), look: new THREE.Vector3(), fov: 27 };
 
-  constructor(readonly container: HTMLElement, private w = 1920, private h = 1080, pixelRatio = 1, subs = { en: false, py: false }) {
+  /**
+   * `lite` is the phone tier: a lighter rig and post chain. Renders always use the full tier.
+   */
+  constructor(readonly container: HTMLElement, private w = 1920, private h = 1080, pixelRatio = 1, subs = { en: false, py: false }, private lite = false) {
     this.renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, powerPreference: 'high-performance' });
     this.renderer.setPixelRatio(pixelRatio);
     this.renderer.setSize(w, h, false);
@@ -68,11 +71,11 @@ export class Theatre {
   async init(houseUrl: string, onProgress?: (k: number) => void) {
     this.house = await buildHouse(houseUrl, this.renderer, onProgress);
     this.scene.add(this.house.root);
-    this.rig = new Rig();
+    this.rig = new Rig(this.lite);
     this.scene.add(this.rig.group);
     this.cyc = new Cyclorama();
     this.scene.add(this.cyc.group);
-    this.post = new Post(this.renderer, this.scene, this.camera, this.w, this.h);
+    this.post = new Post(this.renderer, this.scene, this.camera, this.w, this.h, this.lite);
     this.setLineResolution();
   }
 
@@ -282,6 +285,35 @@ export class Theatre {
     const pr = this.renderer.getPixelRatio();
     stringMaterial.resolution.set(this.w * pr, this.h * pr);
     for (const p of this.pieces.values()) p.lineResolution(this.w * pr, this.h * pr, 1.6 * pr);
+  }
+
+  /**
+   * Makes each frame cheaper by one step: the heaviest effect goes first, then the resolution drops. The live
+   * theatre calls it when frames come too slowly. Returns false when no step is left. No step compiles a shader.
+   */
+  degrade(): boolean {
+    while (this.ladder.length) if (this.ladder.shift()!()) return true;
+    return false;
+  }
+
+  private ladder: (() => boolean)[] = [
+    () => this.post.shed('ao'),
+    () => this.post.shed('bokeh'),
+    () => this.scale(0.8),
+    () => this.scale(0.8),
+    () => this.post.shed('bloom'),
+    () => this.scale(0.8),
+  ];
+
+  /** Draws fewer pixels: the pixel ratio times k, down to 0.45. */
+  private scale(k: number): boolean {
+    const pr = this.renderer.getPixelRatio() * k;
+    if (pr < 0.45) return false;
+    this.renderer.setPixelRatio(pr);
+    this.post.composer.setPixelRatio(pr);
+    this.post.setSize(this.w, this.h);
+    this.setLineResolution();
+    return true;
   }
 
   resize(w: number, h: number) {

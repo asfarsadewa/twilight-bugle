@@ -22,7 +22,8 @@ const subs = { en: params.get('en') === '1', py: params.get('py') === '1' };
 // A phone draws fewer pixels, so the depth, light and grain passes keep their frame rate.
 const PHONE = matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 820;
 const ratio = RENDER ? Number(params.get('ssaa') ?? 2) : PHONE ? 0.75 : Math.min(2, devicePixelRatio || 1);
-const theatre = new Theatre(frame, 1920, 1080, ratio, subs);
+// A phone starts on the lighter tier. Renders always use the full one.
+const theatre = new Theatre(frame, 1920, 1080, ratio, subs, PHONE && !RENDER);
 const audio = new Audio();
 audio.preload = 'auto';
 
@@ -129,10 +130,31 @@ function showTime(): number {
   return theatre.start + clock.showStart + (performance.now() - clock.wallStart) / 1000;
 }
 
-function tick() {
+/**
+ * The pace of the play. If frames come slower than about 25 a second for 90 frames in a row, the theatre makes
+ * each frame one step cheaper. After a step it waits 2 s, so the new setting is measured on its own.
+ */
+const pace = { last: 0, sum: 0, n: 0, quietUntil: 0 };
+function watchPace(now: number) {
+  const dt = now - pace.last;
+  pace.last = now;
+  // Only a running play counts. A long gap is a hidden tab, not a slow frame.
+  if (state !== 'playing' || move.to !== 0 || clock.paused || now < pace.quietUntil || dt > 250) {
+    pace.sum = pace.n = 0;
+    return;
+  }
+  pace.sum += dt;
+  if (++pace.n < 90) return;
+  const slow = pace.sum / pace.n > 40;
+  pace.sum = pace.n = 0;
+  if (slow && theatre.degrade()) pace.quietUntil = now + 2000;
+}
+
+function tick(now: number) {
   raf = requestAnimationFrame(tick);
   // While the crew loads a show, the stage keeps its last frame. A frame now would show the new set too early.
   if (busy) return;
+  watchPace(now);
   const k = Math.min(1, (performance.now() - move.t0) / (move.dur * 1000));
   theatre.view = move.from + (move.to - move.from) * k;
   const t = current ? showTime() : 0;
@@ -335,6 +357,8 @@ function raise() {
   closeProgramme();
   toView(0, 2.6);
   state = 'playing';
+  // The first seconds upload textures and settle the stage. They do not count toward the pace.
+  pace.quietUntil = performance.now() + 4000;
   clock = { wallStart: performance.now(), showStart: 0, paused: false, pausedAt: 0 };
   audio.currentTime = 0;
 }

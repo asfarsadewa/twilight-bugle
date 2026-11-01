@@ -75,7 +75,9 @@ Add `?p=<id>` to open the programme of one show. The dev server watches `../prod
 - A tap works as a click. The intermission slip has a "See the posters" link. A phone needs no Esc key.
 - If a phone is upright, the surtitles move below the stage at a readable size. A slip suggests turning the phone sideways.
 - If a phone is on its side, the programme sets in two columns.
-- A phone draws the frame at 1440 by 810 pixels. The depth, light and grain passes keep their frame rate.
+- A phone draws the frame at 1440 by 810 pixels. It also uses a lighter chain: no ambient occlusion, no depth of field, and a bloom at half resolution. Only the front key light and the follow spot cast shadows, at 1024 pixels.
+- During the play, any device watches its frame rate. If frames come slower than about 25 a second, the theatre turns off one effect or lowers the resolution, one step at a time. No step recompiles a shader.
+- Video renders always use the full quality.
 - A phone browser plays sound only from a tap. The seal unlocks the sound.
 
 ## The live site

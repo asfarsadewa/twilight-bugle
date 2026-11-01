@@ -53,21 +53,32 @@ export class Post {
   readonly bloom: UnrealBloomPass;
   private grade: ShaderPass;
   private bokeh: BokehPass;
+  private ao: GTAOPass;
 
-  constructor(renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.PerspectiveCamera, w: number, h: number) {
+  /**
+   * `lite` is the phone chain: no ambient occlusion and no depth of field, the two passes that draw the whole
+   * scene again. The bloom runs at half resolution.
+   */
+  constructor(renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.PerspectiveCamera, w: number, h: number, lite = false) {
     this.composer = new EffectComposer(renderer);
     this.composer.setPixelRatio(renderer.getPixelRatio());
     this.composer.addPass(new RenderPass(scene, camera));
-    const ao = new GTAOPass(scene, camera, w, h);
-    ao.blendIntensity = 0.9;
-    ao.updateGtaoMaterial({ radius: 0.3, distanceExponent: 1.4, thickness: 1.2, scale: 1.0, samples: 16 });
-    ao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 5, rings: 2, samples: 16 });
-    excluding(scene, ao);
-    this.composer.addPass(ao);
+    this.ao = new GTAOPass(scene, camera, w, h);
+    this.ao.blendIntensity = 0.9;
+    this.ao.updateGtaoMaterial({ radius: 0.3, distanceExponent: 1.4, thickness: 1.2, scale: 1.0, samples: 16 });
+    this.ao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 5, rings: 2, samples: 16 });
+    this.ao.enabled = !lite;
+    excluding(scene, this.ao);
+    this.composer.addPass(this.ao);
     this.bokeh = new BokehPass(scene, camera, { focus: 7, aperture: 0.0005, maxblur: 0.004 });
+    this.bokeh.enabled = !lite;
     excluding(scene, this.bokeh);
     this.composer.addPass(this.bokeh);
     this.bloom = new UnrealBloomPass(new THREE.Vector2(w, h), 0.5, 0.55, 0.9);
+    if (lite) {
+      const size = this.bloom.setSize.bind(this.bloom);
+      this.bloom.setSize = (bw: number, bh: number) => size(Math.round(bw / 2), Math.round(bh / 2));
+    }
     this.composer.addPass(this.bloom);
     this.grade = new ShaderPass(Grade);
     this.composer.addPass(this.grade);
@@ -77,6 +88,14 @@ export class Post {
 
   setSize(w: number, h: number) {
     this.composer.setSize(w, h);
+  }
+
+  /** Turns off one effect. Returns false if it was already off. No shader compiles again. */
+  shed(effect: 'ao' | 'bokeh' | 'bloom'): boolean {
+    const pass = { ao: this.ao, bokeh: this.bokeh, bloom: this.bloom }[effect];
+    if (!pass.enabled) return false;
+    pass.enabled = false;
+    return true;
   }
 
   /**
@@ -98,7 +117,7 @@ export class Post {
       }
       return s;
     };
-    const passes = this.composer.passes;
+    const passes = this.composer.passes.filter((pass) => pass.enabled);
     const was = renderer.getRenderTarget();
     renderer.setRenderTarget(this.composer.readBuffer);
     const jobs = [renderer.compileAsync(scene, camera), renderer.compileAsync(stand(passes.slice(0, -1)), camera)];
