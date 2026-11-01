@@ -1,0 +1,8 @@
+# Song and art tools. Python 3.11 or later. FFmpeg must be on the PATH.
+numpy
+librosa
+soundfile
+opencv-python
+pillow
+pypinyin
+demucs

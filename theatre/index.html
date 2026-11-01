@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Twilight Bugle</title>
+<meta name="description" content="A cardboard puppet theatre of songs. Four shows play on strings, rods and slide wires under real light.">
+<meta name="theme-color" content="#0b0b14">
+<link rel="canonical" href="https://twilightbugle.asfarlab.fun/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Twilight Bugle">
+<meta property="og:title" content="The Twilight Bugle">
+<meta property="og:description" content="A cardboard puppet theatre of songs. Four shows play on strings, rods and slide wires under real light.">
+<meta property="og:url" content="https://twilightbugle.asfarlab.fun/">
+<meta property="og:image" content="https://twilightbugle.asfarlab.fun/og/site.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An old theatre at night with a neon sign that reads Twilight Bugle">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Twilight Bugle">
+<meta name="twitter:description" content="A cardboard puppet theatre of songs. Four shows play on strings, rods and slide wires under real light.">
+<meta name="twitter:image" content="https://twilightbugle.asfarlab.fun/og/site.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23140b0c'/%3E%3Cpath d='M16 3l3 9.5 10 .2-8 6 3 9.6-8-5.8-8 5.8 3-9.6-8-6 10-.2z' fill='%23d9a441'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@500;600&family=IM+Fell+English:ital@0;1&family=Neonderthaw&family=Noto+Serif+SC:wght@600;700;900&family=Playfair+Display+SC:wght@400;700;900&display=block">
+<style>
+  :root { --night: #050407; --paper: #ecdfc3; --ink: #1e1611; --red: #8e1c1a; --gold: #e3bd6a; }
+  html, body { margin: 0; height: 100%; background: var(--night); color: #f1e6cf; overflow: hidden; }
+  #frame { position: absolute; inset: 0; margin: auto; aspect-ratio: 16 / 9; width: min(100vw, 177.78vh); container-type: size; }
+  #frame canvas { width: 100%; height: 100%; display: block; }
+
+  /* Surtitles: Mandarin and Indonesian. English and pinyin on demand. */
+  .surtitles { position: absolute; left: 0; right: 0; bottom: 3.2cqh; display: grid; justify-items: center; gap: 0.35cqh;
+    text-align: center; pointer-events: none; opacity: 0; text-shadow: 0 0.25cqh 1.4cqh rgba(0,0,0,0.9), 0 0 0.4cqh rgba(0,0,0,0.9); }
+  .surtitles .who { font: 600 1.45cqh/1 'Cormorant SC', serif; letter-spacing: 0.3em; color: var(--voice); opacity: 0.95; }
+  .surtitles .main { font: 700 4.6cqh/1.15 'Noto Serif SC', serif; letter-spacing: 0.12em; color: #fff4dc; }
+  .surtitles[data-main="id"] .main, .surtitles[data-main="en"] .main { font: 700 4.4cqh/1.15 'Cormorant Garamond', serif; letter-spacing: 0.02em; }
+  .surtitles .second { font: 500 2.6cqh/1.2 'Cormorant Garamond', serif; color: #f3e9d4; }
+  .surtitles[data-second="zh"] .second { font: 600 2.5cqh/1.25 'Noto Serif SC', serif; letter-spacing: 0.08em; }
+  .surtitles .py { font: italic 400 1.75cqh/1.1 'Cormorant Garamond', serif; color: #d8cbb0; letter-spacing: 0.04em; }
+  .surtitles .tr { display: flex; gap: 2.4cqh; align-items: baseline; justify-content: center; max-width: 86cqw; flex-wrap: wrap; }
+  .surtitles .en { font: 500 2.55cqh/1.2 'Cormorant Garamond', serif; color: #f6ecd8; }
+  .surtitles[data-en="0"] .en, .surtitles[data-py="0"] .py { display: none; }
+  .surtitles[data-en="1"] .second::after { content: '·'; margin-left: 2.4cqh; color: var(--voice); }
+  .surtitles .en { font-style: italic; font-size: 2.3cqh; color: #cfc2a4; }
+
+  /* The playbill: a printed bill pinned in front of the closed curtain while the house fills. */
+  #lobby { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center;
+    background: radial-gradient(ellipse at 50% 55%, rgba(20,8,6,0.15), rgba(0,0,0,0.6)); transition: opacity 1.6s ease, visibility 1.6s; }
+  #lobby.away { opacity: 0; visibility: hidden; }
+  #lobby.away .bill { transform: translateY(14vh) rotate(-0.6deg); }
+  .bill { position: relative; width: min(30rem, 86vw); padding: 2.4rem 2.2rem 2rem; color: var(--ink); text-align: center;
+    transform: rotate(-0.6deg); transition: transform 1.6s cubic-bezier(.5,0,.75,0);
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(160,110,50,0.18), transparent 40%),
+      radial-gradient(ellipse at 85% 90%, rgba(140,90,40,0.22), transparent 45%),
+      radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(120,80,40,0.28)),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.25  0 0 0 0 0.12  0 0 0 0.16 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>"),
+      var(--paper);
+    box-shadow: 0 1.6rem 3rem rgba(0,0,0,0.65), 0 0 0 1px rgba(60,40,20,0.25); }
+  /* Wear: old fold creases, foxing, a tea stain, edges browned by hands and lamp smoke. The torn outline is a
+     clip-path that main.ts cuts once, so it stays the same from frame to frame. */
+  .bill { --paper: #e4d1aa; box-shadow: none; }
+  .billwrap { filter: drop-shadow(0 1.4rem 2.2rem rgba(0,0,0,0.75)) drop-shadow(0 0.2rem 0.3rem rgba(0,0,0,0.5)); }
+  .bill .wear { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply;
+    background:
+      linear-gradient(to bottom, transparent 32.9%, rgba(255,250,235,0.55) 33.15%, rgba(70,45,20,0.32) 33.45%, transparent 33.9%),
+      linear-gradient(to bottom, transparent 65.9%, rgba(255,250,235,0.5) 66.15%, rgba(70,45,20,0.3) 66.45%, transparent 66.9%),
+      linear-gradient(to right, transparent 49.5%, rgba(255,250,235,0.45) 49.8%, rgba(70,45,20,0.26) 50.15%, transparent 50.6%),
+      radial-gradient(circle at 78% 22%, rgba(140,85,30,0.0) 2.2rem, rgba(140,85,30,0.28) 2.45rem, rgba(140,85,30,0.08) 2.9rem, transparent 3.2rem),
+      radial-gradient(circle at 78% 22%, rgba(150,100,40,0.12), transparent 2.3rem),
+      radial-gradient(circle at 12% 78%, rgba(120,70,25,0.35) 0.12rem, transparent 0.4rem),
+      radial-gradient(circle at 16% 82%, rgba(120,70,25,0.3) 0.08rem, transparent 0.3rem),
+      radial-gradient(circle at 63% 9%, rgba(120,70,25,0.3) 0.1rem, transparent 0.35rem),
+      radial-gradient(circle at 88% 61%, rgba(120,70,25,0.28) 0.14rem, transparent 0.5rem),
+      radial-gradient(circle at 34% 47%, rgba(120,70,25,0.18) 0.2rem, transparent 0.7rem),
+      radial-gradient(circle at 7% 30%, rgba(120,70,25,0.25) 0.1rem, transparent 0.35rem),
+      radial-gradient(ellipse at 50% 50%, transparent 48%, rgba(110,65,20,0.42) 100%),
+      linear-gradient(to bottom, rgba(90,55,20,0.22), transparent 8%, transparent 92%, rgba(90,55,20,0.28)); }
+  .bill .ear { position: absolute; right: 0; bottom: 0; width: 2.6rem; height: 2.6rem; pointer-events: none;
+    background: linear-gradient(135deg, #cdb88d 0 48%, rgba(0,0,0,0.35) 50%, transparent 54%); }
+  /* Ink worn thin where the press was light: a fine speckle eats into the type. */
+  .bill .ink, .bill .zh, .bill .en { -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='w'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='7'/><feComponentTransfer><feFuncA type='discrete' tableValues='0 1 1 1 1 1 1'/></feComponentTransfer></filter><rect width='160' height='160' filter='url(%23w)'/></svg>") 0 0 / 160px 160px;
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='w'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='7'/><feComponentTransfer><feFuncA type='discrete' tableValues='0 1 1 1 1 1 1'/></feComponentTransfer></filter><rect width='160' height='160' filter='url(%23w)'/></svg>") 0 0 / 160px 160px; }
+  .bill::before { content: ''; position: absolute; inset: 0.9rem; border: 3px double rgba(30,22,17,0.85); pointer-events: none; }
+  .bill::after { content: ''; position: absolute; inset: 1.35rem; border: 1px solid rgba(30,22,17,0.5); pointer-events: none; }
+  .bill .pin { position: absolute; top: 0.35rem; left: 50%; width: 0.7rem; height: 0.7rem; margin-left: -0.35rem; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #f3d892, #9a7228 60%, #4d3812); box-shadow: 0 2px 3px rgba(0,0,0,0.5); }
+  .ink { filter: url(#letterpress); }
+  .bill .house { font: 900 1.05rem/1 'Playfair Display SC', serif; letter-spacing: 0.42em; margin: 0.4rem 0 0.2rem; }
+  .bill .est { font: italic 0.82rem/1.3 'IM Fell English', serif; opacity: 0.8; }
+  .bill .rule { display: flex; align-items: center; gap: 0.7rem; margin: 0.9rem 0 0.6rem; font: 0.9rem/1 'IM Fell English', serif; }
+  .bill .rule::before, .bill .rule::after { content: ''; flex: 1; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); height: 2px; }
+  .bill .tonight { font: 700 1.25rem/1 'Playfair Display SC', serif; letter-spacing: 0.5em; color: var(--red); padding-left: 0.5em; }
+  .bill .zh { font: 900 clamp(2.6rem, 7vh, 3.6rem)/1.05 'Noto Serif SC', serif; letter-spacing: 0.14em; margin: 0.5rem 0 0.1rem; padding-left: 0.14em; }
+  .bill .en { font: 400 clamp(1.7rem, 4.6vh, 2.3rem)/1 'Abril Fatface', serif; letter-spacing: 0.02em; text-transform: uppercase; }
+  .bill .id { font: italic 1.25rem/1.2 'IM Fell English', serif; color: var(--red); margin-top: 0.35rem; }
+  .bill .about { font: italic 0.95rem/1.4 'IM Fell English', serif; margin: 0.8rem auto 0; max-width: 22rem; }
+  .bill .cast { margin: 0.4rem auto 0; max-width: 21rem; display: grid; gap: 0.25rem; font: 1rem/1.25 'IM Fell English', serif; }
+  .bill .cast div { display: flex; align-items: baseline; gap: 0.4rem; }
+  .bill .cast b { font: 400 0.9rem/1 'Playfair Display SC', serif; letter-spacing: 0.08em; white-space: nowrap; }
+  .bill .cast i { flex: 1; border-bottom: 1px dotted rgba(30,22,17,0.6); transform: translateY(-0.25rem); }
+  .bill .cast span { font-style: italic; white-space: nowrap; }
+  .bill .scenes { font: 0.86rem/1.45 'IM Fell English', serif; margin-top: 0.7rem; }
+  .bill .scenes em { font: 400 0.78rem/1 'Playfair Display SC', serif; letter-spacing: 0.14em; font-style: normal; display: block; margin-bottom: 0.15rem; }
+  .bill .foot { display: grid; justify-items: center; gap: 0.6rem; margin-top: 1.2rem; }
+  .seal { all: unset; cursor: pointer; width: 6.4rem; height: 6.4rem; border-radius: 50%; display: grid; place-items: center; text-align: center;
+    color: #f6e2c2; font: 400 0.82rem/1.15 'Playfair Display SC', serif; letter-spacing: 0.08em;
+    background: radial-gradient(circle at 40% 35%, #c13a2f, #8e1c1a 55%, #5c0e0d);
+    box-shadow: inset 0 0 0 0.35rem rgba(0,0,0,0.12), inset 0 0 0 0.45rem rgba(255,210,170,0.18), 0 0.25rem 0.6rem rgba(0,0,0,0.45);
+    transition: transform 0.25s, opacity 0.6s; }
+  .seal:hover, .seal:focus-visible { transform: scale(1.05) rotate(-3deg); }
+  .seal:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+  .seal[disabled] { opacity: 0.35; cursor: progress; transform: none; }
+  .bill .opening { font: italic 0.88rem/1.2 'IM Fell English', serif; min-height: 1.1rem; }
+  .bill .subs { font: 0.8rem/1.3 'IM Fell English', serif; display: flex; gap: 0.6rem; align-items: center; }
+  .bill .subs button { all: unset; cursor: pointer; font: italic 0.8rem/1 'IM Fell English', serif; border-bottom: 1px solid currentColor; }
+  .bill .subs button[aria-pressed="true"] { color: var(--red); }
+
+  /* The repertoire: one poster for each show hangs on the house wall in 3D. An invisible button over each poster
+     takes the click, the hover and the keyboard focus. */
+  #wall { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+  #wall .poster { all: unset; position: absolute; cursor: pointer; pointer-events: none; }
+  body.at-wall #wall .poster { pointer-events: auto; }
+  #wall .poster:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
+  #wallnote { position: absolute; inset: 0; z-index: 2; display: grid; place-items: end center; padding-bottom: 4vh; pointer-events: none;
+    opacity: 0; transition: opacity 0.5s; }
+  body.at-wall #wallnote { opacity: 1; transition: opacity 1s 1.2s; }
+
+  /* Intermission: the stage dims and a printed slip appears. There are no buttons in this theatre. */
+  #frame canvas { cursor: pointer; }
+  body.at-wall #frame canvas { cursor: default; }
+  #interval { position: absolute; inset: 0; z-index: 4; display: grid; place-items: end center; padding-bottom: 7vh; pointer-events: none;
+    background: radial-gradient(ellipse at 50% 45%, rgba(30,14,8,0.25), rgba(0,0,0,0.6)); opacity: 0; transition: opacity 0.6s; }
+  #interval.on { opacity: 1; }
+  #interval .slip, #wallnote .slip { padding: 0.9rem 1.6rem 0.8rem; color: var(--ink); text-align: center; transform: rotate(0.8deg);
+    background: radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(110,65,20,0.35) 100%), var(--paper);
+    box-shadow: 0 0.6rem 1.4rem rgba(0,0,0,0.6); }
+  #wallnote .slip { transform: rotate(-0.5deg); }
+  #interval .slip b, #wallnote .slip b { display: block; font: 700 1.1rem/1 'Playfair Display SC', serif; letter-spacing: 0.4em; padding-left: 0.4em; color: var(--red); }
+  #interval .slip span, #wallnote .slip span { display: block; margin-top: 0.4rem; font: italic 0.85rem/1.3 'IM Fell English', serif; }
+  #interval .slip button { all: unset; cursor: pointer; pointer-events: auto; margin-top: 0.5rem; display: inline-block;
+    font: italic 0.85rem/1.3 'IM Fell English', serif; border-bottom: 1px solid currentColor; }
+  #interval .slip button:hover, #interval .slip button:focus-visible { color: var(--red); }
+  #interval:not(.on) .slip button { pointer-events: none; }
+  #turn { display: none; }
+
+  /* The door: the theatre seen from the empty street at night. It is also the loading screen. The neon sign lights
+     letter by letter as the house loads, and the light between the doors grows. When the house is ready, a click on
+     the doors lets the light out. */
+  #door { position: fixed; inset: 0; z-index: 20; overflow: hidden; background: #07080f; transition: opacity 1.4s ease 0.9s, visibility 0s linear 2.4s; }
+  #door.gone { opacity: 0; visibility: hidden; pointer-events: none; }
+  #door .scene { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); container-type: size;
+    width: max(100vw, 177.78vh); height: max(100vh, 56.25vw); }
+  #door .facade { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  #door .facade.tall { display: none; }
+  #door .sign, #door .doors { position: absolute; }
+  #door .sign { left: 40.1%; top: 26.8%; width: 19.8%; height: 10.7%; display: grid; place-items: center; }
+  #door .doors { left: 43.6%; top: 45.8%; width: 12.7%; height: 29.9%; }
+  .neon { font: 400 3.15cqw/1 'Neonderthaw', 'Brush Script MT', cursive; white-space: nowrap; letter-spacing: 0.01em; }
+  .neon span { color: rgba(140, 70, 90, 0.38); text-shadow: none; transition: color 0.25s, text-shadow 0.25s; }
+  .neon span.on { color: #ffe3ee; text-shadow: 0 0 0.04em #fff, 0 0 0.12em #ff9ec4, 0 0 0.3em #ff4f93, 0 0 0.7em #ff2f7d, 0 0 1.4em rgba(255, 47, 125, 0.55); }
+  .neon.lit span.on { animation: hum 7s infinite steps(1); }
+  .neon.lit span.broken.on { animation: broken 4.3s infinite steps(1); }
+  @keyframes hum { 0%, 96%, 100% { opacity: 1; } 96.5% { opacity: 0.55; } 97.5% { opacity: 1; } 98% { opacity: 0.7; } }
+  @keyframes broken { 0%, 30%, 34%, 62%, 100% { opacity: 1; } 31% { opacity: 0.15; } 32% { opacity: 0.9; } 33% { opacity: 0.2; } 63% { opacity: 0.35; } 64%, 66% { opacity: 1; } 65% { opacity: 0.1; } }
+  /* The light between the closed doors. --p is the load progress, 0..1. */
+  #door .doors { all: unset; position: absolute; left: 43.6%; top: 45.8%; width: 12.7%; height: 29.9%; cursor: progress; --p: 0; }
+  #door .doors::before { content: ''; position: absolute; left: 50%; top: 4%; bottom: 0; width: 0.5cqw; transform: translateX(-50%);
+    background: linear-gradient(to bottom, rgba(255, 196, 120, 0), rgba(255, 190, 110, 0.9) 30%, rgba(255, 210, 140, 1));
+    opacity: calc(0.15 + 0.85 * var(--p)); filter: blur(0.25cqw); box-shadow: 0 0 calc(1cqw + 3cqw * var(--p)) rgba(255, 170, 80, 0.75); }
+  #door.ready .doors { cursor: pointer; }
+  #door.ready .doors::before { animation: breathe 3.2s ease-in-out infinite; }
+  @keyframes breathe { 50% { box-shadow: 0 0 6cqw rgba(255, 175, 90, 0.95); } }
+  #door .doors:focus-visible { outline: 2px solid rgba(255, 200, 140, 0.7); outline-offset: 0.6cqw; }
+  /* The doors open: warm light floods out from the gap. */
+  #door .flood { position: absolute; left: 50%; top: 61%; width: 4cqw; height: 4cqw; border-radius: 50%; transform: translate(-50%, -50%) scale(0);
+    background: radial-gradient(circle, #fff3dc 0%, #ffcf8a 35%, rgba(255, 170, 90, 0.6) 60%, rgba(255, 150, 80, 0) 72%);
+    transition: transform 1.6s cubic-bezier(.6, 0, .4, 1); pointer-events: none; }
+  #door.open .flood { transform: translate(-50%, -50%) scale(120); }
+  #door .note { position: absolute; left: 0; right: 0; bottom: max(5vh, env(safe-area-inset-bottom, 0px) + 2vh); display: grid; justify-items: center; gap: 0.8rem;
+    padding: 0 max(16px, env(safe-area-inset-left, 0px)); text-align: center; color: #e9dcc8; font: italic 1.05rem/1.4 'IM Fell English', serif;
+    text-shadow: 0 0.1rem 0.6rem #000; }
+  #door .note small { font: 0.82rem/1.3 'Cormorant SC', serif; letter-spacing: 0.28em; opacity: 0.7; }
+  #door #gate:empty { display: none; }
+  /* The loading line: warm light that spreads along the threshold, with the count beside it. */
+  #door .load { display: grid; grid-template-columns: min(15rem, 52vw) auto; align-items: center; gap: 0.7rem; transition: opacity 0.8s; }
+  #door .load::before { content: ''; grid-area: 1 / 1; height: 2px; background: rgba(255, 220, 180, 0.14); }
+  #door .load i { grid-area: 1 / 1; justify-self: center; height: 2px; width: 0%; transition: width 0.4s ease-out;
+    background: linear-gradient(90deg, rgba(255, 190, 110, 0), #ffcf8a 20%, #fff0d6 50%, #ffcf8a 80%, rgba(255, 190, 110, 0)); box-shadow: 0 0 10px rgba(255, 175, 90, 0.9); }
+  #door .load span { font: 600 0.78rem/1 'Cormorant SC', serif; letter-spacing: 0.18em; min-width: 3.2em; text-align: left; opacity: 0.8; font-variant-numeric: tabular-nums; }
+  #door.ready .load { opacity: 0; }
+  @media (orientation: portrait) {
+    #door .scene { width: max(100vw, 56.25vh); height: max(100vh, 177.78vw); }
+    #door .facade.wide { display: none; }
+    #door .facade.tall { display: block; }
+    #door .sign { left: 28.8%; top: 29.1%; width: 42.5%; height: 9.2%; }
+    #door .doors { left: 37.2%; top: 42.2%; width: 25.6%; height: 24.2%; }
+    .neon { font-size: 7.2cqw; }
+    #door .doors::before { width: 1.1cqw; }
+    #door .flood { top: 55%; }
+  }
+  @media (prefers-reduced-motion: reduce) { .neon.lit span.on, #door.ready .doors::before { animation: none; } }
+  body.render #door { display: none; }
+  body.render #interval, body.render #lobby, body.render #wallnote, body.render #wall, body.render #turn { display: none; }
+
+  /* Phones. Upright, the stage is a band across the middle: the surtitles move below it at a readable size,
+     and a slip suggests turning the phone. On its side, a phone is short: the programme sets in two columns. */
+  @media (orientation: portrait) {
+    .surtitles { top: calc(100% + 4vw); bottom: auto; gap: 1vw; }
+    .surtitles .who { font-size: 2.6vw; }
+    .surtitles .main, .surtitles[data-main="id"] .main, .surtitles[data-main="en"] .main { font-size: 5.4vw; }
+    .surtitles .second, .surtitles[data-second="zh"] .second { font-size: 3.9vw; }
+    .surtitles .en { font-size: 3.5vw; }
+    .surtitles .py { font-size: 3vw; }
+    .surtitles .tr { max-width: 94vw; gap: 3vw; }
+  }
+  @media (orientation: portrait) and (pointer: coarse) {
+    #turn { display: grid; position: absolute; top: 5vh; left: 0; right: 0; place-items: center; z-index: 2; pointer-events: none; }
+    #turn .slip { padding: 0.6rem 1.1rem; color: var(--ink); transform: rotate(-0.6deg); background: var(--paper); box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.6);
+      font: italic 0.85rem/1.3 'IM Fell English', serif; }
+  }
+  @media (orientation: landscape) and (max-height: 560px) {
+    .bill { width: min(54rem, 92vw); column-count: 2; column-gap: 2.8rem; }
+    .bill .cast-rule { break-before: column; margin-top: 0; }
+    .bill .foot { break-inside: avoid; }
+    #interval { padding-bottom: 3vh; }
+  }
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="letterpress"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4"/></filter>
+  </svg>
+  <div id="door">
+    <div class="scene">
+      <img class="facade wide" src="/lobby/facade-wide.webp" alt="" fetchpriority="high">
+      <img class="facade tall" src="/lobby/facade-tall.webp" alt="">
+      <div class="sign"><div class="neon" id="neon" role="img" aria-label="Twilight Bugle"></div></div>
+      <button class="doors" id="enter" aria-label="Open the doors of the theatre" disabled></button>
+      <div class="flood"></div>
+    </div>
+    <div class="note"><span id="door-line">The theatre is opening.</span><div id="gate"></div>
+      <div class="load" aria-hidden="true"><i id="load-bar"></i><span id="load-pct">0%</span></div>
+      <small>Strings, rods and real light</small></div>
+  </div>
+  <div id="frame"><div id="wall" aria-label="The repertoire"></div></div>
+  <div id="lobby" class="away">
+    <div class="billwrap"><article class="bill" aria-label="Playbill">
+      <span class="wear"></span>
+      <span class="ear"></span>
+      <span class="pin"></span>
+      <div class="ink house">The Twilight Bugle</div>
+      <div class="est">Cut card, rods and strings, under real light</div>
+      <div class="rule"><span class="ink tonight" id="bill-no">Programme</span></div>
+      <div class="ink zh" id="bill-zh">…</div>
+      <div class="ink en" id="bill-en"></div>
+      <div class="id" id="bill-id"></div>
+      <p class="about" id="bill-about"></p>
+      <div class="rule cast-rule"><span>Dramatis Personae</span></div>
+      <div class="cast" id="bill-cast"></div>
+      <div class="scenes" id="bill-scenes"></div>
+      <div class="foot">
+        <button class="seal" id="raise">Raise the Curtain</button>
+        <div class="opening" id="opening" aria-live="polite">The orchestra is ready.</div>
+        <div class="subs"><span id="bill-subs">The surtitles are in Bahasa Indonesia.</span> <button id="bill-en-toggle" aria-pressed="false">Add English</button></div>
+        <div class="subs">During the play, click the stage to pause.</div>
+        <div class="subs"><button id="bill-share">Copy the link to this show</button></div>
+      </div>
+    </article></div>
+  </div>
+  <div id="wallnote"><div class="slip"><b>The Repertoire</b><span>Pick a poster to read its programme.</span></div></div>
+  <div id="interval" aria-live="polite"><div class="slip"><b>Intermission</b><span>Click the stage to resume.</span><button id="to-wall">See the posters</button></div></div>
+  <div id="turn"><div class="slip"><span>Turn your phone sideways for a larger stage.</span></div></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

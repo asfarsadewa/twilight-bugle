@@ -1,0 +1,9 @@
+{
+ "name": "drop-map",
+ "file": "drop-map.webp",
+ "normal": "drop-map-n.webp",
+ "w": 2048,
+ "h": 1152,
+ "aspect": 1.7778,
+ "opaque": true
+}

@@ -1,0 +1,272 @@
+{
+  "title": {
+    "zh": "天明之约",
+    "en": "The Daybreak Vow",
+    "id": "Janji Fajar"
+  },
+  "voices": {
+    "prince": {
+      "tag": "Male",
+      "name": "Prince Aurel",
+      "voice": "bright heroic male tenor"
+    },
+    "princess": {
+      "tag": "Female",
+      "name": "Princess Ilune",
+      "voice": "clear warm female soprano"
+    },
+    "both": {
+      "tag": "Duet",
+      "name": "Both",
+      "voice": "both voices in two-part harmony"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "label": "Intro",
+      "note": "instrumental: horn and brass fanfare, then the wind synth plays the chorus melody"
+    },
+    {
+      "id": "v1a",
+      "label": "Verse 1",
+      "lines": [
+        {
+          "who": "prince",
+          "zh": "号角吹响 破晓的城墙",
+          "en": "The horns sound on the walls at break of day",
+          "id": "Terompet bergema di tembok kota saat fajar"
+        },
+        {
+          "who": "prince",
+          "zh": "战旗迎着 北方来的霜",
+          "en": "Our banners meet the frost that rides down from the north",
+          "id": "Panji perang menyongsong embun beku dari utara"
+        },
+        {
+          "who": "prince",
+          "zh": "我回头望 你在最高的地方",
+          "en": "I look back, and you stand at the highest place",
+          "id": "Aku menoleh, kau berdiri di tempat tertinggi"
+        },
+        {
+          "who": "prince",
+          "zh": "月白的披风 在风中飞扬",
+          "en": "Your moon-white cloak flies on the wind",
+          "id": "Jubahmu seputih bulan berkibar diterpa angin"
+        }
+      ]
+    },
+    {
+      "id": "v1b",
+      "label": "Verse 1",
+      "lines": [
+        {
+          "who": "princess",
+          "zh": "你把剑 指向遥远的前线",
+          "en": "You point your sword toward the distant front",
+          "id": "Kau arahkan pedangmu ke medan yang jauh"
+        },
+        {
+          "who": "princess",
+          "zh": "九门的钥匙 系在我胸前",
+          "en": "The keys of the nine gates hang at my heart",
+          "id": "Kunci sembilan gerbang tergantung di dadaku"
+        },
+        {
+          "who": "princess",
+          "zh": "别回头 别让泪水模糊你的眼",
+          "en": "Don't look back. Don't let tears cloud your eyes",
+          "id": "Jangan menoleh, jangan biarkan air mata mengaburkan matamu"
+        },
+        {
+          "who": "princess",
+          "zh": "这座城 有我守到春天",
+          "en": "I will hold this city until spring",
+          "id": "Kota ini akan kujaga sampai musim semi"
+        }
+      ]
+    },
+    {
+      "id": "pre1",
+      "label": "Pre-Chorus",
+      "lines": [
+        {
+          "who": "prince",
+          "zh": "一个在烽火之中",
+          "en": "One of us stands in the fires of war",
+          "id": "Yang satu di tengah kobaran perang"
+        },
+        {
+          "who": "princess",
+          "zh": "一个在城头守灯",
+          "en": "One of us keeps the lamp upon the wall",
+          "id": "Yang satu menjaga pelita di atas tembok"
+        },
+        {
+          "who": "prince",
+          "zh": "仰望同一片星空",
+          "en": "We look up at the same starry sky",
+          "id": "Menatap langit berbintang yang sama"
+        },
+        {
+          "who": "princess",
+          "zh": "许下同一个约定",
+          "en": "We make the same vow",
+          "id": "Mengikrarkan janji yang sama"
+        }
+      ]
+    },
+    {
+      "id": "ch1",
+      "label": "Chorus",
+      "lines": [
+        {
+          "who": "prince",
+          "zh": "等我到天明 我的剑为你而鸣",
+          "en": "Wait for me until daybreak. My sword rings out for you",
+          "id": "Tunggu aku sampai fajar, pedangku berdenting untukmu"
+        },
+        {
+          "who": "princess",
+          "zh": "等你到天明 我的灯为你而明",
+          "en": "I will wait for you until daybreak. My lamp burns for you",
+          "id": "Kutunggu kau sampai fajar, pelitaku menyala untukmu"
+        },
+        {
+          "who": "both",
+          "zh": "纵然万里烽火 隔开你我的身影",
+          "en": "Though a thousand miles of war fires stand between us",
+          "id": "Walau ribuan mil api perang memisahkan kita"
+        },
+        {
+          "who": "both",
+          "zh": "日与月 终会在晨光里相逢",
+          "en": "the sun and the moon will meet in the morning light",
+          "id": "matahari dan bulan akan bertemu dalam cahaya pagi"
+        }
+      ]
+    },
+    {
+      "id": "v2a",
+      "label": "Verse 2",
+      "lines": [
+        {
+          "who": "princess",
+          "zh": "火雨落下 夜空在燃烧",
+          "en": "Fire rains down. The night sky burns",
+          "id": "Hujan api turun, langit malam membara"
+        },
+        {
+          "who": "princess",
+          "zh": "我摘下王冠 披上了战袍",
+          "en": "I take off my crown. I put on armor",
+          "id": "Kulepas mahkotaku, kukenakan baju zirah"
+        }
+      ]
+    },
+    {
+      "id": "v2b",
+      "label": "Verse 2",
+      "lines": [
+        {
+          "who": "prince",
+          "zh": "雪落满了 战士的肩头",
+          "en": "Snow lies heavy on the soldiers' shoulders",
+          "id": "Salju menumpuk di bahu para prajurit"
+        },
+        {
+          "who": "prince",
+          "zh": "那一点光 告诉我 别回头",
+          "en": "That far small light tells me: don't look back",
+          "id": "Setitik cahaya itu berkata: jangan menoleh"
+        }
+      ]
+    },
+    {
+      "id": "pre2",
+      "label": "Pre-Chorus",
+      "repeat": "pre1"
+    },
+    {
+      "id": "ch2",
+      "label": "Chorus",
+      "repeat": "ch1"
+    },
+    {
+      "id": "bridge",
+      "label": "Bridge",
+      "note": "half time",
+      "lines": [
+        {
+          "who": "princess",
+          "zh": "如果长夜 永远不会过去",
+          "en": "If the long night never ends",
+          "id": "Jika malam panjang tak pernah berlalu"
+        },
+        {
+          "who": "princess",
+          "zh": "我就把灯 举向更高的天际",
+          "en": "then I will raise my lamp higher into the sky",
+          "id": "akan kuangkat pelitaku lebih tinggi ke langit"
+        },
+        {
+          "who": "prince",
+          "zh": "如果我 没能回到你那里",
+          "en": "If I cannot make it back to you",
+          "id": "Jika aku tak sempat kembali padamu"
+        },
+        {
+          "who": "prince",
+          "zh": "我就把剑 刺穿黑暗的心底",
+          "en": "then I will drive my sword into the heart of the dark",
+          "id": "akan kuhunjamkan pedangku ke jantung kegelapan"
+        },
+        {
+          "who": "both",
+          "zh": "让光 穿过你我之间的距离",
+          "en": "Let the light cross the distance between you and me",
+          "id": "Biar cahaya menembus jarak antara kau dan aku"
+        }
+      ]
+    },
+    {
+      "id": "solo",
+      "label": "Instrumental Duel",
+      "note": "instrumental: the wind synth and an overdriven electric guitar trade 2-bar phrases, building to the key change"
+    },
+    {
+      "id": "ch3",
+      "label": "Final Chorus",
+      "note": "up a whole step, choir and timpani join",
+      "repeat": "ch1",
+      "extra": [
+        {
+          "who": "both",
+          "zh": "天明之约 永不凋零",
+          "en": "Our daybreak vow will never fade",
+          "id": "Janji fajar kita takkan pernah pudar"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "label": "Outro",
+      "note": "soft, piano and strings",
+      "lines": [
+        {
+          "who": "princess",
+          "zh": "天亮了",
+          "en": "The day has come",
+          "id": "Fajar telah tiba"
+        },
+        {
+          "who": "prince",
+          "zh": "我回来了",
+          "en": "I'm home",
+          "id": "Aku pulang"
+        }
+      ]
+    }
+  ]
+}

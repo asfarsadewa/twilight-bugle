@@ -1,0 +1,11 @@
+model: gpt-image-2.5-sunburst (edit)
+quality: high
+size: 1536x1536
+background: transparent
+input images: 1 = art/key-art.png
+
+STYLE: A grand hand-made toy theatre production built from painted corrugated cardboard. Every piece is a flat cutout of cardboard about 4 mm thick, cut by hand with a craft knife. The front of each piece is painted in opaque matte gouache with visible brush strokes, dry-brush texture and a few touches of real gold leaf. Shapes are bold and readable from the back row. Details are painted by hand, never printed. Figures have elegant, slightly long storybook proportions, simple painted faces with dark almond eyes, soft rosy cheeks and a few confident brush lines. Puppet joints are brass split pins. Palette: night indigo #1B2340, deep slate #34425E, snow white #EDE7DA, stone grey #8C8F99, sun gold #E2A93B, ember red #B8452B, moon silver-blue #AFC3E3, dawn rose #E9A7A0, with raw cardboard brown #A57E52 at cut edges. The mood is grand, sentimental and warm, like a beloved fairy tale staged with love. Medieval fantasy that belongs to no real culture.
+CONSTRAINTS: No text, no lettering, no numbers, no logos, no signature, no watermark. No photographic people, no 3D render look, no plastic, no glossy finish.
+REFERENCES: Image 1 is the look reference. Match its gouache paint, gold leaf, raw cardboard edges, palette and figure style. Do not copy its composition.
+SUBJECT: The four pieces of a puppet of Princess Ilune, a young woman, facing three-quarters to the left: (1) the head with long silver-white hair, a slender silver crescent-moon tiara, and the neck; (2) the body from the shoulders down to the hem, standing, in a deep blue gown with silver embroidery and a long moon-white cloak, with NO arms; (3) the right arm from shoulder to hand, holding up the Moonlamp, a silver lantern with a pale blue-white light; (4) the left arm from shoulder to an open hand.
+COMPOSITION: A flat lay of the separate cardboard pieces of ONE jointed rod puppet, all at the same scale, seen straight from the front on a transparent background. Each piece is a separate cutout with clear empty space around it. No piece touches or overlaps another piece. Each joint end has a small brass split pin. No shadow, no rod, no strings, no stand, no stage.

@@ -1,0 +1,9 @@
+{
+ "name": "drop-night",
+ "file": "drop-night.webp",
+ "normal": "drop-night-n.webp",
+ "w": 2048,
+ "h": 1152,
+ "aspect": 1.7778,
+ "opaque": true
+}

@@ -1,0 +1,11 @@
+model: gpt-image-2.5-sunburst (edit)
+quality: high
+size: 2304x768
+background: transparent
+input images: 1 = art/key-art.png
+
+STYLE: A grand hand-made toy theatre production built from painted corrugated cardboard. Every piece is a flat cutout of cardboard about 4 mm thick, cut by hand with a craft knife. The front of each piece is painted in opaque matte gouache with visible brush strokes, dry-brush texture and a few touches of real gold leaf. Shapes are bold and readable from the back row. Details are painted by hand, never printed. Figures have elegant, slightly long storybook proportions, simple painted faces with dark almond eyes, soft rosy cheeks and a few confident brush lines. Puppet joints are brass split pins. Palette: night indigo #1B2340, deep slate #34425E, snow white #EDE7DA, stone grey #8C8F99, sun gold #E2A93B, ember red #B8452B, moon silver-blue #AFC3E3, dawn rose #E9A7A0, with raw cardboard brown #A57E52 at cut edges. The mood is grand, sentimental and warm, like a beloved fairy tale staged with love. Medieval fantasy that belongs to no real culture.
+CONSTRAINTS: No text, no lettering, no numbers, no logos, no signature, no watermark. No photographic people, no 3D render look, no plastic, no glossy finish.
+REFERENCES: Image 1 is the look reference. Match its gouache paint, gold leaf, raw cardboard edges, palette and figure style. Do not copy its composition.
+SUBJECT: A long front rampart of the city: pale stone wall with crenellations along the top, two deep blue banners with a silver crescent, and in the middle a big arched gate with two closed wooden doors with iron bands. The top edge follows the crenellations. The bottom edge is straight.
+COMPOSITION: One single cardboard cutout seen straight from the front, on a transparent background. Clean hand-cut outline. No shadow, no stand, no rod, no strings, no other pieces, no stage, no curtains, no frame.

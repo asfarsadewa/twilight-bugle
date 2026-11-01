@@ -1,0 +1,296 @@
+<title>Daybreak Vow Takes</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IM+Fell+English+SC&family=Noto+Serif+SC:wght@500;700;900&display=swap">
+<style>
+/* Layout: a playbill on a dark stage. Ticket stubs pick the take, a lit box previews the subtitle, the lyric sheet runs below. */
+:root {
+  --stage: #10141f; --board: #181e2d; --board-2: #212839; --kraft: #a88a62;
+  --paper: #eee4d1; --muted: #9399ab; --sun: #e7b24c; --moon: #a9bfe9; --flag: #e57a54; --ok: #8fc79a;
+  --display: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --han: "Noto Serif SC", "Songti SC", "SimSun", "Source Han Serif SC", serif;
+  --data: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) {
+  --stage: #e6d8bd; --board: #f3eadb; --board-2: #ebe0cc; --kraft: #8c6b40;
+  --paper: #1c2133; --muted: #5d5a55; --sun: #95600a; --moon: #34539a; --flag: #b2421f; --ok: #2f7a43; color-scheme: light; } }
+:root[data-theme="light"] {
+  --stage: #e6d8bd; --board: #f3eadb; --board-2: #ebe0cc; --kraft: #8c6b40;
+  --paper: #1c2133; --muted: #5d5a55; --sun: #95600a; --moon: #34539a; --flag: #b2421f; --ok: #2f7a43; color-scheme: light; }
+
+body { background: var(--stage); color: var(--paper); font: 400 1.0625rem/1.55 var(--body); }
+.wrap { max-width: 68rem; margin: 0 auto; padding-block: 2.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 2.25rem; }
+h1, h2 { text-wrap: balance; margin: 0; }
+.eyebrow { font: 500 0.78rem/1 var(--data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--kraft); }
+
+/* Playbill header */
+.bill { display: grid; gap: 0.9rem; border-bottom: 2px dashed var(--kraft); padding-bottom: 1.8rem; }
+.bill h1 { font: 900 clamp(3rem, 11vw, 6.5rem)/1 var(--han); letter-spacing: 0.08em; }
+.bill .names { font: 400 clamp(1.3rem, 3.4vw, 1.9rem)/1.2 var(--display); color: var(--kraft); }
+.bill p { margin: 0; max-width: 40rem; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; font-size: 0.95rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+.glyph { width: 1.1em; height: 1.1em; flex: none; }
+.sun { color: var(--sun); } .moon { color: var(--moon); }
+
+/* Ticket stubs */
+.takes { display: grid; grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr)); gap: 0.9rem; }
+.stub { all: unset; cursor: pointer; display: grid; align-content: start; gap: 0.55rem; padding: 1rem 1.1rem 1.05rem; background: var(--board);
+  border: 1px solid color-mix(in srgb, var(--kraft) 45%, transparent); border-radius: 3px; position: relative;
+  -webkit-mask: radial-gradient(circle at 0 50%, transparent 0.55rem, #000 0.6rem) left / 51% 100% no-repeat,
+                radial-gradient(circle at 100% 50%, transparent 0.55rem, #000 0.6rem) right / 51% 100% no-repeat;
+          mask: radial-gradient(circle at 0 50%, transparent 0.55rem, #000 0.6rem) left / 51% 100% no-repeat,
+                radial-gradient(circle at 100% 50%, transparent 0.55rem, #000 0.6rem) right / 51% 100% no-repeat; }
+.stub:hover { background: var(--board-2); }
+.stub:focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; }
+.stub[aria-pressed="true"] { background: var(--board-2); border-color: var(--sun); box-shadow: inset 0 0 0 1px var(--sun); }
+.stub .top { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+.stub .name { font: 400 1.45rem/1 var(--display); }
+.stub .round { font: 500 0.72rem/1 var(--data); color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.stub dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 0.8rem; font-size: 0.9rem; }
+.stub dt { color: var(--muted); } .stub dd { margin: 0; font: 500 0.88rem/1.5 var(--data); font-variant-numeric: tabular-nums; text-align: right; }
+.pill { justify-self: start; font: 500 0.7rem/1 var(--data); letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.3rem 0.5rem; border-radius: 2px; background: var(--sun); color: var(--stage); }
+.pill.warn { background: transparent; color: var(--flag); box-shadow: inset 0 0 0 1px var(--flag); }
+
+/* Stage box */
+.stage { background: radial-gradient(120% 90% at 50% 110%, color-mix(in srgb, var(--sun) 16%, var(--board)) 0%, var(--board) 60%);
+  border: 1px solid color-mix(in srgb, var(--kraft) 40%, transparent); border-radius: 4px; padding: 1.4rem clamp(1rem, 4vw, 2.5rem) 1.2rem;
+  display: grid; gap: 1.1rem; }
+.now { min-height: 11.5rem; display: grid; align-content: center; justify-items: center; text-align: center; gap: 0.35rem; }
+.now .who { display: inline-flex; align-items: center; gap: 0.45rem; font: 500 0.78rem/1 var(--data); letter-spacing: 0.12em; text-transform: uppercase; }
+.now .zh { font: 700 clamp(1.7rem, 5.4vw, 2.9rem)/1.25 var(--han); letter-spacing: 0.06em; }
+.now .py { font: italic 400 1rem/1.3 var(--body); color: var(--muted); }
+.now .en { font-size: 1.15rem; } .now .id { font-size: 1.05rem; color: var(--muted); }
+.now.rest .zh { font: 400 clamp(1.4rem, 4vw, 2rem)/1.2 var(--display); color: var(--kraft); letter-spacing: 0.02em; }
+.transport { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.9rem; }
+.play { all: unset; cursor: pointer; width: 3rem; height: 3rem; border-radius: 50%; display: grid; place-items: center;
+  background: var(--sun); color: var(--stage); }
+.play:focus-visible { outline: 2px solid var(--paper); outline-offset: 3px; }
+.play svg { width: 1.2rem; height: 1.2rem; }
+.bar { position: relative; height: 2.2rem; cursor: pointer; touch-action: none; }
+.bar .track { position: absolute; inset: 0.95rem 0; background: var(--board-2); border-radius: 2px; }
+.bar .seg { position: absolute; top: 0.55rem; height: 1.1rem; border-radius: 1px; opacity: 0.8; }
+.bar .seg.prince { background: var(--sun); } .bar .seg.princess { background: var(--moon); }
+.bar .seg.both { background: linear-gradient(180deg, var(--sun) 50%, var(--moon) 50%); }
+.bar .seg.flag { box-shadow: 0 -0.35rem 0 -0.15rem var(--flag); }
+.bar .head { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--paper); transform: translateX(-1px); }
+.time { font: 500 0.9rem/1 var(--data); font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+
+/* Notes and method */
+.cols { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2rem; }
+@media (max-width: 760px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+h2 { font: 400 1.5rem/1.2 var(--display); margin-bottom: 0.7rem; }
+ul.notes { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+ul.notes li::marker { color: var(--kraft); }
+.method p { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.97rem; }
+
+/* Lyric sheet */
+.sheet { display: grid; gap: 1.6rem; }
+.sec { display: grid; gap: 0.15rem; }
+.sec h3 { margin: 0 0 0.35rem; font: 500 0.78rem/1 var(--data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--kraft); }
+.line { all: unset; cursor: pointer; display: grid; grid-template-columns: 4.2rem 1.4rem minmax(0, 1fr); gap: 0.2rem 0.7rem;
+  padding: 0.55rem 0.6rem; border-radius: 3px; }
+.line:hover { background: var(--board); }
+.line:focus-visible { outline: 2px solid var(--sun); }
+.line.on { background: var(--board-2); }
+.line .ts { font: 500 0.82rem/1.9 var(--data); color: var(--muted); font-variant-numeric: tabular-nums; }
+.line .glyph { margin-top: 0.4rem; }
+.line .txt { display: grid; gap: 0.05rem; min-width: 0; }
+.line .zh { font: 500 1.2rem/1.5 var(--han); letter-spacing: 0.04em; }
+.line .py { font-style: italic; color: var(--muted); font-size: 0.92rem; }
+.line .tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.2rem 1.2rem; font-size: 0.97rem; }
+.line .tr .id { color: var(--muted); }
+@media (max-width: 560px) { .line .tr { grid-template-columns: minmax(0, 1fr); } .line { grid-template-columns: 3.4rem 1.2rem minmax(0, 1fr); } }
+.line .flag { grid-column: 3; font: 500 0.8rem/1.4 var(--data); color: var(--flag); }
+@media (prefers-reduced-motion: no-preference) { .line, .stub { transition: background-color 0.15s; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="g-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.6" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></g></symbol>
+  <symbol id="g-moon" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 3.2a9 9 0 1 0 5.3 13.6A7.4 7.4 0 0 1 15.5 3.2z"/></symbol>
+  <symbol id="g-both" viewBox="0 0 24 24"><circle cx="9" cy="12" r="5.5" fill="var(--sun)"/><path fill="var(--moon)" d="M16.8 5.2a7 7 0 1 0 4 11.6 5.8 5.8 0 0 1-4-11.6z"/></symbol>
+  <symbol id="g-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5z"/></symbol>
+  <symbol id="g-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header class="bill">
+    <span class="eyebrow">Song review</span>
+    <h1 id="t-zh">天明之约</h1>
+    <div class="names" id="t-names">The Daybreak Vow · Janji Fajar</div>
+    <p>A prince and a princess sing a Mandarin duet. A war keeps them apart.</p>
+    <p><strong>Listen to each take. Pick one take for the video.</strong></p>
+    <div class="legend">
+      <span><svg class="glyph sun"><use href="#g-sun"/></svg>Prince Aurel, tenor</span>
+      <span><svg class="glyph moon"><use href="#g-moon"/></svg>Princess Ilune, soprano</span>
+      <span><svg class="glyph"><use href="#g-both"/></svg>Both voices</span>
+    </div>
+  </header>
+
+  <section aria-label="Takes"><div class="takes" id="takes"></div></section>
+
+  <section class="stage" aria-label="Player">
+    <div class="now rest" id="now" aria-live="polite"><div class="zh">Intro</div></div>
+    <div class="transport">
+      <button class="play" id="play" aria-label="Play"><svg><use href="#g-play"/></svg></button>
+      <div class="bar" id="bar" role="slider" tabindex="0" aria-label="Position in the song" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+        <div class="track"></div><div id="segs"></div><div class="head" id="head"></div>
+      </div>
+      <div class="time" id="time">0:00 / 0:00</div>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+  </section>
+
+  <div class="cols">
+    <section><h2 id="notes-h">Notes</h2><ul class="notes" id="notes"></ul></section>
+    <section class="method">
+      <h2>How the checks work</h2>
+      <p>Scribe v2 transcribes each take. The page matches the transcript to the lyric sheet by pinyin.</p>
+      <p>Gemini names the voice on each line. A pitch check on the separated vocal track names the voice again.</p>
+      <p>The page flags a line if both checks hear the same wrong voice.</p>
+      <p>Line times come from the transcript. A line with no match gets an estimated time.</p>
+      <p>Round 2 groups verse 2 and the bridge by singer. Lyria still swaps voices on some lines.</p>
+    </section>
+  </div>
+
+  <section aria-label="Lyrics"><div class="sheet" id="sheet"></div></section>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const $ = (id) => document.getElementById(id);
+const audio = $("audio");
+const WHO = { prince: { name: "Prince Aurel", g: "g-sun", c: "sun" }, princess: { name: "Princess Ilune", g: "g-moon", c: "moon" }, both: { name: "Both", g: "g-both", c: "" } };
+const HEARD = { male: "The prince", female: "The princess", both: "Both voices", none: "No voice" };
+const OWNER = { prince: "the prince", princess: "the princess", both: "both voices" };
+let take = null, lineEls = [], current = -2, raf = 0;
+
+const fmt = (s) => { s = Math.max(0, s || 0); return `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`; };
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const glyph = (who) => `<svg class="glyph ${WHO[who].c}" aria-hidden="true"><use href="#${WHO[who].g}"/></svg>`;
+const ends = (t) => t.lines.map((l, i) => Math.min(l.e != null ? l.e + 1.2 : l.t + 4, t.lines[i + 1] ? t.lines[i + 1].t : t.duration));
+const flagText = (l) => l.missing ? "Scribe did not hear this line." : `${HEARD[l.gemini]} sings this line. The sheet gives it to ${OWNER[l.who]}.`;
+
+function stubs() {
+  $("takes").innerHTML = DATA.takes.map((t) => {
+    const flags = t.lines.filter((l) => l.wrong || l.missing).length;
+    const round = t.lines.findIndex((l) => l.section === "v2a") >= 0 ? "Round 2" : "Round 1";
+    const pill = t.id === DATA.pick ? `<span class="pill">My pick</span>` : (DATA.notes[t.id]?.reject ? `<span class="pill warn">${esc(DATA.notes[t.id].reject)}</span>` : "");
+    return `<button class="stub" data-id="${t.id}" aria-pressed="false">
+      <span class="top"><span class="name">Take ${t.id.slice(1)}</span><span class="round">${round}</span></span>
+      <dl><dt>Length</dt><dd>${fmt(t.duration)}</dd><dt>Intro</dt><dd>${Math.round(t.lines[0].t)} s</dd><dt>Lyrics heard</dt><dd>${Math.round(t.lyric_match * 100)}%</dd>
+      <dt>Voice flags</dt><dd>${flags}</dd></dl>${pill}</button>`;
+  }).join("");
+  $("takes").querySelectorAll(".stub").forEach((b) => b.addEventListener("click", () => select(b.dataset.id, true)));
+}
+
+function select(id, keepPlace) {
+  const prev = take, wasPlaying = !audio.paused;
+  let seekTo = 0;
+  if (keepPlace && prev && current >= 0) {
+    // Keep the listener's place: find the same line (section and text) in the new take.
+    const l = prev.lines[current], into = audio.currentTime - l.t;
+    const next = DATA.takes.find((t) => t.id === id);
+    const match = next.lines.find((m) => m.section === l.section && m.zh === l.zh);
+    if (match) seekTo = Math.max(0, match.t + into);
+  }
+  take = DATA.takes.find((t) => t.id === id);
+  try { localStorage.setItem("dv-take", id); } catch (e) {}
+  document.querySelectorAll(".stub").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.id === id)));
+  audio.src = `takes/${id}/take.mp3`;
+  audio.addEventListener("loadedmetadata", () => { audio.currentTime = seekTo; if (wasPlaying) audio.play(); }, { once: true });
+  current = -2;
+  renderSheet(); renderBar(); renderNotes(); tick();
+}
+
+function renderSheet() {
+  const out = []; let sec = null;
+  take.lines.forEach((l, i) => {
+    if (l.section !== sec) { if (sec) out.push("</div>"); sec = l.section; out.push(`<div class="sec"><h3>${esc(DATA.labels[sec])}</h3>`); }
+    const flag = l.wrong || l.missing ? `<span class="flag">${esc(flagText(l))}</span>` : "";
+    out.push(`<button class="line" data-i="${i}"><span class="ts">${fmt(l.t)}</span>${glyph(l.who)}
+      <span class="txt"><span class="zh">${esc(l.zh)}</span><span class="py">${esc(l.py)}</span>
+      <span class="tr"><span>${esc(l.en)}</span><span class="id">${esc(l.id)}</span></span></span>${flag}</button>`);
+  });
+  out.push("</div>");
+  $("sheet").innerHTML = out.join("");
+  lineEls = [...$("sheet").querySelectorAll(".line")];
+  lineEls.forEach((el) => el.addEventListener("click", () => { audio.currentTime = take.lines[+el.dataset.i].t; audio.play(); }));
+}
+
+function renderBar() {
+  const e = ends(take);
+  $("segs").innerHTML = take.lines.map((l, i) => {
+    const left = (l.t / take.duration) * 100, w = Math.max(0.4, ((e[i] - l.t) / take.duration) * 100);
+    return `<div class="seg ${l.who}${l.wrong || l.missing ? " flag" : ""}" style="left:${left}%;width:${w}%"></div>`;
+  }).join("");
+  $("bar").setAttribute("aria-valuemax", String(Math.round(take.duration)));
+}
+
+function renderNotes() {
+  const mine = DATA.notes[take.id]?.items || [];
+  const auto = take.lines.filter((l) => l.wrong || l.missing).map((l) => `${fmt(l.t)} ${l.zh}: ${flagText(l)}`);
+  $("notes-h").textContent = `Notes on take ${take.id.slice(1)}`;
+  const items = [...mine, ...auto];
+  $("notes").innerHTML = items.length ? items.map((s) => `<li>${esc(s)}</li>`).join("") : "<li>The checks found no problem in this take.</li>";
+}
+
+function showLine(i) {
+  const now = $("now");
+  if (i < 0) {
+    const t = audio.currentTime, first = take.lines[0].t;
+    const label = t < first ? "Intro" : t > take.lines[take.lines.length - 1].t ? "Ending" : "Instrumental";
+    now.className = "now rest"; now.innerHTML = `<div class="zh">${label}</div>`; return;
+  }
+  const l = take.lines[i], w = WHO[l.who];
+  now.className = "now";
+  now.innerHTML = `<span class="who ${w.c}">${glyph(l.who)}${esc(w.name)}</span><div class="zh">${esc(l.zh)}</div>
+    <div class="py">${esc(l.py)}</div><div class="en">${esc(l.en)}</div><div class="id">${esc(l.id)}</div>`;
+}
+
+function tick() {
+  cancelAnimationFrame(raf);
+  const t = audio.currentTime || 0, e = ends(take);
+  let i = -1;
+  for (let k = 0; k < take.lines.length; k++) if (t >= take.lines[k].t - 0.15 && t < e[k] + 0.6) i = k;
+  if (i !== current) {
+    lineEls.forEach((el, k) => el.classList.toggle("on", k === i));
+    showLine(i); current = i;
+  }
+  $("head").style.left = `${(t / take.duration) * 100}%`;
+  $("time").textContent = `${fmt(t)} / ${fmt(take.duration)}`;
+  $("bar").setAttribute("aria-valuenow", String(Math.round(t)));
+  if (!audio.paused) raf = requestAnimationFrame(tick);
+}
+
+function seekFromPointer(ev) {
+  const r = $("bar").getBoundingClientRect();
+  audio.currentTime = Math.min(1, Math.max(0, (ev.clientX - r.left) / r.width)) * take.duration; tick();
+}
+$("bar").addEventListener("pointerdown", (ev) => { $("bar").setPointerCapture(ev.pointerId); seekFromPointer(ev); });
+$("bar").addEventListener("pointermove", (ev) => { if (ev.buttons) seekFromPointer(ev); });
+$("bar").addEventListener("keydown", (ev) => {
+  const d = { ArrowRight: 5, ArrowLeft: -5 }[ev.key];
+  if (d) { audio.currentTime = Math.max(0, audio.currentTime + d); tick(); ev.preventDefault(); }
+});
+$("play").addEventListener("click", () => (audio.paused ? audio.play() : audio.pause()));
+audio.addEventListener("play", () => { $("play").innerHTML = `<svg><use href="#g-pause"/></svg>`; $("play").setAttribute("aria-label", "Pause"); tick(); });
+audio.addEventListener("pause", () => { $("play").innerHTML = `<svg><use href="#g-play"/></svg>`; $("play").setAttribute("aria-label", "Play"); tick(); });
+audio.addEventListener("seeked", tick);
+document.addEventListener("keydown", (ev) => {
+  if (ev.code === "Space" && !/BUTTON|INPUT|TEXTAREA/.test(document.activeElement?.tagName)) { ev.preventDefault(); $("play").click(); }
+});
+
+$("t-zh").textContent = DATA.title.zh;
+$("t-names").textContent = `${DATA.title.en} · ${DATA.title.id}`;
+stubs();
+let start = DATA.pick || DATA.takes[0].id;
+try { const saved = localStorage.getItem("dv-take"); if (saved && DATA.takes.some((t) => t.id === saved)) start = saved; } catch (e) {}
+select(start, false);
+</script>

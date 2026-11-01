@@ -1,0 +1,14 @@
+puppet-meret 1536x1536 transparent
+flat-temple 2048x1536 transparent
+flat-waves 2304x768 transparent
+flat-papyrus 2304x768 transparent
+flat-dunes 2304x768 transparent
+flat-sky-mother 2304x1152 transparent
+flat-crowd 2304x768 transparent
+prop-barge 2048x1024 transparent
+prop-sailboat 1536x1024 transparent
+prop-sun 1024x1024 transparent
+prop-hero 1024x1536 transparent
+prop-mother 1024x1536 transparent
+prop-ibis 1024x1024 transparent
+prop-jars 1024x1024 transparent

@@ -1,0 +1,238 @@
+{
+  "title": {
+    "fr": "Un jour viendra",
+    "id": "Suatu Hari Nanti",
+    "zh": "终有一天",
+    "en": "A Day Will Come"
+  },
+  "sung": "fr",
+  "voices": {
+    "shan": {
+      "name": "Shan",
+      "voice": "a young, warm male tenor",
+      "heard": "male",
+      "glyph": "g-moon",
+      "cls": "star",
+      "part": "the boy soldier"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "label": "Intro",
+      "note": "instrumental: a solo dizi bamboo flute over guzheng, like mist on the mountains"
+    },
+    {
+      "id": "v1",
+      "label": "Verse 1",
+      "lines": [
+        {
+          "who": "shan",
+          "fr": "À l'aube, j'ai quitté mon village",
+          "id": "Saat fajar, kutinggalkan desaku",
+          "zh": "黎明时分，我离开了村庄",
+          "en": "At dawn, I left my village"
+        },
+        {
+          "who": "shan",
+          "fr": "La brume dormait sur les rizières",
+          "id": "Kabut masih tertidur di atas sawah",
+          "zh": "薄雾还睡在稻田之上",
+          "en": "The mist still slept on the rice fields"
+        },
+        {
+          "who": "shan",
+          "fr": "Tu m'as donné une fleur de prunier",
+          "id": "Kau memberiku sekuntum bunga plum",
+          "zh": "你送我一枝梅花",
+          "en": "You gave me a plum blossom"
+        },
+        {
+          "who": "shan",
+          "fr": "Et ton silence valait mille prières",
+          "id": "Dan diammu bernilai seribu doa",
+          "zh": "你的沉默胜过千遍祈祷",
+          "en": "And your silence was worth a thousand prayers"
+        },
+        {
+          "who": "shan",
+          "fr": "Je n'avais qu'un bâton et mon courage",
+          "id": "Aku hanya punya tongkat dan keberanianku",
+          "zh": "我只有一根木棍和满腔勇气",
+          "en": "I had only a staff and my courage"
+        },
+        {
+          "who": "shan",
+          "fr": "Et tout l'honneur de mes pères",
+          "id": "Dan seluruh kehormatan leluhurku",
+          "zh": "还有祖辈全部的荣光",
+          "en": "And all the honour of my fathers"
+        }
+      ]
+    },
+    {
+      "id": "pre1",
+      "label": "Pre-Chorus",
+      "lines": [
+        {
+          "who": "shan",
+          "fr": "On me donne un balai, pas une épée",
+          "id": "Mereka memberiku sapu, bukan pedang",
+          "zh": "他们给我扫帚，而不是刀剑",
+          "en": "They hand me a broom, not a sword"
+        },
+        {
+          "who": "shan",
+          "fr": "Mais mon cœur, lui, n'a jamais plié",
+          "id": "Tapi hatiku tak pernah tunduk",
+          "zh": "可我的心从未弯折",
+          "en": "But my heart has never bent"
+        }
+      ]
+    },
+    {
+      "id": "ch1",
+      "label": "Chorus",
+      "lines": [
+        {
+          "who": "shan",
+          "fr": "Un jour viendra, je porterai la bannière",
+          "id": "Suatu hari nanti, akan kubawa panji itu",
+          "zh": "终有一天，我会举起那面军旗",
+          "en": "A day will come, I will carry the banner"
+        },
+        {
+          "who": "shan",
+          "fr": "Mille soldats marcheront derrière moi",
+          "id": "Seribu prajurit akan berbaris di belakangku",
+          "zh": "千军万马将在我身后行进",
+          "en": "A thousand soldiers will march behind me"
+        },
+        {
+          "who": "shan",
+          "fr": "Pour mon village, pour mes montagnes fières",
+          "id": "Demi desaku, demi gunung-gunungku yang megah",
+          "zh": "为了我的村庄，为了我骄傲的群山",
+          "en": "For my village, for my proud mountains"
+        },
+        {
+          "who": "shan",
+          "fr": "Un jour viendra, un jour viendra",
+          "id": "Suatu hari nanti, suatu hari nanti",
+          "zh": "终有一天，终有一天",
+          "en": "A day will come, a day will come"
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "label": "Verse 2",
+      "lines": [
+        {
+          "who": "shan",
+          "fr": "Je balaie la cour avant le soleil",
+          "id": "Kusapu halaman sebelum matahari terbit",
+          "zh": "太阳升起之前，我清扫庭院",
+          "en": "I sweep the courtyard before the sun"
+        },
+        {
+          "who": "shan",
+          "fr": "Je porte l'eau, je lave les armures",
+          "id": "Kupikul air, kucuci baju zirah",
+          "zh": "我挑水，我擦洗铠甲",
+          "en": "I carry the water, I wash the armour"
+        },
+        {
+          "who": "shan",
+          "fr": "On rit de moi, je ne dis rien, je veille",
+          "id": "Mereka menertawakanku, aku diam, aku berjaga",
+          "zh": "他们嘲笑我，我不作声，默默守望",
+          "en": "They laugh at me, I say nothing, I keep watch"
+        },
+        {
+          "who": "shan",
+          "fr": "Mais chaque coup me rend plus dur",
+          "id": "Tapi setiap pukulan membuatku lebih kuat",
+          "zh": "可每一次打击都让我更加坚强",
+          "en": "But every blow makes me harder"
+        }
+      ]
+    },
+    {
+      "id": "pre2",
+      "label": "Pre-Chorus",
+      "repeat": "pre1"
+    },
+    {
+      "id": "ch2",
+      "label": "Chorus",
+      "repeat": "ch1"
+    },
+    {
+      "id": "bridge",
+      "label": "Bridge",
+      "note": "erhu and voice only",
+      "lines": [
+        {
+          "who": "shan",
+          "fr": "La nuit, je parle à la lune",
+          "id": "Di malam hari, aku bicara pada bulan",
+          "zh": "夜里，我对着月亮说话",
+          "en": "At night, I talk to the moon"
+        },
+        {
+          "who": "shan",
+          "fr": "Elle éclaire aussi ton visage",
+          "id": "Ia juga menyinari wajahmu",
+          "zh": "它也照亮你的脸庞",
+          "en": "She lights your face as well"
+        },
+        {
+          "who": "shan",
+          "fr": "Je garde ta fleur, ma seule fortune",
+          "id": "Kusimpan bungamu, satu-satunya hartaku",
+          "zh": "我珍藏你的花，那是我唯一的财富",
+          "en": "I keep your flower, my only fortune"
+        },
+        {
+          "who": "shan",
+          "fr": "Attends-moi au bout du voyage",
+          "id": "Tunggulah aku di ujung perjalanan",
+          "zh": "在旅途的尽头等我",
+          "en": "Wait for me at the end of the journey"
+        }
+      ]
+    },
+    {
+      "id": "swell",
+      "label": "Instrumental",
+      "note": "no vocals, war drums, brass and a men's choir swell, building to a key change up a whole step"
+    },
+    {
+      "id": "ch3",
+      "label": "Final Chorus",
+      "repeat": "ch1",
+      "note": "up a whole step, a men's choir joins"
+    },
+    {
+      "id": "outro",
+      "label": "Outro",
+      "note": "soft, dizi flute",
+      "lines": [
+        {
+          "who": "shan",
+          "fr": "Un jour viendra, je reviendrai vers toi",
+          "id": "Suatu hari nanti, aku akan kembali padamu",
+          "zh": "终有一天，我会回到你身边",
+          "en": "A day will come, I will come back to you"
+        }
+      ]
+    }
+  ],
+  "subs": [
+    "id",
+    "zh",
+    "en"
+  ],
+  "about": "A village boy joins the imperial army as its lowest servant. He sweeps, carries and keeps a plum blossom for the girl at home."
+}

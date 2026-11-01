@@ -1,0 +1,235 @@
+{
+  "title": {
+    "id": "Bintang Senja",
+    "zh": "暮星",
+    "en": "The Evening Star"
+  },
+  "sung": "id",
+  "voices": {
+    "kirana": {
+      "name": "Kirana",
+      "voice": "a warm, clear female lead vocalist",
+      "heard": "female",
+      "glyph": "g-star",
+      "cls": "star",
+      "part": "the fallen star"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "label": "Intro",
+      "note": "instrumental: a solo trumpet plays the chorus melody over Rhodes piano, like a bugle call at dusk"
+    },
+    {
+      "id": "v1",
+      "label": "Verse 1",
+      "lines": [
+        {
+          "who": "kirana",
+          "id": "Aku jatuh di ujung senja",
+          "zh": "我坠落在黄昏的尽头",
+          "en": "I fell at the edge of dusk"
+        },
+        {
+          "who": "kirana",
+          "id": "Ke lembah sepi tanpa nama",
+          "zh": "落进无名的寂静山谷",
+          "en": "into a quiet valley with no name"
+        },
+        {
+          "who": "kirana",
+          "id": "Kau angkat cahaya yang hampir padam",
+          "zh": "你捧起将要熄灭的光",
+          "en": "You lifted a light that had almost died"
+        },
+        {
+          "who": "kirana",
+          "id": "Kau bawa pulang dalam genggam",
+          "zh": "把它握在手心带回家",
+          "en": "and carried it home in your hands"
+        },
+        {
+          "who": "kirana",
+          "id": "Kau tiup terompet dari menara",
+          "zh": "你在塔楼上吹响号角",
+          "en": "You blow your bugle from the tower"
+        },
+        {
+          "who": "kirana",
+          "id": "Membangunkan pagi untuk kota",
+          "zh": "为整座城唤醒清晨",
+          "en": "and wake the morning for the town"
+        },
+        {
+          "who": "kirana",
+          "id": "Namun cahayaku memudar setiap hari",
+          "zh": "可我的光一天天黯淡",
+          "en": "But every day my light grows faint"
+        },
+        {
+          "who": "kirana",
+          "id": "Bintang tak bisa lama tinggal di sini",
+          "zh": "星星不能久留人间",
+          "en": "A star cannot stay here long"
+        }
+      ]
+    },
+    {
+      "id": "pre1",
+      "label": "Pre-Chorus",
+      "lines": [
+        {
+          "who": "kirana",
+          "id": "Jangan menangis, wahai pemberani",
+          "zh": "别哭，我勇敢的人",
+          "en": "Don't cry, my brave one"
+        },
+        {
+          "who": "kirana",
+          "id": "Antar aku ke puncak tertinggi",
+          "zh": "送我登上最高的山巅",
+          "en": "Take me up to the highest peak"
+        }
+      ]
+    },
+    {
+      "id": "ch1",
+      "label": "Chorus",
+      "lines": [
+        {
+          "who": "kirana",
+          "id": "Bawa aku pulang ke langit senja",
+          "zh": "带我回到黄昏的天空",
+          "en": "Take me home to the twilight sky"
+        },
+        {
+          "who": "kirana",
+          "id": "Walau esok kita tak lagi bersama",
+          "zh": "哪怕明天我们不再相守",
+          "en": "even if tomorrow we are no longer together"
+        },
+        {
+          "who": "kirana",
+          "id": "Tiuplah terompetmu saat petang tiba",
+          "zh": "当暮色降临，吹响你的号角",
+          "en": "Blow your bugle when the evening comes"
+        },
+        {
+          "who": "kirana",
+          "id": "Akulah bintang yang menjawab namamu",
+          "zh": "我就是那颗回应你名字的星",
+          "en": "I am the star that answers to your name"
+        }
+      ]
+    },
+    {
+      "id": "v2",
+      "label": "Verse 2",
+      "lines": [
+        {
+          "who": "kirana",
+          "id": "Badai turun di jalan gunung",
+          "zh": "风暴降临在山路上",
+          "en": "The storm comes down on the mountain road"
+        },
+        {
+          "who": "kirana",
+          "id": "Serigala bayang datang mengepung",
+          "zh": "影狼从四面围拢",
+          "en": "Shadow wolves close in around us"
+        },
+        {
+          "who": "kirana",
+          "id": "Kau berdiri tegak di depanku",
+          "zh": "你挺身挡在我面前",
+          "en": "You stand tall in front of me"
+        },
+        {
+          "who": "kirana",
+          "id": "Dengan lagu yang tak pernah ragu",
+          "zh": "唱着从不动摇的歌",
+          "en": "with a song that never wavers"
+        }
+      ]
+    },
+    {
+      "id": "pre2",
+      "label": "Pre-Chorus",
+      "repeat": "pre1"
+    },
+    {
+      "id": "ch2",
+      "label": "Chorus",
+      "repeat": "ch1"
+    },
+    {
+      "id": "bridge",
+      "label": "Bridge",
+      "note": "piano and voice only",
+      "lines": [
+        {
+          "who": "kirana",
+          "id": "Di puncak dunia kau lepas tanganku",
+          "zh": "在世界之巅，你松开我的手",
+          "en": "At the top of the world you let go of my hand"
+        },
+        {
+          "who": "kirana",
+          "id": "Air matamu jatuh jadi hujan cahaya",
+          "zh": "你的泪落下，化作光之雨",
+          "en": "Your tears fall and turn to rain of light"
+        },
+        {
+          "who": "kirana",
+          "id": "Jangan lupakan aku",
+          "zh": "不要忘记我",
+          "en": "Don't forget me"
+        },
+        {
+          "who": "kirana",
+          "id": "Aku takkan pernah jauh",
+          "zh": "我永远不会远去",
+          "en": "I will never be far"
+        }
+      ]
+    },
+    {
+      "id": "solo",
+      "label": "Trumpet Solo",
+      "note": "instrumental: a long, soaring trumpet solo over the full band, building to the key change"
+    },
+    {
+      "id": "ch3",
+      "label": "Final Chorus",
+      "note": "up a whole step, a choir joins",
+      "repeat": "ch1",
+      "extra": [
+        {
+          "who": "kirana",
+          "id": "Akulah bintang yang menjawab namamu",
+          "zh": "我就是那颗回应你名字的星",
+          "en": "I am the star that answers to your name"
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "label": "Outro",
+      "note": "soft, a muted trumpet echoes the chorus melody",
+      "lines": [
+        {
+          "who": "kirana",
+          "id": "Setiap senja, aku di sana",
+          "zh": "每个黄昏，我都在那里",
+          "en": "Every dusk, I am there"
+        }
+      ]
+    }
+  ],
+  "subs": [
+    "zh",
+    "en"
+  ],
+  "about": "A star falls at twilight. A young bugler carries her back to the sky."
+}

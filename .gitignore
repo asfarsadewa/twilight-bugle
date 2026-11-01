@@ -1,0 +1,31 @@
+# Dependencies, builds and local state.
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.env
+.env.*
+.wrangler/
+.dev.vars
+.claude/
+*.log
+
+# Song takes: raw audio, stems and listening checks. A production ships its master as song/master.mp3 and
+# song/master.json.
+productions/*/song/takes/
+productions/*/song/review.html
+productions/*/song/review_notes.json
+**/_work/
+
+# Raw image generations and contact sheets. The theatre plays art/cut/. art/key-art.png is the style reference.
+productions/*/art/src/
+theatre/art/src/*
+!theatre/art/src/proscenium-2.png
+theatre/art/lobby/*.png
+theatre/art/lobby/*.jpg
+
+# Renders are rebuilt from the cue sheet.
+productions/*/render/
+
+# Blender build scratch: height maps, bakes, previews.
+theatre/blender/work/

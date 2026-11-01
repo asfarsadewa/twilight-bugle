@@ -1,0 +1,9 @@
+{
+ "name": "drop-dawn",
+ "file": "drop-dawn.webp",
+ "normal": "drop-dawn-n.webp",
+ "w": 2048,
+ "h": 1152,
+ "aspect": 1.7778,
+ "opaque": true
+}

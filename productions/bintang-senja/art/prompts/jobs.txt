@@ -1,0 +1,8 @@
+puppet-bayu 1536x1536 transparent
+puppet-kirana 1536x1536 transparent
+flat-fort 2048x1536 transparent
+flat-reeds 2304x768 transparent
+flat-peak 1536x1536 transparent
+flat-summit 2304x768 transparent
+prop-hound 1536x1024 transparent
+prop-star 1024x1024 transparent

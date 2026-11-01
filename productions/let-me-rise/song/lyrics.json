@@ -1,0 +1,103 @@
+{
+  "title": {
+    "en": "Let Me Rise",
+    "id": "Biar Aku Terbit",
+    "zh": "如日初升"
+  },
+  "sung": "en",
+  "voices": {
+    "meret": {
+      "name": "Meret",
+      "voice": "a young, warm, clear female lead vocalist",
+      "heard": "female",
+      "glyph": "g-sun",
+      "cls": "star",
+      "part": "the young scribe"
+    }
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "label": "Intro",
+      "note": "instrumental: an arched harp and a solo reed flute over soft strings, like dawn on a river"
+    },
+    {
+      "id": "v1",
+      "label": "Verse 1",
+      "lines": [
+        { "who": "meret", "en": "Down the nine stone steps at dawn", "id": "Kala fajar kuturuni sembilan anak tangga batu", "zh": "黎明时我走下九级石阶" },
+        { "who": "meret", "en": "I fill my jars where the river bends", "id": "Kuisi tempayanku di tikungan sungai", "zh": "在河湾处把陶罐盛满" },
+        { "who": "meret", "en": "I copy hymns till the sun is gone", "id": "Kusalin kidung pujian hingga mentari tenggelam", "zh": "我抄写颂歌，直到太阳西沉" },
+        { "who": "meret", "en": "I light the lamps when the long day ends", "id": "Kunyalakan pelita saat hari panjang usai", "zh": "漫长的一天结束时，我点亮灯火" },
+        { "who": "meret", "en": "I paint the heroes on the temple wall", "id": "Kulukis para pahlawan di dinding kuil", "zh": "我在神庙墙上描绘英雄" },
+        { "who": "meret", "en": "I write their names in gold, but never mine", "id": "Kutulis nama mereka dengan emas, tapi tak pernah namaku", "zh": "用金箔写下他们的名字，却从没有我的" }
+      ]
+    },
+    {
+      "id": "pre1",
+      "label": "Pre-Chorus",
+      "lines": [
+        { "who": "meret", "en": "But the boats go sailing to the sea", "id": "Namun perahu-perahu berlayar menuju laut", "zh": "可是船只一艘艘驶向大海" },
+        { "who": "meret", "en": "And every sail is calling me", "id": "Dan setiap layar memanggilku", "zh": "每一张帆都在呼唤我" }
+      ]
+    },
+    {
+      "id": "ch1",
+      "label": "Chorus",
+      "lines": [
+        { "who": "meret", "en": "Let me rise, let me rise like the sun on the river", "id": "Biar aku terbit, terbit bagai mentari di atas sungai", "zh": "让我升起，像河上的太阳一样升起" },
+        { "who": "meret", "en": "Let me sail past the reeds and away", "id": "Biar aku berlayar melewati rumpun buluh, jauh pergi", "zh": "让我驶过芦苇，远远离去" },
+        { "who": "meret", "en": "I have written in gold every hero's story", "id": "Telah kutulis dengan emas kisah setiap pahlawan", "zh": "我已用金箔写下每位英雄的故事" },
+        { "who": "meret", "en": "Now it's my turn to take the stage", "id": "Kini giliranku naik ke panggung", "zh": "现在轮到我登上舞台" }
+      ]
+    },
+    {
+      "id": "v2",
+      "label": "Verse 2",
+      "lines": [
+        { "who": "meret", "en": "Mother says the walls will keep me safe", "id": "Ibu berkata tembok ini akan menjagaku", "zh": "母亲说高墙会护我周全" },
+        { "who": "meret", "en": "That a girl should keep the flame instead", "id": "Bahwa seorang gadis cukup menjaga api saja", "zh": "女孩只该守着这盏灯火" },
+        { "who": "meret", "en": "But a flame was made to light the dark", "id": "Tapi api tercipta untuk menerangi gelap", "zh": "可火焰生来就要照亮黑暗" },
+        { "who": "meret", "en": "And I was made to find my way", "id": "Dan aku tercipta untuk menemukan jalanku", "zh": "而我生来就要找到自己的路" }
+      ]
+    },
+    { "id": "pre2", "label": "Pre-Chorus", "repeat": "pre1" },
+    { "id": "ch2", "label": "Chorus", "repeat": "ch1" },
+    {
+      "id": "bridge",
+      "label": "Bridge",
+      "note": "harp and voice only",
+      "lines": [
+        { "who": "meret", "en": "When the river rises in the night", "id": "Saat sungai meluap di tengah malam", "zh": "当河水在夜里上涨" },
+        { "who": "meret", "en": "And the sky bends low with all her stars", "id": "Dan langit merunduk dengan seluruh bintangnya", "zh": "天空带着满天繁星低垂" },
+        { "who": "meret", "en": "I will take the oar and I will go", "id": "Akan kugenggam dayung dan aku akan pergi", "zh": "我会握起船桨，启程远行" },
+        { "who": "meret", "en": "And the morning will find me far", "id": "Dan pagi akan menemukanku di kejauhan", "zh": "清晨将在远方找到我" }
+      ]
+    },
+    {
+      "id": "swell",
+      "label": "Instrumental",
+      "note": "no vocals, the full orchestra swells with horns, timpani and a wordless choir, building to a key change up a whole step"
+    },
+    {
+      "id": "ch3",
+      "label": "Final Chorus",
+      "repeat": "ch1",
+      "note": "up a whole step, a choir joins",
+      "extra": [
+        { "who": "meret", "en": "Let the whole wide world hear my name", "id": "Biar seluruh dunia mendengar namaku", "zh": "让这广阔世界听见我的名字" },
+        { "who": "meret", "en": "I am ready, let me rise", "id": "Aku siap, biar aku terbit", "zh": "我已准备好，让我升起" }
+      ]
+    },
+    {
+      "id": "outro",
+      "label": "Outro",
+      "note": "soft, harp and reed flute",
+      "lines": [
+        { "who": "meret", "en": "Like the sun on the river, let me rise", "id": "Bagai mentari di atas sungai, biar aku terbit", "zh": "像河上的太阳，让我升起" }
+      ]
+    }
+  ],
+  "subs": ["id", "zh"],
+  "about": "A young scribe paints the heroes of the temple wall. She wants a story of her own."
+}
