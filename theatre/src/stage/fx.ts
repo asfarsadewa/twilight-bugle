@@ -267,18 +267,26 @@ export class Effects {
   private trail?: Trail;
   private portal?: Portal;
   private fireworks?: Fireworks;
-  private hasFire = false;
+  /** The fire, once a production brings flame art. A failed build clears it, so the next load tries again. */
+  private fire: Promise<void> | null = null;
+
+  private async buildFire(flameUrl: string) {
+    const map = await loadTexture(flameUrl);
+    const fireMat = new THREE.MeshStandardMaterial({ map, alphaTest: 0.5, side: THREE.DoubleSide, emissive: 0xffffff, emissiveMap: map, emissiveIntensity: 1.6 });
+    const img = map.image as { width: number; height: number };
+    const fire = new Fall({ name: 'fire', count: 70, size: [0.12, 0.22], speed: [0.7, 1.1], spin: 0.6, z: [-2.2, -0.6] }, fireMat, img.width / img.height);
+    this.falls.push(fire);
+    this.group.add(fire.mesh);
+  }
 
   async build(flameUrl: string | undefined) {
     // Fire needs a production's flame art. It joins the effects the first time a production brings one.
-    if (flameUrl && !this.hasFire) {
-      this.hasFire = true;
-      const map = await loadTexture(flameUrl);
-      const fireMat = new THREE.MeshStandardMaterial({ map, alphaTest: 0.5, side: THREE.DoubleSide, emissive: 0xffffff, emissiveMap: map, emissiveIntensity: 1.6 });
-      const img = map.image as { width: number; height: number };
-      const fire = new Fall({ name: 'fire', count: 70, size: [0.12, 0.22], speed: [0.7, 1.1], spin: 0.6, z: [-2.2, -0.6] }, fireMat, img.width / img.height);
-      this.falls.push(fire);
-      this.group.add(fire.mesh);
+    if (flameUrl) {
+      this.fire ??= this.buildFire(flameUrl).catch((err) => {
+        this.fire = null;
+        throw err;
+      });
+      await this.fire;
     }
     if (this.dust) return;
     const glow = glowTexture();

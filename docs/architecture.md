@@ -110,7 +110,11 @@ The changeover planner reads the old production and the new production. It write
 
 The planner starts each moving piece 0.45 seconds after the one before it. An old piece in view stays until the crew strikes it, also when the new show has a piece with the same id. The new show brings its own copy. At an encore, the crew strikes the whole set in view and sets it again.
 
-The theatre builds the new set before it touches the stage. If a file of the new show does not load, the old show stays on stage with its song, and the seal offers another attempt.
+The theatre builds the new set before it touches the stage. If a file of the new show does not load, the old show stays on stage with its song. The seal then offers another attempt.
+
+All pieces of a show load in parallel. When a programme opens, the theatre starts to load the art of its show. The song loads during the preroll. If the song is late, the stage waits for it at the first note.
+
+The shaders compile in the background before the first frame. They compile for the render targets of the post-processing chain, because the frames render into those targets.
 
 The entr'acte sound does not exist yet. The plan uses rope creaks, pulley clicks and wood knocks from ElevenLabs. A short instrumental bridge from Lyria can play under them.
 

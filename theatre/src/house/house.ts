@@ -105,10 +105,13 @@ export interface HouseParts {
  * Loads the house that theatre/blender/build_house.py builds and bakes: the carved arch, the stage boards, the
  * footlight lip and fender, and the orchestra rail. Its `opening` marker gives the stage opening and floor height.
  */
-export async function buildHouse(url: string, renderer: THREE.WebGLRenderer): Promise<HouseParts> {
+export async function buildHouse(url: string, renderer: THREE.WebGLRenderer, onProgress?: (k: number) => void): Promise<HouseParts> {
   const root = new THREE.Group();
   root.name = 'house';
-  const gltf = await new GLTFLoader().loadAsync(url);
+  // The model is one large file, so its bytes are the progress.
+  const gltf = await new GLTFLoader().loadAsync(url, (e) => {
+    if (e.lengthComputable && e.total) onProgress?.(e.loaded / e.total);
+  });
   const house = gltf.scene;
   const u = house.getObjectByName('opening')!.userData as { floor: number; openW: number; openH: number; prosceniumW: number; prosceniumH: number };
   STAGE.floor = u.floor;

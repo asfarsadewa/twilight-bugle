@@ -202,11 +202,16 @@ export class Piece {
    * Frees what this piece owns: its geometry, its strings, and the painted-face and shadow materials of each
    * cutout. The back, edge, rod and wire materials are shared by every piece, and the texture cache owns the art.
    */
-  dispose() {
+  /** Takes the piece and its strings off the stage. It keeps its resources until `dispose`. */
+  detach() {
     this.root.removeFromParent();
+    this.strings?.removeFromParent();
+  }
+
+  dispose() {
+    this.detach();
     if (this.strings) {
       // The strings hang in the scene, outside the root, so the traversal below never reaches them.
-      this.strings.removeFromParent();
       this.strings.geometry.dispose();
       (this.strings.material as LineMaterial).dispose();
     }
@@ -234,9 +239,11 @@ export class Puppet extends Piece {
     this.h = P.height;
     this.w = bodyPart.sheet[0] * k;
     const thick = this.spec.thick ?? 0.02;
-    const body = await cardboardMesh(bodyPart.art, this.w, this.h, { thick, anchor: 'bottom', renderer });
-    this.faceMeshes.push(body);
-    this.body.add(body);
+    const mountBody = async () => {
+      const body = await cardboardMesh(bodyPart.art, this.w, this.h, { thick, anchor: 'bottom', renderer });
+      this.faceMeshes.push(body);
+      this.body.add(body);
+    };
 
     const mount = async (key: 'head' | 'armA' | 'armB', part: PartSpec | undefined, defaultZ: number) => {
       if (!part) return;
@@ -257,9 +264,8 @@ export class Puppet extends Piece {
       this.faceMeshes.push(mesh);
       this.body.add(joint);
     };
-    await mount('head', P.head, -0.6);
-    await mount('armA', P.armA, 1);
-    await mount('armB', P.armB, 1.1);
+    // The body and the parts load at once. Each part's place comes from its spec, so the order does not matter.
+    await Promise.all([mountBody(), mount('head', P.head, -0.6), mount('armA', P.armA, 1), mount('armB', P.armB, 1.1)]);
     this.addRigging();
   }
 

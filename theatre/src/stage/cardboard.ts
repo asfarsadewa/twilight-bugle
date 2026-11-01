@@ -201,8 +201,7 @@ export async function cardboardMesh(
   h: number,
   opts: { thick?: number; anchor?: 'bottom' | 'center' | [number, number]; glow?: number; renderer?: THREE.WebGLRenderer; silhouette?: { color: number } } = {},
 ): Promise<THREE.Mesh> {
-  const map = await loadTexture(art.url, opts.renderer);
-  const normal = art.normalUrl ? await loadTexture(art.normalUrl, opts.renderer) : null;
+  const [map, normal] = await Promise.all([loadTexture(art.url, opts.renderer), art.normalUrl ? loadTexture(art.normalUrl, opts.renderer) : null]);
   if (normal) normal.colorSpace = THREE.NoColorSpace;
   const geo = cardboardGeometry(art.shapes, w, h, opts.thick ?? 0.02, opts.anchor ?? 'bottom');
   const face = faceMaterial(map, opts.glow ?? 0, !!art.opaque, normal, opts.silhouette);

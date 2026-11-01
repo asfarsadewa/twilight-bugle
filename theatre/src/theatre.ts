@@ -9,6 +9,7 @@ import { PosterWall } from './house/posters.ts';
 import { Rig } from './house/rig.ts';
 import { planChangeover } from './changeover.ts';
 import { Effects } from './stage/fx.ts';
+import { loadTexture } from './stage/cardboard.ts';
 import { makePiece, type Piece, POSE, STAGE, stringMaterial } from './stage/piece.ts';
 import { Post } from './render/post.ts';
 import { Surtitles } from './ui/surtitles.ts';
@@ -51,7 +52,9 @@ export class Theatre {
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure = 1.0;
     this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    // three.js replaces PCFSoftShadowMap with PCFShadowMap at the first shadow render. Set it here, so shaders
+    // compiled before that render match the ones the frames use.
+    this.renderer.shadowMap.type = THREE.PCFShadowMap;
     container.append(this.renderer.domElement);
     this.surtitles = new Surtitles(container, subs);
     const pmrem = new THREE.PMREMGenerator(this.renderer);
@@ -61,8 +64,9 @@ export class Theatre {
     this.scene.fog = new THREE.FogExp2(0x05060a, 0.018);
   }
 
-  async init(houseUrl: string) {
-    this.house = await buildHouse(houseUrl, this.renderer);
+  /** Builds the house. `onProgress` gets the share of the model downloaded, 0..1. */
+  async init(houseUrl: string, onProgress?: (k: number) => void) {
+    this.house = await buildHouse(houseUrl, this.renderer, onProgress);
     this.scene.add(this.house.root);
     this.rig = new Rig();
     this.scene.add(this.rig.group);
@@ -72,16 +76,20 @@ export class Theatre {
     this.setLineResolution();
   }
 
-  /** Hangs one poster for each show on the house wall and frames the lobby view to fit them all. */
-  async hang(shows: Production[]) {
+  /**
+   * Hangs one poster for each show on the house wall and frames the lobby view to fit them all. Then it compiles
+   * the shaders of the first frame. `onProgress` gets 0..1: the posters fill the first half, the shaders the rest.
+   */
+  async hang(shows: Production[], onProgress?: (k: number) => void) {
     this.posters = new PosterWall(this.house.width / 2, this.house.height / 2);
-    await this.posters.build(shows);
+    await this.posters.build(shows, (k) => onProgress?.(k / 2));
     this.scene.add(this.posters.group);
     const half = Math.tan(THREE.MathUtils.degToRad(this.wall.fov / 2)) * (this.w / this.h);
     const d = (this.posters.reach + 0.45) / half;
     this.wall.look.set(0, this.posters.y - 0.05, this.posters.z);
     this.wall.pos.set(0, this.posters.y + 0.25, this.posters.z + d);
-    await this.renderer.compileAsync(this.scene, this.camera);
+    await this.post.warm(this.renderer, this.scene, this.camera);
+    onProgress?.(1);
   }
 
   /** Each poster's outline on screen, as fractions of the frame. */
@@ -96,17 +104,13 @@ export class Theatre {
    * The new set is built off stage first. If any of it fails to load, this rejects and the stage stays as it was.
    */
   async load(p: Production, from?: { production: Production; at: number }) {
-    const incoming: Piece[] = [];
-    try {
-      for (const spec of p.pieces) {
-        const piece = makePiece(spec);
-        incoming.push(piece);
-        await piece.build(this.renderer);
-      }
-      await this.fx.build(p.fx?.flame);
-    } catch (err) {
+    // Every piece loads at once, so the files come down in parallel. All builds finish before the stage changes.
+    const incoming = p.pieces.map((spec) => makePiece(spec));
+    const built = await Promise.allSettled([...incoming.map((piece) => piece.build(this.renderer)), this.fx.build(p.fx?.flame)]);
+    const failure = built.find((r) => r.status === 'rejected');
+    if (failure) {
       for (const piece of incoming) piece.dispose();
-      throw err;
+      throw failure.reason;
     }
 
     const tl = new Timeline();
@@ -117,13 +121,17 @@ export class Theatre {
     // new piece with the same id (an encore, or a common name such as "moon") never takes its channels.
     // Pieces out of view go at once, so pieces never pile up from show to show.
     const outgoing: Piece[] = [];
+    // Pieces that leave now are freed after the new show compiles. Until then their materials keep the shared
+    // shader programs alive, so the new show reuses them and does not compile them again.
+    const retired: Piece[] = [];
     let changeover = 0;
     if (from) {
       for (const piece of old.values()) {
         const was = piece.id;
         const out = oldTl.value(`${was}.out`, from.at, piece.spec.startIn ? 0 : 1);
         if (out >= 0.99) {
-          piece.dispose();
+          piece.detach();
+          retired.push(piece);
           continue;
         }
         piece.rename(`old/${was}`);
@@ -133,7 +141,10 @@ export class Theatre {
         outgoing.push(piece);
       }
     } else {
-      for (const piece of old.values()) piece.dispose();
+      for (const piece of old.values()) {
+        piece.detach();
+        retired.push(piece);
+      }
     }
     for (const piece of incoming) {
       this.scene.add(piece.root);
@@ -171,6 +182,21 @@ export class Theatre {
     this.surtitles.load(p);
     this.setLineResolution();
     await this.compile();
+    for (const piece of retired) piece.dispose();
+  }
+
+  /**
+   * Starts to load a production's art in the background. A later `load` of it finds the files in the cache.
+   * The live theatre calls it when a programme opens, so the art loads while the audience reads.
+   */
+  prefetch(p: Production) {
+    for (const s of p.pieces) {
+      const P = s.puppet;
+      const arts = P ? [P.body, P.head, P.armA, P.armB].flatMap((part) => (part ? [part.art] : [])) : s.art ? [s.art] : [];
+      for (const art of arts) {
+        for (const url of [art.url, art.normalUrl]) if (url) loadTexture(url, this.renderer).catch(() => {});
+      }
+    }
   }
 
   /** The house state before any production cue: curtain shut, house lights up, footlights on. */
@@ -198,7 +224,7 @@ export class Theatre {
         }
       }
     });
-    await this.renderer.compileAsync(this.scene, this.camera);
+    await this.post.warm(this.renderer, this.scene, this.camera);
     this.post.render(0);
     for (const o of shown) o.visible = false;
     this.frame(this.start);

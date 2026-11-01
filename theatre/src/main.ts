@@ -62,24 +62,13 @@ async function boot() {
   } catch {
     return;
   }
-  // Progress: three steps of the house, plus every file the loaders fetch.
-  let steps = 0, items = 0, total = 0;
-  const report = () => door.progress((steps + (total ? items / total : 0)) / 4);
-  DefaultLoadingManager.onProgress = (_url, loaded, all) => {
-    items = loaded;
-    total = all;
-    report();
-  };
+  // Progress: the house model by its bytes, the shows, the posters, the shaders. The first frame completes it.
+  const span = (from: number, to: number) => (k: number) => door.progress(from + (to - from) * k);
   try {
-    await theatre.init('/house/house.glb');
-    steps++;
-    report();
+    await theatre.init('/house/house.glb', span(0, 0.6));
     shows = (await Promise.all(repertoire.map((r) => r.load()))).sort((a, b) => a.no - b.no);
-    steps++;
-    report();
-    await theatre.hang(shows);
-    steps++;
-    report();
+    door.progress(0.65);
+    await theatre.hang(shows, span(0.65, 0.95));
   } catch (err) {
     console.error(err);
     door.say('The theatre did not load. Reload the page to try again.');
@@ -244,6 +233,8 @@ function openProgramme(p: Production) {
   // Focus moves onto the programme, to its seal.
   before = document.activeElement instanceof HTMLElement && document.activeElement !== document.body ? document.activeElement : null;
   ($('raise') as HTMLButtonElement).focus({ preventScroll: true });
+  // The crew starts to fetch the show's art while the audience reads the programme.
+  theatre.prefetch(p);
 }
 
 /** Scales the programme down so all of it fits the window. */
@@ -269,11 +260,13 @@ function closeProgramme() {
   else ($('raise') as HTMLButtonElement).blur();
 }
 
-/** Loads a show onto the stage: art, shaders and the song. With `from`, the changeover starts from that show. */
+/**
+ * Loads a show onto the stage: art and shaders. With `from`, the changeover starts from that show.
+ * The song loads during the preroll. If it is late, the stage waits for it at the first note: the song is the clock.
+ */
 async function prepare(p: Production, from?: { production: Production; at: number }) {
   audio.pause();
   setSong(p);
-  const buffered = audio.readyState >= 4 ? Promise.resolve() : new Promise((r) => audio.addEventListener('canplaythrough', r, { once: true }));
   try {
     await theatre.load(p, from);
   } catch (err) {
@@ -281,8 +274,6 @@ async function prepare(p: Production, from?: { production: Production; at: numbe
     if (current) setSong(current);
     throw err;
   }
-  // Some phones fetch audio only on play. The wait has a limit, so the seal never sticks.
-  await Promise.race([buffered, new Promise((r) => setTimeout(r, 5000))]);
   current = p;
   state = 'set';
   clock = { wallStart: 0, showStart: 0, paused: true, pausedAt: theatre.start };

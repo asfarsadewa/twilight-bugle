@@ -40,9 +40,17 @@ export class PosterWall {
     this.y = centreY;
   }
 
-  async build(shows: Production[]) {
+  /** Hangs the posters. `onProgress` gets the share of posters printed, 0..1. All of them print at once. */
+  async build(shows: Production[], onProgress?: (k: number) => void) {
     const order = [...shows].sort((a, b) => a.no - b.no);
     const ids: (Production | null)[] = order.length % 2 ? [...order, null] : order;
+    let printed = 0;
+    const prints = ids.map((p) =>
+      (p ? printPoster(p) : blankPoster()).then((canvas) => {
+        onProgress?.(++printed / ids.length);
+        return canvas;
+      }),
+    );
     const half = ids.length / 2;
     const rows = half > 2 ? 2 : 1;
     const s = rows === 1 ? 1 : 0.62;
@@ -74,7 +82,7 @@ export class PosterWall {
         g.add(bar);
       }
 
-      const tex = new THREE.CanvasTexture(p ? await printPoster(p) : await blankPoster());
+      const tex = new THREE.CanvasTexture(await prints[i]!);
       tex.colorSpace = THREE.SRGBColorSpace;
       tex.anisotropy = 8;
       const paper = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.85, emissive: 0xffffff, emissiveMap: tex, emissiveIntensity: 0.06 });

@@ -79,6 +79,36 @@ export class Post {
     this.composer.setSize(w, h);
   }
 
+  /**
+   * Compiles the shaders of a frame in the background, so the first frame does not stall the page. The scene
+   * renders into the composer's targets, so its shaders compile for a render target, which needs other shader
+   * variants than the screen. Each pass's own materials compile on a stand-in quad. The last pass draws to the
+   * screen, so its materials compile for the screen.
+   */
+  async warm(renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.Camera) {
+    // The stand-in uses the passes' own full-screen triangle, so its shader variants are the ones the passes use.
+    const fs = this.composer.passes.map((pass) => (pass as Pass & { _fsQuad?: { _mesh?: THREE.Mesh } })._fsQuad?._mesh).find(Boolean);
+    const quad = fs?.geometry ?? new THREE.PlaneGeometry(2, 2);
+    const stand = (passes: Pass[]) => {
+      const s = new THREE.Scene();
+      for (const pass of passes) {
+        for (const v of Object.values(pass)) {
+          for (const m of Array.isArray(v) ? v : [v]) if (m instanceof THREE.Material) s.add(new THREE.Mesh(quad, m));
+        }
+      }
+      return s;
+    };
+    const passes = this.composer.passes;
+    const was = renderer.getRenderTarget();
+    renderer.setRenderTarget(this.composer.readBuffer);
+    const jobs = [renderer.compileAsync(scene, camera), renderer.compileAsync(stand(passes.slice(0, -1)), camera)];
+    renderer.setRenderTarget(null);
+    jobs.push(renderer.compileAsync(stand(passes.slice(-1)), camera));
+    renderer.setRenderTarget(was);
+    await Promise.all(jobs);
+    if (!fs) quad.dispose();
+  }
+
   /** Focus distance in world units from the camera, and the aperture (0 is pin sharp). */
   focus(distance: number, aperture: number) {
     const u = this.bokeh.uniforms as Record<string, { value: number }>;
