@@ -55,9 +55,11 @@ const pieces: PieceSpec[] = [
     puppet: {
       height: 0.95, faces: 'right',
       body: { art: shitou[2]!, sheet: sheet(shitou[2]!), pivot: [0.5, 1] },
-      head: { art: shitou[0]!, sheet: sheet(shitou[0]!), pivot: [0.62, 0.9], attach: [0.5, 0.03], z: -0.6, string: [0.52, 0.07] },
-      armA: { art: shitou[1]!, sheet: sheet(shitou[1]!), pivot: [0.62, 0.355], attach: [0.13, 0.08], z: 1, rest: 0, string: [0.42, 0.45] },
-      armB: { art: shitou[3]!, sheet: sheet(shitou[3]!), pivot: [0.2, 0.12], attach: [0.83, 0.08], z: 1.1, rest: -20, string: [0.84, 0.9] },
+      // Each pivot is the brass pin painted on the part. The arm pins sit on the shoulder pins of the body. The body has
+      // no neck pin, so the head sits behind the body's collar and its own collar stays hidden.
+      head: { art: shitou[0]!, sheet: sheet(shitou[0]!), pivot: [0.624, 0.909], attach: [0.47, 0.088], z: -0.6, string: [0.52, 0.07] },
+      armA: { art: shitou[1]!, sheet: sheet(shitou[1]!), pivot: [0.752, 0.382], attach: [0.215, 0.09], z: 1, rest: 0, string: [0.42, 0.45] },
+      armB: { art: shitou[3]!, sheet: sheet(shitou[3]!), pivot: [0.184, 0.096], attach: [0.624, 0.102], z: 1.1, rest: -20, string: [0.84, 0.9] },
     },
   },
   { id: 'waves1', kind: 'flat', art: art('flat-waves'), width: 6.6, home: { x: -0.2, y: -1.06, z: -0.95 }, route: 'trap', rod: true, startIn: true },
