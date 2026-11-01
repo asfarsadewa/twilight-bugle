@@ -487,7 +487,7 @@ const production: Production = {
   postroll: 7,
   surtitles: { main: 'id', second: 'zh' },
   bill: {
-    about: 'A song in English. A young scribe paints the heroes of the temple wall. She wants a story of her own.',
+    about: 'A young scribe paints the heroes of the temple wall. She wants a story of her own. She sings the song in English.',
     cast: [['Meret, a scribe', 'Voice'], ['Her mother', 'On a slide'], ['The Sky Mother', 'On strings'], ['The heroes of the wall', 'On rods']],
     scenes: ['The temple steps at dawn', 'The river feast', 'The flood', 'Sunrise'],
   },

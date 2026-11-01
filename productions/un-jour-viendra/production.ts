@@ -507,7 +507,7 @@ const production: Production = {
   postroll: 7,
   surtitles: { main: 'id', second: 'zh' },
   bill: {
-    about: 'A song in French. A village boy joins the imperial army as its lowest servant. His spirit never goes out.',
+    about: 'A village boy joins the imperial army as its lowest servant. His spirit never goes out. He sings the song in French.',
     cast: [['Shan, a village boy', 'Voice'], ['Mei', 'On a slide'], ['The ink dragon', 'On strings'], ['The army of his dream', 'On rods']],
     scenes: ['Cloud Brook at dawn', 'The camp below the wall', 'The moon', 'The dream'],
   },

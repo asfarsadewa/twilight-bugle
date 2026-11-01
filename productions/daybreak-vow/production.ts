@@ -489,7 +489,7 @@ const production: Production = {
   postroll: 7,
   fx: { flame: urls['./art/cut/prop-flame.webp']! },
   bill: {
-    about: 'A duet in Mandarin for a prince and a princess. A war keeps them apart until daybreak.',
+    about: 'A war keeps a prince and a princess apart until daybreak. They sing the song as a duet in Mandarin.',
     cast: [['Prince Aurel', 'Tenor'], ['Princess Ilune', 'Soprano'], ['The Hollow Crown', 'On strings'], ['The Umbral Host', 'On strings']],
     scenes: ['Ilvara under the Long Night', 'The snows of the Sunward Marches', 'Daybreak'],
   },

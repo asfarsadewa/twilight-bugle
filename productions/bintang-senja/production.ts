@@ -457,7 +457,7 @@ const production: Production = {
   postroll: 7,
   surtitles: { main: 'id', second: 'zh' },
   bill: {
-    about: 'A song in Indonesian. A star falls at twilight. A young bugler carries her back to the sky.',
+    about: 'A star falls at twilight. A young bugler carries her back to the sky. She sings the song in Indonesian.',
     cast: [['Kirana, a fallen star', 'Voice'], ['Bayu, a bugler', 'Trumpet'], ['The Hollow Hounds', 'On rods']],
     scenes: ['Emberhill at dusk', 'The reeds of the valley', 'The Stair of Winds'],
   },
