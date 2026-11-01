@@ -218,6 +218,8 @@ function fillBill(p: Production) {
   $('bill-scenes').innerHTML = `<em>Scenery</em>${p.bill.scenes.join(' · ')}`;
   const s = p.surtitles ?? { main: 'zh', second: 'id' };
   $('bill-subs').textContent = `The surtitles are in ${LANG[s.main]} and ${LANG[s.second]}.`;
+  // A show with English surtitles needs no English button.
+  $('bill-en-toggle').hidden = s.main === 'en' || s.second === 'en';
 }
 
 /** The seal says what it does for this show: raise, resume or encore. */
