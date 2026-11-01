@@ -305,10 +305,10 @@ export class Theatre {
     () => this.scale(0.8),
   ];
 
-  /** Draws fewer pixels: the pixel ratio times k, down to 0.45. */
+  /** Draws fewer pixels: the pixel ratio times k, down to 0.35. */
   private scale(k: number): boolean {
     const pr = this.renderer.getPixelRatio() * k;
-    if (pr < 0.45) return false;
+    if (pr < 0.35) return false;
     this.renderer.setPixelRatio(pr);
     this.post.composer.setPixelRatio(pr);
     this.post.setSize(this.w, this.h);
