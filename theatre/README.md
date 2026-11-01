@@ -89,7 +89,7 @@ The theatre runs on Cloudflare Workers at https://twilightbugle.asfarlab.fun. Th
 | `/og/site.jpg`, `/og/<id>.jpg` | Share cards, 1200 by 630 |
 | `/api/gate`, `/api/enter` | The Turnstile gate |
 
-The door is the loading screen. The neon sign lights one letter at a time, and a line of light grows under the doors. When the house is ready, a click on the doors opens it.
+The door is the loading screen. The neon sign lights one letter at a time. A line of light grows under the doors. When the house is ready, a click on the doors opens it.
 
 After a new show joins, write the share cards again:
 
@@ -107,7 +107,7 @@ bun run build
 wrangler deploy
 ```
 
-The gate uses the Turnstile widget "orders". It is on: the Worker has the secrets `TURNSTILE_SECRET` and `PASS_KEY`. A visitor passes the check at the door, and the Worker then sets a pass for 12 hours. Without the pass, the Worker refuses the songs, the house and the art. If either secret is removed, the gate turns off and the door opens without a check.
+The gate uses the Turnstile widget "orders". It is on: the Worker has the secrets `TURNSTILE_SECRET` and `PASS_KEY`. A visitor passes the check at the door. The Worker then sets a pass for 12 hours. Without the pass, the Worker refuses the songs, the house and the art. If you remove either secret, the gate turns off. The door then opens without a check. If a check fails, the door says what failed. A click on the doors starts a new check.
 
 ## Page settings
 

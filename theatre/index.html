@@ -47,8 +47,9 @@
 
   /* The playbill: a printed bill pinned in front of the closed curtain while the house fills. */
   #lobby { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center;
-    background: radial-gradient(ellipse at 50% 55%, rgba(20,8,6,0.15), rgba(0,0,0,0.6)); transition: opacity 1.6s ease, visibility 1.6s; }
-  #lobby.away { opacity: 0; visibility: hidden; }
+    background: radial-gradient(ellipse at 50% 55%, rgba(20,8,6,0.15), rgba(0,0,0,0.6)); transition: opacity 1.6s ease, visibility 0s; }
+  /* The programme is visible at once when it opens, so its seal can take focus. It hides after the fade. */
+  #lobby.away { opacity: 0; visibility: hidden; transition: opacity 1.6s ease, visibility 0s linear 1.6s; }
   #lobby.away .bill { transform: translateY(14vh) rotate(-0.6deg); }
   .bill { position: relative; width: min(30rem, 86vw); padding: 2.4rem 2.2rem 2rem; color: var(--ink); text-align: center;
     transform: rotate(-0.6deg); transition: transform 1.6s cubic-bezier(.5,0,.75,0);
@@ -170,7 +171,7 @@
   #door .doors::before { content: ''; position: absolute; left: 50%; top: 4%; bottom: 0; width: 0.5cqw; transform: translateX(-50%);
     background: linear-gradient(to bottom, rgba(255, 196, 120, 0), rgba(255, 190, 110, 0.9) 30%, rgba(255, 210, 140, 1));
     opacity: calc(0.15 + 0.85 * var(--p)); filter: blur(0.25cqw); box-shadow: 0 0 calc(1cqw + 3cqw * var(--p)) rgba(255, 170, 80, 0.75); }
-  #door.ready .doors { cursor: pointer; }
+  #door.ready .doors, #door.retry .doors { cursor: pointer; }
   #door.ready .doors::before { animation: breathe 3.2s ease-in-out infinite; }
   @keyframes breathe { 50% { box-shadow: 0 0 6cqw rgba(255, 175, 90, 0.95); } }
   #door .doors:focus-visible { outline: 2px solid rgba(255, 200, 140, 0.7); outline-offset: 0.6cqw; }
@@ -245,7 +246,7 @@
       <div class="load" aria-hidden="true"><i id="load-bar"></i><span id="load-pct">0%</span></div>
       <small>Strings, rods and real light</small></div>
   </div>
-  <div id="frame"><div id="wall" aria-label="The repertoire"></div></div>
+  <div id="frame"><div id="wall" aria-label="The repertoire" inert></div></div>
   <div id="lobby" class="away">
     <div class="billwrap"><article class="bill" aria-label="Playbill">
       <span class="wear"></span>
@@ -271,7 +272,7 @@
     </article></div>
   </div>
   <div id="wallnote"><div class="slip"><b>The Repertoire</b><span>Pick a poster to read its programme.</span></div></div>
-  <div id="interval" aria-live="polite"><div class="slip"><b>Intermission</b><span>Click the stage to resume.</span><button id="to-wall">See the posters</button></div></div>
+  <div id="interval" aria-live="polite" inert><div class="slip"><b>Intermission</b><span>Click the stage to resume.</span><button id="to-wall">See the posters</button></div></div>
   <div id="turn"><div class="slip"><span>Turn your phone sideways for a larger stage.</span></div></div>
   <script type="module" src="/src/main.ts"></script>
 </body>

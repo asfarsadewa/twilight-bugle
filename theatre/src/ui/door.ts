@@ -11,7 +11,7 @@ const BROKEN = 9;
 
 declare global {
   interface Window {
-    turnstile?: { render(el: HTMLElement, opts: Record<string, unknown>): string; remove(id: string): void };
+    turnstile?: { render(el: HTMLElement, opts: Record<string, unknown>): string; reset(id: string): void; remove(id: string): void };
   }
 }
 
@@ -22,6 +22,7 @@ export class Door {
   private line = document.getElementById('door-line')!;
   private letters: HTMLElement[] = [];
   private shown = 0;
+  private waiting: AbortController | null = null;
 
   constructor() {
     for (const [i, ch] of [...SIGN].entries()) {
@@ -48,36 +49,102 @@ export class Door {
   }
 
   /**
-   * The Turnstile gate. Resolves when the Worker accepts a token, or at once if the site has no gate.
-   * Rejects if the check fails, with the reason shown on the door.
+   * After a failure the doors become the retry control: the line says what failed, and a click on the doors
+   * (or Enter on them) tries again. Resolves on that click.
+   */
+  private retry(text: string): Promise<void> {
+    this.say(`${text} Click the doors to try again.`);
+    this.el.classList.add('retry');
+    this.doors.disabled = false;
+    const ac = new AbortController();
+    this.waiting = ac;
+    return new Promise((resolve) => {
+      this.doors.addEventListener(
+        'click',
+        () => {
+          this.endRetry();
+          resolve();
+        },
+        { once: true, signal: ac.signal },
+      );
+    });
+  }
+
+  /** Takes the retry off the doors. A retry that nobody clicked never resolves. */
+  private endRetry() {
+    this.waiting?.abort();
+    this.waiting = null;
+    this.doors.disabled = true;
+    this.el.classList.remove('retry');
+  }
+
+  /**
+   * The Turnstile gate. Resolves when the Worker accepts a token, or at once if the site has no gate. It never
+   * gives up: each failure (network, script, challenge, verification) offers a retry on the doors, and the
+   * widget's own later success also lets the visitor in.
    */
   async gate(): Promise<void> {
-    let sitekey = '';
-    try {
-      const r = await fetch('/api/gate', { headers: { accept: 'application/json' } });
-      if (r.ok && (r.headers.get('content-type') ?? '').includes('json')) sitekey = ((await r.json()) as { sitekey?: string }).sitekey ?? '';
-    } catch {
-      sitekey = '';
+    let sitekey: string | null = null;
+    while (sitekey === null) {
+      try {
+        const r = await fetch('/api/gate', { headers: { accept: 'application/json' } });
+        // No gate endpoint (a dev server) means no gate.
+        sitekey = r.ok && (r.headers.get('content-type') ?? '').includes('json') ? (((await r.json()) as { sitekey?: string }).sitekey ?? '') : '';
+      } catch {
+        await this.retry('The theatre does not answer.');
+      }
     }
     if (!sitekey) return;
     this.say('Checking that you are a person.');
-    await loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit');
-    const token = await new Promise<string>((resolve, reject) => {
-      window.turnstile!.render(document.getElementById('gate')!, {
-        sitekey,
-        action: 'enter',
-        theme: 'dark',
-        appearance: 'interaction-only',
-        callback: resolve,
-        'error-callback': () => reject(new Error('turnstile')),
-        'expired-callback': () => reject(new Error('expired')),
-      });
-    });
-    const r = await fetch('/api/enter', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token }) });
-    if (!r.ok) {
-      this.say('The check failed. Reload the page to try again.');
-      throw new Error('gate');
+    while (!window.turnstile) {
+      await loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit').catch(() => {});
+      if (!window.turnstile) {
+        await this.retry('The check did not load.');
+        this.say('Checking that you are a person.');
+      }
     }
+    // Each token the widget gives feeds the current wait, so a success after an error still counts.
+    let take: (token: string) => void = () => {};
+    let next = new Promise<string>((r) => (take = r));
+    let failed: Promise<void> | null = null;
+    const fail = (text: string) => {
+      failed ??= this.retry(text).then(() => {
+        failed = null;
+        this.say('Checking that you are a person.');
+        window.turnstile!.reset(widget);
+      });
+    };
+    const widget = window.turnstile.render(document.getElementById('gate')!, {
+      sitekey,
+      action: 'enter',
+      theme: 'dark',
+      appearance: 'interaction-only',
+      callback: (token: string) => take(token),
+      'error-callback': () => fail('The check failed.'),
+      'timeout-callback': () => fail('The check timed out.'),
+      'expired-callback': () => window.turnstile!.reset(widget),
+    });
+    for (;;) {
+      const token = await next;
+      next = new Promise<string>((r) => (take = r));
+      if (failed) {
+        // The widget recovered on its own while the doors offered a retry.
+        failed = null;
+        this.endRetry();
+        this.say('Checking that you are a person.');
+      }
+      let ok = false;
+      try {
+        const r = await fetch('/api/enter', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token }) });
+        ok = r.ok;
+      } catch {
+        ok = false;
+      }
+      if (ok) break;
+      // A token works once. A new attempt needs a fresh challenge.
+      fail('The check failed.');
+    }
+    window.turnstile.remove(widget);
     document.getElementById('gate')!.replaceChildren();
     this.say('The theatre is opening.');
   }

@@ -185,11 +185,11 @@ function cues({ tl, section, line }: CueContext) {
   playBugle(L(4) + 0.2, 3.6);
   follow('bayu', L(4), 0.5, 0.8, 0xfff0d8);
   // 6 Namun cahayaku memudar setiap hari — days pass on the sky. Her light fades.
+  // Dusk, morning, dusk. Line 7's night takes over from the last dusk.
   const d0 = L(6) - 0.4;
-  [0, 1].forEach((n) => {
-    sky(d0 + n * 2.4, 1.1, ...DUSK, [0.75, 1.0, 0.5]);
-    sky(d0 + n * 2.4 + 1.2, 1.1, ...MORNING, [0.8, 0.85, 0.55], 0.22);
-  });
+  sky(d0, 1.1, ...DUSK, [0.75, 1.0, 0.5]);
+  sky(d0 + 1.2, 1.1, ...MORNING, [0.8, 0.85, 0.55], 0.22);
+  sky(d0 + 2.4, 1.1, ...DUSK, [0.75, 1.0, 0.5]);
   kiranaLight(0.4, L(6), 4.5);
   k.move('kirana.head', -10, L(6) + 1, 2);
   follow('kirana', L(6) - 0.2, 0.6, 0.75);

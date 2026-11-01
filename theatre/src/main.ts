@@ -70,15 +70,21 @@ async function boot() {
     total = all;
     report();
   };
-  await theatre.init('/house/house.glb');
-  steps++;
-  report();
-  shows = (await Promise.all(repertoire.map((r) => r.load()))).sort((a, b) => a.no - b.no);
-  steps++;
-  report();
-  await theatre.hang(shows);
-  steps++;
-  report();
+  try {
+    await theatre.init('/house/house.glb');
+    steps++;
+    report();
+    shows = (await Promise.all(repertoire.map((r) => r.load()))).sort((a, b) => a.no - b.no);
+    steps++;
+    report();
+    await theatre.hang(shows);
+    steps++;
+    report();
+  } catch (err) {
+    console.error(err);
+    door.say('The theatre did not load. Reload the page to try again.');
+    return;
+  }
   for (const p of shows) wallButton(p);
   theatre.view = 1;
   // One frame warms the house behind the door. The render loop waits for the doors, so the street stays smooth.
@@ -106,6 +112,10 @@ let state: 'set' | 'playing' | 'paused' | 'ended' = 'set';
 let chosen: Production | null = null;
 /** True while the crew changes the set. Nothing else starts until it ends. */
 let busy = false;
+/** True after the crew failed to set the chosen show. The seal then offers another attempt. */
+let failed = false;
+/** The control that had focus before the programme opened. Focus goes back to it when the programme closes. */
+let before: HTMLElement | null = null;
 let clock = { wallStart: 0, showStart: 0, paused: true, pausedAt: 0 };
 /** The camera between the show (0) and the house wall (1). */
 let move = { from: 1, to: 1, t0: 0, dur: 1 };
@@ -116,9 +126,11 @@ function toView(to: number, dur: number) {
   setWall();
 }
 
-/** The wall is live when the camera is on it and no programme is open. */
+/** The wall is live when the camera is on it and no programme is open. Otherwise its posters take no focus. */
 function setWall() {
-  document.body.classList.toggle('at-wall', move.to === 1 && !chosen);
+  const live = move.to === 1 && !chosen;
+  document.body.classList.toggle('at-wall', live);
+  $('wall').inert = !live;
 }
 
 function showTime(): number {
@@ -168,10 +180,8 @@ function wallButton(p: Production) {
   b.onpointerleave = () => hover(false);
   b.onfocus = () => hover(true);
   b.onblur = () => hover(false);
-  b.onclick = () => {
-    b.blur();
-    openProgramme(p);
-  };
+  // The programme takes focus from the poster, and gives it back when it closes.
+  b.onclick = () => openProgramme(p);
   $('wall').append(b);
 }
 
@@ -206,7 +216,9 @@ function updateSeal() {
   const here = current?.id === chosen.id;
   const [label, line] = busy
     ? ['Raise the Curtain', 'The crew is setting the stage.']
-    : here && state === 'paused'
+    : failed
+      ? ['Raise the Curtain', 'The crew could not set the stage. Click the seal to try again.']
+      : here && state === 'paused'
       ? ['Resume the Play', 'The play is paused.']
       : here && state === 'ended'
         ? ['Encore', 'The company takes its bow.']
@@ -216,8 +228,10 @@ function updateSeal() {
   $('opening').textContent = line;
 }
 
+/** A programme opens only at the house wall. It never opens over a running performance. */
 function openProgramme(p: Production) {
-  if (busy) return;
+  if (busy || move.to !== 1) return;
+  if (chosen?.id !== p.id) failed = false;
   chosen = p;
   if (theatre.posters) theatre.posters.chosen = p.id;
   fillBill(p);
@@ -227,6 +241,9 @@ function openProgramme(p: Production) {
   $('lobby').classList.remove('away');
   fitBill();
   setWall();
+  // Focus moves onto the programme, to its seal.
+  before = document.activeElement instanceof HTMLElement && document.activeElement !== document.body ? document.activeElement : null;
+  ($('raise') as HTMLButtonElement).focus({ preventScroll: true });
 }
 
 /** Scales the programme down so all of it fits the window. */
@@ -238,12 +255,18 @@ function fitBill() {
 }
 addEventListener('resize', fitBill);
 
+/** Puts the programme down. Focus goes back to the poster that opened it, if the wall stays live. */
 function closeProgramme() {
   if (chosen) history.replaceState(null, '', '/');
   chosen = null;
+  failed = false;
   if (theatre.posters) theatre.posters.chosen = null;
   $('lobby').classList.add('away');
   setWall();
+  const back = before;
+  before = null;
+  if (move.to === 1 && back?.isConnected) back.focus({ preventScroll: true });
+  else ($('raise') as HTMLButtonElement).blur();
 }
 
 /** Loads a show onto the stage: art, shaders and the song. With `from`, the changeover starts from that show. */
@@ -251,7 +274,13 @@ async function prepare(p: Production, from?: { production: Production; at: numbe
   audio.pause();
   setSong(p);
   const buffered = audio.readyState >= 4 ? Promise.resolve() : new Promise((r) => audio.addEventListener('canplaythrough', r, { once: true }));
-  await theatre.load(p, from);
+  try {
+    await theatre.load(p, from);
+  } catch (err) {
+    // The stage still holds the old show, so the old show keeps its song.
+    if (current) setSong(current);
+    throw err;
+  }
   // Some phones fetch audio only on play. The wait has a limit, so the seal never sticks.
   await Promise.race([buffered, new Promise((r) => setTimeout(r, 5000))]);
   current = p;
@@ -291,17 +320,27 @@ async function onSeal() {
   if (here && state === 'set') return raise();
   // Another show, or an encore: the crew strikes the set on stage and builds this one, in view.
   busy = true;
+  failed = false;
   updateSeal();
   try {
     await prepare(p, current ? { production: current, at: clock.pausedAt } : undefined);
-  } finally {
+  } catch (err) {
+    // A file did not load. The stage keeps the old show, and the seal offers another attempt.
+    console.error(err);
     busy = false;
+    failed = true;
+    updateSeal();
+    ($('raise') as HTMLButtonElement).focus({ preventScroll: true });
+    return;
   }
+  busy = false;
   raise();
 }
 
 /** The programme lifts, the camera takes its seat, and the performance starts. */
 function raise() {
+  // The camera leaves the wall, so focus does not go back to a poster.
+  before = null;
   closeProgramme();
   toView(0, 2.6);
   state = 'playing';
@@ -310,6 +349,7 @@ function raise() {
 }
 
 function resume() {
+  before = null;
   closeProgramme();
   toView(0, 2.0);
   state = 'playing';
@@ -324,6 +364,7 @@ function toWall(ended: boolean) {
   audio.pause();
   state = ended ? 'ended' : 'paused';
   $('interval').classList.remove('on');
+  $('interval').inert = true;
   toView(1, 1.8);
 }
 
@@ -349,6 +390,8 @@ function intermission(on: boolean) {
     audio.pause();
   }
   $('interval').classList.toggle('on', clock.paused);
+  // The slip's button takes focus only while the slip shows.
+  $('interval').inert = !clock.paused;
 }
 
 $('raise').onclick = () => void onSeal();
@@ -380,7 +423,8 @@ frame.addEventListener('click', (e) => {
 });
 addEventListener('keydown', (e) => {
   if (e.code === 'Space') {
-    // Space never presses a focused button in this theatre. It only pauses the play.
+    // Space presses a focused control as usual. With no control in focus, it pauses the play.
+    if ((e.target as HTMLElement).closest?.('button, a[href], input, select, textarea, [tabindex]')) return;
     e.preventDefault();
     if (state === 'playing' && move.to === 0) intermission(!clock.paused);
   } else if (e.code === 'Escape') {

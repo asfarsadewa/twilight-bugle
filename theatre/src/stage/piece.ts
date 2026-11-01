@@ -25,6 +25,12 @@ export const STAGE = {
   wing: 4.2,
 };
 
+/**
+ * The value of each pose channel when no cue sets it. The renderer and the changeover's pose capture both read
+ * this table, so a piece never looks different in the changeover than it did in the show.
+ */
+export const POSE = { x: 0, y: 0, z: 0, rz: 0, s: 1, turn: 0, head: 0, armA: 0, armB: 0, glow: 0, strings: 1 } as const;
+
 const rodMaterial = new THREE.MeshStandardMaterial({ color: 0x7a5534, roughness: 0.7 });
 const wireMaterial = new THREE.MeshStandardMaterial({ color: 0x9c8b66, metalness: 0.8, roughness: 0.35 });
 /** Marionette strings: dark thread that catches a little light. Width is in pixels at the render size. */
@@ -42,15 +48,23 @@ export class Piece {
   protected faceMeshes: THREE.Mesh[] = [];
   w = 1;
   h = 1;
+  /** The name of the piece's channels. It starts as the spec id. */
+  private key: string;
 
   constructor(readonly spec: PieceSpec) {
+    this.key = spec.id;
     this.root.name = spec.id;
     this.root.add(this.turnHolder);
     this.turnHolder.add(this.body);
   }
 
   get id() {
-    return this.spec.id;
+    return this.key;
+  }
+
+  /** Gives the piece new channel names. A piece on its way out takes one, so an incoming piece with the same id never moves it. */
+  rename(key: string) {
+    this.key = key;
   }
 
   async build(renderer: THREE.WebGLRenderer): Promise<void> {
@@ -146,22 +160,22 @@ export class Piece {
     }
     const p = this.home().add(this.outOffset().multiplyScalar(out));
     const hop = tl.value(`${id}.hop`, t, 0);
-    p.x += tl.value(`${id}.x`, t, 0);
-    p.y += tl.value(`${id}.y`, t, 0) + hop * Math.abs(Math.sin(t * Math.PI * 2.2)) * 0.05;
-    p.z += tl.value(`${id}.z`, t, 0);
+    p.x += tl.value(`${id}.x`, t, POSE.x);
+    p.y += tl.value(`${id}.y`, t, POSE.y) + hop * Math.abs(Math.sin(t * Math.PI * 2.2)) * 0.05;
+    p.z += tl.value(`${id}.z`, t, POSE.z);
     this.root.position.copy(p);
     const sway = tl.value(`${id}.sway`, t, 0);
-    this.root.rotation.z = THREE.MathUtils.degToRad(tl.value(`${id}.rz`, t, 0) + sway * wobble(t, id.length, 0.8) * 3);
-    const s = tl.value(`${id}.s`, t, 1);
+    this.root.rotation.z = THREE.MathUtils.degToRad(tl.value(`${id}.rz`, t, POSE.rz) + sway * wobble(t, this.spec.id.length, 0.8) * 3);
+    const s = tl.value(`${id}.s`, t, POSE.s);
     this.root.scale.setScalar(s);
 
     // The turn: rotate to edge-on, swap to the mirror image, rotate back to face front.
     // 0 faces as painted, 1 faces the other way. Animate back to 0 to turn again.
-    const turn = THREE.MathUtils.clamp(tl.value(`${id}.turn`, t, 0), 0, 1);
+    const turn = THREE.MathUtils.clamp(tl.value(`${id}.turn`, t, POSE.turn), 0, 1);
     this.turnHolder.rotation.y = turn < 0.5 ? turn * Math.PI : (turn - 1) * Math.PI;
     this.body.scale.x = turn < 0.5 ? 1 : -1;
 
-    const glow = tl.value(`${id}.glow`, t, 0);
+    const glow = tl.value(`${id}.glow`, t, POSE.glow);
     for (const m of this.faceMeshes) {
       const face = (m.material as THREE.Material[])[1] as THREE.MeshStandardMaterial;
       face.emissiveIntensity = (this.spec.glow ?? 0) + glow;
@@ -171,7 +185,7 @@ export class Piece {
 
   protected updateStrings(tl: Timeline, t: number) {
     if (!this.strings) return;
-    const show = tl.value(`${this.id}.strings`, t, 1);
+    const show = tl.value(`${this.id}.strings`, t, POSE.strings);
     this.strings.visible = show > 0.01;
     (this.strings.material as LineMaterial).opacity = 0.9 * show;
     this.root.updateMatrixWorld(true);
@@ -184,13 +198,26 @@ export class Piece {
     (this.strings.geometry as LineSegmentsGeometry).setPositions(pos);
   }
 
+  /**
+   * Frees what this piece owns: its geometry, its strings, and the painted-face and shadow materials of each
+   * cutout. The back, edge, rod and wire materials are shared by every piece, and the texture cache owns the art.
+   */
   dispose() {
     this.root.removeFromParent();
-    this.strings?.removeFromParent();
+    if (this.strings) {
+      // The strings hang in the scene, outside the root, so the traversal below never reaches them.
+      this.strings.removeFromParent();
+      this.strings.geometry.dispose();
+      (this.strings.material as LineMaterial).dispose();
+    }
     this.root.traverse((o) => {
       const m = o as THREE.Mesh;
       if (m.geometry) m.geometry.dispose();
     });
+    for (const mesh of this.faceMeshes) {
+      (mesh.material as THREE.Material[])[1]?.dispose();
+      mesh.customDepthMaterial?.dispose();
+    }
   }
 }
 
@@ -241,13 +268,14 @@ export class Puppet extends Piece {
     if (!this.root.visible) return;
     const id = this.id;
     const sing = tl.value(`${id}.sing`, t, 0);
-    const life = wobble(t, id.charCodeAt(0), 0.9);
+    // The breath follows the spec id, so a piece that is renamed on its way out keeps the same breath.
+    const life = wobble(t, this.spec.id.charCodeAt(0), 0.9);
     const rad = THREE.MathUtils.degToRad;
     // Breath on the rod, and a lift of the head on loud notes.
     this.body.position.y = 0.006 * life + sing * 0.012;
-    if (this.joints.head) this.joints.head.rotation.z = rad(this.rests.head + tl.value(`${id}.head`, t, 0) + life * 1.5 + sing * 6);
-    if (this.joints.armA) this.joints.armA.rotation.z = rad(this.rests.armA + tl.value(`${id}.armA`, t, 0) + life * 1.2);
-    if (this.joints.armB) this.joints.armB.rotation.z = rad(this.rests.armB + tl.value(`${id}.armB`, t, 0) - life * 1.2 + sing * 4);
+    if (this.joints.head) this.joints.head.rotation.z = rad(this.rests.head + tl.value(`${id}.head`, t, POSE.head) + life * 1.5 + sing * 6);
+    if (this.joints.armA) this.joints.armA.rotation.z = rad(this.rests.armA + tl.value(`${id}.armA`, t, POSE.armA) + life * 1.2);
+    if (this.joints.armB) this.joints.armB.rotation.z = rad(this.rests.armB + tl.value(`${id}.armB`, t, POSE.armB) - life * 1.2 + sing * 4);
     // Strings tied to a head or a hand follow the joint, so they are drawn again after the pose.
     this.updateStrings(tl, t);
   }

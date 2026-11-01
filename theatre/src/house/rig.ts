@@ -162,6 +162,10 @@ export class Rig {
       inst.light.color.copy(c);
       inst.light.intensity = inst.power * level;
       // A light is never switched off, only dimmed. Changing the number of lights recompiles every material.
+      // The lamp moves first, so its beam aims from where the lamp is at this time.
+      if (inst.pos && !(inst.light instanceof THREE.HemisphereLight)) {
+        inst.light.position.set(tl.value(`${n}.px`, t, inst.pos.x), tl.value(`${n}.py`, t, inst.pos.y), tl.value(`${n}.pz`, t, inst.pos.z));
+      }
       if (inst.target && inst.light instanceof THREE.SpotLight) {
         inst.light.target.position.set(tl.value(`${n}.tx`, t, inst.target.x), tl.value(`${n}.ty`, t, inst.target.y), tl.value(`${n}.tz`, t, inst.target.z));
         inst.light.target.updateMatrixWorld();
@@ -170,9 +174,6 @@ export class Rig {
           const haze = tl.value('haze', t, 1);
           beam.aim(inst.light.position, inst.light.target.position, c, level * haze * (inst as Instrument & { beamPower: number }).beamPower);
         }
-      }
-      if (inst.pos && !(inst.light instanceof THREE.HemisphereLight)) {
-        inst.light.position.set(tl.value(`${n}.px`, t, inst.pos.x), tl.value(`${n}.py`, t, inst.pos.y), tl.value(`${n}.pz`, t, inst.pos.z));
       }
     }
   }

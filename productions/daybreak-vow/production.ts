@@ -187,7 +187,8 @@ function cues({ tl, section, line }: CueContext) {
   tl.hold('aurel.turn', L(7)).to('aurel.turn', 1, L(7), 0.6);
   k.move('army.x', -6.5, L(7) + 0.4, 3.0, 'in');
   tl.hold('army.hop', L(7) + 0.4).to('army.hop', 0.5, L(7) + 0.4, 0.3);
-  k.move('aurel.x', -1.9, L(7) + 1, 1.6, 'in');
+  // He marches a few steps after the army, then turns back for the pre-chorus.
+  k.move('aurel.x', -1.4, L(7) + 1, 1.0, 'inOut');
   tl.hold('aurel.hop', L(7) + 1).to('aurel.hop', 1, L(7) + 1, 0.3);
 
   // ---- pre-chorus 1: the stage splits. The front is on the left, the city on the right.
@@ -196,7 +197,7 @@ function cues({ tl, section, line }: CueContext) {
   k.enter('hills', pre1 - 0.9, 1.6, 'out');
   k.enter('pines', pre1 - 0.6, 1.6, 'out');
   k.enter('campfire', pre1 - 0.2, 1.0, 'outBack');
-  k.move('aurel.x', 0, pre1 - 1.3, 1.5, 'out');
+  k.move('aurel.x', 0, pre1 - 0.8, 1.0, 'out');
   tl.hold('aurel.hop', pre1 + 0.1).to('aurel.hop', 0, pre1 + 0.1, 0.2);
   tl.hold('aurel.turn', pre1).to('aurel.turn', 0, pre1, 0.6);
   k.place('fire', -1.9, 0.35, -0.85, 0);
@@ -430,7 +431,6 @@ function cues({ tl, section, line }: CueContext) {
   k.move('cycHz.y', 0.22, L(35), 5);
   k.move('stars.i', 0, L(35), 4);
   k.move('stars.out', 1, L(35) + 1, 4, 'in');
-  k.move('city.glow', 0.35, L(35), 4);
   k.leave('clouds', L(35) + 0.5, 3.5, 'in');
   k.look(L(35), 4, { cyc: [1, 0xffb38a], back: [0.9, 0xffcf90], fohL: [0.75, 0xffdcae], fohR: [0.7, 0xffe9cc], foot: 0.9, ambient: 0.55, left: 0.25, right: 0.25 });
   k.move('city.glow', 0.15, L(35), 3);

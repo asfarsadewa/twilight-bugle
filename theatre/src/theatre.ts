@@ -9,12 +9,9 @@ import { PosterWall } from './house/posters.ts';
 import { Rig } from './house/rig.ts';
 import { planChangeover } from './changeover.ts';
 import { Effects } from './stage/fx.ts';
-import { makePiece, type Piece, STAGE, stringMaterial } from './stage/piece.ts';
+import { makePiece, type Piece, POSE, STAGE, stringMaterial } from './stage/piece.ts';
 import { Post } from './render/post.ts';
 import { Surtitles } from './ui/surtitles.ts';
-
-/** Channels every piece reads, used to carry a piece's last pose into a changeover. */
-const POSE = ['out', 'x', 'y', 'z', 'rz', 's', 'turn', 'head', 'armA', 'armB', 'glow', 'strings'];
 
 export class Theatre {
   readonly renderer: THREE.WebGLRenderer;
@@ -95,36 +92,54 @@ export class Theatre {
   /**
    * Builds a performance of a production. With `from`, the old production's pieces stay on stage in their last
    * pose, and the changeover planner strikes them and sets the new show before its own preroll.
+   *
+   * The new set is built off stage first. If any of it fails to load, this rejects and the stage stays as it was.
    */
   async load(p: Production, from?: { production: Production; at: number }) {
+    const incoming: Piece[] = [];
+    try {
+      for (const spec of p.pieces) {
+        const piece = makePiece(spec);
+        incoming.push(piece);
+        await piece.build(this.renderer);
+      }
+      await this.fx.build(p.fx?.flame);
+    } catch (err) {
+      for (const piece of incoming) piece.dispose();
+      throw err;
+    }
+
     const tl = new Timeline();
-    const old = new Map(this.pieces);
+    const old = this.pieces;
     const oldTl = this.tl;
     this.pieces = new Map();
-    // Old pieces in view that the new show does not reuse stay until the strike. Each keeps its last pose.
-    // The rest go at once, so pieces never pile up from show to show.
+    // Old pieces in view stay until the crew strikes them, each in its last pose. Each takes a new name, so a
+    // new piece with the same id (an encore, or a common name such as "moon") never takes its channels.
+    // Pieces out of view go at once, so pieces never pile up from show to show.
+    const outgoing: Piece[] = [];
     let changeover = 0;
     if (from) {
-      for (const [id, piece] of old) {
-        const out = oldTl.value(`${id}.out`, from.at, piece.spec.startIn ? 0 : 1);
-        if (p.pieces.some((s) => s.id === id) || out >= 0.99) {
+      for (const piece of old.values()) {
+        const was = piece.id;
+        const out = oldTl.value(`${was}.out`, from.at, piece.spec.startIn ? 0 : 1);
+        if (out >= 0.99) {
           piece.dispose();
           continue;
         }
-        for (const ch of POSE) tl.base(`${id}.${ch}`, oldTl.value(`${id}.${ch}`, from.at, ch === 's' ? 1 : ch === 'out' ? out : 0));
-        this.pieces.set(id, piece);
+        piece.rename(`old/${was}`);
+        tl.base(`${piece.id}.out`, out);
+        for (const [ch, rest] of Object.entries(POSE)) tl.base(`${piece.id}.${ch}`, oldTl.value(`${was}.${ch}`, from.at, rest));
+        this.pieces.set(piece.id, piece);
+        outgoing.push(piece);
       }
     } else {
       for (const piece of old.values()) piece.dispose();
     }
-    for (const spec of p.pieces) {
-      const piece = makePiece(spec);
-      await piece.build(this.renderer);
+    for (const piece of incoming) {
       this.scene.add(piece.root);
       piece.attachStrings(this.scene);
-      this.pieces.set(spec.id, piece);
+      this.pieces.set(piece.id, piece);
     }
-    await this.fx.build(p.fx?.flame);
     if (!this.fx.group.parent) this.scene.add(this.fx.group);
 
     this.rig.defaults(tl);
@@ -141,9 +156,9 @@ export class Theatre {
       for (const ch of ['curtain.open', 'curtain.style', 'house.i', 'foot.i']) tl.base(ch, oldTl.value(ch, from.at));
       changeover = planChangeover(tl, {
         // The old pieces still here are the ones the audience can see.
-        oldPieces: [...this.pieces.values()].filter((x) => !p.pieces.some((s) => s.id === x.id)),
+        oldPieces: outgoing,
         was: (ch) => (oldTl.has(ch) ? oldTl.value(ch, from.at) : undefined),
-        newPieces: p.pieces.map((s) => this.pieces.get(s.id)!),
+        newPieces: incoming,
         oldClose: from.production.curtain.close,
         startAt: -p.preroll,
       });

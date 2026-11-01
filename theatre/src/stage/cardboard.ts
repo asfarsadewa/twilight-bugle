@@ -10,12 +10,17 @@ const textures = new Map<string, Promise<THREE.Texture>>();
 export function loadTexture(url: string, renderer?: THREE.WebGLRenderer): Promise<THREE.Texture> {
   let p = textures.get(url);
   if (!p) {
-    p = loader.loadAsync(url).then((t) => {
+    const loading = loader.loadAsync(url).then((t) => {
       t.colorSpace = THREE.SRGBColorSpace;
       t.anisotropy = renderer?.capabilities.getMaxAnisotropy() ?? 8;
       return t;
     });
-    textures.set(url, p);
+    // A failed load leaves the cache, so the next attempt asks the network again.
+    loading.catch(() => {
+      if (textures.get(url) === loading) textures.delete(url);
+    });
+    textures.set(url, loading);
+    p = loading;
   }
   return p;
 }

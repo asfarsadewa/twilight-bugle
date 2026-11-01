@@ -433,8 +433,9 @@ function cues({ tl, section, line }: CueContext) {
     };
     tl.base('haze', 1);
     // Intro: the house goes dim. A pool waits on the stage, and Shan comes down into it on his strings.
-    // The sky dims with the house, or the bright cloth would swallow the beam.
-    k.look(3.8, 1.6, { fohL: 0.14, fohR: 0.1, left: 0.12, right: 0.14, cycTop: 0.3, cycHz: 0.42, cycBot: 0.3 });
+    // The sky comes up only to a dim level as the curtain opens, or the bright cloth would swallow the beam.
+    k.look(0, 4, { cycTop: 0.3, cycHz: 0.42, cycBot: 0.3 });
+    k.look(3.8, 1.6, { fohL: 0.14, fohR: 0.1, left: 0.12, right: 0.14 });
     k.move('haze', 2.2, 3.8, 1.6);
     k.aim('follow', -1.05, 0.85, -1.62, 3.8, 0.01);
     k.look(4.2, 1.2, { follow: [0.95, 0xfff0d8] });

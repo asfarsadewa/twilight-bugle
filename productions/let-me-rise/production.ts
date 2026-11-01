@@ -387,9 +387,10 @@ function cues({ tl, section, line }: CueContext) {
   k.move('meret.armA', 70, sw + 1, 1);
   lamp(1.3, sw + 1.5, 0.6);
   follow(sw + 1, swEnd - sw - 1, 0.9, 0xd8e4ff);
-  // Dawn comes at the end of the voyage. The Sky Mother rises away on her strings.
+  // The Sky Mother rises away on her strings. The sky stays dark to the last half second, then dawn breaks
+  // and the sunrise follows on the chorus.
   k.leave('skymother', swEnd - 5, 4.5, 'inOut');
-  sky(swEnd - 4, 4, ...DAWN, [0.75, 1.0, 0.6], 0.14);
+  sky(swEnd - 0.5, 0.5, ...DAWN, [0.75, 1.0, 0.6], 0.14);
   k.move('stars.i', 0, swEnd - 3, 3);
   k.move('waves2.y', 0.06, swEnd - 3, 3);
   k.move('waves1.y', 0, swEnd - 3, 3);
@@ -405,7 +406,7 @@ function cues({ tl, section, line }: CueContext) {
   k.flash('flash', c3, 0.8, 0, 0.03, 1.2);
   k.move('sun.glow', 0.8, c3, 0.5);
   k.move('sun.glow', 0.4, c3 + 1.2, 2.5);
-  sky(c3 - 0.5, 3, ...GLORY, [0.8, 1.0, 0.6], 0.2);
+  sky(c3, 2.5, ...GLORY, [0.8, 1.0, 0.6], 0.2);
   k.look(c3, 1.5, { fohL: [0.5, 0xffd6a8], fohR: [0.42, 0xffe4c8], left: [0.6, 0xffb070], right: [0.65, 0xffc080], back: [0.2, 0xffd8a0], foot: 0.8, glowA: 0.3 });
   tl.set('glints.x0', -2.6, c3).set('glints.x1', 2.6, c3);
   k.move('glints.rate', 0.5, c3, 1);

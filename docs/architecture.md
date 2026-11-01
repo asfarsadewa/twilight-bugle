@@ -92,6 +92,8 @@ The cue sheet ties actions to the song. A cue starts at a time, a section, a lyr
 
 Line times come from the song review. Beat times come from a beat grid of the selected master.
 
+A cue moves a channel from the value that the channel has at the cue's start. If a cue starts while an earlier cue still moves the same channel, the later cue takes over at its start. The earlier move stops there, on its own curve. A cue never changes a channel before its own start. A `set` jumps at its own time. A cue written after a `set` at the same time moves on from the new value.
+
 ## Changeover
 
 The changeover planner reads the old production and the new production. It writes a changeover cue sheet. The same engine plays it in view of the audience.
@@ -106,7 +108,9 @@ The changeover planner reads the old production and the new production. It write
 8. Programme. The board on the arch turns to the new title.
 9. Open. The new show's preroll runs. The house lights go down. The curtain opens in the open style of the new show.
 
-The planner starts each moving piece 0.45 seconds after the one before it. If both shows use a piece with the same id, the new show brings its own copy.
+The planner starts each moving piece 0.45 seconds after the one before it. An old piece in view stays until the crew strikes it, also when the new show has a piece with the same id. The new show brings its own copy. At an encore, the crew strikes the whole set in view and sets it again.
+
+The theatre builds the new set before it touches the stage. If a file of the new show does not load, the old show stays on stage with its song, and the seal offers another attempt.
 
 The entr'acte sound does not exist yet. The plan uses rope creaks, pulley clicks and wood knocks from ElevenLabs. A short instrumental bridge from Lyria can play under them.
 
