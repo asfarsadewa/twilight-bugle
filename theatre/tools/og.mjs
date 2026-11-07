@@ -37,7 +37,7 @@ const shows = await page.evaluate(async () => {
 const FONTS = 'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,500&family=Cormorant+SC:wght@600&family=IM+Fell+English:ital@0;1&family=Neonderthaw&family=Noto+Serif+SC:wght@900&family=Playfair+Display+SC:wght@700&display=block';
 const roman = (n) => ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'][n] ?? String(n);
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-const UNDER = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'] };
+const UNDER = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'] };
 
 async function shoot(html, file) {
   await page.setContent(html, { waitUntil: 'networkidle' });

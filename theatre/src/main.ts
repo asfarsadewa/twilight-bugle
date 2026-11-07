@@ -176,7 +176,7 @@ function tick(now: number) {
 
 // ---------------------------------------------------------------- posters and programmes
 
-const LANG = { zh: 'Mandarin', id: 'Bahasa Indonesia', en: 'English' } as const;
+const LANG = { zh: 'Mandarin', id: 'Bahasa Indonesia', en: 'English', jv: 'Javanese' } as const;
 
 /** An invisible button over each poster, so a poster takes clicks, hover and keyboard focus. */
 function wallButton(p: Production) {
@@ -210,9 +210,10 @@ function placeWallButtons() {
 function fillBill(p: Production) {
   $('bill-no').textContent = `Programme ${roman(p.no)}`;
   $('bill-zh').textContent = p.title.zh;
-  // A French song leads with its French title. The English title then joins the Indonesian one.
-  $('bill-en').textContent = p.title.fr ?? p.title.en;
-  $('bill-id').textContent = p.title.fr ? `${p.title.id} · ${p.title.en}` : p.title.id;
+  // A French or Javanese song leads with its own title. The English title then joins the Indonesian one.
+  const own = p.title.fr ?? p.title.jv;
+  $('bill-en').textContent = own ?? p.title.en;
+  $('bill-id').textContent = own ? `${p.title.id} · ${p.title.en}` : p.title.id;
   $('bill-about').textContent = p.bill.about;
   $('bill-cast').innerHTML = p.bill.cast.map(([who, part]) => `<div><b>${who}</b><i></i><span>${part}</span></div>`).join('');
   $('bill-scenes').innerHTML = `<em>Scenery</em>${p.bill.scenes.join(' · ')}`;

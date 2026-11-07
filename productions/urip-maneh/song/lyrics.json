@@ -1,0 +1,198 @@
+{
+ "title": {
+  "jv": "Urip Maneh",
+  "zh": "再世相逢",
+  "id": "Hidup Kembali",
+  "en": "Alive Again"
+ },
+ "sung": "jv",
+ "voices": {
+  "bayu": {
+   "name": "Bayu",
+   "voice": "a mature, warm heroic male tenor",
+   "heard": "male",
+   "glyph": "g-moon",
+   "cls": "star",
+   "part": "the man who keeps being born"
+  }
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "label": "Intro",
+   "note": "instrumental: solo piano and strings"
+  },
+  {
+   "id": "v1",
+   "label": "Verse 1",
+   "lines": [
+    {
+     "who": "bayu",
+     "jv": "Ing candhi tuwa, raimu tak ukir",
+     "zh": "古老的石壁上，我刻下你的容颜",
+     "en": "At the old temple, I carve your face"
+    },
+    {
+     "who": "bayu",
+     "jv": "Watu lan wektu dadi seksi katresnan",
+     "zh": "石头与岁月，为这份爱作证",
+     "en": "Stone and time bear witness to love"
+    },
+    {
+     "who": "bayu",
+     "jv": "Kowe liwat, mung sak kedhep mripat",
+     "zh": "你走过，只在一眨眼之间",
+     "en": "You pass by, in one blink of an eye"
+    },
+    {
+     "who": "bayu",
+     "jv": "Urip iki ora cukup kanggo nyandhing kowe",
+     "zh": "这一生，不够我伴你身边",
+     "en": "This life is not enough to stand beside you"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "label": "Verse 2",
+   "lines": [
+    {
+     "who": "bayu",
+     "jv": "Ing kali wengi, keroncong nangis lirih",
+     "zh": "夜的河上，琴声低低哭泣",
+     "en": "On the night river, the keroncong softly weeps"
+    },
+    {
+     "who": "bayu",
+     "jv": "Kapal budhal, aku mlayu menyang dermaga",
+     "zh": "船已起航，我奔向码头",
+     "en": "The ship departs, I run to the quay"
+    },
+    {
+     "who": "bayu",
+     "jv": "Tanganku nggayuh, segara wis misahake",
+     "zh": "我伸出手，大海已将我们隔开",
+     "en": "My hand reaches out, the sea already parts us"
+    },
+    {
+     "who": "bayu",
+     "jv": "Urip iki maneh, aku kalah karo wektu",
+     "zh": "这一生，我又输给了时间",
+     "en": "This life again, I lose to time"
+    }
+   ]
+  },
+  {
+   "id": "pre",
+   "label": "Pre-chorus",
+   "lines": [
+    {
+     "who": "bayu",
+     "jv": "Yen iki dudu wektune",
+     "zh": "若此刻还不是时候",
+     "en": "If this is not the time"
+    },
+    {
+     "who": "bayu",
+     "jv": "Aku gelem ngenteni maneh",
+     "zh": "我愿意，再等一回",
+     "en": "I will wait again"
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "bayu",
+     "jv": "Mbesuk yen urip maneh, goleki aku",
+     "zh": "来世若再相逢，请你把我寻找",
+     "en": "Someday, when we live again, look for me"
+    },
+    {
+     "who": "bayu",
+     "jv": "Ing antarane sewu rai, aku ngerti kowe",
+     "zh": "千万张面孔里，我一眼认出你",
+     "en": "Among a thousand faces, I will know you"
+    },
+    {
+     "who": "bayu",
+     "jv": "Sanajan lintang wis ganti panggonan",
+     "zh": "纵然星辰已换了位置",
+     "en": "Even if the stars have changed their places"
+    },
+    {
+     "who": "bayu",
+     "jv": "Tresnaku ora bakal lali dalan mulih",
+     "zh": "我的爱，不会忘记回家的路",
+     "en": "My love will not forget the way home"
+    }
+   ]
+  },
+  {
+   "id": "bridge",
+   "label": "Bridge",
+   "lines": [
+    {
+     "who": "bayu",
+     "jv": "Wis kaping telu aku lair",
+     "zh": "我已三度降生",
+     "en": "Three times now I have been born"
+    },
+    {
+     "who": "bayu",
+     "jv": "Wis kaping telu aku kelangan",
+     "zh": "我已三度失去",
+     "en": "Three times now I have lost"
+    },
+    {
+     "who": "bayu",
+     "jv": "Kayon ditancepake, lakon durung rampung",
+     "zh": "神山已立，这出戏还未落幕",
+     "en": "The kayon is planted, the story is not over"
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "label": "Final chorus",
+   "lines": [
+    {
+     "who": "bayu",
+     "jv": "Saiki aku urip maneh, lan aku weruh kowe",
+     "zh": "如今我再次活着，我看见了你",
+     "en": "Now I live again, and I see you"
+    },
+    {
+     "who": "bayu",
+     "jv": "Ing ngarepe candhi, mesem kaya biyen",
+     "zh": "在古老的庙前，笑得一如从前",
+     "en": "Before the temple, smiling as you did"
+    },
+    {
+     "who": "bayu",
+     "jv": "Sanajan kowe lali, atiku isih kelingan",
+     "zh": "纵然你已忘记，我的心还记得",
+     "en": "Though you forget, my heart remembers"
+    },
+    {
+     "who": "bayu",
+     "jv": "Iki wektune, aja lunga maneh",
+     "zh": "就是此刻，不要再离开",
+     "en": "This is the time, do not go away again"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "label": "Outro",
+   "note": "instrumental: quiet piano, one long held chord"
+  }
+ ],
+ "subs": [
+  "zh",
+  "en"
+ ],
+ "about": "Two souls keep missing each other across lifetimes in Java. A wayang gunungan sweeps across the frame to end each life. In the last life, a woman stops at an old temple relief that a stone carver made of her face."
+}

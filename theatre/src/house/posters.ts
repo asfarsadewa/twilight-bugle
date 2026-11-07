@@ -12,9 +12,9 @@ const GAP = 0.32;
 /** Just in front of the proscenium wall. */
 const Z = -0.2;
 
-type Lang = 'zh' | 'en' | 'id' | 'fr';
+type Lang = 'zh' | 'en' | 'id' | 'fr' | 'jv';
 /** The two titles under the lead, by the lead language. */
-const UNDER: Record<Lang, [Lang, Lang]> = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'] };
+const UNDER: Record<Lang, [Lang, Lang]> = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'] };
 
 interface Slot {
   id: string | null;
@@ -202,7 +202,7 @@ export async function printPoster(p: Production): Promise<HTMLCanvasElement> {
   const lead = (p.master.sung ?? 'zh') as Lang;
   const rest = UNDER[lead];
   const title = (l: Lang) => p.title[l] ?? p.title.en;
-  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}`;
+  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}${p.title.jv ?? ''}`;
   await Promise.all([
     document.fonts.load('900 80px "Noto Serif SC"', all),
     document.fonts.load('400 80px "Abril Fatface"', all),

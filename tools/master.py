@@ -47,7 +47,7 @@ def main():
         # If the sheet was corrected to the words a take sang, the old words find no match. Such a line takes the
         # current line at the same place, when both sheets have the same number of lines.
         cur = current.get(key) or (order[i] if len(order) == len(sheet) else {})
-        l = {**s, **{k: v for k, v in cur.items() if k in ("zh", "py", "en", "id", "fr")}}
+        l = {**s, **{k: v for k, v in cur.items() if k in ("zh", "py", "en", "id", "fr", "jv")}}
         l["sung"] = l.get(sung, l.get("sung"))
         l["written_for"] = s["who"]
         if vote:

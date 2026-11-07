@@ -17,6 +17,7 @@ The theatre runs in the browser with Three.js. The same engine renders each show
 | III | [Let Me Rise · Biar Aku Terbit · 如日初升](productions/let-me-rise) | English | A young scribe paints the heroes of a temple wall. She wants a story of her own. | Art Nouveau with Egyptian Revival motifs |
 | IV | [Un jour viendra · 终有一天 · Suatu Hari Nanti](productions/un-jour-viendra) | French | A village boy joins the imperial army as its lowest servant. His spirit never goes out. | A solemn Chinese ink painting |
 | V | [山河为证 · Let the Land Bear Witness · Biar Tanah Air Menjadi Saksi](productions/shanhe-wei-zheng) | Mandarin | A boy of sixteen walks the Long March of 1934 to 1935. He loses his comrades on the road. | A Chinese woodcut print of the 1930s |
+| VI | [Urip Maneh · 再世相逢 · Alive Again](productions/urip-maneh) | Javanese | Two souls miss each other across four lives in Java. In the last life, she finds her own face on an old temple wall. | A Javanese wayang beber scroll |
 
 Each show has surtitles in two languages. If English is not one of them, a button on the programme adds it. Each show also has its own link, such as https://twilightbugle.asfarlab.fun/show/daybreak-vow.
 
@@ -24,7 +25,7 @@ Each show has surtitles in two languages. If English is not one of them, a butto
 |---|---|
 | ![The Daybreak Vow: the Hollow Crown on its strings above the wall](docs/images/daybreak-vow.jpg) | ![Bintang Senja: the bugler on the summit under the evening star](docs/images/bintang-senja.jpg) |
 | ![Let Me Rise: the Sky Mother arches over the flood](docs/images/let-me-rise.jpg) | ![Un jour viendra: fireworks over the dream army](docs/images/un-jour-viendra.jpg) |
-| ![山河为证: the sun rises over the loess hills as the column reaches the north](docs/images/shanhe-wei-zheng.jpg) | |
+| ![山河为证: the sun rises over the loess hills as the column reaches the north](docs/images/shanhe-wei-zheng.jpg) | ![Urip Maneh: the two reach for each other over the carved stone](docs/images/urip-maneh.jpg) |
 
 ## Inside the theatre
 
