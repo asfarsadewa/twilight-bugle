@@ -1,0 +1,347 @@
+{
+ "title": {
+  "id": "Gema Masa Muda",
+  "zh": "青春回声",
+  "en": "Echo of Our Youth"
+ },
+ "sung": "id",
+ "voices": {
+  "dimas": {
+   "name": "Dimas",
+   "voice": "the grown man who remembers",
+   "heard": "male",
+   "glyph": "g-moon",
+   "cls": "star",
+   "part": "the one who remembers"
+  }
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "label": "Intro",
+   "note": "instrumental"
+  },
+  {
+   "id": "v1",
+   "label": "Verse 1",
+   "lines": [
+    {
+     "who": "dimas",
+     "id": "Meja kayu tua",
+     "zh": "那张旧木课桌",
+     "en": "The old wooden desk"
+    },
+    {
+     "who": "dimas",
+     "id": "Penuh coretan nama kita berdua",
+     "zh": "刻满了我们俩的名字",
+     "en": "Covered with our two names, scratched in"
+    },
+    {
+     "who": "dimas",
+     "id": "Pulang sekolah",
+     "zh": "放学回家",
+     "en": "After school"
+    },
+    {
+     "who": "dimas",
+     "id": "Lapangan berdebu keemasan di mata",
+     "zh": "尘土飞扬的操场 在眼里镀上金光",
+     "en": "The dusty field turned gold in our eyes"
+    },
+    {
+     "who": "dimas",
+     "id": "Saku yang sobek",
+     "zh": "磨破的衣兜",
+     "en": "From a torn pocket"
+    },
+    {
+     "who": "dimas",
+     "id": "Bungkus permen dan mimpi kecil berjatuhan",
+     "zh": "糖纸和小小的梦 一路散落",
+     "en": "Candy wrappers and small dreams fell out"
+    },
+    {
+     "who": "dimas",
+     "id": "Saat itu kira",
+     "zh": "那时总以为",
+     "en": "Back then we thought"
+    },
+    {
+     "who": "dimas",
+     "id": "Dewasa tersimpan di soal esok hari",
+     "zh": "长大 就藏在明天的考卷里",
+     "en": "Growing up was hidden in tomorrow's test"
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "dimas",
+     "id": "Ah gema masa muda bergulung di dada",
+     "zh": "啊 青春的回声在胸口翻涌",
+     "en": "Ah, the echo of our youth rolls in my chest"
+    },
+    {
+     "who": "dimas",
+     "id": "Saat kupanggil namamu langit pun makin dalam",
+     "zh": "我一喊你的名字 天空便更深远",
+     "en": "When I call your name, the sky grows deeper"
+    },
+    {
+     "who": "dimas",
+     "id": "Ah kita berlari tak bertanya jarak",
+     "zh": "啊 我们奔跑 从不问路有多远",
+     "en": "Ah, we ran and never asked how far"
+    },
+    {
+     "who": "dimas",
+     "id": "Lutut pun terluka tetap tertawa bilang tak sakit",
+     "zh": "膝盖擦破了 还笑着说不疼",
+     "en": "Our knees were scraped, and we laughed and said it did not hurt"
+    },
+    {
+     "who": "dimas",
+     "id": "Ah semua pagi dan senja penuh tanda tanya",
+     "zh": "啊 每个清晨与黄昏 都写满了问号",
+     "en": "Ah, every morning and every dusk full of questions"
+    },
+    {
+     "who": "dimas",
+     "id": "Ternyata surat untuk diriku di masa depan",
+     "zh": "原来都是 写给未来自己的信",
+     "en": "Turned out to be letters to my future self"
+    },
+    {
+     "who": "dimas",
+     "id": "(Oh) gema masa muda",
+     "zh": "（哦）青春的回声",
+     "en": "(Oh) the echo of our youth"
+    },
+    {
+     "who": "dimas",
+     "id": "Masih bernyanyi dalam hati",
+     "zh": "仍在心里歌唱",
+     "en": "Still singing in my heart"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "label": "Verse 2",
+   "lines": [
+    {
+     "who": "dimas",
+     "id": "Lorong yang usang",
+     "zh": "斑驳的走廊",
+     "en": "The worn corridor"
+    },
+    {
+     "who": "dimas",
+     "id": "Jejak langkah jadi irama menggema",
+     "zh": "脚步声 成了回荡的节拍",
+     "en": "Our footsteps became an echoing rhythm"
+    },
+    {
+     "who": "dimas",
+     "id": "Debu kapur putih",
+     "zh": "白色的粉笔灰",
+     "en": "White chalk dust"
+    },
+    {
+     "who": "dimas",
+     "id": "Tersapu ke balik awan yang begitu lembut",
+     "zh": "被拂进那样柔软的云里",
+     "en": "Swept away behind clouds so soft"
+    },
+    {
+     "who": "dimas",
+     "id": "Diam menyimpan rasa",
+     "zh": "沉默里藏着心事",
+     "en": "Silently keeping a feeling"
+    },
+    {
+     "who": "dimas",
+     "id": "Sampul surat pun tak berani kutulis lengkap",
+     "zh": "信封上的字 都不敢写完",
+     "en": "I did not dare to finish the envelope"
+    },
+    {
+     "who": "dimas",
+     "id": "Satu kata “semangat”",
+     "zh": "一句“加油”",
+     "en": "One word: “semangat”, keep going"
+    },
+    {
+     "who": "dimas",
+     "id": "Kita anggap janji yang tak akan berakhir",
+     "zh": "我们当成了永不落幕的约定",
+     "en": "We took it as a promise that would never end"
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "dimas",
+     "id": "Ah gema masa muda bergulung di dada",
+     "zh": "啊 青春的回声在胸口翻涌",
+     "en": "Ah, the echo of our youth rolls in my chest"
+    },
+    {
+     "who": "dimas",
+     "id": "Saat kupanggil namamu langit pun makin dalam",
+     "zh": "我一喊你的名字 天空便更深远",
+     "en": "When I call your name, the sky grows deeper"
+    },
+    {
+     "who": "dimas",
+     "id": "Ah kita berlari tak bertanya jarak",
+     "zh": "啊 我们奔跑 从不问路有多远",
+     "en": "Ah, we ran and never asked how far"
+    },
+    {
+     "who": "dimas",
+     "id": "Lutut pun terluka tetap tertawa bilang tak sakit",
+     "zh": "膝盖擦破了 还笑着说不疼",
+     "en": "Our knees were scraped, and we laughed and said it did not hurt"
+    },
+    {
+     "who": "dimas",
+     "id": "Ah semua pagi dan senja penuh tanda tanya",
+     "zh": "啊 每个清晨与黄昏 都写满了问号",
+     "en": "Ah, every morning and every dusk full of questions"
+    },
+    {
+     "who": "dimas",
+     "id": "Ternyata surat untuk diriku di masa depan",
+     "zh": "原来都是 写给未来自己的信",
+     "en": "Turned out to be letters to my future self"
+    },
+    {
+     "who": "dimas",
+     "id": "(Oh) gema masa muda",
+     "zh": "（哦）青春的回声",
+     "en": "(Oh) the echo of our youth"
+    },
+    {
+     "who": "dimas",
+     "id": "Masih bernyanyi dalam hati",
+     "zh": "仍在心里歌唱",
+     "en": "Still singing in my heart"
+    }
+   ]
+  },
+  {
+   "id": "bridge",
+   "label": "Bridge",
+   "lines": [
+    {
+     "who": "dimas",
+     "id": "Siapa lebih dulu",
+     "zh": "是谁先",
+     "en": "Who was the first"
+    },
+    {
+     "who": "dimas",
+     "id": "Belajar menahan air mata yang jatuh",
+     "zh": "学会了忍住眼泪",
+     "en": "To learn to hold back falling tears"
+    },
+    {
+     "who": "dimas",
+     "id": "Siapa yang pergi jauh",
+     "zh": "是谁走得那么远",
+     "en": "Who went so far away"
+    },
+    {
+     "who": "dimas",
+     "id": "Bahkan bayangannya pun tak dapat kukejar",
+     "zh": "远得连影子都追不上",
+     "en": "That I could not catch even their shadow"
+    },
+    {
+     "who": "dimas",
+     "id": "Namun lihatlah saat malam pekat",
+     "zh": "可是你看 在最深的夜里",
+     "en": "But look, when the night is darkest"
+    },
+    {
+     "who": "dimas",
+     "id": "Di dalam hati terang satu lapangan bersinar",
+     "zh": "心里有一片操场 依然闪亮",
+     "en": "In my heart one field still shines bright"
+    }
+   ]
+  },
+  {
+   "id": "ch3",
+   "label": "Final chorus",
+   "lines": [
+    {
+     "who": "dimas",
+     "id": "Ah gema masa muda kini pun terbangun",
+     "zh": "啊 青春的回声 此刻苏醒",
+     "en": "Ah, the echo of our youth wakes now"
+    },
+    {
+     "who": "dimas",
+     "id": "Setiap luka di jalan bermekaran jadi pemandang",
+     "zh": "路上的每道伤 都开成了风景",
+     "en": "Every wound along the road blooms into a view"
+    },
+    {
+     "who": "dimas",
+     "id": "Ah jatuh dan terbentur jadi sebuah lagu",
+     "zh": "啊 跌跌撞撞 都成了一首歌",
+     "en": "Ah, every fall and every bruise became a song"
+    },
+    {
+     "who": "dimas",
+     "id": "Kunyanyikan untuk diriku yang keras kepala dan ceroboh",
+     "zh": "唱给那个倔强又莽撞的自己",
+     "en": "I sing it to my stubborn, careless self"
+    },
+    {
+     "who": "dimas",
+     "id": "Ah meski dunia riuh sendu kelam",
+     "zh": "啊 纵然世界喧嚣 忧伤又昏暗",
+     "en": "Ah, though the world is loud and sad and dark"
+    },
+    {
+     "who": "dimas",
+     "id": "Tetap kudengar jawaban pertama yang memanggil",
+     "zh": "我仍听见 最初那声呼唤的回应",
+     "en": "I still hear the first answer calling"
+    },
+    {
+     "who": "dimas",
+     "id": "(Oh) gema masa muda",
+     "zh": "（哦）青春的回声",
+     "en": "(Oh) the echo of our youth"
+    },
+    {
+     "who": "dimas",
+     "id": "Menuntunku maju satu demi satu langkah",
+     "zh": "领着我 一步一步向前",
+     "en": "Leading me forward, one step at a time"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "label": "Outro",
+   "note": "instrumental"
+  }
+ ],
+ "subs": [
+  "id",
+  "zh"
+ ],
+ "about": "A grown man remembers his school friends. Their youth still echoes in him."
+}
