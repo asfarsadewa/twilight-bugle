@@ -67,7 +67,8 @@ if (args.stills) {
   const ff = spawn('ffmpeg', [
     '-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-',
     ...(existsSync(audio) ? ['-ss', String(skip), '-i', audio, '-filter_complex', `[1:a]adelay=${delay}|${delay},apad[a]`, '-map', '0:v', '-map', '[a]', '-shortest', '-c:a', 'aac', '-b:a', '256k'] : []),
-    '-c:v', 'libx264', '-preset', 'slow', '-crf', '17', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', file,
+    // The haze, grain and halftone print eat bits. A cap at 8 Mbps keeps a 1080p show at about 60 MB a minute.
+    '-c:v', 'libx264', '-preset', 'slow', '-crf', '21', '-maxrate', '8M', '-bufsize', '16M', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', file,
   ], { stdio: ['pipe', 'inherit', 'inherit'] });
   const n = Math.round((to - from) * fps);
   const t0 = Date.now();
