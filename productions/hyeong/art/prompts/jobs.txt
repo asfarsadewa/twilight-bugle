@@ -1,0 +1,16 @@
+puppet-min 1536x1536 transparent
+puppet-cheol 1536x1536 transparent
+prop-mother 1024x1536 transparent
+flat-village 2304x1024 transparent
+flat-hills 2304x768 transparent
+flat-refugees 2304x768 transparent
+flat-bridge 2304x1024 transparent
+flat-river 2304x768 transparent
+prop-fire 1024x1024 transparent
+flat-gate 2048x1536 transparent
+prop-boys 1024x1536 transparent
+prop-far 1024x1536 transparent
+prop-march-a 2304x768 transparent
+prop-line-a 2304x1024 transparent
+prop-line-b 2304x1024 transparent
+prop-sun 1024x1024 transparent

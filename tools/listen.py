@@ -5,7 +5,7 @@
 
 For each take in <song>/takes/<take>/:
   1. ElevenLabs Scribe v2 transcribes take.mp3 with word times (scribe.json), in the sung language of lyrics.json.
-  2. The transcript is aligned to lines.json: Mandarin by toneless pinyin, so homophones still match; other
+  2. The transcript is aligned to lines.json: Mandarin by toneless pinyin, so homophones still match; Korean by syllable; other
      languages word by word.
      Each line gets start, end and a match ratio (sounds sung / sounds written).
   3. Gemini listens to the take with those times. It reports the voice on each line
@@ -17,10 +17,11 @@ from pypinyin import lazy_pinyin
 
 GEMINI = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent"
 WORD = re.compile(r"[a-z]+")
-LANGS = {"zh": "Mandarin Chinese", "id": "Indonesian", "en": "English", "ja": "Japanese", "fr": "French"}
+LANGS = {"zh": "Mandarin Chinese", "id": "Indonesian", "en": "English", "ja": "Japanese", "fr": "French", "ko": "Korean", "jv": "Javanese"}
 # The voice a listener should hear for each singer, when lyrics.json does not say.
 EXPECT = {"prince": "male", "princess": "female", "both": "both"}
 HAN = re.compile(r"[㐀-鿿]")
+HANGUL = re.compile(r"[가-힣]")
 
 
 def scribe(path, lang):
@@ -41,6 +42,9 @@ def tokens(text, lang):
     Other languages: lower-case words without punctuation or accents, so "été" and "ete" match."""
     if lang == "zh":
         return [lazy_pinyin(ch)[0] for ch in HAN.findall(text)]
+    # Korean: one unit per Hangul syllable. NFKD below would split a syllable into its letters.
+    if lang == "ko":
+        return HANGUL.findall(text)
     plain = "".join(c for c in unicodedata.normalize("NFKD", text.lower()) if not unicodedata.combining(c))
     return WORD.findall(plain.replace("œ", "oe").replace("æ", "ae"))
 

@@ -101,6 +101,7 @@ export interface Line {
   en?: string;
   fr?: string;
   jv?: string;
+  ko?: string;
   id?: string;
   start: number;
   end: number;
@@ -109,7 +110,7 @@ export interface Line {
 export interface Master {
   take: string;
   /** The sung language. */
-  sung?: 'zh' | 'id' | 'en' | 'fr' | 'jv';
+  sung?: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko';
   duration: number;
   bpm: number;
   beats: number[];
@@ -134,8 +135,8 @@ export interface Production {
   id: string;
   /** The show number. The posters on the house wall hang in this order. */
   no: number;
-  /** Titles. A song in French or Javanese adds its title in that language. */
-  title: { zh: string; en: string; id: string; fr?: string; jv?: string };
+  /** Titles. A song in French, Javanese or Korean adds its title in that language. */
+  title: { zh: string; en: string; id: string; fr?: string; jv?: string; ko?: string };
   /** Poster art for the house wall. Plain bands at the top and the bottom take the printed titles. */
   poster: string;
   audio: string;
@@ -153,6 +154,6 @@ export interface Production {
   /** Singer names and colours for the surtitles. */
   voices: Record<string, { name: string; color: string }>;
   /** Which language leads the surtitles and which follows. English and pinyin are on demand. */
-  surtitles?: { main: 'zh' | 'id' | 'en' | 'jv'; second: 'zh' | 'id' | 'en' | 'jv' };
+  surtitles?: { main: 'zh' | 'id' | 'en' | 'jv' | 'ko'; second: 'zh' | 'id' | 'en' | 'jv' | 'ko' };
   cues(c: CueContext): void;
 }

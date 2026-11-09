@@ -12,9 +12,9 @@ const GAP = 0.32;
 /** Just in front of the proscenium wall. */
 const Z = -0.2;
 
-type Lang = 'zh' | 'en' | 'id' | 'fr' | 'jv';
+type Lang = 'zh' | 'en' | 'id' | 'fr' | 'jv' | 'ko';
 /** The two titles under the lead, by the lead language. */
-const UNDER: Record<Lang, [Lang, Lang]> = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'] };
+const UNDER: Record<Lang, [Lang, Lang]> = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'], ko: ['id', 'en'] };
 
 interface Slot {
   id: string | null;
@@ -29,8 +29,8 @@ export class PosterWall {
   private slots: Slot[] = [];
   /** Half the width of the wall the posters take, from the centre line. The lobby camera frames it. */
   reach = 0;
-  /** Height of the poster centres. */
-  readonly y: number;
+  /** Height of the poster centres. Two rows hang higher. */
+  y: number;
   readonly z = Z;
   hovered: string | null = null;
   chosen: string | null = null;
@@ -55,6 +55,8 @@ export class PosterWall {
     const rows = half > 2 ? 2 : 1;
     const s = rows === 1 ? 1 : 0.62;
     const cols = Math.ceil(half / rows);
+    // Two rows reach low on the wall, where the front railing would cut the lower row. The wall hangs them higher.
+    if (rows === 2) this.y += 0.34;
     const frame = new THREE.MeshStandardMaterial({ color: 0xb98a3e, metalness: 0.85, roughness: 0.36 });
     const board = new THREE.MeshStandardMaterial({ color: 0x24140c, roughness: 0.7 });
     const brass = new THREE.MeshStandardMaterial({ color: 0xc8963e, metalness: 0.9, roughness: 0.3 });
@@ -202,9 +204,10 @@ export async function printPoster(p: Production): Promise<HTMLCanvasElement> {
   const lead = (p.master.sung ?? 'zh') as Lang;
   const rest = UNDER[lead];
   const title = (l: Lang) => p.title[l] ?? p.title.en;
-  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}${p.title.jv ?? ''}`;
+  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}${p.title.jv ?? ''}${p.title.ko ?? ''}`;
   await Promise.all([
     document.fonts.load('900 80px "Noto Serif SC"', all),
+    document.fonts.load('900 80px "Noto Serif KR"', all),
     document.fonts.load('400 80px "Abril Fatface"', all),
     document.fonts.load('italic 40px "IM Fell English"', all),
     document.fonts.load('700 24px "Playfair Display SC"', 'THE TWILIGHT BUGLE'),
@@ -223,12 +226,13 @@ export async function printPoster(p: Production): Promise<HTMLCanvasElement> {
     g.globalAlpha = 1;
   };
   const face = (l: Lang, big: boolean) =>
-    l === 'zh' ? (px: number) => `900 ${px}px "Noto Serif SC", serif` : big ? (px: number) => `400 ${px}px "Abril Fatface", serif` : (px: number) => `italic ${px}px "IM Fell English", serif`;
+    l === 'zh' ? (px: number) => `900 ${px}px "Noto Serif SC", serif` : l === 'ko' ? (px: number) => `900 ${px}px "Noto Serif KR", serif` : big ? (px: number) => `400 ${px}px "Abril Fatface", serif` : (px: number) => `italic ${px}px "IM Fell English", serif`;
 
   // Top band: the title in the sung language.
-  const top = lead === 'zh' ? p.title.zh : title(lead).toUpperCase();
-  fit(top, face(lead, true), lead === 'zh' ? 88 : 76, 820);
-  ink(top, 512, 74, INK, lead === 'zh' ? '14px' : '2px');
+  const cjk = lead === 'zh' || lead === 'ko';
+  const top = cjk ? title(lead) : title(lead).toUpperCase();
+  fit(top, face(lead, true), cjk ? 88 : 76, 820);
+  ink(top, 512, 74, INK, cjk ? '14px' : '2px');
 
   // Bottom band: the other two titles and the house.
   const second = rest[0]!, third = rest[1]!;

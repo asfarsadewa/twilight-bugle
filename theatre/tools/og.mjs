@@ -34,10 +34,10 @@ const shows = await page.evaluate(async () => {
   return list.sort((a, b) => a.no - b.no);
 });
 
-const FONTS = 'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,500&family=Cormorant+SC:wght@600&family=IM+Fell+English:ital@0;1&family=Neonderthaw&family=Noto+Serif+SC:wght@900&family=Playfair+Display+SC:wght@700&display=block';
+const FONTS = 'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,500&family=Cormorant+SC:wght@600&family=IM+Fell+English:ital@0;1&family=Neonderthaw&family=Noto+Serif+SC:wght@900&family=Noto+Serif+KR:wght@900&family=Playfair+Display+SC:wght@700&display=block';
 const roman = (n) => ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'][n] ?? String(n);
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-const UNDER = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'] };
+const UNDER = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'], ko: ['id', 'en'] };
 
 async function shoot(html, file) {
   await page.setContent(html, { waitUntil: 'networkidle' });
@@ -69,7 +69,7 @@ await shoot(`<!doctype html><html><head><link rel="stylesheet" href="${FONTS}"><
 for (const s of shows) {
   const lead = s.sung === 'zh' ? s.title.zh : (s.title[s.sung] ?? s.title.en);
   const [a, b] = UNDER[s.sung] ?? ['en', 'id'];
-  const leadCss = s.sung === 'zh' ? "font: 900 92px/1.05 'Noto Serif SC', serif; letter-spacing: 0.08em;" : "font: 400 70px/1.02 'Abril Fatface', serif; text-transform: uppercase; letter-spacing: 0.01em;";
+  const leadCss = s.sung === 'zh' ? "font: 900 92px/1.05 'Noto Serif SC', serif; letter-spacing: 0.08em;" : s.sung === 'ko' ? "font: 900 88px/1.05 'Noto Serif KR', serif; letter-spacing: 0.04em;" : "font: 400 70px/1.02 'Abril Fatface', serif; text-transform: uppercase; letter-spacing: 0.01em;";
   await shoot(`<!doctype html><html><head><link rel="stylesheet" href="${FONTS}"><style>
     html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
     body { background: radial-gradient(ellipse at 70% 50%, #4a1a1e 0%, #2a0d10 55%, #12060a 100%); font-family: 'IM Fell English', serif; color: #efe3cd; position: relative; }

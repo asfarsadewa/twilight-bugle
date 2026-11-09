@@ -1,0 +1,231 @@
+{
+ "title": {
+  "ko": "형 먼저 가",
+  "id": "Kak, Pergilah Dulu",
+  "en": "Brother, Go First",
+  "zh": "哥，你先走"
+ },
+ "sung": "ko",
+ "voices": {
+  "min": {
+   "name": "Min",
+   "voice": "a young male tenor, clear and slightly husky",
+   "heard": "male",
+   "part": "the younger one, who stays"
+  },
+  "cheol": {
+   "name": "Cheol",
+   "voice": "a deeper, older male voice",
+   "heard": "male",
+   "part": "his hyung, who crosses"
+  },
+  "both": {
+   "name": "Min and Cheol",
+   "heard": "both"
+  }
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "label": "Intro",
+   "note": "instrumental"
+  },
+  {
+   "id": "v1",
+   "label": "Verse 1",
+   "lines": [
+    {
+     "who": "min",
+     "ko": "장마비 내리던 6월의 아침",
+     "id": "Pagi bulan Juni, hujan tak henti",
+     "en": "A June morning in the monsoon rain"
+    },
+    {
+     "who": "min",
+     "ko": "우린 같은 길을 걸어 나서지",
+     "id": "Kita melangkah di jalan yang sama",
+     "en": "We set out on the same road"
+    },
+    {
+     "who": "min",
+     "ko": "누가 친구고 누가 남인지",
+     "id": "Siapa kawan, siapa orang asing",
+     "en": "Who was a friend, who was a stranger"
+    },
+    {
+     "who": "min",
+     "ko": "아무도 모르는 안개 속에서",
+     "id": "Tak ada yang tahu, di dalam kabut",
+     "en": "No one could tell, in the fog"
+    },
+    {
+     "who": "min",
+     "ko": "떨리는 내 손을 네가 잡아줬지",
+     "id": "Kau genggam tanganku yang gemetar",
+     "en": "You took my trembling hand"
+    },
+    {
+     "who": "min",
+     "ko": "괜찮아 우린 형제니까",
+     "id": "Tak apa, kita bersaudara",
+     "en": "It is all right, we are brothers"
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "min",
+     "ko": "형 먼저 가",
+     "id": "Kak, pergilah dulu",
+     "en": "Hyung, go first"
+    },
+    {
+     "who": "min",
+     "ko": "이 다리는 내가 지키게",
+     "id": "Jembatan ini biar aku yang jaga",
+     "en": "Let me hold this bridge"
+    },
+    {
+     "who": "min",
+     "ko": "뒤돌아보지 말고 가",
+     "id": "Pergilah, jangan menoleh",
+     "en": "Go, and do not look back"
+    },
+    {
+     "who": "min",
+     "ko": "꼭 살아서 집에 가",
+     "id": "Kau harus hidup, pulanglah",
+     "en": "Stay alive, and get home"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "label": "Verse 2",
+   "lines": [
+    {
+     "who": "min",
+     "ko": "엄마가 싸 준 주먹밥 한쪽",
+     "id": "Sekepal nasi bekal dari ibu",
+     "en": "The rice ball Mother packed for us"
+    },
+    {
+     "who": "min",
+     "ko": "너에게 건네던 그 밤을 기억해",
+     "id": "Kuingat malam saat kuberikan padamu",
+     "en": "I remember the night I gave it to you"
+    },
+    {
+     "who": "min",
+     "ko": "누군가는 남아야 한다면",
+     "id": "Jika harus ada yang tinggal",
+     "en": "If someone has to stay behind"
+    },
+    {
+     "who": "min",
+     "ko": "그게 나라서 다행이야",
+     "id": "Syukurlah, itu aku",
+     "en": "I am glad that it is me"
+    }
+   ]
+  },
+  {
+   "id": "bridge",
+   "label": "Bridge",
+   "lines": [
+    {
+     "who": "min",
+     "ko": "비에 젖은 이름을 가슴에 품고",
+     "id": "Kudekap namamu yang basah oleh hujan",
+     "en": "I hold your rain-soaked name to my heart"
+    },
+    {
+     "who": "min",
+     "ko": "한 걸음씩 새벽을 건너가",
+     "id": "Selangkah demi selangkah, seberangi fajar",
+     "en": "Step by step, cross into the dawn"
+    },
+    {
+     "who": "min",
+     "ko": "네가 돌아올 길을 남겨둘게",
+     "id": "Kusisakan jalan untukmu kembali",
+     "en": "I will leave you a road back"
+    },
+    {
+     "who": "min",
+     "ko": "고향의 문은 열려 있으니",
+     "id": "Pintu kampung halaman tetap terbuka",
+     "en": "The door of home stays open"
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "label": "Final chorus",
+   "lines": [
+    {
+     "who": "min",
+     "ko": "형 먼저 가",
+     "id": "Kak, pergilah dulu",
+     "en": "Hyung, go first"
+    },
+    {
+     "who": "min",
+     "ko": "이 다리는 내가 지키게",
+     "id": "Jembatan ini biar aku yang jaga",
+     "en": "Let me hold this bridge"
+    },
+    {
+     "who": "min",
+     "ko": "뒤돌아보지 말고 가",
+     "id": "Pergilah, jangan menoleh",
+     "en": "Go, and do not look back"
+    },
+    {
+     "who": "min",
+     "ko": "꼭 살아서 집에 가",
+     "id": "Kau harus hidup, pulanglah",
+     "en": "Stay alive, and get home"
+    },
+    {
+     "who": "cheol",
+     "ko": "비가 그치면 날 찾아줘",
+     "id": "Saat hujan reda, carilah aku",
+     "en": "When the rain stops, come and find me"
+    },
+    {
+     "who": "cheol",
+     "ko": "우린 다시 고향에서 만나",
+     "id": "Kita bertemu lagi di kampung halaman",
+     "en": "We will meet again at home"
+    },
+    {
+     "who": "both",
+     "ko": "우린 다시 고향에서 만나",
+     "id": "Kita bertemu lagi di kampung halaman",
+     "en": "We will meet again at home"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "label": "Outro",
+   "lines": [
+    {
+     "who": "both",
+     "ko": "우린 다시 고향에서 만나",
+     "id": "Kita bertemu lagi di kampung halaman",
+     "en": "We will meet again at home"
+    }
+   ]
+  }
+ ],
+ "subs": [
+  "ko",
+  "id"
+ ],
+ "about": "June 1950. Two friends walk south in the rain. At a bridge, the younger one stays to hold it."
+}

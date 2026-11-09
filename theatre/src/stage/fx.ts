@@ -6,6 +6,7 @@ import { STAGE } from './piece.ts';
 
 // Stage effects. Each particle's place is a pure function of time and its seed, so any frame can be drawn alone.
 //   snow.rate  0..1 share of flakes falling     snow.x0 .x1   the span of stage it falls on
+//   rain.rate  0..1 share of drops falling      rain.x0 .x1
 //   fire.rate  0..1 share of flames falling     fire.x0 .x1
 //   dust.i     0..1 motes in the light
 //   glints.rate 0..1 share of gold sparks falling, glints.x0 .x1
@@ -19,6 +20,8 @@ interface FallOpts {
   speed: [number, number];
   spin: number;
   z: [number, number];
+  /** Rain: each streak falls straight and faces the house. It does not drift or turn. */
+  straight?: boolean;
 }
 
 class Fall {
@@ -48,10 +51,11 @@ class Fall {
       if (sd.a > rate) return;
       const speed = o.speed[0] + (o.speed[1] - o.speed[0]) * sd.b;
       const y = top - ((t * speed + sd.c * height) % height);
-      const x = x0 + (x1 - x0) * sd.d + Math.sin(t * 0.8 + sd.e * 20) * 0.08;
+      const x = x0 + (x1 - x0) * sd.d + (o.straight ? 0 : Math.sin(t * 0.8 + sd.e * 20) * 0.08);
       const z = o.z[0] + (o.z[1] - o.z[0]) * sd.e;
       const size = o.size[0] + (o.size[1] - o.size[0]) * sd.c;
-      this.e.set(Math.sin(t + sd.a * 9) * 0.6, t * o.spin * (sd.b - 0.5), Math.sin(t * 0.7 + sd.d * 9) * o.spin);
+      if (o.straight) this.e.set(0, 0, 0.06);
+      else this.e.set(Math.sin(t + sd.a * 9) * 0.6, t * o.spin * (sd.b - 0.5), Math.sin(t * 0.7 + sd.d * 9) * o.spin);
       this.q.setFromEuler(this.e);
       this.m.compose(this.v.set(x, y, z), this.q, this.s.set(size, size, size));
       this.mesh.setMatrixAt(shown++, this.m);
@@ -73,6 +77,23 @@ function flakeTexture(): THREE.CanvasTexture {
     g.lineTo(32 + Math.cos(a) * r, 32 + Math.sin(a) * r);
   }
   g.fill();
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+}
+
+/** A rain streak: a thin line, brightest in the middle and soft at both ends. */
+function streakTexture(): THREE.CanvasTexture {
+  const c = document.createElement('canvas');
+  c.width = 8;
+  c.height = 128;
+  const g = c.getContext('2d')!;
+  const grd = g.createLinearGradient(0, 0, 0, 128);
+  grd.addColorStop(0, 'rgba(220,230,240,0)');
+  grd.addColorStop(0.6, 'rgba(230,238,246,0.9)');
+  grd.addColorStop(1, 'rgba(230,238,246,0)');
+  g.fillStyle = grd;
+  g.fillRect(2, 0, 4, 128);
   const t = new THREE.CanvasTexture(c);
   t.colorSpace = THREE.SRGBColorSpace;
   return t;
@@ -302,6 +323,10 @@ export class Effects {
     const snow = new Fall({ name: 'snow', count: 420, size: [0.03, 0.06], speed: [0.18, 0.32], spin: 2.5, z: [-2.4, 0.2] }, snowMat);
     this.falls.push(snow);
     this.group.add(snow.mesh);
+    const rainMat = new THREE.MeshBasicMaterial({ map: streakTexture(), transparent: true, opacity: 0.5, depthWrite: false, side: THREE.DoubleSide, color: 0xc8d4e2 });
+    const rain = new Fall({ name: 'rain', count: 1400, size: [0.006, 0.009], speed: [3.6, 5.2], spin: 0, z: [-2.6, 0.4], straight: true }, rainMat, 0.03);
+    this.falls.push(rain);
+    this.group.add(rain.mesh);
     const n = 500;
     this.dustSeeds = new Float32Array(n * 3);
     const r = rng(41);
