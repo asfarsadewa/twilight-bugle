@@ -20,6 +20,7 @@ The theatre runs in the browser with Three.js. The same engine renders each show
 | VI | [Urip Maneh · 再世相逢 · Alive Again](productions/urip-maneh) | Javanese | Two souls miss each other across four lives in Java. In the last life, she finds her own face on an old temple wall. | A Javanese wayang beber scroll |
 | VII | [Gema Masa Muda · 青春回声 · Echo of Our Youth](productions/gema-masa-muda) | Indonesian | A grown man remembers his school friends. The old school field still shines in his heart. | An old Indonesian school textbook of the 1980s |
 | VIII | [형 먼저 가 · Brother, Go First · Kak, Pergilah Dulu](productions/hyeong) | Korean, two voices | June 1950, in the monsoon rain. At a bridge, the younger of two friends stays to hold it. | Charcoal and ink wash on hanji paper |
+| IX | [少年回声 · Echoes of Youth · Gema Masa Remaja](productions/shaonian-huisheng) | Mandarin | A grown man comes back to the court of his old school and opens the tin of letters he and his friends buried at fourteen. | A schoolboy's ballpoint and coloured pencil drawing on exercise paper |
 
 Each show has surtitles in two languages. If English is not one of them, a button on the programme adds it. Each show also has its own link, such as https://twilightbugle.asfarlab.fun/show/daybreak-vow.
 
@@ -29,6 +30,7 @@ Each show has surtitles in two languages. If English is not one of them, a butto
 | ![Let Me Rise: the Sky Mother arches over the flood](docs/images/let-me-rise.jpg) | ![Un jour viendra: fireworks over the dream army](docs/images/un-jour-viendra.jpg) |
 | ![山河为证: the sun rises over the loess hills as the column reaches the north](docs/images/shanhe-wei-zheng.jpg) | ![Urip Maneh: the two reach for each other over the carved stone](docs/images/urip-maneh.jpg) |
 | ![Gema Masa Muda: the grown man and the boy he was on the school field under the flame tree](docs/images/gema-masa-muda.jpg) | ![형 먼저 가: Min at the bridgehead in the rain as Cheol crosses](docs/images/hyeong.jpg) |
+| ![少年回声: the boys run with the ball on the gold court as the grown man watches](docs/images/shaonian-huisheng.jpg) | |
 
 ## Inside the theatre
 
