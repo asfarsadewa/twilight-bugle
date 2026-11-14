@@ -1,0 +1,27 @@
+{
+  "key-art-v2": {
+    "transparent_background": false,
+    "reference": "key-art-v1.png + Hyeong troop cards",
+    "generator": "built-in image_gen"
+  },
+  "flat-city": {
+    "transparent_background": true,
+    "reference": "key-art-v2.png",
+    "generator": "built-in image_gen"
+  },
+  "flat-far-bank": {
+    "transparent_background": true,
+    "reference": "key-art-v2.png",
+    "generator": "built-in image_gen"
+  },
+  "flat-promenade": {
+    "transparent_background": true,
+    "reference": "key-art-v2.png",
+    "generator": "built-in image_gen"
+  },
+  "poster-v2": {
+    "transparent_background": false,
+    "reference": "key-art-v2.png",
+    "generator": "built-in image_gen"
+  }
+}

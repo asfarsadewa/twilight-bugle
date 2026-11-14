@@ -1,0 +1,42 @@
+{
+  "key-art": {
+    "transparent_background": false,
+    "prompt": "key-art.prompt",
+    "generator": "built-in image_gen"
+  },
+  "puppet-elder": {
+    "transparent_background": true,
+    "prompt": "puppet-elder.prompt",
+    "generator": "built-in image_gen"
+  },
+  "flat-bank": {
+    "transparent_background": true,
+    "prompt": "flat-bank.prompt",
+    "generator": "built-in image_gen"
+  },
+  "prop-reeds": {
+    "transparent_background": true,
+    "prompt": "prop-reeds.prompt",
+    "generator": "built-in image_gen"
+  },
+  "flat-village-now": {
+    "transparent_background": true,
+    "prompt": "flat-village-now.prompt",
+    "generator": "built-in image_gen"
+  },
+  "prop-bridgehead": {
+    "transparent_background": true,
+    "prompt": "prop-bridgehead.prompt",
+    "generator": "built-in image_gen"
+  },
+  "prop-rice": {
+    "transparent_background": true,
+    "prompt": "prop-rice.prompt",
+    "generator": "built-in image_gen"
+  },
+  "poster": {
+    "transparent_background": false,
+    "prompt": "poster.prompt",
+    "generator": "built-in image_gen"
+  }
+}

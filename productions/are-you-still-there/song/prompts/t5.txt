@@ -1,0 +1,71 @@
+Compose an ORIGINAL, deeply melodic Korean symphonic lament, sung in Korean, approximately three minutes long. One male soloist with a warm dark lower register and a ringing lyrical upper register. The singer is Cheol, an older brother at dusk, looking across a river for the little brother lost to him in the war. The lyrics are accepted: sing every supplied line, in order, with clear Korean diction. Nobody answers him.
+
+COMPOSITION FIRST: Write one beautiful, immediately memorable tragic theme. State its melody clearly on piano and cellos in the opening, before any words, and let the orchestra recall it between vocal phrases. The first two lines of every chorus form a simple, balanced four-bar hook: a short call on '민아', a rest, then the longer pleading question '아직 거기 있니'. Repeat that hook recognizably in all three choruses. Use a decisive interval, a sustained high note and a falling, sighing answer; make the melody easy to hum after one hearing. Develop the rest of the chorus as an answering phrase with a real cadence. Sing the verse on a tune too; leave the chorus a larger register and a stronger rhythmic identity.
+
+HARMONY: Sustain a minor-key tragic identity. Use a moving descending bass, rich inversions, minor subdominant, half-diminished approach chords, dominant flat-nine tension and appoggiaturas that resolve a beat late. At the question, hold the harmony on a suspension or half cadence; let the following phrase release it. Follow the take's chord roadmap below as closely as musically possible. The orchestra must express yearning through changing harmony and an independently singing cello line. A swell alone is not the emotional event. Brief major-colour memories return to the minor present; do not turn the refrain into a cheerful victory anthem. Keep the final chorus in the same key and make its return hurt through melodic recognition and orchestral development.
+
+SOUND AND ARC: Full symphonic strings, grand piano, lyrical cellos, oboe and French horns, supported by harp and restrained orchestral timpani. Warm concert-hall depth. The intro and first verse are tender, the chorus is sweeping and fully melodic, the second verse remembers the June rain, the bridge pulls back, and the last chorus is the largest statement of the same theme. Return to a solo, quiet two-line ending and a complete instrumental cadence. Natural legato, clear pitch, expressive controlled vibrato. No speech-like reciting, sobbing sound effects, second lead, marching snare, drum-kit backbeat, rock guitar or electronic pulse. The scale is majestic; the emotion is the pain of an irretrievable family life.
+
+This is a new composition with its own tune, rhythm and orchestration, not a quotation or recreation of an existing film theme. Section headings are directions, not sung words.
+
+TAKE DIRECTION: G minor, an unhurried 4/4 around 72 BPM, with the most incisive vocal hook. Chorus harmonic roadmap: Gm | D/F# | Gm/F | C/E | Cm/Eb | Gm/D | Am7b5-D7(b9) | Gm(add9). The bass moves G-F#-F-E-Eb-D: a warm remembered chord darkens as C major becomes C minor. Give '민아' the same short two-note call every time, then let '아직 거기 있니' rise into one long pleading note and fall in a small sigh. The answering phrase must be equally singable. A clear resonant male lyric tenor, legato strings and a cello countermelody. Keep grief in the chord movement, with breadth and a strong refrain rather than a pop groove. The bridge's question about the same sunset starts almost alone; the exact hook returns over the full orchestra in the final chorus.
+
+Lyrics:
+
+[Intro - instrumental; state the original chorus theme clearly on piano and cellos]
+
+[Verse 1 - present day; intimate, mature male solo]
+해 질 무렵 그 강가에 서면
+저편 우리 마을에 불이 켜진다
+내 머리는 어느새 하얘졌는데
+기억 속의 너는 아직 열아홉
+
+[Pre-chorus 1 - strings rise, the memory approaches]
+강바람에 갈대만 스쳐도
+내 이름 부르던 네 목소리
+
+[Chorus 1 - the recurring four-bar title hook and a strong answering melodic phrase; minor-key lament]
+민아, 아직 거기 있니
+저녁밥 짓는 연기 아래
+형 먼저 가라던 그 한마디
+아직도 나를 붙잡는구나
+네가 없는 집은 집이 아니더라
+동생아, 내 목소리 들리니
+
+[Verse 2 - June 1950 remembered; quiet again, same lead singer]
+장맛비 쏟아지던 그날 아침
+네 몫의 밥을 내 손에 쥐여 주고
+내 손을 놓으며 웃던 그 얼굴
+내가 돌아선 뒤 울진 않았을까
+
+[Pre-chorus 2 - guilt builds into the refrain]
+널 지키겠다던 형의 약속인데
+왜 네가 날 지켜야만 했나
+
+[Chorus 2 - repeat the same chorus melody recognizably, with a developing cello countermelody]
+민아, 아직 거기 있니
+저녁밥 짓는 연기 아래
+형 먼저 가라던 그 한마디
+아직도 나를 붙잡는구나
+네가 없는 집은 집이 아니더라
+동생아, 내 목소리 들리니
+
+[Bridge - piano and solo cello; almost a private question, then a long crescendo]
+혹시 너도 이 노을을 보니
+저녁이면 내 이름을 부르니
+살아서 집에 가라던 네 말에
+난 오늘도 살아 여기 서 있다
+
+[Orchestral lift - instrumental; recall the original theme, remain in the same key]
+
+[Final chorus - the same chorus tune with the changed final words; full symphonic lament, no reply]
+민아, 아직 거기 있니
+형은 여기서 널 기다린다
+늦어서 미안하다, 내 동생아
+이번엔 형이 남아 있을게
+해가 지면 춥다, 내 동생아
+집에 가자, 우리 함께 가자
+
+[Outro - orchestra falls away; the same man alone, no reply]
+대답 없는 강 위로 해는 저물고
+민아, 형은 여기 있다

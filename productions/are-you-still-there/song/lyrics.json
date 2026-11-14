@@ -1,0 +1,313 @@
+{
+ "title": {
+  "ko": "형은 여기 있다",
+  "en": "Your Brother Is Here",
+  "id": "Kakak Ada di Sini",
+  "zh": "哥在这里"
+ },
+ "sung": "ko",
+ "subs": [
+  "id",
+  "en"
+ ],
+ "voices": {
+  "cheol": {
+   "name": "Cheol",
+   "voice": "one mature male baritone with a warm, resonant low register and a ringing upper register",
+   "heard": "male",
+   "part": "the older blood brother, many years after the separation"
+  }
+ },
+ "about": "At dusk, Cheol looks across the river towards home and calls the little brother he has not seen since the war.",
+ "sections": [
+  {
+   "id": "intro",
+   "label": "Intro",
+   "note": "instrumental; a lone oboe over piano, dusk by the river"
+  },
+  {
+   "id": "v1",
+   "label": "Verse 1",
+   "note": "present day; intimate, mature male solo",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "해 질 무렵 그 강가에 서면",
+     "id": "Saat senja, aku berdiri di tepi sungai itu",
+     "en": "When I stand by that river at dusk"
+    },
+    {
+     "who": "cheol",
+     "ko": "저편 우리 마을에 불이 켜진다",
+     "id": "Lampu menyala di kampung kita di seberang",
+     "en": "Lights come on in our village across the water"
+    },
+    {
+     "who": "cheol",
+     "ko": "내 머리는 어느새 하얘졌는데",
+     "id": "Tanpa terasa rambutku telah memutih",
+     "en": "My hair has turned white before I knew it"
+    },
+    {
+     "who": "cheol",
+     "ko": "기억 속의 너는 아직 열아홉",
+     "id": "Dalam ingatanku, kau masih sembilan belas",
+     "en": "In my memory, you are still nineteen"
+    }
+   ]
+  },
+  {
+   "id": "pre1",
+   "label": "Pre-chorus 1",
+   "note": "strings rise, the memory approaches",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "강바람에 갈대만 스쳐도",
+     "id": "Angin sungai baru menyentuh ilalang",
+     "en": "At the slightest river wind through the reeds"
+    },
+    {
+     "who": "cheol",
+     "ko": "내 이름 부르던 네 목소리",
+     "id": "Terdengar suaramu yang memanggil namaku",
+     "en": "I hear the voice that used to call my name"
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "label": "Chorus 1",
+   "note": "a broad, unforgettable rising melody; full orchestra",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "민아, 아직 거기 있니",
+     "id": "Min, masihkah kau di sana?",
+     "en": "Min, are you still there?"
+    },
+    {
+     "who": "cheol",
+     "ko": "저녁밥 짓는 연기 아래",
+     "id": "Di bawah asap tungku makan malam",
+     "en": "Beneath the smoke of supper fires"
+    },
+    {
+     "who": "cheol",
+     "ko": "형 먼저 가라던 그 한마디",
+     "id": "Kata-katamu: Kak, pergilah dulu",
+     "en": "Those words of yours: Brother, go first"
+    },
+    {
+     "who": "cheol",
+     "ko": "아직도 나를 붙잡는구나",
+     "id": "Hingga kini masih menahanku",
+     "en": "Still hold me where I stood"
+    },
+    {
+     "who": "cheol",
+     "ko": "네가 없는 집은 집이 아니더라",
+     "id": "Tanpamu, rumah tak lagi terasa rumah",
+     "en": "Without you, home never felt like home"
+    },
+    {
+     "who": "cheol",
+     "ko": "동생아, 내 목소리 들리니",
+     "id": "Adikku, terdengarkah suaraku?",
+     "en": "Little brother, can you hear my voice?"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "label": "Verse 2",
+   "note": "June 1950 remembered; quiet again, same lead singer",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "장맛비 쏟아지던 그날 아침",
+     "id": "Pagi itu, hujan musim panas tercurah",
+     "en": "That morning when the monsoon rain poured down"
+    },
+    {
+     "who": "cheol",
+     "ko": "네 몫의 밥을 내 손에 쥐여 주고",
+     "id": "Kau letakkan jatah nasimu di tanganku",
+     "en": "You pressed your own share of rice into my hand"
+    },
+    {
+     "who": "cheol",
+     "ko": "내 손을 놓으며 웃던 그 얼굴",
+     "id": "Wajahmu tersenyum saat melepas tanganku",
+     "en": "That face that smiled as you let go of my hand"
+    },
+    {
+     "who": "cheol",
+     "ko": "내가 돌아선 뒤 울진 않았을까",
+     "id": "Setelah aku berpaling, mungkinkah kau menangis?",
+     "en": "After I turned away, did you perhaps begin to cry?"
+    }
+   ]
+  },
+  {
+   "id": "pre2",
+   "label": "Pre-chorus 2",
+   "note": "guilt builds into the refrain",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "널 지키겠다던 형의 약속인데",
+     "id": "Kakaklah yang berjanji akan menjagamu",
+     "en": "It was your older brother's promise to protect you"
+    },
+    {
+     "who": "cheol",
+     "ko": "왜 네가 날 지켜야만 했나",
+     "id": "Mengapa justru kau yang harus menjagaku?",
+     "en": "Why did you have to be the one to protect me?"
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "label": "Chorus 2",
+   "note": "the same chorus melody, more urgent and expansive",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "민아, 아직 거기 있니",
+     "id": "Min, masihkah kau di sana?",
+     "en": "Min, are you still there?"
+    },
+    {
+     "who": "cheol",
+     "ko": "저녁밥 짓는 연기 아래",
+     "id": "Di bawah asap tungku makan malam",
+     "en": "Beneath the smoke of supper fires"
+    },
+    {
+     "who": "cheol",
+     "ko": "형 먼저 가라던 그 한마디",
+     "id": "Kata-katamu: Kak, pergilah dulu",
+     "en": "Those words of yours: Brother, go first"
+    },
+    {
+     "who": "cheol",
+     "ko": "아직도 나를 붙잡는구나",
+     "id": "Hingga kini masih menahanku",
+     "en": "Still hold me where I stood"
+    },
+    {
+     "who": "cheol",
+     "ko": "네가 없는 집은 집이 아니더라",
+     "id": "Tanpamu, rumah tak lagi terasa rumah",
+     "en": "Without you, home never felt like home"
+    },
+    {
+     "who": "cheol",
+     "ko": "동생아, 내 목소리 들리니",
+     "id": "Adikku, terdengarkah suaraku?",
+     "en": "Little brother, can you hear my voice?"
+    }
+   ]
+  },
+  {
+   "id": "bridge",
+   "label": "Bridge",
+   "note": "piano and solo cello; almost a private question, then a long crescendo",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "혹시 너도 이 노을을 보니",
+     "id": "Mungkinkah kau juga melihat lembayung ini?",
+     "en": "Could you be watching this same sunset?"
+    },
+    {
+     "who": "cheol",
+     "ko": "저녁이면 내 이름을 부르니",
+     "id": "Saat senja, apakah kau memanggil namaku?",
+     "en": "When evening comes, do you call my name?"
+    },
+    {
+     "who": "cheol",
+     "ko": "살아서 집에 가라던 네 말에",
+     "id": "Karena katamu: Hiduplah, pulanglah",
+     "en": "Because you told me to stay alive and go home"
+    },
+    {
+     "who": "cheol",
+     "ko": "난 오늘도 살아 여기 서 있다",
+     "id": "Hari ini aku masih hidup, berdiri di sini",
+     "en": "I am alive and standing here again today"
+    }
+   ]
+  },
+  {
+   "id": "lift",
+   "label": "Orchestral lift",
+   "note": "instrumental; strings and horns carry the refrain into the final chorus"
+  },
+  {
+   "id": "ch3",
+   "label": "Final chorus",
+   "note": "the chorus melody returns at its largest; grief and love, unresolved",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "민아, 아직 거기 있니",
+     "id": "Min, masihkah kau di sana?",
+     "en": "Min, are you still there?"
+    },
+    {
+     "who": "cheol",
+     "ko": "형은 여기서 널 기다린다",
+     "id": "Kakak menunggumu di sini",
+     "en": "Your brother is waiting for you here"
+    },
+    {
+     "who": "cheol",
+     "ko": "늦어서 미안하다, 내 동생아",
+     "id": "Maaf aku terlambat, adikku",
+     "en": "I am sorry I am so late, my little brother"
+    },
+    {
+     "who": "cheol",
+     "ko": "이번엔 형이 남아 있을게",
+     "id": "Kali ini, biar kakak yang tinggal",
+     "en": "This time your brother will stay behind"
+    },
+    {
+     "who": "cheol",
+     "ko": "해가 지면 춥다, 내 동생아",
+     "id": "Selepas matahari terbenam, dingin, adikku",
+     "en": "It gets cold after sunset, my little brother"
+    },
+    {
+     "who": "cheol",
+     "ko": "집에 가자, 우리 함께 가자",
+     "id": "Mari pulang, kita pulang bersama",
+     "en": "Let us go home; let us go together"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "label": "Outro",
+   "note": "orchestra falls away; the same man alone, no reply",
+   "lines": [
+    {
+     "who": "cheol",
+     "ko": "대답 없는 강 위로 해는 저물고",
+     "id": "Matahari tenggelam di atas sungai yang tak menjawab",
+     "en": "The sun goes down over the river that gives no answer"
+    },
+    {
+     "who": "cheol",
+     "ko": "민아, 형은 여기 있다",
+     "id": "Min, kakak ada di sini",
+     "en": "Min, your brother is here"
+    }
+   ]
+  }
+ ]
+}

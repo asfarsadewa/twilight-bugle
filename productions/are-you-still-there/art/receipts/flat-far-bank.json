@@ -1,0 +1,10 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/revision-2/flat-far-bank.prompt",
+  "references": [
+    "key-art-v2.png"
+  ],
+  "output": "src/flat-far-bank.png",
+  "transparent_background": true,
+  "source_generated": "C:\\Users\\asfar\\.codex\\generated_images\\01a1d777-ac3c-7033-9b2c-d520b3bfea2f\\exec-f02b8974-469e-47d1-a127-abe3de74150a.png"
+}

@@ -1,0 +1,96 @@
+{
+  "body": {
+    "index": 1,
+    "pivot": [
+      0.5,
+      1
+    ],
+    "scale": 1
+  },
+  "head": {
+    "index": 0,
+    "pivot": [
+      0.5586,
+      0.897
+    ],
+    "attach": [
+      0.6015,
+      0.0356
+    ],
+    "z": -0.6,
+    "string": [
+      0.5,
+      0.055
+    ],
+    "scale": 0.7
+  },
+  "armA": {
+    "index": 2,
+    "pivot": [
+      0.0991,
+      0.5768
+    ],
+    "attach": [
+      0.8102,
+      0.1105
+    ],
+    "z": 1.1,
+    "rest": -72,
+    "string": [
+      0.85,
+      0.2
+    ],
+    "scale": 1
+  },
+  "armB": {
+    "index": 3,
+    "pivot": [
+      0.3707,
+      0.0507
+    ],
+    "attach": [
+      0.2984,
+      0.1063
+    ],
+    "z": 1,
+    "string": [
+      0.72,
+      0.35
+    ],
+    "scale": 1.2
+  },
+  "calibration": {
+    "source": "src/puppet-elder.png",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "pin_centres_pixels": {
+      "neck": [
+        597,
+        210
+      ],
+      "shoulderA": [
+        685.5,
+        290
+      ],
+      "shoulderB": [
+        468.5,
+        285.5
+      ],
+      "head": [
+        197,
+        337
+      ],
+      "armA": [
+        811.5,
+        355
+      ],
+      "armB": [
+        122.5,
+        441
+      ]
+    },
+    "method": "Brass pin centres measured from the 2x close-up in _work/pin-detail.png; cane arm scaled to meet the stage; head reduced to adult proportions."
+  }
+}

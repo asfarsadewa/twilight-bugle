@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/flat-village-now.prompt",
+  "reference": "key-art-v1.png",
+  "output": "src/flat-village-now.png",
+  "source_generated_name": "exec-1964cc97-6597-4f00-84f0-ffff48b9c766.png"
+}

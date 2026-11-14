@@ -1,0 +1,10 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/revision-2/poster-v2.prompt",
+  "references": [
+    "key-art-v2.png"
+  ],
+  "output": "src/poster-v2.png",
+  "transparent_background": false,
+  "source_generated": "C:\\Users\\asfar\\.codex\\generated_images\\01a1d777-ac3c-7033-9b2c-d520b3bfea2f\\exec-a2339d0d-e18f-46dc-9e9f-cfc9e87a23a8.png"
+}

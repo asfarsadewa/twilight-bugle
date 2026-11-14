@@ -1,0 +1,47 @@
+{
+ "t1": {
+  "label": "The River at Dusk",
+  "direction": "The principal version: a grand Korean orchestral drama ballad in a slow 4/4, around 70 BPM. Begin with piano, oboe and low strings. The chorus opens into an especially strong, singable melodic lift, driven by flowing strings and noble French horns. Give each chorus an unmistakable peak and breathing space afterwards. A half-step lift may heighten the last chorus, followed by a deeply quiet outro. Large and majestic, with a warm, weathered male lead."
+ },
+ "t2": {
+  "label": "A Brother's Evening Prayer",
+  "direction": "A broad, swaying 6/8 orchestral lament, dotted-quarter pulse around 52 BPM. A simple piano figure, solo cello and oboe open the song. Let the verse sound like an older brother quietly calling a familiar name. The chorus has a huge lyrical sweep over rolling harp and string arpeggios, with singing countermelodies and deeply resonant horns. The climax comes from harmonic release and a long high vocal line. Keep the first two choruses restrained enough to make the final one devastating. Elegiac, melodic and warm, ending with one lonely voice."
+ },
+ "t3": {
+  "label": "The Promise Across the Water",
+  "direction": "The most expansive symphonic version: an unhurried 4/4 Korean orchestral power ballad, around 66 BPM, with an immediately memorable rising chorus. Piano and strings introduce the tune, a resonant baritone begins intimately, and each section opens the orchestra further. Use soaring violins, answering cello lines, full French horns and orchestral timpani rolls. Keep the rhythm orchestral, with no marching or pop backbeat. The bridge drops to piano and voice; a luminous whole-step modulation launches the final chorus, with a soft wordless choir deep behind the soloist. End with the solo singer alone and the river's unanswered question."
+ },
+ "t4": {
+  "label": "The Uncrossed River",
+  "round": 2,
+  "direction": "D minor, broad adagio 4/4 around 68 BPM. Chorus harmonic roadmap, one bar per cell: Dm(add9) | Dm/C | Bbmaj7 | A7sus4-A7 | Gm(add9) | Dm/F | Em7b5-A7(b9) | Dm(add9). The first four bars carry the title call and its answer. Let the bass descend D-C-Bb-A beneath a strongly shaped lyrical vocal arch. At '거기 있니', suspend the voice above the dominant before resolving. Repeat the initial call rhythm in the next phrase and give '동생아' an aching, clear cadential answer. Piano and cellos establish this original tune in the intro; broad violins and horns take it up in the chorus. A warm high baritone or lyric tenor, fully sung and never breathlessly whispered."
+ },
+ "t5": {
+  "label": "The Promise I Could Not Keep",
+  "round": 2,
+  "direction": "G minor, an unhurried 4/4 around 72 BPM, with the most incisive vocal hook. Chorus harmonic roadmap: Gm | D/F# | Gm/F | C/E | Cm/Eb | Gm/D | Am7b5-D7(b9) | Gm(add9). The bass moves G-F#-F-E-Eb-D: a warm remembered chord darkens as C major becomes C minor. Give '민아' the same short two-note call every time, then let '아직 거기 있니' rise into one long pleading note and fall in a small sigh. The answering phrase must be equally singable. A clear resonant male lyric tenor, legato strings and a cello countermelody. Keep grief in the chord movement, with breadth and a strong refrain rather than a pop groove. The bridge's question about the same sunset starts almost alone; the exact hook returns over the full orchestra in the final chorus."
+ },
+ "t6": {
+  "label": "Your Brother Is Here",
+  "round": 2,
+  "direction": "C minor, a very lyrical 6/8 symphonic elegy around dotted-quarter 48 BPM. Chorus roadmap: Cm(add9) | Abmaj7 | Fm(add9) | G7sus4-G7 | Cm/Bb | Abmaj7 | Dm7b5-G7(b9) | Cm(add9). Set the first two lyric lines as a memorable four-bar question: repeat the name-call rhythm, open into a broad rising melodic arc, then let it fall against a suspended dominant. Rocking piano and cello figures support the melody with changing bass and expressive suspensions. The theme should sound like a remembered song of home, clear and beautiful even on solo piano. On its orchestral return the same tune becomes tragic. One warm, ringing male lead; the last domestic plea is tender. No triumphant key change; let the same melody and minor cadence carry the final climax, then the solitary outro."
+ },
+ "t7": {
+  "label": "A Name Across the River",
+  "round": 3,
+  "reference": "Taegukgi - Epilogue",
+  "direction": "D minor, broad lyrical 4/4, around 72 BPM. Give the opening title line an original eight-note seed: D4-A4-F4-E4 | G4-F4-E4-D4, one pitch per sung syllable of '민 아 아 직 거 기 있 니'. The leap on the name and the falling answer make the hook; stretch it naturally over two bars, with a breath after the name. It is a guide for a beautiful tune, not a mechanical scale exercise. Repeat its rhythm and contour exactly when the refrain returns. The second line is a related rising answer. Use Dm(add9)-Bbmaj7-Gm9-A7sus4/A7, with inversions and an aching dominant preparation before the chorus. Grand legato strings and French horns broaden the tune; the singer remains clear, tender and direct. The final chorus is emotionally open and majestic, then falls back to the lone brother."
+ },
+ "t8": {
+  "label": "The Evening Call",
+  "round": 3,
+  "reference": "Taegukgi - Epilogue",
+  "direction": "C minor, a gently swaying 6/8 symphonic lament, dotted-quarter around 50 BPM. Retain a broad rocking sadness but make the chorus melody much more definite. Original title-hook seed, eight syllables: G3-C4-D4-Eb4 | G4-F4-Eb4-D4. A short pickup rises into the name, climbs into a long pleading note and falls to an unresolved question; the next line completes the phrase. Repeat this recognizably in all choruses. Let Cm(add9)-Abmaj7-Fm9-G7(b9) support the hook, with descending bass and late suspensions. Piano and cello introduce the hook alone, then the voice inherits it. Let the violin melody and horn counterline answer the lead between phrases, with the full Epilogue-like retrospective sweep in the final refrain. One warm, ringing male singer, and an unanswered, intimate outro."
+ },
+ "t9": {
+  "label": "The Home We Remember",
+  "round": 3,
+  "reference": "Taegukgi - Epilogue",
+  "direction": "A broad 4/4 end-credit ballad, around 68 BPM, in F major with a D-minor shadow. The melody recalls the beautiful home life the brothers should have shared. Give '민아' a repeated, unmistakable two-note calling figure; the rest of the title line rises in a long singing arc, then falls with a small sigh. Let the answering line repeat that rhythmic identity so the chorus is immediately memorable. Harmonic colour: F-C/E-Dm-Am/C-Bbmaj7-Bbm6-F/A/C7-Dm(add9). The borrowed minor subdominant and the deceptive minor landing make the warm memory hurt. This is tenderness and loss, not a victory fanfare. A lyrical tenor or high baritone, luminous strings and French horns; develop the same theme into the largest final chorus. The sorrow comes from hearing that beautiful tune return while the brother remains absent. End quietly with Cheol alone."
+ }
+}

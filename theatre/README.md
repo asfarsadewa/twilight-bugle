@@ -106,7 +106,7 @@ bun run build
 ```
 
 ```bash
-wrangler deploy
+bun run deploy
 ```
 
 The gate uses the Turnstile widget "orders". It is on: the Worker has the secrets `TURNSTILE_SECRET` and `PASS_KEY`. A visitor passes the check at the door. The Worker then sets a pass for 12 hours. Without the pass, the Worker refuses the songs, the house and the art. If you remove either secret, the gate turns off. The door then opens without a check. If a check fails, the door says what failed. A click on the doors starts a new check.

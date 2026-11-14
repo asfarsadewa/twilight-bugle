@@ -2,7 +2,7 @@
 
 Kak, Pergilah Dulu · Brother, Go First
 
-June 1950, in the monsoon rain. Two friends walk south with the refugees. At a bridge, the younger one stays to hold it. Min sings the song in Korean. Cheol answers him in the final chorus.
+June 1950, in the monsoon rain. Two brothers walk south with the refugees. At a bridge, the younger one stays to hold it. Min sings the song in Korean. Cheol answers him in the final chorus.
 
 The surtitles show the Korean line and the Indonesian line. A button on the programme adds English.
 

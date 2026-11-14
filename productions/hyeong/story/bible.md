@@ -1,6 +1,8 @@
 # Story bible: 형 먼저 가
 
-June 1950, the first days of the Korean War. The monsoon rain falls. Two young men from one village walk south with the refugees. They are friends, not blood brothers, but Min calls Cheol his hyung. At a wooden bridge over a swollen river, someone must stay and hold it while the others cross. Min stays. He tells his hyung to go first and to live.
+June 1950, the first days of the Korean War. The monsoon rain falls. Two brothers from one village walk south with the refugees. Min is the younger, and Cheol is his hyung. At a wooden bridge over a swollen river, someone must stay and hold it while the others cross. Min stays. He tells his hyung to go first and to live.
+
+Continuity: the user established them as blood brothers while developing the companion *형은 여기 있다 · Your Brother Is Here*.
 
 The war takes them to different sides. In the last chorus they stand on the two banks of the river, and the bridge between them is gone. They promise to meet again at home.
 

@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/puppet-elder.prompt",
+  "reference": "key-art-v1.png",
+  "output": "src/puppet-elder.png",
+  "source_generated_name": "exec-5c8b50c7-358b-4a5c-b733-5970f2999ad3.png"
+}

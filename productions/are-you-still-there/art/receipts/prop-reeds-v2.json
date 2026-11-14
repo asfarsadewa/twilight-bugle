@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/prop-reeds-alpha-fix.prompt",
+  "reference": "src/prop-reeds.png",
+  "output": "src/prop-reeds-v2.png",
+  "source_generated_name": "exec-b7870535-dda5-401b-b5f2-1e8a3df7573e.png"
+}

@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/prop-reeds.prompt",
+  "reference": "key-art-v1.png",
+  "output": "src/prop-reeds.png",
+  "source_generated_name": "exec-d51c54ef-bce6-471c-b6af-b6b4d9b6b5ba.png"
+}

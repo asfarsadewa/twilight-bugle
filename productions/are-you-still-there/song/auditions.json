@@ -1,0 +1,123 @@
+{
+  "model": "lyria-3.5",
+  "status": "auditions_ready_for_user_earcheck",
+  "selected_take": "suno-final",
+  "takes": [
+    {
+      "take": "t1",
+      "label": "The River at Dusk",
+      "model": "lyria-3.5",
+      "duration_seconds": 182.72,
+      "audio": "takes/t1/take.mp3",
+      "original": "takes/t1/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "rejected_by_user",
+      "round": 1,
+      "user_feedback": "Lyrics accepted. User rejects this musical take: chorus weak and not catchy, harmony insufficiently lamenting, melodic tragedy missing compared with Hyeong."
+    },
+    {
+      "take": "t2",
+      "label": "A Brother's Evening Prayer",
+      "model": "lyria-3.5",
+      "duration_seconds": 181.931,
+      "audio": "takes/t2/take.mp3",
+      "original": "takes/t2/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "rejected_by_user",
+      "round": 1,
+      "user_feedback": "Lyrics accepted. User rejects this musical take: chorus weak and not catchy, harmony insufficiently lamenting, melodic tragedy missing compared with Hyeong."
+    },
+    {
+      "take": "t3",
+      "label": "The Promise Across the Water",
+      "model": "lyria-3.5",
+      "duration_seconds": 177.632,
+      "audio": "takes/t3/take.mp3",
+      "original": "takes/t3/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "rejected_by_user",
+      "round": 1,
+      "user_feedback": "Lyrics accepted. User rejects this musical take: chorus weak and not catchy, harmony insufficiently lamenting, melodic tragedy missing compared with Hyeong."
+    },
+    {
+      "take": "t4",
+      "label": "The Uncrossed River",
+      "round": 2,
+      "model": "lyria-3.5",
+      "duration_seconds": 182.464,
+      "audio": "takes/t4/take.mp3",
+      "original": "takes/t4/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "not_selected_by_user",
+      "user_feedback": "Stronger sadness can be felt, but choruses are still weak. Keep take 6 for now; request a new round inspired by Epilogue."
+    },
+    {
+      "take": "t5",
+      "label": "The Promise I Could Not Keep",
+      "round": 2,
+      "model": "lyria-3.5",
+      "duration_seconds": 181.013,
+      "audio": "takes/t5/take.mp3",
+      "original": "takes/t5/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "not_selected_by_user",
+      "user_feedback": "Stronger sadness can be felt, but choruses are still weak. Keep take 6 for now; request a new round inspired by Epilogue."
+    },
+    {
+      "take": "t6",
+      "label": "Your Brother Is Here",
+      "round": 2,
+      "model": "lyria-3.5",
+      "duration_seconds": 181.675,
+      "audio": "takes/t6/take.mp3",
+      "original": "takes/t6/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "provisionally_kept_by_user",
+      "user_feedback": "Stronger sadness can be felt, but choruses are still weak. Keep take 6 for now; request a new round inspired by Epilogue."
+    },
+    {
+      "take": "t7",
+      "label": "A Name Across the River",
+      "round": 3,
+      "model": "lyria-3.5",
+      "duration_seconds": 184.32,
+      "audio": "takes/t7/take.mp3",
+      "original": "takes/t7/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "pending_user"
+    },
+    {
+      "take": "t8",
+      "label": "The Evening Call",
+      "round": 3,
+      "model": "lyria-3.5",
+      "duration_seconds": 184.32,
+      "audio": "takes/t8/take.mp3",
+      "original": "takes/t8/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "preferred_music_vocal_issue",
+      "user_feedback": "User: take 8 is almost the desired musical direction, but the chorus vocals go out of tune. Pitch issue explicitly clarified by user."
+    },
+    {
+      "take": "t9",
+      "label": "The Home We Remember",
+      "round": 3,
+      "model": "lyria-3.5",
+      "duration_seconds": 182.517,
+      "audio": "takes/t9/take.mp3",
+      "original": "takes/t9/original.wav",
+      "file_integrity": "passed",
+      "earcheck": "pending_user"
+    }
+  ],
+  "latest_round": 3,
+  "lyric_approval": "accepted_by_user",
+  "selection_status": "user_approved_final",
+  "reference_for_next_round": "Taegukgi - Epilogue",
+  "reference_for_latest_round": "Taegukgi - Epilogue",
+  "preferred_candidate": "t8",
+  "fallback_take": "t6",
+  "candidate_issue": "User reports out-of-tune chorus vocals; composition is almost the desired direction.",
+  "next_step": "Prepared take 8 Suno handoff for user; no audio uploaded or new generation submitted.",
+  "final_source": "master-source.json"
+}

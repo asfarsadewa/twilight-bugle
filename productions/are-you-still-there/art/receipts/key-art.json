@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/key-art.prompt",
+  "reference": "../../hyeong/art/key-art.png",
+  "output": "key-art-v1.png",
+  "source_generated_name": "exec-8b8e1aff-be8c-4c23-8e56-8065369f02a8.png"
+}

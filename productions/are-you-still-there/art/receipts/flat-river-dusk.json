@@ -1,0 +1,10 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/revision-2/flat-river-dusk.prompt",
+  "references": [
+    "key-art-v2.png"
+  ],
+  "output": "src/flat-river-dusk.png",
+  "transparent_background": true,
+  "source_generated": "C:\\Users\\asfar\\.codex\\generated_images\\01a1d777-ac3c-7033-9b2c-d520b3bfea2f\\exec-4b847cb6-2b8f-45e2-9bcd-96de9d711188.png"
+}

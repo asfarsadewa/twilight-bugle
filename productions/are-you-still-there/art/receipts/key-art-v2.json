@@ -1,0 +1,12 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/revision-2/key-art-v2.prompt",
+  "references": [
+    "key-art-v1.png",
+    "../../hyeong/art/cut/prop-line-a.webp",
+    "../../hyeong/art/cut/prop-line-b.webp"
+  ],
+  "output": "key-art-v2.png",
+  "canonical": "key-art.png",
+  "source_generated": "C:\\Users\\asfar\\.codex\\generated_images\\01a1d777-ac3c-7033-9b2c-d520b3bfea2f\\exec-57866404-c425-455e-b06f-3bcbc3db46b6.png"
+}

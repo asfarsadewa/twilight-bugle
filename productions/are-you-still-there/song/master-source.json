@@ -1,0 +1,15 @@
+{
+  "take": "suno-final",
+  "provider": "Suno",
+  "source_name": "형은 여기 있다.mp3",
+  "title": {
+    "ko": "형은 여기 있다",
+    "en": "Your Brother Is Here",
+    "id": "Kakak Ada di Sini",
+    "zh": "哥在这里"
+  },
+  "duration_seconds": 242.8,
+  "sha256": "45bb5f2ec175d3de8b3180446f031dcee249191573a2dd8abe36be474bcb00fd",
+  "audio_approved_by": "user",
+  "source_suno_id": "451f1ea2-5f0e-4772-b677-a80d47a7715e"
+}

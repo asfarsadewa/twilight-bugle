@@ -2,7 +2,7 @@
 // The cue sheet follows the take in song/master.json. Line numbers below are the sung lines.
 // Heights (y) are above the stage floor. The stage opening is about 5.5 wide and 2.4 high. Depth runs to z = -4.
 //
-// June 1950, the monsoon. Two friends walk south. At a bridge the younger one stays. Min and Cheol are
+// June 1950, the monsoon. Two brothers walk south. At a bridge the younger one stays. Min and Cheol are
 // marionettes. The village, the hills, the bridge and the gate fly in. The river is a wave machine of two rows.
 // The refugees, the soldiers in the fog and Mother are cards on tin wires. Rain falls through the whole show.
 
@@ -429,7 +429,7 @@ const production: Production = {
   postroll: 7,
   surtitles: { main: 'ko', second: 'id' },
   bill: {
-    about: 'June 1950, in the monsoon rain. Two friends walk south with the refugees. At a bridge, the younger one stays to hold it. Min sings the song in Korean.',
+    about: 'June 1950, in the monsoon rain. Two brothers walk south with the refugees. At a bridge, the younger one stays to hold it. Min sings the song in Korean.',
     cast: [['Min', 'Voice'], ['Cheol, his hyung', 'Voice'], ['Their mother', 'On a slide'], ['The road', 'On slides']],
     scenes: ['The village at dawn', 'The road south', 'The bridge', 'The night fire', 'The open gate'],
   },

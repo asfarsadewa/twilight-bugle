@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/poster.prompt",
+  "reference": "key-art-v1.png",
+  "output": "src/poster.png",
+  "source_generated_name": "exec-9cf7875a-2d7e-4725-80a7-d0f3ac31ee74.png"
+}

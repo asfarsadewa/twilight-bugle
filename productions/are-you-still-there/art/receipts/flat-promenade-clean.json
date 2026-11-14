@@ -1,0 +1,11 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/revision-2/flat-promenade-clean.prompt",
+  "references": [
+    "src/flat-promenade.png"
+  ],
+  "output": "src/flat-promenade-clean.png",
+  "transparent_background": true,
+  "source_generated": "C:\\Users\\asfar\\.codex\\generated_images\\01a1d777-ac3c-7033-9b2c-d520b3bfea2f\\exec-fededbe3-d61c-4d7e-a9c1-a5c5e9e678b5.png",
+  "reason": "Remove the unwanted painted background so the live cyclorama and independent scenery remain visible."
+}

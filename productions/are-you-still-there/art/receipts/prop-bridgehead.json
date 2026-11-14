@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/prop-bridgehead.prompt",
+  "reference": "key-art-v1.png",
+  "output": "src/prop-bridgehead.png",
+  "source_generated_name": "exec-f12609c1-6b19-402a-b2b7-554690917799.png"
+}

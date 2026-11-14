@@ -1,0 +1,10 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/revision-2/flat-promenade.prompt",
+  "references": [
+    "key-art-v2.png"
+  ],
+  "output": "src/flat-promenade.png",
+  "transparent_background": true,
+  "source_generated": "C:\\Users\\asfar\\.codex\\generated_images\\01a1d777-ac3c-7033-9b2c-d520b3bfea2f\\exec-8d273007-7f38-4b75-a694-11dc6b5034cd.png"
+}

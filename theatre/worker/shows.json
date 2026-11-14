@@ -59,7 +59,7 @@
   "id": "hyeong",
   "no": 8,
   "title": "형 먼저 가 · Kak, Pergilah Dulu · Brother, Go First",
-  "description": "June 1950, in the monsoon rain. Two friends walk south with the refugees. At a bridge, the younger one stays to hold it. Min sings the song in Korean.",
+  "description": "June 1950, in the monsoon rain. Two brothers walk south with the refugees. At a bridge, the younger one stays to hold it. Min sings the song in Korean.",
   "image": "https://twilightbugle.asfarlab.fun/og/hyeong.jpg",
   "url": "https://twilightbugle.asfarlab.fun/show/hyeong"
  },
@@ -70,5 +70,13 @@
   "description": "A grown man comes back to the basketball court of his old school. He opens the tin box of letters he and his friends buried at fourteen. Xiaoyu sings the song in Mandarin.",
   "image": "https://twilightbugle.asfarlab.fun/og/shaonian-huisheng.jpg",
   "url": "https://twilightbugle.asfarlab.fun/show/shaonian-huisheng"
+ },
+ {
+  "id": "are-you-still-there",
+  "no": 10,
+  "title": "형은 여기 있다 · Kakak Ada di Sini · Your Brother Is Here",
+  "description": "War drove Chol across a refugee bridge; Min stayed and cut the crossing. Decades later, Chol calls from a developed bank towards the dim rural shore. The river and a locked gate still divide them.",
+  "image": "https://twilightbugle.asfarlab.fun/og/are-you-still-there.jpg",
+  "url": "https://twilightbugle.asfarlab.fun/show/are-you-still-there"
  }
 ]

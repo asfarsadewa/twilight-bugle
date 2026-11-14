@@ -12,6 +12,46 @@ import { STAGE } from './piece.ts';
 //   glints.rate 0..1 share of gold sparks falling, glints.x0 .x1
 //   meteor.i .x .y .z   a falling star: its head and a tail that follows its own recent path
 //   portal.i .x .y .s   a door of light in the sky: a soft radiant disc in front of the cyclorama
+//   smoke.i .x .y .z   a small chimney plume; y is height above the stage floor
+
+/** A small practical smoke plume. Its phase comes from show time, so seeking is deterministic. */
+class ChimneySmoke {
+  readonly group = new THREE.Group();
+  private puffs: THREE.Sprite[] = [];
+
+  constructor() {
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = 64;
+    const ctx = canvas.getContext('2d')!;
+    const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+    gradient.addColorStop(0, 'rgba(205,205,210,0.8)');
+    gradient.addColorStop(0.45, 'rgba(185,190,200,0.35)');
+    gradient.addColorStop(1, 'rgba(185,190,200,0)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, 64, 64);
+    const map = new THREE.CanvasTexture(canvas);
+    map.colorSpace = THREE.SRGBColorSpace;
+    for (let i = 0; i < 18; i++) {
+      const puff = new THREE.Sprite(new THREE.SpriteMaterial({ map, transparent: true, depthWrite: false, opacity: 0 }));
+      this.puffs.push(puff);
+      this.group.add(puff);
+    }
+  }
+
+  update(tl: Timeline, t: number) {
+    const level = tl.value('smoke.i', t, 0);
+    this.group.visible = level > 0.002;
+    if (!this.group.visible) return;
+    const x = tl.value('smoke.x', t, 1.3), y = STAGE.floor + tl.value('smoke.y', t, 1.4), z = tl.value('smoke.z', t, -3.2);
+    this.puffs.forEach((puff, i) => {
+      const age = ((t * 0.12 + i * 0.61803398875) % 1 + 1) % 1;
+      const size = 0.07 + age * 0.24;
+      puff.position.set(x + age * 0.19 + Math.sin(t * 0.3 + i * 2.1) * 0.018, y + age * 0.72, z);
+      puff.scale.set(size, size * 1.35, 1);
+      (puff.material as THREE.SpriteMaterial).opacity = level * 0.13 * Math.sin(age * Math.PI) ** 2;
+    });
+  }
+}
 
 interface FallOpts {
   name: string;
@@ -288,6 +328,7 @@ export class Effects {
   private trail?: Trail;
   private portal?: Portal;
   private fireworks?: Fireworks;
+  private smoke?: ChimneySmoke;
   /** The fire, once a production brings flame art. A failed build clears it, so the next load tries again. */
   private fire: Promise<void> | null = null;
 
@@ -318,7 +359,8 @@ export class Effects {
     this.trail = new Trail(glow);
     this.portal = new Portal();
     this.fireworks = new Fireworks(glow);
-    this.group.add(this.trail.mesh, this.portal.mesh, this.fireworks.mesh);
+    this.smoke = new ChimneySmoke();
+    this.group.add(this.trail.mesh, this.portal.mesh, this.fireworks.mesh, this.smoke.group);
     const snowMat = new THREE.MeshStandardMaterial({ map: flakeTexture(), alphaTest: 0.5, side: THREE.DoubleSide, roughness: 0.9 });
     const snow = new Fall({ name: 'snow', count: 420, size: [0.03, 0.06], speed: [0.18, 0.32], spin: 2.5, z: [-2.4, 0.2] }, snowMat);
     this.falls.push(snow);
@@ -344,6 +386,7 @@ export class Effects {
     this.trail?.update(tl, t);
     this.portal?.update(tl, t);
     this.fireworks?.update(tl, t);
+    this.smoke?.update(tl, t);
     const i = tl.value('dust.i', t, 0.6);
     (this.dust.material as THREE.PointsMaterial).opacity = 0.6 * i;
     this.dust.visible = i > 0.01;
