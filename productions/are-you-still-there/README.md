@@ -8,7 +8,7 @@ For this song they are blood brothers, as requested by the user. Cheol alone sin
 
 ## Production
 
-The corrected production is complete and approved by the user. The full 1080p film is `render/are-you-still-there.mp4` (4:18.800 with preroll and curtain call). [production-review.md](production-review.md) records the delivered assets and checks. The show link is https://twilightbugle.asfarlab.fun/show/are-you-still-there.
+The corrected production is complete and approved by the user. The full 1080p film is `render/are-you-still-there.mp4` (4:18.800 with preroll and curtain call). [production-review.md](production-review.md) records the delivered assets, checks and deployment version. The show is live at https://twilightbugle.asfarlab.fun/show/are-you-still-there.
 
 Show X of the Twilight Bugle. The user-approved Suno recording is the master source: `형은 여기 있다.mp3`, 4:02.800, imported without changing its audio. It grew from Lyria take 8. The earlier working title, *아직 거기 있니 · Are You Still There?*, remains in the folder id and audition history.
 

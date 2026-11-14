@@ -173,4 +173,3 @@ Matahari tenggelam di atas sungai yang tak menjawab
 **민아, 형은 여기 있다**  
 Min, your brother is here  
 Min, kakak ada di sini
-

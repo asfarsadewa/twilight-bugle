@@ -27,3 +27,9 @@ The first village-only look test is superseded. Original Hyeong art and the mini
 - Final source and browser master hashes match byte for byte. No listening model reviewed the final recording.
 
 Detailed local evidence is retained in ignored `render/qa/`: runtime, UI, build and export reports, screenshots and the verification script. Development stills stay in `render/stills-v2/` and `render/blocking-check/`; final present-day stills are in `render/final-stills/`.
+
+## Production deployment
+
+Published on 14 November 2026 after the user's approval. Source commit `dde51a8` was pushed to `origin/main`. Cloudflare Worker `twilight-bugle` serves version `b5d119d2-11a5-4bb0-8c7b-52bd2548af7c` at 100% traffic on the existing production domain, tagged `show-x-your-brother-is-here`.
+
+Typecheck, production build and Wrangler dry run passed before deployment. The live show page returns HTTP 200 with the correct Korean title and war-separation description. The live share card and application entry script match the release build byte for byte. The existing Turnstile gate remains enabled, and an unauthenticated request for the new audio correctly returns HTTP 403. Full playback, subtitles, changeovers and the encore were checked locally before release. The live HTTP verification receipt is retained in `render/qa/live-deployment.json`.
