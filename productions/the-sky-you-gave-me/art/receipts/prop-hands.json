@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/prop-hands.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-hands.prompt",
+  "prompt_sha256": "e21b172ea8dd89ff0de258355f77ded8a60e106411b091e13486f403f90a6662",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "3f72ddc58f4745b1f1e001650607673f67736c7140fb96eb03ca4eee49484fd7",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.6989,
+  "generation_seconds": 41.4,
+  "runtime_metadata": "cut/prop-hands.json"
+}

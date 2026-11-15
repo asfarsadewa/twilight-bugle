@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/prop-father-cane.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-father-cane.prompt",
+  "prompt_sha256": "386124d4bb5d685e0c07ab9a1fa824f4c0d0349b9db46873e5a8e6a13255dc5f",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "71dfe69ae0a1143bfd70d8cffe1e8e0255dc5a00a7c9ae6e5bcac46f6a524e6e",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.6538,
+  "generation_seconds": 43.2,
+  "runtime_metadata": "cut/prop-father-cane.json"
+}

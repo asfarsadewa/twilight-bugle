@@ -1,0 +1,451 @@
+{
+ "title": {
+  "zh": "你给我的星空",
+  "en": "The Sky You Gave Me",
+  "id": "Langit yang Kauberikan"
+ },
+ "sung": "zh",
+ "subs": [
+  "id",
+  "en"
+ ],
+ "voices": {
+  "daughter": {
+   "name": "Daughter",
+   "heard": "female",
+   "voice": "one adult female Mandarin lead",
+   "part": "the miner’s daughter, now an astronomer"
+  }
+ },
+ "about": "A miner’s daughter becomes an astronomer. After his loss of sight, she brings the stars back to his palm.",
+ "sections": [
+  {
+   "id": "intro",
+   "label": "Intro",
+   "lines": []
+  },
+  {
+   "id": "v1",
+   "label": "Verse 1",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "你回家的时候，天已经黑了",
+     "py": "nǐ huí jiā de shí hòu， tiān yǐ jīng hēi le",
+     "en": "When you came home, the sky was already dark",
+     "id": "Saat Ayah pulang, langit sudah gelap"
+    },
+    {
+     "who": "daughter",
+     "zh": "煤灰还留在你的指缝",
+     "py": "méi huī hái liú zài nǐ de zhǐ fèng",
+     "en": "Coal dust still clung between your fingers",
+     "id": "Debu batu bara masih melekat di sela jarimu"
+    },
+    {
+     "who": "daughter",
+     "zh": "你把我的小手轻轻摊开",
+     "py": "nǐ bǎ wǒ de xiǎo shǒu qīng qīng tān kāi",
+     "en": "You gently opened my little hand",
+     "id": "Kaubuka tangan kecilku dengan lembut"
+    },
+    {
+     "who": "daughter",
+     "zh": "一笔一画，画出一片星空",
+     "py": "yī bǐ yī huà， huà chū yī piàn xīng kōng",
+     "en": "Stroke by stroke, you drew a sky full of stars",
+     "id": "Gores demi gores, kaulukis langit penuh bintang"
+    },
+    {
+     "who": "daughter",
+     "zh": "你说每颗星，都有自己的故事",
+     "py": "nǐ shuō měi kē xīng， dōu yǒu zì jǐ de gù shì",
+     "en": "You said every star had a story of its own",
+     "id": "Katamu, tiap bintang punya kisahnya sendiri"
+    },
+    {
+     "who": "daughter",
+     "zh": "我听着听着，就睡进了梦中",
+     "py": "wǒ tīng zhe tīng zhe， jiù shuì jìn le mèng zhōng",
+     "en": "I listened until I drifted into dreams",
+     "id": "Aku mendengarkan hingga terlelap dalam mimpi"
+    }
+   ]
+  },
+  {
+   "id": "pre1",
+   "label": "Pre-Chorus",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "你说爸爸的路，在山的深处",
+     "py": "nǐ shuō bà bà de lù， zài shān de shēn chù",
+     "en": "You said, Dad’s road runs deep into the mountain",
+     "id": "Katamu, jalan Ayah jauh di dalam gunung"
+    },
+    {
+     "who": "daughter",
+     "zh": "你的路，要走向有光的地方",
+     "py": "nǐ de lù， yào zǒu xiàng yǒu guāng de dì fāng",
+     "en": "Yours must lead towards the light",
+     "id": "Jalanmu harus menuju tempat yang terang"
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "你给我的星空",
+     "py": "nǐ gěi wǒ de xīng kōng",
+     "en": "The starry sky you gave me",
+     "id": "Langit penuh bintang pemberianmu"
+    },
+    {
+     "who": "daughter",
+     "zh": "亮在我每一个梦中",
+     "py": "liàng zài wǒ měi yí gè mèng zhōng",
+     "en": "Shines through every dream I have",
+     "id": "Bersinar dalam setiap mimpiku"
+    },
+    {
+     "who": "daughter",
+     "zh": "你在没有星光的地方",
+     "py": "nǐ zài méi yǒu xīng guāng de dì fāng",
+     "en": "In a place without starlight",
+     "id": "Di tempat tanpa cahaya bintang"
+    },
+    {
+     "who": "daughter",
+     "zh": "托起我头顶的苍穹",
+     "py": "tuō qǐ wǒ tóu dǐng de cāng qióng",
+     "en": "You held up the heavens above my head",
+     "id": "Kautopang langit di atas kepalaku"
+    },
+    {
+     "who": "daughter",
+     "zh": "爸爸啊，握紧我的手",
+     "py": "bà bà a， wò jǐn wǒ de shǒu",
+     "en": "Dad, hold my hand tightly",
+     "id": "Ayah, genggam erat tanganku"
+    },
+    {
+     "who": "daughter",
+     "zh": "就像那年握着我",
+     "py": "jiù xiàng nà nián wò zhe wǒ",
+     "en": "As you held mine back then",
+     "id": "Seperti saat kaugenggam tanganku dulu"
+    },
+    {
+     "who": "daughter",
+     "zh": "你曾画给我的星空",
+     "py": "nǐ céng huà gěi wǒ de xīng kōng",
+     "en": "The sky you once drew for me",
+     "id": "Langit yang pernah kaulukiskan untukku"
+    },
+    {
+     "who": "daughter",
+     "zh": "让我慢慢讲给你听",
+     "py": "ràng wǒ màn màn jiǎng gěi nǐ tīng",
+     "en": "Let me tell you about it, slowly",
+     "id": "Biar kuceritakan perlahan kepadamu"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "label": "Verse 2",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "那场塌方以后，灯还亮着",
+     "py": "nà chǎng tā fāng yǐ hòu， dēng hái liàng zhe",
+     "en": "After the mine collapsed, the light was still on",
+     "id": "Setelah tambang runtuh, lampunya masih menyala"
+    },
+    {
+     "who": "daughter",
+     "zh": "你却再也看不见我的脸",
+     "py": "nǐ què zài yě kàn bú jiàn wǒ de liǎn",
+     "en": "But you could no longer see my face",
+     "id": "Namun Ayah tak lagi dapat melihat wajahku"
+    },
+    {
+     "who": "daughter",
+     "zh": "我说，爸爸，我不去念书了",
+     "py": "wǒ shuō， bà bà， wǒ bù qù niàn shū le",
+     "en": "I said, Dad, I’m not going away to study",
+     "id": "Kataku, Ayah, aku tak jadi pergi kuliah"
+    },
+    {
+     "who": "daughter",
+     "zh": "你把录取信放回我手边",
+     "py": "nǐ bǎ lù qǔ xìn fàng huí wǒ shǒu biān",
+     "en": "You put my acceptance letter back beside my hand",
+     "id": "Kauletakkan lagi surat penerimaan itu di sisi tanganku"
+    },
+    {
+     "who": "daughter",
+     "zh": "后来我有了第一架望远镜",
+     "py": "hòu lái wǒ yǒu le dì yī jià wàng yuǎn jìng",
+     "en": "Later, I had my first telescope",
+     "id": "Kemudian aku memiliki teleskop pertamaku"
+    },
+    {
+     "who": "daughter",
+     "zh": "你学着用手杖走过长街",
+     "py": "nǐ xué zhe yòng shǒu zhàng zǒu guò cháng jiē",
+     "en": "You learned to cross the long street with a cane",
+     "id": "Ayah belajar menyusuri jalan dengan tongkat"
+    },
+    {
+     "who": "daughter",
+     "zh": "毕业那天，我把证书交给你",
+     "py": "bì yè nà tiān， wǒ bǎ zhèng shū jiāo gěi nǐ",
+     "en": "On graduation day, I placed my certificate in your hands",
+     "id": "Saat wisuda, kuserahkan ijazahku ke tanganmu"
+    },
+    {
+     "who": "daughter",
+     "zh": "那枚钢印，你摸了好多遍",
+     "py": "nà méi gāng yìn， nǐ mō le hǎo duō biàn",
+     "en": "You felt its embossed seal again and again",
+     "id": "Segel timbulnya kauraba berkali-kali"
+    }
+   ]
+  },
+  {
+   "id": "pre2",
+   "label": "Pre-Chorus",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "我认得天上越来越多的星",
+     "py": "wǒ rèn de tiān shàng yuè lái yuè duō de xīng",
+     "en": "I learned more and more of the stars above",
+     "id": "Makin banyak bintang di langit yang kukenal"
+    },
+    {
+     "who": "daughter",
+     "zh": "你听我说着，一颗一颗地记",
+     "py": "nǐ tīng wǒ shuō zhe， yī kē yī kē dì jì",
+     "en": "You listened and remembered them, one by one",
+     "id": "Kaudengarkan dan kauingat satu per satu"
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "你给我的星空",
+     "py": "nǐ gěi wǒ de xīng kōng",
+     "en": "The starry sky you gave me",
+     "id": "Langit penuh bintang pemberianmu"
+    },
+    {
+     "who": "daughter",
+     "zh": "亮在我每一个梦中",
+     "py": "liàng zài wǒ měi yí gè mèng zhōng",
+     "en": "Shines through every dream I have",
+     "id": "Bersinar dalam setiap mimpiku"
+    },
+    {
+     "who": "daughter",
+     "zh": "你在没有星光的地方",
+     "py": "nǐ zài méi yǒu xīng guāng de dì fāng",
+     "en": "In a place without starlight",
+     "id": "Di tempat tanpa cahaya bintang"
+    },
+    {
+     "who": "daughter",
+     "zh": "托起我头顶的苍穹",
+     "py": "tuō qǐ wǒ tóu dǐng de cāng qióng",
+     "en": "You held up the heavens above my head",
+     "id": "Kautopang langit di atas kepalaku"
+    },
+    {
+     "who": "daughter",
+     "zh": "爸爸啊，握紧我的手",
+     "py": "bà bà a， wò jǐn wǒ de shǒu",
+     "en": "Dad, hold my hand tightly",
+     "id": "Ayah, genggam erat tanganku"
+    },
+    {
+     "who": "daughter",
+     "zh": "就像那年握着我",
+     "py": "jiù xiàng nà nián wò zhe wǒ",
+     "en": "As you held mine back then",
+     "id": "Seperti saat kaugenggam tanganku dulu"
+    },
+    {
+     "who": "daughter",
+     "zh": "你曾画给我的星空",
+     "py": "nǐ céng huà gěi wǒ de xīng kōng",
+     "en": "The sky you once drew for me",
+     "id": "Langit yang pernah kaulukiskan untukku"
+    },
+    {
+     "who": "daughter",
+     "zh": "让我慢慢讲给你听",
+     "py": "ràng wǒ màn màn jiǎng gěi nǐ tīng",
+     "en": "Let me tell you about it, slowly",
+     "id": "Biar kuceritakan perlahan kepadamu"
+    }
+   ]
+  },
+  {
+   "id": "bridge",
+   "label": "Bridge",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "今夜群星，慢慢亮起",
+     "py": "jīn yè qún xīng， màn màn liàng qǐ",
+     "en": "Tonight, the stars slowly light up",
+     "id": "Malam ini, bintang-bintang perlahan menyala"
+    },
+    {
+     "who": "daughter",
+     "zh": "最好的座位，留给了你",
+     "py": "zuì hǎo de zuò wèi， liú gěi le nǐ",
+     "en": "The best seat is reserved for you",
+     "id": "Tempat duduk terbaik kusediakan untukmu"
+    },
+    {
+     "who": "daughter",
+     "zh": "人们为这片星空鼓掌",
+     "py": "rén men wèi zhè piàn xīng kōng gǔ zhǎng",
+     "en": "People applaud this sky full of stars",
+     "id": "Orang-orang bertepuk tangan untuk langit ini"
+    },
+    {
+     "who": "daughter",
+     "zh": "你问我，它们有多明亮",
+     "py": "nǐ wèn wǒ， tā men yǒu duō míng liàng",
+     "en": "You ask me how brightly they shine",
+     "id": "Kautanya kepadaku, seberapa terang bintang-bintang itu"
+    },
+    {
+     "who": "daughter",
+     "zh": "掌声散了，座位都空了",
+     "py": "zhǎng shēng sàn le， zuò wèi dōu kōng le",
+     "en": "The applause fades; every other seat is empty",
+     "id": "Tepuk tangan reda, kursi-kursi lainnya telah kosong"
+    },
+    {
+     "who": "daughter",
+     "zh": "我关掉群星，坐回你身旁",
+     "py": "wǒ guān diào qún xīng， zuò huí nǐ shēn páng",
+     "en": "I switch off the stars and sit beside you again",
+     "id": "Kumatikan bintang-bintang, lalu duduk lagi di sisimu"
+    }
+   ]
+  },
+  {
+   "id": "lift",
+   "label": "Orchestral Interlude",
+   "lines": []
+  },
+  {
+   "id": "ch3",
+   "label": "Final Chorus",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "你给我的星空",
+     "py": "nǐ gěi wǒ de xīng kōng",
+     "en": "The starry sky you gave me",
+     "id": "Langit penuh bintang pemberianmu"
+    },
+    {
+     "who": "daughter",
+     "zh": "亮在我每一个梦中",
+     "py": "liàng zài wǒ měi yí gè mèng zhōng",
+     "en": "Shines through every dream I have",
+     "id": "Bersinar dalam setiap mimpiku"
+    },
+    {
+     "who": "daughter",
+     "zh": "你在没有星光的地方",
+     "py": "nǐ zài méi yǒu xīng guāng de dì fāng",
+     "en": "In a place without starlight",
+     "id": "Di tempat tanpa cahaya bintang"
+    },
+    {
+     "who": "daughter",
+     "zh": "托起我头顶的苍穹",
+     "py": "tuō qǐ wǒ tóu dǐng de cāng qióng",
+     "en": "You held up the heavens above my head",
+     "id": "Kautopang langit di atas kepalaku"
+    },
+    {
+     "who": "daughter",
+     "zh": "爸爸啊，握紧我的手",
+     "py": "bà bà a， wò jǐn wǒ de shǒu",
+     "en": "Dad, hold my hand tightly",
+     "id": "Ayah, genggam erat tanganku"
+    },
+    {
+     "who": "daughter",
+     "zh": "这一次，换我牵着你走",
+     "py": "zhè yī cì， huàn wǒ qiān zhe nǐ zǒu",
+     "en": "This time, let me lead you",
+     "id": "Kali ini, biarkan aku yang menuntunmu"
+    },
+    {
+     "who": "daughter",
+     "zh": "你曾画给我的星空",
+     "py": "nǐ céng huà gěi wǒ de xīng kōng",
+     "en": "The sky you once drew for me",
+     "id": "Langit yang pernah kaulukiskan untukku"
+    },
+    {
+     "who": "daughter",
+     "zh": "今夜又在你手中",
+     "py": "jīn yè yòu zài nǐ shǒu zhōng",
+     "en": "Tonight, that sky is in your hands again",
+     "id": "Malam ini, langit itu kembali di tanganmu"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "label": "Outro",
+   "lines": [
+    {
+     "who": "daughter",
+     "zh": "我摊开你那双苍老的手",
+     "py": "wǒ tān kāi nǐ nà shuāng cāng lǎo de shǒu",
+     "en": "I open your two aged hands",
+     "id": "Kubuka kedua tanganmu yang telah menua"
+    },
+    {
+     "who": "daughter",
+     "zh": "一颗一颗，画给你",
+     "py": "yī kē yī kē， huà gěi nǐ",
+     "en": "Star by star, I draw for you",
+     "id": "Satu per satu, kulukiskan bintang untukmu"
+    },
+    {
+     "who": "daughter",
+     "zh": "爸爸，这颗星的故事",
+     "py": "bà bà， zhè kē xīng de gù shì",
+     "en": "Dad, the story of this star—",
+     "id": "Ayah, kisah bintang yang ini—"
+    },
+    {
+     "who": "daughter",
+     "zh": "我们慢慢说",
+     "py": "wǒ men màn màn shuō",
+     "en": "We can tell it slowly",
+     "id": "Kita ceritakan perlahan saja"
+    }
+   ]
+  }
+ ]
+}

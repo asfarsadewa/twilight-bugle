@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/body-daughter-seat.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/body-daughter-seat.prompt",
+  "prompt_sha256": "7ecc51241592734fdd6236f0e312ed5b1944a2bf235027dedf3c811249b35679",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "74c9c89e32ce9eb62149f8aa461db851db245922cc98950fad12d18ae4496502",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.6479,
+  "generation_seconds": 49.1,
+  "runtime_metadata": "cut/body-daughter-seat.json"
+}

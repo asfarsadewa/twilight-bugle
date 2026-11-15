@@ -1,0 +1,16 @@
+{
+  "generator": "bundled imagegen CLI",
+  "requested_model": "gpt-image-2.6-sunburst",
+  "endpoint": "/v1/images/generations",
+  "quality": "high",
+  "size": "1536x1024",
+  "background": "opaque",
+  "prompt": "prompts/key-art.prompt",
+  "raw_output": "src/output/imagegen/key-art-sunburst.png",
+  "selected_output": "key-art.png",
+  "generation_seconds": 58.3,
+  "status": "complete",
+  "prompt_sha256": "3710c20dc4fa6f53f57da5afd22787944064b3e99fa0bb8945ca5f80d44d0cfc",
+  "raw_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "selected_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83"
+}

@@ -1,0 +1,7 @@
+{
+  "generator": "built-in image_gen",
+  "prompt": "prompts/key-art.prompt",
+  "output": "src/unselected/key-art-native-draft.png",
+  "source_generated": "C:\\Users\\asfar\\.codex\\generated_images\\01a1d777-ac3c-7033-9b2c-d520b3bfea2f\\exec-8451701e-c4a0-4b83-b193-febb094735c1.png",
+  "selection": "unselected; backend model id was not exposed"
+}

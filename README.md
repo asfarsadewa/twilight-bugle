@@ -22,6 +22,7 @@ The theatre runs in the browser with Three.js. The same engine renders each show
 | VIII | [형 먼저 가 · Brother, Go First · Kak, Pergilah Dulu](productions/hyeong) | Korean, two voices | June 1950, in the monsoon rain. At a bridge, the younger of two brothers stays to hold it. | Charcoal and ink wash on hanji paper |
 | IX | [少年回声 · Echoes of Youth · Gema Masa Remaja](productions/shaonian-huisheng) | Mandarin | A grown man comes back to the court of his old school and opens the tin of letters he and his friends buried at fourteen. | A schoolboy's ballpoint and coloured pencil drawing on exercise paper |
 | X | [형은 여기 있다 · Your Brother Is Here · Kakak Ada di Sini](productions/are-you-still-there) | Korean | War cuts the brothers off on opposite banks. Decades later, Chol calls from a developed embankment towards the dim rural shore. | Charcoal and ink on hanji, in dusk amber and indigo |
+| XI | [你给我的星空 · The Sky You Gave Me · Langit yang Kauberikan](productions/the-sky-you-gave-me) | Mandarin | A mine collapse takes a father's sight. His daughter becomes an astronomer and returns the stars he once drew in her palm. | Charcoal, graphite and chalk pastel on blue-grey paper |
 
 Each show has surtitles in two languages. If English is not one of them, a button on the programme adds it. Each show also has its own link, such as https://twilightbugle.asfarlab.fun/show/daybreak-vow.
 
@@ -32,6 +33,7 @@ Each show has surtitles in two languages. If English is not one of them, a butto
 | ![山河为证: the sun rises over the loess hills as the column reaches the north](docs/images/shanhe-wei-zheng.jpg) | ![Urip Maneh: the two reach for each other over the carved stone](docs/images/urip-maneh.jpg) |
 | ![Gema Masa Muda: the grown man and the boy he was on the school field under the flame tree](docs/images/gema-masa-muda.jpg) | ![형 먼저 가: Min at the bridgehead in the rain as Cheol crosses](docs/images/hyeong.jpg) |
 | ![少年回声: the boys run with the ball on the gold court as the grown man watches](docs/images/shaonian-huisheng.jpg) | ![형은 여기 있다: old Chol behind a locked observation gate, the developed bank and sparse far shore divided by the river](docs/images/are-you-still-there.jpg) |
+| ![你给我的星空: the daughter traces stars into her living father's palm after the planetarium goes dark](docs/images/the-sky-you-gave-me.jpg) | |
 
 ## Inside the theatre
 
@@ -49,8 +51,8 @@ Each show has surtitles in two languages. If English is not one of them, a butto
 Each show lives in `productions/<id>/`.
 
 1. **Story.** `story/bible.md` holds the premise, the cast and the story by song section.
-2. **Song.** `song/lyrics.json` holds the sung lines and translations. Lyria sings the takes; some are developed further in Suno. A transcriber supplies word times and the producer gives the final earcheck. Listening-model checks are optional when requested. `tools/master.py` locks the chosen take as `song/master.mp3` and `song/master.json`: line times, sections, beats and vocal loudness.
-3. **Art.** `art/bible.md` locks one style text. An image model paints the key art, then every piece with the key art as its reference. `tools/cutout.py` cuts each piece into a cardboard solid with a relief map.
+2. **Song.** `song/lyrics.json` holds the sung lines and translations. Takes may come from Lyria or directly from a user-supplied Suno recording. A transcriber supplies word times and the producer gives the final earcheck. Listening-model checks are optional when requested. `tools/master.py` locks the chosen take as `song/master.mp3` and `song/master.json`: line times, sections, beats and vocal loudness.
+3. **Art.** `art/bible.md` locks one style text. An image model paints the key art, then every piece with the key art as its reference. Show XI explicitly uses `gpt-image-2.6-sunburst` and retains a receipt for every selected sheet. `tools/cutout.py` cuts each piece into a cardboard solid with a relief map.
 4. **Cue sheet.** `production.ts` names the pieces and their rigs, and writes the cue sheet. A cue sheet is TypeScript on a timeline, keyed to the line times and the beats of the master.
 5. **Render.** Look-test stills come first, then the full video.
 
@@ -133,7 +135,7 @@ The design notes are in [docs/architecture.md](docs/architecture.md).
 
 ## Generated content
 
-Google Lyria sang the original takes. Some final songs, including *Your Brother Is Here*, were developed further in Suno. OpenAI image models painted the art. The staging, the puppetry and the engine are code in this repository. Check each provider's terms before you reuse a song or a piece of art.
+Google Lyria sang the original takes of the earlier shows. Some songs were developed further in Suno; *The Sky You Gave Me* was made directly in Suno. OpenAI image models painted the art, with `gpt-image-2.6-sunburst` explicitly used for every selected image of Show XI. The staging, the puppetry and the engine are code in this repository. Check each provider's terms before you reuse a song or a piece of art.
 
 ## License
 

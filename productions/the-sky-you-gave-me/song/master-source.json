@@ -1,0 +1,16 @@
+{
+  "take": "suno-final-corrected",
+  "provider": "Suno",
+  "source_name": "你给我的星空 (1).mp3",
+  "title": {
+    "zh": "你给我的星空",
+    "en": "The Sky You Gave Me",
+    "id": "Langit yang Kauberikan"
+  },
+  "duration_seconds": 325.2,
+  "sha256": "e8a63b88bd672c415884d0b86df44ea39b4ede2595ea7cdd6d8e800a8d342c1d",
+  "selected_by": "user",
+  "musical_earcheck": "human producer",
+  "source_suno_id": "4adbaac7-d385-41a8-a9a1-bdb2ba109250",
+  "embedded_lyric_match": true
+}

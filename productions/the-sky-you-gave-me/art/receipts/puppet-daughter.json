@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/puppet-daughter.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-daughter.prompt",
+  "prompt_sha256": "537b36f542ae25967f520a1c4194fbabfe5c70096a1396ce094c1c89170d36c7",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "b86799685dc59e8638933a797798bed5f2182125c58952fc253372c78f6c8656",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.6142,
+  "generation_seconds": 51.1,
+  "runtime_metadata": "cut/puppet-daughter.json"
+}

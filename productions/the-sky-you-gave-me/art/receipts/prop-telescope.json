@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/prop-telescope.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-telescope.prompt",
+  "prompt_sha256": "739655a2626b462b4e22d623e704b7038aaec3b573ca35944d89adfbf6f5967d",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "551d13bc6f3ef298add32820a96afe557e087cfa389c8c13020526f8eb025611",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.8024,
+  "generation_seconds": 46.9,
+  "runtime_metadata": "cut/prop-telescope.json"
+}

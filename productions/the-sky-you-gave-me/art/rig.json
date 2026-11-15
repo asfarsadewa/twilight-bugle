@@ -1,0 +1,203 @@
+{
+  "daughter": {
+    "body": {
+      "index": 1,
+      "pivot": [
+        0.5,
+        1
+      ]
+    },
+    "head": {
+      "index": 0,
+      "pivot": [
+        0.64446,
+        0.90304
+      ],
+      "attach": [
+        0.48076,
+        0.07254
+      ],
+      "scale": 0.76,
+      "z": -0.6,
+      "rest": 0,
+      "source_pin": [
+        263,
+        303
+      ],
+      "source_body_pin": [
+        551,
+        95
+      ],
+      "string": [
+        0.5,
+        0.04
+      ]
+    },
+    "armA": {
+      "index": 3,
+      "pivot": [
+        0.84556,
+        0.10122
+      ],
+      "attach": [
+        0.24756,
+        0.09371
+      ],
+      "scale": 1,
+      "z": 1.1,
+      "rest": 0,
+      "source_pin": [
+        297,
+        400
+      ],
+      "source_body_pin": [
+        454,
+        116
+      ],
+      "string": [
+        0.04,
+        0.96
+      ]
+    },
+    "armB": {
+      "index": 2,
+      "pivot": [
+        0.23696,
+        0.0952
+      ],
+      "attach": [
+        0.72358,
+        0.09371
+      ],
+      "scale": 1,
+      "z": 1,
+      "rest": 0,
+      "source_pin": [
+        829,
+        398
+      ],
+      "source_body_pin": [
+        652,
+        116
+      ],
+      "string": [
+        0.85,
+        0.92
+      ]
+    }
+  },
+  "father": {
+    "body": {
+      "index": 1,
+      "pivot": [
+        0.5,
+        1
+      ]
+    },
+    "head": {
+      "index": 0,
+      "pivot": [
+        0.49061,
+        0.90795
+      ],
+      "attach": [
+        0.45446,
+        0.05568
+      ],
+      "scale": 0.74,
+      "z": -0.6,
+      "rest": 0,
+      "source_pin": [
+        674,
+        328
+      ],
+      "source_body_pin": [
+        286,
+        264
+      ],
+      "string": [
+        0.52,
+        0.04
+      ]
+    },
+    "armA": {
+      "index": 2,
+      "pivot": [
+        0.09619,
+        0.22212
+      ],
+      "attach": [
+        0.60105,
+        0.1113
+      ],
+      "scale": 1,
+      "z": 1.2,
+      "rest": 0,
+      "source_pin": [
+        528,
+        417
+      ],
+      "source_body_pin": [
+        376,
+        308
+      ],
+      "string": [
+        0.79,
+        0.43
+      ]
+    },
+    "armB": {
+      "index": 3,
+      "pivot": [
+        0.15265,
+        0.17394
+      ],
+      "attach": [
+        0.25902,
+        0.10372
+      ],
+      "scale": 1,
+      "z": 1,
+      "rest": -18,
+      "source_pin": [
+        654,
+        625
+      ],
+      "source_body_pin": [
+        166,
+        302
+      ],
+      "string": [
+        0.9,
+        0.86
+      ]
+    }
+  },
+  "daughterSeat": {
+    "body": {
+      "pivot": [
+        0.5,
+        1
+      ]
+    },
+    "reused_part_scale": 1.2472065682083173,
+    "head_attach": [
+      0.53233,
+      0.08383
+    ],
+    "armA_attach": [
+      0.32641,
+      0.12371
+    ],
+    "armB_attach": [
+      0.7592,
+      0.12371
+    ]
+  },
+  "body_heights": {
+    "daughter": 1.05,
+    "father": 0.95,
+    "daughterSeat": 0.83
+  },
+  "note": "Source pixels refer to 1024\u00d71024 sheets; normalized pins account for each actual alpha crop. Daughter head mounts are lowered about 0.042 world units behind the collar to shorten the exposed neck. Verify hand contact in the rendered stage."
+}

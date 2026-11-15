@@ -1,0 +1,155 @@
+{
+  "puppet-daughter": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/puppet-daughter.png"
+  },
+  "puppet-father-seat": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/puppet-father-seat.png"
+  },
+  "body-daughter-seat": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/body-daughter-seat.png"
+  },
+  "prop-childhood": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-childhood.png"
+  },
+  "prop-miner": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-miner.png"
+  },
+  "prop-father-cane": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-father-cane.png"
+  },
+  "flat-town": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/flat-town.png"
+  },
+  "flat-mine": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/flat-mine.png"
+  },
+  "prop-beam": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-beam.png"
+  },
+  "prop-telescope": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-telescope.png"
+  },
+  "prop-letter": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-letter.png"
+  },
+  "prop-certificate": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-certificate.png"
+  },
+  "flat-dome": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/flat-dome.png"
+  },
+  "prop-projector": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-projector.png"
+  },
+  "flat-audience": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/flat-audience.png"
+  },
+  "prop-hands": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "raw_output": "src/output/imagegen/prop-hands.png"
+  },
+  "poster": {
+    "model": "gpt-image-2.6-sunburst",
+    "endpoint": "images.edits",
+    "reference": "key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "opaque",
+    "raw_output": "src/output/imagegen/poster.png"
+  }
+}

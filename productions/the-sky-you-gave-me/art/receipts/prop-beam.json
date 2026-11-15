@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/prop-beam.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-beam.prompt",
+  "prompt_sha256": "41200d77036b1496d24071a8a535446ae8cfacad929b4db7e13f811b3fa6469c",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "f2d1020b9b7ab986ebb35a177befbfc861d9e948a71964656895f075bb1625d1",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.7715,
+  "generation_seconds": 43.3,
+  "runtime_metadata": "cut/prop-beam.json"
+}

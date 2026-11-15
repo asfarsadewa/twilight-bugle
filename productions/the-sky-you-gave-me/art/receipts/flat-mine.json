@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/flat-mine.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-mine.prompt",
+  "prompt_sha256": "9c7731e95eb5a07dbd36398ad71b2388c89d4799850e5c1cfac00392c64d700c",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "128140ac571590ba3c8fb34fe119bf7c12e76769d6b279f3c9723c3a0232cbaa",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.4002,
+  "generation_seconds": 43.0,
+  "runtime_metadata": "cut/flat-mine.json"
+}

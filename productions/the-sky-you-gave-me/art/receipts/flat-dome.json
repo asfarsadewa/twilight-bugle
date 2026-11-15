@@ -1,0 +1,22 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "endpoint": "images.edits",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/output/imagegen/flat-dome.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-dome.prompt",
+  "prompt_sha256": "e2a4a1321b6174655b830c09e9afececddb2fab799d91e8ab564dfe036c2a0a1",
+  "reference_sha256": "395bfc7e1a1cc9ee798a4db3fd5a8dd839832be7ffcca3f6589596c737be7b83",
+  "raw_sha256": "e68091e7158ff678461a199828ee5c30e3a9a3575cbb68d99d9f5f3dfdf67af3",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.7662,
+  "generation_seconds": 48.5,
+  "runtime_metadata": "cut/flat-dome.json"
+}
