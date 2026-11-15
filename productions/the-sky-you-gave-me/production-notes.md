@@ -69,4 +69,16 @@ The approved local film is `render/the-sky-you-gave-me-corrected.mp4`: **341.200
 
 The complete film decodes without errors. Technical waveform comparisons against the correct MP3 at song seconds 24, 144, 260 and 300 all measure zero additional offset after the 7-second preroll, with correlations above 0.9999. The preroll is silent. These are clock/delivery checks; no musical listening model is used.
 
-`render/delivery.json` records the selected file, Suno id, source/cue/rig hashes and technical results. The cue hash is `b2c0e6344efca82e5dea87d3d9a7c1bf1eb3da7b953ee619735bee68b46a451b`; the rig hash is `7a722d86dcc1f236aaf98a6ba16a515b4669c8f89b10ae21294bc48a901d8cb1`. The development preview is available at `http://127.0.0.1:5199/?p=the-sky-you-gave-me` while the local server is running. Public release is approved; the deployment record follows publication.
+`render/delivery.json` records the selected file, Suno id, source/cue/rig hashes and technical results. The cue hash is `b2c0e6344efca82e5dea87d3d9a7c1bf1eb3da7b953ee619735bee68b46a451b`; the rig hash is `7a722d86dcc1f236aaf98a6ba16a515b4669c8f89b10ae21294bc48a901d8cb1`. The development preview is available at `http://127.0.0.1:5199/?p=the-sky-you-gave-me` while the local server is running.
+
+## Public release
+
+The user approved publication on 15 November 2026. Production commit `7efeae5` was pushed to `origin/main` and deployed with the pinned Wrangler 4.152.0 to Worker `twilight-bugle`, custom domain `twilightbugle.asfarlab.fun`. Cloudflare version **`84c39884-1fe4-4d13-a0e7-239f3fa21fe2`** was deployed at **20:01:19 Australia/Perth**, with **100% traffic**. Version tag: `show-xi-the-sky-you-gave-me`.
+
+Live URL: https://twilightbugle.asfarlab.fun/show/the-sky-you-gave-me.
+
+Release preflight passed typecheck, Vite build, Wrangler deployment dry run and source/rig/approved-film hash checks. Wrangler uploaded 62 new assets and retained 491 existing assets. The configured custom domain and gate settings match the previous deployment; both gate secret bindings remain present.
+
+Live verification passes: the root and show page return 200; the show title, canonical link and share card identify Programme XI; the share-card bytes match the local 1200×630 image. The live entry `/assets/index-ZD0RCXcG.js` and production `/assets/production-BejhUX6t.js` match the approved build byte for byte. The production bundle includes the corrected score and collar-adjusted head mounts, and references `/assets/master-BUefehOG.mp3`; the uploaded build's MP3 has the selected `(1)` source hash `e8a63b88bd672c415884d0b86df44ea39b4ede2595ea7cdd6d8e800a8d342c1d`. An unauthenticated MP3 request correctly returns 403 while the gate remains enabled. Authenticated public playback is left to the normal theatre entrance; these checks do not bypass it.
+
+Detailed deployment and HTTP evidence is retained in ignored `render/deploy.log`, `render/release-status.json` and `render/qa/live.json`. The release-record commit changes documentation only and does not require another runtime deployment.

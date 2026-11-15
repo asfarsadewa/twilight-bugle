@@ -2,6 +2,8 @@
 
 Pinyin: **Nǐ gěi wǒ de xīngkōng**.
 
+**[Watch the live production](https://twilightbugle.asfarlab.fun/show/the-sky-you-gave-me).** Released on 15 November 2026 from commit `7efeae5`, with the corrected recording and shorter neck mounts in both daughter poses.
+
 Show XI of The Twilight Bugle. A coal miner draws constellations in his little daughter's palm. A mine collapse takes his sight. Years later, after her first planetarium show, she turns its projected stars off and traces their stories into his hand. Both are alive and together at the end.
 
 The user selected the corrected Mandarin Suno recording **`你给我的星空 (1).mp3`** on 15 November 2026: **5:25.200**, Suno id `4adbaac7-d385-41a8-a9a1-bdb2ba109250`. `song/master.mp3` is an unchanged copy. All 52 embedded lyric lines match the handoff. The previously supplied unsuffixed file was the wrong recording; its take and film are preserved in ignored superseded archives. Chinese and Indonesian surtitles lead; English and pinyin are available on demand. The user performs the final musical earcheck. Scribe is used only for timing; no Lyria generation or listening-model review was used for this show.
