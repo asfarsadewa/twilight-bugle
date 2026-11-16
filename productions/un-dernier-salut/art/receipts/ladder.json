@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "transparent",
+  "parts": false,
+  "raw_output": "src/ladder.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/ladder.prompt",
+  "prompt_sha256": "3b5f664e55c8b3acd269b66acc25a9e686a3c21b7304121f49450e808ec8b1d5",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "c042dcec3aff99297ec5472c468abbbc55937d48d79e66294ac0d289e67ed125",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.7838,
+  "generation_seconds": 45.1,
+  "runtime_metadata": "cut/ladder.json"
+}

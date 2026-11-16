@@ -195,7 +195,7 @@ export class Theatre {
   prefetch(p: Production) {
     for (const s of p.pieces) {
       const P = s.puppet;
-      const arts = P ? [P.body, P.head, P.armA, P.armB].flatMap((part) => (part ? [part.art] : [])) : s.art ? [s.art] : [];
+      const arts = P ? [P.body, P.head, P.armA, P.armB, P.foreA, P.foreB, P.thighA, P.thighB, P.shinA, P.shinB].flatMap((part) => (part ? [part.art] : [])) : s.art ? [s.art] : [];
       for (const art of arts) {
         for (const url of [art.url, art.normalUrl]) if (url) loadTexture(url, this.renderer).catch(() => {});
       }
@@ -258,6 +258,7 @@ export class Theatre {
     }
     this.cyc.update(tl, t);
     for (const piece of this.pieces.values()) piece.update(tl, t);
+    for (const piece of this.pieces.values()) piece.updateLinks(this.pieces, tl, t);
     this.fx.update(tl, t);
 
     const style = CURTAIN_STYLES[Math.round(tl.value('curtain.style', t, 0))] ?? 'traveller';

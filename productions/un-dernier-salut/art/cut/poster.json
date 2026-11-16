@@ -1,0 +1,9 @@
+{
+ "name": "poster",
+ "file": "poster.webp",
+ "normal": "poster-n.webp",
+ "w": 1024,
+ "h": 1536,
+ "aspect": 0.6667,
+ "opaque": true
+}

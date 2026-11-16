@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "parts": true,
+  "raw_output": "src/dancer-arms.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/dancer-arms.prompt",
+  "prompt_sha256": "27853c1a6a47d549344ffb1288c036880b2f5ecbe00f74e0bb48b35dc2136dc4",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "31fc48e50e7b53220df9391f2315ca6491c102e138aff9271e985b5f725b64f7",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.8664,
+  "generation_seconds": 63.4,
+  "runtime_metadata": "cut/dancer-arms.json"
+}

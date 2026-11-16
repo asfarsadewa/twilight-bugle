@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "parts": true,
+  "raw_output": "src/dancer-legs.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/dancer-legs.prompt",
+  "prompt_sha256": "d567c3f7a6af44e42b6b8419d35fd3c3161dd6b82bd4c67415d492bccb28692b",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "fbc3676508e748b4e53fefa210b7eb8347da39e3c52f9bafa9cac132083cc550",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.8308,
+  "generation_seconds": 57.4,
+  "runtime_metadata": "cut/dancer-legs.json"
+}

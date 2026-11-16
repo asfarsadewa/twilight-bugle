@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "parts": true,
+  "raw_output": "src/clown-legs.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/clown-legs.prompt",
+  "prompt_sha256": "f35f56465fb4e092e6f4d80a25d3d6daec05278aeb4c929d2400bdbc76be5659",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "6068eb059c17ffe5163c272a28ca05cb41c0beef4cfd5dd1729628325a4194bb",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.7804,
+  "generation_seconds": 54.6,
+  "runtime_metadata": "cut/clown-legs.json"
+}

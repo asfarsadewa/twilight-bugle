@@ -1,0 +1,490 @@
+[
+ {
+  "section": "v1f",
+  "who": "dancer",
+  "sung": "Ce soir, la lumière est pour moi,",
+  "fr": "Ce soir, la lumière est pour moi,",
+  "en": "Tonight, the light belongs to me",
+  "id": "Malam ini, cahaya itu milikku"
+ },
+ {
+  "section": "v1f",
+  "who": "dancer",
+  "sung": "Demain, on repliera le toit.",
+  "fr": "Demain, on repliera le toit.",
+  "en": "Tomorrow, they will fold away the roof",
+  "id": "Besok, atap ini akan dilipat"
+ },
+ {
+  "section": "v1f",
+  "who": "dancer",
+  "sung": "Je veux ma révérence parfaite,",
+  "fr": "Je veux ma révérence parfaite,",
+  "en": "I want my final bow to be perfect",
+  "id": "Kuingin salam terakhirku sempurna"
+ },
+ {
+  "section": "v1f",
+  "who": "dancer",
+  "sung": "Pas ton balai, pas tes pirouettes.",
+  "fr": "Pas ton balai, pas tes pirouettes.",
+  "en": "Not your broom, not your pirouettes",
+  "id": "Bukan sapumu, bukan putaranmu"
+ },
+ {
+  "section": "v1m",
+  "who": "clown",
+  "sung": "Moi, je fais danser la poussière,",
+  "fr": "Moi, je fais danser la poussière,",
+  "en": "I make the dust dance",
+  "id": "Aku membuat debu menari"
+ },
+ {
+  "section": "v1m",
+  "who": "clown",
+  "sung": "En rêvant d’un peu de lumière.",
+  "fr": "En rêvant d’un peu de lumière.",
+  "en": "Dreaming of a little light",
+  "id": "Sambil bermimpi mendapat sedikit cahaya"
+ },
+ {
+  "section": "v1m",
+  "who": "clown",
+  "sung": "Mon pied s’accroche au vieux rideau,",
+  "fr": "Mon pied s’accroche au vieux rideau,",
+  "en": "My foot catches in the old curtain",
+  "id": "Kakiku tersangkut tirai tua"
+ },
+ {
+  "section": "v1m",
+  "who": "clown",
+  "sung": "Et me voilà dans ton solo.",
+  "fr": "Et me voilà dans ton solo.",
+  "en": "And here I am, inside your solo",
+  "id": "Dan kini aku masuk ke tarian solomu"
+ },
+ {
+  "section": "pre1f",
+  "who": "dancer",
+  "sung": "Un, deux, trois, suis la cadence !",
+  "fr": "Un, deux, trois, suis la cadence !",
+  "en": "One, two, three, keep the rhythm",
+  "id": "Satu, dua, tiga, ikuti irama"
+ },
+ {
+  "section": "pre1f",
+  "who": "dancer",
+  "sung": "Un, deux, trois, garde tes distances !",
+  "fr": "Un, deux, trois, garde tes distances !",
+  "en": "One, two, three, keep your distance",
+  "id": "Satu, dua, tiga, jaga jarakmu"
+ },
+ {
+  "section": "pre1m",
+  "who": "clown",
+  "sung": "Un, deux, trois, je fais de mon mieux,",
+  "fr": "Un, deux, trois, je fais de mon mieux,",
+  "en": "One, two, three, I do my best",
+  "id": "Satu, dua, tiga, aku berusaha"
+ },
+ {
+  "section": "pre1m",
+  "who": "clown",
+  "sung": "Mais ton tabouret danse pour deux.",
+  "fr": "Mais ton tabouret danse pour deux.",
+  "en": "But your stool is dancing for two",
+  "id": "Tapi bangkumu menari untuk berdua"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Un pas pour toi, un pas pour moi,",
+  "fr": "Un pas pour toi, un pas pour moi,",
+  "en": "One step for you, one step for me",
+  "id": "Selangkah untukmu, selangkah untukku"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Chacun sa place, chacun sa loi.",
+  "fr": "Chacun sa place, chacun sa loi.",
+  "en": "Each in our place, each by our rules",
+  "id": "Masing-masing tempat, masing-masing aturan"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Tourne, tourne, encore un tour,",
+  "fr": "Tourne, tourne, encore un tour,",
+  "en": "Turn, turn, one more turn",
+  "id": "Berputar, berputar, sekali lagi"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Pousse-toi donc, c’est à mon tour !",
+  "fr": "Pousse-toi donc, c’est à mon tour !",
+  "en": "Move aside now, it is my turn",
+  "id": "Minggirlah, kini giliranku"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Tant qu’il nous reste un bout de plancher,",
+  "fr": "Tant qu’il nous reste un bout de plancher,",
+  "en": "As long as a piece of floor remains",
+  "id": "Selama masih tersisa sepotong lantai"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Il reste un monde à faire danser.",
+  "fr": "Il reste un monde à faire danser.",
+  "en": "There is still a world to set dancing",
+  "id": "Masih ada dunia yang bisa kita ajak menari"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Un dernier tour, un dernier salut,",
+  "fr": "Un dernier tour, un dernier salut,",
+  "en": "One last turn, one last bow",
+  "id": "Satu putaran terakhir, satu salam terakhir"
+ },
+ {
+  "section": "ch1",
+  "who": "both",
+  "sung": "Pour ce théâtre qui n’ouvrira plus.",
+  "fr": "Pour ce théâtre qui n’ouvrira plus.",
+  "en": "For this theatre that will never open again",
+  "id": "Untuk teater yang tak akan dibuka lagi"
+ },
+ {
+  "section": "v2m",
+  "who": "clown",
+  "sung": "Le vent s’engouffre sous la toile,",
+  "fr": "Le vent s’engouffre sous la toile,",
+  "en": "The wind rushes beneath the canvas",
+  "id": "Angin menerobos ke bawah kanvas"
+ },
+ {
+  "section": "v2m",
+  "who": "clown",
+  "sung": "Nos décors filent à toutes voiles.",
+  "fr": "Nos décors filent à toutes voiles.",
+  "en": "Our scenery sails away",
+  "id": "Dekorasi kita berlayar entah ke mana"
+ },
+ {
+  "section": "v2m",
+  "who": "clown",
+  "sung": "L’échelle glisse, le banc s’en va,",
+  "fr": "L’échelle glisse, le banc s’en va,",
+  "en": "The ladder slips, the bench rolls off",
+  "id": "Tangga tergelincir, bangku meluncur pergi"
+ },
+ {
+  "section": "v2m",
+  "who": "clown",
+  "sung": "Je cours après, reviens par là !",
+  "fr": "Je cours après, reviens par là !",
+  "en": "I run after it—come back here",
+  "id": "Kukejar semuanya—kembalilah"
+ },
+ {
+  "section": "v2f",
+  "who": "dancer",
+  "sung": "Le grand portant tombe sur toi !",
+  "fr": "Le grand portant tombe sur toi !",
+  "en": "The great support is falling towards you",
+  "id": "Penyangga besar itu jatuh ke arahmu"
+ },
+ {
+  "section": "v2f",
+  "who": "dancer",
+  "sung": "Attrape ma main, saute vers moi !",
+  "fr": "Attrape ma main, saute vers moi !",
+  "en": "Take my hand, jump towards me",
+  "id": "Raih tanganku, lompatlah ke arahku"
+ },
+ {
+  "section": "v2f",
+  "who": "dancer",
+  "sung": "La marche se brise sous mes pieds,",
+  "fr": "La marche se brise sous mes pieds,",
+  "en": "The step breaks beneath my feet",
+  "id": "Anak tangga patah di bawah kakiku"
+ },
+ {
+  "section": "v2f",
+  "who": "dancer",
+  "sung": "Je n’ai plus rien pour m’appuyer.",
+  "fr": "Je n’ai plus rien pour m’appuyer.",
+  "en": "There is nothing left to hold me up",
+  "id": "Tak ada lagi tempatku bertumpu"
+ },
+ {
+  "section": "pre2m",
+  "who": "clown",
+  "sung": "Attrape le bout de ton ruban,",
+  "fr": "Attrape le bout de ton ruban,",
+  "en": "Catch the end of your ribbon",
+  "id": "Tangkap ujung pitamu"
+ },
+ {
+  "section": "pre2m",
+  "who": "clown",
+  "sung": "Je te retiens, prends tout ton temps.",
+  "fr": "Je te retiens, prends tout ton temps.",
+  "en": "I am holding you; take your time",
+  "id": "Kutahan dirimu, pelan-pelan saja"
+ },
+ {
+  "section": "pre2f",
+  "who": "dancer",
+  "sung": "Si je me penche, tu glisses aussi,",
+  "fr": "Si je me penche, tu glisses aussi,",
+  "en": "If I lean, you slip as well",
+  "id": "Jika aku condong, kau juga tergelincir"
+ },
+ {
+  "section": "pre2f",
+  "who": "dancer",
+  "sung": "Alors on compte, et l’on se suit.",
+  "fr": "Alors on compte, et l’on se suit.",
+  "en": "So we count, and follow each other",
+  "id": "Maka kita berhitung dan saling mengikuti"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Un pas vers toi, un pas vers moi,",
+  "fr": "Un pas vers toi, un pas vers moi,",
+  "en": "One step towards you, one towards me",
+  "id": "Selangkah ke arahmu, selangkah ke arahku"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Garde l’équilibre, écoute ma voix.",
+  "fr": "Garde l’équilibre, écoute ma voix.",
+  "en": "Keep your balance, listen to my voice",
+  "id": "Jaga keseimbangan, dengarkan suaraku"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Tourne, tourne, encore un tour,",
+  "fr": "Tourne, tourne, encore un tour,",
+  "en": "Turn, turn, one more turn",
+  "id": "Berputar, berputar, sekali lagi"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Penche avec moi, chacun son tour.",
+  "fr": "Penche avec moi, chacun son tour.",
+  "en": "Lean with me, each in our turn",
+  "id": "Condonglah bersamaku, bergantian"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Tant qu’il nous reste un bout de plancher,",
+  "fr": "Tant qu’il nous reste un bout de plancher,",
+  "en": "As long as a piece of floor remains",
+  "id": "Selama masih tersisa sepotong lantai"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Il reste un monde à faire danser.",
+  "fr": "Il reste un monde à faire danser.",
+  "en": "There is still a world to set dancing",
+  "id": "Masih ada dunia yang bisa kita ajak menari"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Un dernier tour, un dernier salut,",
+  "fr": "Un dernier tour, un dernier salut,",
+  "en": "One last turn, one last bow",
+  "id": "Satu putaran terakhir, satu salam terakhir"
+ },
+ {
+  "section": "ch2",
+  "who": "both",
+  "sung": "Pour ce théâtre qui n’ouvrira plus.",
+  "fr": "Pour ce théâtre qui n’ouvrira plus.",
+  "en": "For this theatre that will never open again",
+  "id": "Untuk teater yang tak akan dibuka lagi"
+ },
+ {
+  "section": "bridgef",
+  "who": "dancer",
+  "sung": "Je savais saluer les foules,",
+  "fr": "Je savais saluer les foules,",
+  "en": "I knew how to bow before crowds",
+  "id": "Aku pandai memberi salam pada penonton"
+ },
+ {
+  "section": "bridgef",
+  "who": "dancer",
+  "sung": "Tourner sans jamais faire un faux pas.",
+  "fr": "Tourner sans jamais faire un faux pas.",
+  "en": "To turn without ever missing a step",
+  "id": "Berputar tanpa pernah salah langkah"
+ },
+ {
+  "section": "bridgef",
+  "who": "dancer",
+  "sung": "Mais quand tout le théâtre s’écroule,",
+  "fr": "Mais quand tout le théâtre s’écroule,",
+  "en": "But when the whole theatre falls apart",
+  "id": "Namun saat seluruh teater ini runtuh"
+ },
+ {
+  "section": "bridgef",
+  "who": "dancer",
+  "sung": "Mes plus beaux pas me ramènent à toi.",
+  "fr": "Mes plus beaux pas me ramènent à toi.",
+  "en": "My finest steps lead me back to you",
+  "id": "Langkah terbaikku membawaku kembali padamu"
+ },
+ {
+  "section": "bridgem",
+  "who": "clown",
+  "sung": "Je passais ma vie dans les coulisses,",
+  "fr": "Je passais ma vie dans les coulisses,",
+  "en": "I spent my life in the wings",
+  "id": "Seumur hidup aku di balik panggung"
+ },
+ {
+  "section": "bridgem",
+  "who": "clown",
+  "sung": "À ramasser les fleurs pour toi.",
+  "fr": "À ramasser les fleurs pour toi.",
+  "en": "Picking up the flowers for you",
+  "id": "Memunguti bunga-bunga untukmu"
+ },
+ {
+  "section": "bridgem",
+  "who": "clown",
+  "sung": "J’ai peur aussi, mais quand tu glisses,",
+  "fr": "J’ai peur aussi, mais quand tu glisses,",
+  "en": "I am afraid too, but when you slip",
+  "id": "Aku juga takut, tapi saat kau tergelincir"
+ },
+ {
+  "section": "bridgem",
+  "who": "clown",
+  "sung": "Mes deux mains savent être là.",
+  "fr": "Mes deux mains savent être là.",
+  "en": "My two hands know how to be there",
+  "id": "Kedua tanganku tahu harus ada di sana"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Un pas vers toi, un pas vers moi,",
+  "fr": "Un pas vers toi, un pas vers moi,",
+  "en": "One step towards you, one towards me",
+  "id": "Selangkah ke arahmu, selangkah ke arahku"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Tourne avec moi, reste avec moi.",
+  "fr": "Tourne avec moi, reste avec moi.",
+  "en": "Turn with me, stay with me",
+  "id": "Berputarlah bersamaku, tetap di sisiku"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Tourne, tourne, encore un tour,",
+  "fr": "Tourne, tourne, encore un tour,",
+  "en": "Turn, turn, one more turn",
+  "id": "Berputar, berputar, sekali lagi"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Le jour peut bien attendre son tour.",
+  "fr": "Le jour peut bien attendre son tour.",
+  "en": "The day can wait its turn",
+  "id": "Biarlah esok menunggu gilirannya"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Tant qu’il nous reste un bout de plancher,",
+  "fr": "Tant qu’il nous reste un bout de plancher,",
+  "en": "As long as a piece of floor remains",
+  "id": "Selama masih tersisa sepotong lantai"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Il reste un monde à faire danser.",
+  "fr": "Il reste un monde à faire danser.",
+  "en": "There is still a world to set dancing",
+  "id": "Masih ada dunia yang bisa kita ajak menari"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Un dernier tour, un dernier salut,",
+  "fr": "Un dernier tour, un dernier salut,",
+  "en": "One last turn, one last bow",
+  "id": "Satu putaran terakhir, satu salam terakhir"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "sung": "Pour ce théâtre qui n’ouvrira plus.",
+  "fr": "Pour ce théâtre qui n’ouvrira plus.",
+  "en": "For this theatre that will never open again",
+  "id": "Untuk teater yang tak akan dibuka lagi"
+ },
+ {
+  "section": "outrom",
+  "who": "clown",
+  "sung": "Je vais rentrer dans les coulisses,",
+  "fr": "Je vais rentrer dans les coulisses,",
+  "en": "I will return to the wings",
+  "id": "Aku akan kembali ke balik panggung"
+ },
+ {
+  "section": "outrom",
+  "who": "clown",
+  "sung": "Avec mon balai, sans faire de bruit.",
+  "fr": "Avec mon balai, sans faire de bruit.",
+  "en": "With my broom, without a sound",
+  "id": "Bersama sapuku, tanpa suara"
+ },
+ {
+  "section": "outrof",
+  "who": "dancer",
+  "sung": "Pose-le là. Reste avec moi.",
+  "fr": "Pose-le là. Reste avec moi.",
+  "en": "Put it down. Stay beside me",
+  "id": "Taruh di sana. Tetaplah bersamaku"
+ },
+ {
+  "section": "outrof",
+  "who": "dancer",
+  "sung": "Ce soir, le salut sera pour toi.",
+  "fr": "Ce soir, le salut sera pour toi.",
+  "en": "Tonight, the bow will be for you",
+  "id": "Malam ini, salam itu untukmu"
+ },
+ {
+  "section": "outro",
+  "who": "both",
+  "sung": "Un dernier tour, un dernier salut…",
+  "fr": "Un dernier tour, un dernier salut…",
+  "en": "One last turn, one last bow…",
+  "id": "Satu putaran terakhir, satu salam terakhir…"
+ }
+]

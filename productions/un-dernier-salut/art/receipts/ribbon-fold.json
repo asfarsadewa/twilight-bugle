@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "parts": false,
+  "raw_output": "src/ribbon-fold.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/ribbon-fold.prompt",
+  "prompt_sha256": "7f0a76e37f7cd057341eb1f9f2c31c8be5bf2c923edfdee4f9d38e79c1c89259",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "927885ad74f93d1006f1ca9dc95ff0366a666746d261ad535f7b477d221bc59f",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.7977,
+  "generation_seconds": 51.3,
+  "runtime_metadata": "cut/ribbon-fold.json"
+}

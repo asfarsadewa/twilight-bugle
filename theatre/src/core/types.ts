@@ -27,7 +27,7 @@ export type Route = 'fly' | 'left' | 'right' | 'trap' | 'none';
 
 export interface PieceSpec {
   id: string;
-  kind: 'drop' | 'flat' | 'prop' | 'puppet';
+  kind: 'drop' | 'flat' | 'prop' | 'puppet' | 'ribbon';
   art?: Art;
   puppet?: PuppetSpec;
   /** World width. Height follows the art aspect when only one is given. */
@@ -57,6 +57,10 @@ export interface PieceSpec {
   mirror?: boolean;
   /** A toy-theatre slide: a tin wire from the foot of the piece into that wing, as if a hand pushes it on stage. */
   slide?: 'left' | 'right';
+  /** A prop pin held by a performer's part. `<id>.held` blends from its cue position to the hand. */
+  grip?: { piece: string; part: string; point: Pt; pin: Pt; z?: number };
+  /** A flexible cloth strip between actual points on two performers. */
+  tether?: { from: { piece: string; part: string; point: Pt }; to: { piece: string; part: string; point: Pt }; color: number; width: number; sag: number };
 }
 
 export interface PartSpec {
@@ -75,6 +79,20 @@ export interface PartSpec {
   mirror?: boolean;
   /** A marionette string tied to this part, at a point of the part (0..1). It follows the joint. */
   string?: Pt;
+  /** Nested joint: attach is measured on this parent part instead of on the torso. */
+  parent?: PuppetJoint;
+}
+
+export type PuppetJoint = 'head' | 'armA' | 'armB' | 'foreA' | 'foreB' | 'thighA' | 'thighB' | 'shinA' | 'shinB';
+
+export interface PuppetChain {
+  upper: PuppetJoint;
+  lower: PuppetJoint;
+  /** The contact point on the lower part, in image coordinates. */
+  end: Pt;
+  target: 'handA' | 'handB' | 'footA' | 'footB';
+  /** Which way the elbow or knee bends. */
+  bend: 1 | -1;
 }
 
 export interface PuppetSpec {
@@ -85,6 +103,18 @@ export interface PuppetSpec {
   /** The arm that holds the prop: sword, lamp. */
   armA?: PartSpec;
   armB?: PartSpec;
+  foreA?: PartSpec;
+  foreB?: PartSpec;
+  thighA?: PartSpec;
+  thighB?: PartSpec;
+  shinA?: PartSpec;
+  shinB?: PartSpec;
+  /** Torso bottom above the root, leaving room for articulated legs. Existing puppets default to zero. */
+  bodyOffset?: number;
+  /** Scale of uncommanded breathing/voice movement; zero keeps precision grips planted. */
+  life?: number;
+  /** Two-bone chains. Targets are stage x, height above the floor and world z; weight is `<id>.<target>`. */
+  chains?: PuppetChain[];
   /** Which way the figure faces as painted. */
   faces: 'left' | 'right';
 }
@@ -154,6 +184,6 @@ export interface Production {
   /** Singer names and colours for the surtitles. */
   voices: Record<string, { name: string; color: string }>;
   /** Which language leads the surtitles and which follows. English and pinyin are on demand. */
-  surtitles?: { main: 'zh' | 'id' | 'en' | 'jv' | 'ko'; second: 'zh' | 'id' | 'en' | 'jv' | 'ko' };
+  surtitles?: { main: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko'; second: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko' };
   cues(c: CueContext): void;
 }

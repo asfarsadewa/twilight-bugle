@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "parts": false,
+  "raw_output": "src/stool.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/stool.prompt",
+  "prompt_sha256": "308b56e4d491747f6380f14723a94c76b6a5fd5e1b8eb35932a539e036bea042",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "d5d422cd97e917e00971744f861c867e419d5c368e797e471f72514355b68a5a",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.7587,
+  "generation_seconds": 57.9,
+  "runtime_metadata": "cut/stool.json"
+}

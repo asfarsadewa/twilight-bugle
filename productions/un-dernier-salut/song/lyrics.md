@@ -1,0 +1,106 @@
+# Un dernier salut
+
+French source lyrics; Indonesian and English translations in lines.json.
+
+[Instrumental Overture: 8 bars, mournful cello and piano, slow minor-key triple meter, introduce the chorus melody]
+
+[Verse 1 - Female]
+Ce soir, la lumière est pour moi,
+Demain, on repliera le toit.
+Je veux ma révérence parfaite,
+Pas ton balai, pas tes pirouettes.
+
+[Verse 1 - Male]
+Moi, je fais danser la poussière,
+En rêvant d’un peu de lumière.
+Mon pied s’accroche au vieux rideau,
+Et me voilà dans ton solo.
+
+[Pre-Chorus - Female]
+Un, deux, trois, suis la cadence !
+Un, deux, trois, garde tes distances !
+
+[Pre-Chorus - Male]
+Un, deux, trois, je fais de mon mieux,
+Mais ton tabouret danse pour deux.
+
+[Chorus 1 - Duet]
+Un pas pour toi, un pas pour moi,
+Chacun sa place, chacun sa loi.
+Tourne, tourne, encore un tour,
+Pousse-toi donc, c’est à mon tour !
+Tant qu’il nous reste un bout de plancher,
+Il reste un monde à faire danser.
+Un dernier tour, un dernier salut,
+Pour ce théâtre qui n’ouvrira plus.
+
+[Instrumental Dance: 16 bars, aching minor-key theme, measured pulse, sorrow beneath the movement, no vocals]
+
+[Verse 2 - Male]
+Le vent s’engouffre sous la toile,
+Nos décors filent à toutes voiles.
+L’échelle glisse, le banc s’en va,
+Je cours après, reviens par là !
+
+[Verse 2 - Female]
+Le grand portant tombe sur toi !
+Attrape ma main, saute vers moi !
+La marche se brise sous mes pieds,
+Je n’ai plus rien pour m’appuyer.
+
+[Pre-Chorus 2 - Male]
+Attrape le bout de ton ruban,
+Je te retiens, prends tout ton temps.
+
+[Pre-Chorus 2 - Female]
+Si je me penche, tu glisses aussi,
+Alors on compte, et l’on se suit.
+
+[Chorus 2 - Duet]
+Un pas vers toi, un pas vers moi,
+Garde l’équilibre, écoute ma voix.
+Tourne, tourne, encore un tour,
+Penche avec moi, chacun son tour.
+Tant qu’il nous reste un bout de plancher,
+Il reste un monde à faire danser.
+Un dernier tour, un dernier salut,
+Pour ce théâtre qui n’ouvrira plus.
+
+[Instrumental Rescue: 16 bars, urgent grieving strings and dark horns, minor key, no vocals]
+
+[Bridge - Female]
+Je savais saluer les foules,
+Tourner sans jamais faire un faux pas.
+Mais quand tout le théâtre s’écroule,
+Mes plus beaux pas me ramènent à toi.
+
+[Bridge - Male]
+Je passais ma vie dans les coulisses,
+À ramasser les fleurs pour toi.
+J’ai peur aussi, mais quand tu glisses,
+Mes deux mains savent être là.
+
+[Final Chorus - Duet, same melody, full tragic orchestra, minor key, grief and resolve]
+Un pas vers toi, un pas vers moi,
+Tourne avec moi, reste avec moi.
+Tourne, tourne, encore un tour,
+Le jour peut bien attendre son tour.
+Tant qu’il nous reste un bout de plancher,
+Il reste un monde à faire danser.
+Un dernier tour, un dernier salut,
+Pour ce théâtre qui n’ouvrira plus.
+
+[Instrumental Farewell Dance: 8 bars, sorrowful and fragile, minor key, then soften]
+
+[Outro - Male, quietly grieving]
+Je vais rentrer dans les coulisses,
+Avec mon balai, sans faire de bruit.
+
+[Outro - Female, quietly grieving]
+Pose-le là. Reste avec moi.
+Ce soir, le salut sera pour toi.
+
+[Outro - Duet, exhausted and intimate]
+Un dernier tour, un dernier salut…
+
+[Instrumental Curtain Call: 4 bars, solo cello, quiet bare minor chord, natural decay]

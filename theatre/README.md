@@ -137,6 +137,12 @@ A wave machine is a set of ground rows that rock against each other. The cue she
 
 A toy theatre swaps figures for a new pose. A second cut of a figure, such as Shan with the water yoke, slides in while the first figure leaves.
 
+Show XII adds articulated marionettes. A `PartSpec.parent` nests a forearm on an upper arm or a shin on a thigh. Optional `PuppetSpec.chains` solve palm and sole contacts from stage coordinates; the pelvis can lower to keep the feet planted. Channels such as `dancer.handBx` and `dancer.footAy` set the contact, and `dancer.handB` or `dancer.footA` sets its weight. `rx` tips a figure towards the audience; `headPitch` adds a nod. Existing head-and-arm puppets retain their original behaviour.
+
+A prop's optional `grip` pins it to an actual painted part while its `held` channel is one. A `ribbon` piece joins two such points with cloth. Contacts resolve after every actor has posed. Fly and slide offsets carry the whole articulated pose, including its targets. Outgoing grips and cloth resolve against the outgoing cast during a changeover.
+
+`productions/un-dernier-salut/choreography.ts` contains the movement score. Sampled pose signals hold their first and last values outside their sample range; audio envelopes keep their existing zero-outside behaviour. All poses and contacts remain functions of show time, including backwards seeks and encore.
+
 Fireworks burst in the sky in front of the cyclorama. A cue sets `fw<k>.at`, `fw<k>.x`, `fw<k>.y`, `fw<k>.z` and `fw<k>.hue` for up to 16 shells. The shell rises for 0.75 seconds, then bursts. Sparks need a dark sky to show.
 
 Each show uses more than one kind of rig. The README of each production lists its rigs.

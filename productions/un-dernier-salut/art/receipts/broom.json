@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "transparent",
+  "parts": false,
+  "raw_output": "src/broom.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/broom.prompt",
+  "prompt_sha256": "20b044c83044da07a4ecdefb5f2f670f19acde3c8e0bcb2a7156f7506dcdfea4",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "983d0208e38ab77aba91ad8b33972c9a64364719c22356578f53e7e4c61707c8",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.8668,
+  "generation_seconds": 40.3,
+  "runtime_metadata": "cut/broom.json"
+}

@@ -1,0 +1,172 @@
+{
+  "dancer-core": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": true,
+    "raw_output": "src/dancer-core.png"
+  },
+  "dancer-arms": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": true,
+    "raw_output": "src/dancer-arms.png"
+  },
+  "dancer-legs": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": true,
+    "raw_output": "src/dancer-legs.png"
+  },
+  "clown-core": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": true,
+    "raw_output": "src/clown-core.png"
+  },
+  "clown-arms": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": true,
+    "raw_output": "src/clown-arms.png"
+  },
+  "clown-legs": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": true,
+    "raw_output": "src/clown-legs.png"
+  },
+  "canopy": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/canopy.png"
+  },
+  "cloud-wing": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/cloud-wing.png"
+  },
+  "platform": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/platform.png"
+  },
+  "support": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/support.png"
+  },
+  "ladder": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/ladder.png"
+  },
+  "stool": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/stool.png"
+  },
+  "broom": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/broom.png"
+  },
+  "hat": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/hat.png"
+  },
+  "trunk": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1536x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/trunk.png"
+  },
+  "ribbon-fold": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1024",
+    "quality": "high",
+    "background": "transparent",
+    "parts": false,
+    "raw_output": "src/ribbon-fold.png"
+  },
+  "poster": {
+    "model": "gpt-image-2.6-sunburst",
+    "mode": "edit",
+    "reference": "src/key-art.png",
+    "size": "1024x1536",
+    "quality": "high",
+    "background": "opaque",
+    "parts": false,
+    "raw_output": "src/poster.png"
+  }
+}

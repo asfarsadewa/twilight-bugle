@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "parts": true,
+  "raw_output": "src/clown-arms.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/clown-arms.prompt",
+  "prompt_sha256": "f8cead98fd2300ed66de82f65c5424ce8ee534caa43628c49e0d217d265b1165",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "4ab7e2353c82bb77767884388e2de23892481139799f9ddea0ae20b09d98a87b",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.8233,
+  "generation_seconds": 56.1,
+  "runtime_metadata": "cut/clown-arms.json"
+}

@@ -1,0 +1,509 @@
+{
+  "dancer": {
+    "height": 0.5,
+    "bodyOffset": 0.49,
+    "parts": {
+      "body": {
+        "sheet": "dancer-core",
+        "index": 0,
+        "height": 0.5,
+        "pivot": [
+          0.5,
+          1
+        ]
+      },
+      "head": {
+        "sheet": "dancer-core",
+        "index": 1,
+        "height": 0.252,
+        "pivot": [
+          0.53865,
+          0.94453
+        ],
+        "attach": [
+          0.52167,
+          0.11756
+        ],
+        "z": -0.7,
+        "source_pin": [
+          260,
+          590
+        ],
+        "source_attach": [
+          720,
+          224
+        ],
+        "string": [
+          0.49866,
+          0.07322
+        ]
+      },
+      "armA": {
+        "sheet": "dancer-arms",
+        "index": 0,
+        "height": 0.3,
+        "pivot": [
+          0.51541,
+          0.12775
+        ],
+        "attach": [
+          0.21841,
+          0.10464
+        ],
+        "z": 0.7,
+        "source_pin": [
+          332,
+          65
+        ],
+        "source_attach": [
+          552,
+          214
+        ]
+      },
+      "foreA": {
+        "sheet": "dancer-arms",
+        "index": 3,
+        "height": 0.36,
+        "pivot": [
+          0.75819,
+          0.07673
+        ],
+        "attach": [
+          0.51541,
+          0.92288
+        ],
+        "z": 0.32,
+        "source_pin": [
+          324,
+          523
+        ],
+        "source_attach": [
+          332,
+          395
+        ],
+        "parent": "armA",
+        "string": [
+          0.52201,
+          0.80992
+        ],
+        "end": [
+          0.52201,
+          0.80992
+        ]
+      },
+      "thighA": {
+        "sheet": "dancer-legs",
+        "index": 0,
+        "height": 0.29,
+        "pivot": [
+          0.48587,
+          0.09276
+        ],
+        "attach": [
+          0.27979,
+          0.92899
+        ],
+        "z": -0.8,
+        "source_pin": [
+          310,
+          54
+        ],
+        "source_attach": [
+          586,
+          852
+        ]
+      },
+      "shinA": {
+        "sheet": "dancer-legs",
+        "index": 3,
+        "height": 0.34,
+        "pivot": [
+          0.72797,
+          0.08165
+        ],
+        "attach": [
+          0.50301,
+          0.9141
+        ],
+        "z": 0.3,
+        "source_pin": [
+          309,
+          530
+        ],
+        "source_attach": [
+          313,
+          417
+        ],
+        "parent": "thighA",
+        "string": [
+          0.72797,
+          0.08165
+        ],
+        "end": [
+          0.40076,
+          0.98252
+        ]
+      },
+      "armB": {
+        "sheet": "dancer-arms",
+        "index": 1,
+        "height": 0.3,
+        "pivot": [
+          0.42934,
+          0.12948
+        ],
+        "attach": [
+          0.87186,
+          0.10464
+        ],
+        "z": 0.95,
+        "source_pin": [
+          682,
+          72
+        ],
+        "source_attach": [
+          914,
+          214
+        ]
+      },
+      "foreB": {
+        "sheet": "dancer-arms",
+        "index": 2,
+        "height": 0.36,
+        "pivot": [
+          0.24863,
+          0.0852
+        ],
+        "attach": [
+          0.45551,
+          0.91923
+        ],
+        "z": 0.32,
+        "source_pin": [
+          680,
+          524
+        ],
+        "source_attach": [
+          687,
+          395
+        ],
+        "parent": "armB",
+        "string": [
+          0.43512,
+          0.82178
+        ],
+        "end": [
+          0.43512,
+          0.82178
+        ]
+      },
+      "thighB": {
+        "sheet": "dancer-legs",
+        "index": 1,
+        "height": 0.29,
+        "pivot": [
+          0.4676,
+          0.09276
+        ],
+        "attach": [
+          0.7076,
+          0.92899
+        ],
+        "z": -0.6000000000000001,
+        "source_pin": [
+          690,
+          54
+        ],
+        "source_attach": [
+          823,
+          852
+        ]
+      },
+      "shinB": {
+        "sheet": "dancer-legs",
+        "index": 2,
+        "height": 0.34,
+        "pivot": [
+          0.26904,
+          0.08301
+        ],
+        "attach": [
+          0.4676,
+          0.9141
+        ],
+        "z": 0.3,
+        "source_pin": [
+          688,
+          528
+        ],
+        "source_attach": [
+          690,
+          417
+        ],
+        "parent": "thighB",
+        "string": [
+          0.26904,
+          0.08301
+        ],
+        "end": [
+          0.58102,
+          0.98014
+        ]
+      }
+    }
+  },
+  "clown": {
+    "height": 0.53,
+    "bodyOffset": 0.49,
+    "parts": {
+      "body": {
+        "sheet": "clown-core",
+        "index": 0,
+        "height": 0.53,
+        "pivot": [
+          0.5,
+          1
+        ]
+      },
+      "head": {
+        "sheet": "clown-core",
+        "index": 1,
+        "height": 0.252,
+        "pivot": [
+          0.50616,
+          0.92449
+        ],
+        "attach": [
+          0.46355,
+          0.02469
+        ],
+        "z": -0.7,
+        "source_pin": [
+          231,
+          649
+        ],
+        "source_attach": [
+          708,
+          125
+        ],
+        "string": [
+          0.479,
+          0.05108
+        ]
+      },
+      "armA": {
+        "sheet": "clown-arms",
+        "index": 0,
+        "height": 0.3,
+        "pivot": [
+          0.53498,
+          0.10777
+        ],
+        "attach": [
+          0.11031,
+          0.22846
+        ],
+        "z": 0.7,
+        "source_pin": [
+          319,
+          56
+        ],
+        "source_attach": [
+          519,
+          298
+        ]
+      },
+      "foreA": {
+        "sheet": "clown-arms",
+        "index": 2,
+        "height": 0.36,
+        "pivot": [
+          0.37968,
+          0.09397
+        ],
+        "attach": [
+          0.53498,
+          0.87838
+        ],
+        "z": 0.32,
+        "source_pin": [
+          318,
+          524
+        ],
+        "source_attach": [
+          319,
+          392
+        ],
+        "parent": "armA",
+        "string": [
+          0.53168,
+          0.84778
+        ],
+        "end": [
+          0.53168,
+          0.84778
+        ]
+      },
+      "thighA": {
+        "sheet": "clown-legs",
+        "index": 0,
+        "height": 0.29,
+        "pivot": [
+          0.48689,
+          0.09434
+        ],
+        "attach": [
+          0.25235,
+          0.93753
+        ],
+        "z": -0.8,
+        "source_pin": [
+          338,
+          48
+        ],
+        "source_attach": [
+          595,
+          900
+        ]
+      },
+      "shinA": {
+        "sheet": "clown-legs",
+        "index": 2,
+        "height": 0.34,
+        "pivot": [
+          0.63949,
+          0.06046
+        ],
+        "attach": [
+          0.4299,
+          0.90584
+        ],
+        "z": 0.3,
+        "source_pin": [
+          331,
+          521
+        ],
+        "source_attach": [
+          327,
+          401
+        ],
+        "parent": "thighA",
+        "string": [
+          0.63949,
+          0.06046
+        ],
+        "end": [
+          0.36923,
+          0.98244
+        ]
+      },
+      "armB": {
+        "sheet": "clown-arms",
+        "index": 1,
+        "height": 0.3,
+        "pivot": [
+          0.51166,
+          0.10802
+        ],
+        "attach": [
+          0.89903,
+          0.22846
+        ],
+        "z": 0.95,
+        "source_pin": [
+          711,
+          56
+        ],
+        "source_attach": [
+          941,
+          298
+        ]
+      },
+      "foreB": {
+        "sheet": "clown-arms",
+        "index": 3,
+        "height": 0.36,
+        "pivot": [
+          0.70747,
+          0.09341
+        ],
+        "attach": [
+          0.51166,
+          0.87814
+        ],
+        "z": 0.32,
+        "source_pin": [
+          714,
+          525
+        ],
+        "source_attach": [
+          711,
+          391
+        ],
+        "parent": "armB",
+        "string": [
+          0.53668,
+          0.84863
+        ],
+        "end": [
+          0.53668,
+          0.84863
+        ]
+      },
+      "thighB": {
+        "sheet": "clown-legs",
+        "index": 1,
+        "height": 0.29,
+        "pivot": [
+          0.47942,
+          0.09412
+        ],
+        "attach": [
+          0.73269,
+          0.93753
+        ],
+        "z": -0.6000000000000001,
+        "source_pin": [
+          672,
+          48
+        ],
+        "source_attach": [
+          852,
+          900
+        ]
+      },
+      "shinB": {
+        "sheet": "clown-legs",
+        "index": 3,
+        "height": 0.34,
+        "pivot": [
+          0.39256,
+          0.06034
+        ],
+        "attach": [
+          0.53611,
+          0.90371
+        ],
+        "z": 0.3,
+        "source_pin": [
+          684,
+          521
+        ],
+        "source_attach": [
+          683,
+          401
+        ],
+        "parent": "thighB",
+        "string": [
+          0.39256,
+          0.06034
+        ],
+        "end": [
+          0.58431,
+          0.98048
+        ]
+      }
+    }
+  },
+  "note": "All source pins are measured in the selected 1024 px sheets. Heights rescale separate sheets into one physical puppet. Head bases overlap collars, rather than stacking neck stubs. Contact endpoints are palms and soles, not image corners."
+}

@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "transparent",
+  "parts": false,
+  "raw_output": "src/cloud-wing.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/cloud-wing.prompt",
+  "prompt_sha256": "d1c2e221cab27cdebafdb60eef8fc1857145dc330901c30e3d0907906bfeba31",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "5d91de103b605b2016eb9118b3cdeae64eca58b67df4ad8743b77d8cc8c2f964",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.5878,
+  "generation_seconds": 51.3,
+  "runtime_metadata": "cut/cloud-wing.json"
+}

@@ -1,0 +1,23 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "src/key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "parts": true,
+  "raw_output": "src/dancer-core.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/dancer-core.prompt",
+  "prompt_sha256": "5ee0920c78f8851404cc337190e9dfdde8dad722f39d5656036dc60dfcc910ad",
+  "reference_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "raw_sha256": "482eb6014649ee7a06bf01cdcc9f6852c3f54865a792e034e21a9ac24d1671f1",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.6613,
+  "generation_seconds": 57.7,
+  "runtime_metadata": "cut/dancer-core.json"
+}

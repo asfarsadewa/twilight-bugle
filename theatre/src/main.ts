@@ -176,7 +176,7 @@ function tick(now: number) {
 
 // ---------------------------------------------------------------- posters and programmes
 
-const LANG = { zh: 'Mandarin', id: 'Bahasa Indonesia', en: 'English', jv: 'Javanese', ko: 'Korean' } as const;
+const LANG = { zh: 'Mandarin', id: 'Bahasa Indonesia', en: 'English', fr: 'French', jv: 'Javanese', ko: 'Korean' } as const;
 
 /** An invisible button over each poster, so a poster takes clicks, hover and keyboard focus. */
 function wallButton(p: Production) {

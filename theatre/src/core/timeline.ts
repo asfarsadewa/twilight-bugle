@@ -89,11 +89,11 @@ export class Timeline {
     return this;
   }
 
-  private signals = new Map<string, { fps: number; v: ArrayLike<number> }>();
+  private signals = new Map<string, { fps: number; v: ArrayLike<number>; hold: boolean }>();
 
   /** A channel sampled at a fixed rate, such as the loudness of a voice. It replaces keys on that channel. */
-  signal(ch: string, fps: number, v: ArrayLike<number>): this {
-    this.signals.set(ch, { fps, v });
+  signal(ch: string, fps: number, v: ArrayLike<number>, hold = false): this {
+    this.signals.set(ch, { fps, v, hold });
     return this;
   }
 
@@ -133,7 +133,8 @@ export class Timeline {
     if (sig) {
       const f = at * sig.fps;
       const i = Math.floor(f);
-      if (i < 0 || i >= sig.v.length - 1) return 0;
+      if (i < 0) return sig.hold ? sig.v[0] ?? 0 : 0;
+      if (i >= sig.v.length - 1) return sig.hold ? sig.v[sig.v.length - 1] ?? 0 : 0;
       return sig.v[i]! + (sig.v[i + 1]! - sig.v[i]!) * (f - i);
     }
     if (!this.cues.has(ch)) return this.bases.get(ch) ?? fallback;

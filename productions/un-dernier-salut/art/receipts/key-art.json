@@ -1,0 +1,12 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "generate",
+  "quality": "high",
+  "size": "1536x1024",
+  "background": "opaque",
+  "status": "complete",
+  "selected": "key-art.png",
+  "prompt_sha256": "c74a560310f36b9755a8dfa676c6095860744654c98109dd842872b81eb296d9",
+  "raw_sha256": "8992b36d22c7911d57a71082eba4ea05cf43ce15afa8cae5f9dcd2451a1357a3",
+  "generation_seconds": 70.5
+}
