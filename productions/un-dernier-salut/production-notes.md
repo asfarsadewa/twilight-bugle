@@ -51,3 +51,15 @@ The producer's subsequent browser annotation showed that the clown's head was st
 The current full master is `render/neck-corrected/un-dernier-salut.mp4`: 293,926,430 bytes, SHA-256 `efbb86ffdfd0eb2a3e69f85fc0916f9dbd54e9c3d0f579af44a7d78222dfe0b6`. It includes both corrected head mounts and the hand/grip revisions. Sources match the snapshot taken before rendering. Complete decode passes; all six audio checks find 0 ms offset, with minimum correlation 0.999724.
 
 The requested channel export is `D:\un-dernier-salut-ashthepeasant.mp4`: 343.933 seconds, 1920×1080 at 30 fps, 10,318 frames, H.264 High/AAC stereo, 331,165,158 bytes. SHA-256 `214462e0752ef4d676dbc21fc4f8fc3f89db461d054ba7295b0a698dfcd1c847`. The same Georgia italic `@ashthepeasant` watermark drifts along the right of the stage above the surtitles at 35% opacity. The export signals limited-range BT.709, retains identical audio packets, has no dropped/duplicated frames and passes complete decoding. The MP4 index precedes the media data for fast start. Actual encoded frames at 27, 137 and 302 seconds were inspected for corrected head placement, watermark movement and subtitle clearance. Receipts remain in `render/delivery.json` and `render/youtube/export.json`. Musical earcheck remains with the producer.
+
+## Public release
+
+The producer approved commit, push and deployment on 16 November 2026. Production commit `596e9d4` was pushed to `origin/main` and deployed with the pinned Wrangler 4.152.0 to Worker `twilight-bugle`, custom domain `twilightbugle.asfarlab.fun`. Version `ec9e5a2a-178c-4b84-816d-cb1722decba2` received 100% traffic at 23:04:03 Australia/Perth. Version tag: `show-xii-un-dernier-salut`.
+
+Live URL: https://twilightbugle.asfarlab.fun/show/un-dernier-salut.
+
+Release preflight passed typecheck, production build, Wrangler dry run, selected-song identity and source/rig checks against the rendered master. All eighteen selected-image receipts specify `gpt-image-2.6-sunburst`. Wrangler uploaded 79 assets and retained 539 existing assets. The domain, compatibility date and public gate variables match the previous release; both gate secret bindings remain present.
+
+Live verification passes: the root, Show XII and Show XI pages return 200. Show XII's title, description, canonical URL and 1200×630 share card identify the new production; share-card bytes match the local file. The live entry `/assets/index-ajNjT4JQ.js` and production `/assets/production-DRwVyFyy.js` match the checked build byte for byte. The production bundle contains the corrected male attachment `[708,125]` and references `/assets/master-BS4tUwB4.mp3`; the build's song has selected-source SHA-256 `a8e3b9195ba29797a34097e4530d53acfea4a82390409f1753fd11a5bc2df6e8`. Unauthenticated song access correctly returns 403 while the gate is enabled. Authenticated playback uses the normal entrance; the gate was not bypassed.
+
+Detailed deployment and HTTP evidence is retained in ignored `render/deploy.log`, `render/release-status.json`, `render/release-preflight.json` and `render/qa/live.json`. This release-record update changes documentation only and requires no new runtime deployment.
