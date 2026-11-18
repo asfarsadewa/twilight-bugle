@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-quay.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-quay.prompt",
+  "prompt_sha256": "78e0cde709a0150e62c0d35db346ee428e65bb60e5e3de7eab2affeab4fd49bd",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "e78cdd65098c397a203613c81576d2db17b448b65f3e3d3e550c36fafcd79799",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.266,
+  "generation_seconds": 37.0
+}

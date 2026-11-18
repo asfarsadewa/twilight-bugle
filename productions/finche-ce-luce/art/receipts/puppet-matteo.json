@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-matteo.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-matteo.prompt",
+  "prompt_sha256": "cd45ac5fd2fc875ad10c79b3c7f3ed33a96afc005b548e623fcc3aa6d68fbd41",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "58042ea5616847068a648a336e50a3c411c05f72128cc651d2709069ef1ae555",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.5324,
+  "generation_seconds": 54.0
+}

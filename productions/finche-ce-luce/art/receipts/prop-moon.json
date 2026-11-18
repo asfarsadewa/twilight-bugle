@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-moon.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-moon.prompt",
+  "prompt_sha256": "1f0e44dabb97b9cbd6123c753d7eca55671fc76a1c1940a6238bfa79cde6e246",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "6f92b62e03ff5b78d5f148702b102f809843842defb89d36bb8a5a756a1c6f30",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.2445,
+  "generation_seconds": 47.0
+}

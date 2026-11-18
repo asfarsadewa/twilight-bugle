@@ -1,0 +1,88 @@
+# Finché c'è luce
+
+Italian source lyrics. Indonesian and English lines are in lines.json.
+
+[Intro: solo cello, distant sea, one tolling bell, the choir hums the chorus melody]
+
+[Verse 1: Matteo, low and steady]
+Pietra su pietra, mani nel vento,
+alzammo la torre sopra lo scoglio.
+Ogni inverno il mare prendeva un figlio,
+e noi giurammo: mai più nel buio.
+
+[Verse 2: Lucia, tender, accordion and harp]
+Io portavo l'acqua, il pane, la calce,
+tu cantavi piano contro il freddo.
+Nostro figlio dormiva in una cesta di corda
+sotto la prima fiamma accesa.
+
+[Pre-Chorus: duet, strings rising, short and building]
+Gira la lanterna,
+guarda il mare...
+
+[Chorus: Matteo, the hook on a soaring long-held note, the choir answers]
+Finché c'è luce,
+(Choir: torna a casa!)
+finché c'è luce,
+io resto qui.
+Sopra il mare nero
+giro la ruota,
+finché c'è luce...
+(Choir: torna a casa!)
+
+[Verse 3: Lucia, years later, mandolin]
+Nino è cresciuto, ha le tue spalle,
+ha il sale negli occhi e il mare nel petto.
+Ogni alba lo guardo partire con gli altri
+e conto le vele, una per una.
+
+[Verse 4: Matteo, heavier]
+Pulisco il vetro, carico i pesi,
+la catena scende tutta la notte.
+Se la luce si ferma, il mare non perdona,
+lo so da quando ero bambino.
+
+[Pre-Chorus: duet]
+Gira la lanterna,
+guarda il mare...
+
+[Chorus: duet, the choir answers, fuller]
+Finché c'è luce,
+(Choir: torna a casa!)
+finché c'è luce,
+io resto qui.
+Sopra il mare nero
+giro la ruota,
+finché c'è luce...
+(Choir: torna a casa!)
+
+[Bridge: the storm, driving 6/8, timpani, brass, full choir chanting]
+Notte di tempesta, la catena si spezza!
+(Gira, gira, gira!)
+Le mani sulla ruota, Lucia porta l'olio!
+(Gira, gira, gira!)
+Una vela, due vele, dieci vele tornano,
+ma la vela di Nino non si vede.
+
+[Break: piano only, Lucia almost spoken]
+All'alba il mare ha riportato la sua barca,
+vuota, leggera, sulla sabbia.
+
+[Final Chorus: duet and full choir, the biggest moment, sung through tears]
+Finché c'è luce,
+(Choir: torna a casa!)
+figlio di un'altra,
+io resto qui.
+Anche se il mio
+non torna più,
+finché c'è luce...
+(Choir: torna a casa!)
+
+[Final Chorus repeat: the hook held as long as it can last, still minor]
+Finché c'è luce,
+(Choir: torna a casa!)
+finché c'è luce,
+io resto qui...
+
+[Outro: solo cello, the sea, one tolling bell]
+(Lucia, whispered) Accendi, Matteo. È sera.

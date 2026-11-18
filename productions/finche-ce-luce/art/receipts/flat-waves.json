@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-waves.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-waves.prompt",
+  "prompt_sha256": "fd852213d6fc84856b06ff8212ffe5e5dbe8ae153cf1bd1b1618a9ea5da14f23",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "f0f3c28bbeab19e7daaa7a53769e2dd7261892cd9ed1c54ebac29d3fee692f6c",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.5036,
+  "generation_seconds": 32.0
+}

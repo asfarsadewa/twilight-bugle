@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-stair.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-stair.prompt",
+  "prompt_sha256": "447d03d4910db479dd251c2c7644debf914d00491433967e1c7ef737a4b356d0",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "3ecc0f7b174d7bd63807e9f3802a6e605e24ceedd995b988e0fe42cb8f620c8c",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.5051,
+  "generation_seconds": 42.0
+}

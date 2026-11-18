@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-women.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-women.prompt",
+  "prompt_sha256": "4c7e5ae328356a74f47f917f2fac03be223ff47e7d9bb1ee473cb037b0e4fcd7",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "c46b2e6361c37a03919520da257722080ebb58cff91c1334f024d04afcc1d09a",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.2543,
+  "generation_seconds": 38.0
+}

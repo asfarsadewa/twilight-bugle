@@ -1,0 +1,458 @@
+[
+ {
+  "section": "v1",
+  "who": "matteo",
+  "it": "Pietra su pietra, mani nel vento,",
+  "id": "Batu demi batu, tangan di tengah angin,",
+  "en": "Stone upon stone, our hands in the wind,",
+  "sung": "Pietra su pietra, mani nel vento,"
+ },
+ {
+  "section": "v1",
+  "who": "matteo",
+  "it": "alzammo la torre sopra lo scoglio.",
+  "id": "kami dirikan menara di atas karang.",
+  "en": "we raised the tower on the rock.",
+  "sung": "alzammo la torre sopra lo scoglio."
+ },
+ {
+  "section": "v1",
+  "who": "matteo",
+  "it": "Ogni inverno il mare prendeva un figlio,",
+  "id": "Setiap musim dingin laut mengambil seorang anak,",
+  "en": "Every winter the sea took a son,",
+  "sung": "Ogni inverno il mare prendeva un figlio,"
+ },
+ {
+  "section": "v1",
+  "who": "matteo",
+  "it": "e noi giurammo: mai più nel buio.",
+  "id": "dan kami bersumpah: tak lagi dalam gelap.",
+  "en": "and we swore: never again in the dark.",
+  "sung": "e noi giurammo: mai più nel buio."
+ },
+ {
+  "section": "v2",
+  "who": "lucia",
+  "it": "Io portavo l'acqua, il pane, la calce,",
+  "id": "Aku membawa air, roti, dan kapur,",
+  "en": "I carried the water, the bread, the lime,",
+  "sung": "Io portavo l'acqua, il pane, la calce,"
+ },
+ {
+  "section": "v2",
+  "who": "lucia",
+  "it": "tu cantavi piano contro il freddo.",
+  "id": "kau bernyanyi pelan melawan dingin.",
+  "en": "you sang softly against the cold.",
+  "sung": "tu cantavi piano contro il freddo."
+ },
+ {
+  "section": "v2",
+  "who": "lucia",
+  "it": "Nostro figlio dormiva in una cesta di corda",
+  "id": "Anak kita tidur dalam keranjang tali",
+  "en": "Our son slept in a basket of rope",
+  "sung": "Nostro figlio dormiva in una cesta di corda"
+ },
+ {
+  "section": "v2",
+  "who": "lucia",
+  "it": "sotto la prima fiamma accesa.",
+  "id": "di bawah nyala api yang pertama.",
+  "en": "beneath the first flame we lit.",
+  "sung": "sotto la prima fiamma accesa."
+ },
+ {
+  "section": "pre1",
+  "who": "both",
+  "it": "Gira la lanterna",
+  "id": "Putarlah lentera",
+  "en": "Turn the lantern",
+  "sung": "Gira la lanterna"
+ },
+ {
+  "section": "pre1",
+  "who": "both",
+  "it": "guarda il mare...",
+  "id": "tataplah laut...",
+  "en": "watch the sea...",
+  "sung": "guarda il mare..."
+ },
+ {
+  "section": "ch1",
+  "who": "matteo",
+  "it": "Finché c'è luce",
+  "id": "Selama masih ada cahaya",
+  "en": "As long as there is light",
+  "sung": "Finché c'è luce"
+ },
+ {
+  "section": "ch1",
+  "who": "choir",
+  "it": "torna a casa!",
+  "id": "pulanglah!",
+  "en": "come home!",
+  "sung": "torna a casa!"
+ },
+ {
+  "section": "ch1",
+  "who": "matteo",
+  "it": "finché c'è luce",
+  "id": "selama masih ada cahaya",
+  "en": "as long as there is light",
+  "sung": "finché c'è luce"
+ },
+ {
+  "section": "ch1",
+  "who": "matteo",
+  "it": "io resto qui",
+  "id": "aku tetap di sini",
+  "en": "I stay here",
+  "sung": "io resto qui"
+ },
+ {
+  "section": "ch1",
+  "who": "matteo",
+  "it": "Sopra il mare nero",
+  "id": "Di atas laut yang hitam",
+  "en": "Above the black sea",
+  "sung": "Sopra il mare nero"
+ },
+ {
+  "section": "ch1",
+  "who": "matteo",
+  "it": "giro la ruota",
+  "id": "kuputar rodanya",
+  "en": "I turn the wheel",
+  "sung": "giro la ruota"
+ },
+ {
+  "section": "ch1",
+  "who": "matteo",
+  "it": "finché c'è luce...",
+  "id": "selama masih ada cahaya...",
+  "en": "as long as there is light...",
+  "sung": "finché c'è luce..."
+ },
+ {
+  "section": "ch1",
+  "who": "choir",
+  "it": "torna a casa!",
+  "id": "pulanglah!",
+  "en": "come home!",
+  "sung": "torna a casa!"
+ },
+ {
+  "section": "v3",
+  "who": "lucia",
+  "it": "Nino è cresciuto, ha le tue spalle,",
+  "id": "Nino sudah besar, bahunya seperti bahumu,",
+  "en": "Nino has grown, he has your shoulders,",
+  "sung": "Nino è cresciuto, ha le tue spalle,"
+ },
+ {
+  "section": "v3",
+  "who": "lucia",
+  "it": "ha il sale negli occhi e il mare nel petto.",
+  "id": "garam di matanya, laut di dadanya.",
+  "en": "salt in his eyes and the sea in his chest.",
+  "sung": "ha il sale negli occhi e il mare nel petto."
+ },
+ {
+  "section": "v3",
+  "who": "lucia",
+  "it": "Ogni alba lo guardo partire con gli altri",
+  "id": "Setiap fajar kulihat ia berangkat bersama yang lain",
+  "en": "Every dawn I watch him leave with the others",
+  "sung": "Ogni alba lo guardo partire con gli altri"
+ },
+ {
+  "section": "v3",
+  "who": "lucia",
+  "it": "e conto le vele, una per una.",
+  "id": "dan kuhitung layarnya, satu demi satu.",
+  "en": "and I count the sails, one by one.",
+  "sung": "e conto le vele, una per una."
+ },
+ {
+  "section": "v4",
+  "who": "matteo",
+  "it": "Pulisco il vetro, carico i pesi,",
+  "id": "Kubersihkan kaca, kuisi pemberatnya,",
+  "en": "I clean the glass, I wind the weights,",
+  "sung": "Pulisco il vetro, carico i pesi,"
+ },
+ {
+  "section": "v4",
+  "who": "matteo",
+  "it": "la catena scende tutta la notte.",
+  "id": "rantainya turun sepanjang malam.",
+  "en": "the chain goes down the whole night long.",
+  "sung": "la catena scende tutta la notte."
+ },
+ {
+  "section": "v4",
+  "who": "matteo",
+  "it": "Se la luce si ferma, il mare non perdona,",
+  "id": "Jika cahaya berhenti, laut tak memaafkan,",
+  "en": "If the light stops, the sea does not forgive,",
+  "sung": "Se la luce si ferma, il mare non perdona,"
+ },
+ {
+  "section": "v4",
+  "who": "matteo",
+  "it": "lo so da quando ero bambino.",
+  "id": "aku tahu sejak aku masih kecil.",
+  "en": "I have known it since I was a boy.",
+  "sung": "lo so da quando ero bambino."
+ },
+ {
+  "section": "pre2",
+  "who": "both",
+  "it": "Gira la lanterna",
+  "id": "Putarlah lentera",
+  "en": "Turn the lantern",
+  "sung": "Gira la lanterna"
+ },
+ {
+  "section": "pre2",
+  "who": "both",
+  "it": "guarda il mare...",
+  "id": "tataplah laut...",
+  "en": "watch the sea...",
+  "sung": "guarda il mare..."
+ },
+ {
+  "section": "ch2",
+  "who": "matteo",
+  "it": "Finché c'è luce",
+  "id": "Selama masih ada cahaya",
+  "en": "As long as there is light",
+  "sung": "Finché c'è luce"
+ },
+ {
+  "section": "ch2",
+  "who": "choir",
+  "it": "torna a casa!",
+  "id": "pulanglah!",
+  "en": "come home!",
+  "sung": "torna a casa!"
+ },
+ {
+  "section": "ch2",
+  "who": "matteo",
+  "it": "finché c'è luce",
+  "id": "selama masih ada cahaya",
+  "en": "as long as there is light",
+  "sung": "finché c'è luce"
+ },
+ {
+  "section": "ch2",
+  "who": "matteo",
+  "it": "io resto qui",
+  "id": "aku tetap di sini",
+  "en": "I stay here",
+  "sung": "io resto qui"
+ },
+ {
+  "section": "ch2",
+  "who": "matteo",
+  "it": "Sopra il mare nero",
+  "id": "Di atas laut yang hitam",
+  "en": "Above the black sea",
+  "sung": "Sopra il mare nero"
+ },
+ {
+  "section": "ch2",
+  "who": "matteo",
+  "it": "giro la ruota",
+  "id": "kuputar rodanya",
+  "en": "I turn the wheel",
+  "sung": "giro la ruota"
+ },
+ {
+  "section": "ch2",
+  "who": "matteo",
+  "it": "finché c'è luce...",
+  "id": "selama masih ada cahaya...",
+  "en": "as long as there is light...",
+  "sung": "finché c'è luce..."
+ },
+ {
+  "section": "ch2",
+  "who": "choir",
+  "it": "torna a casa!",
+  "id": "pulanglah!",
+  "en": "come home!",
+  "sung": "torna a casa!"
+ },
+ {
+  "section": "storm",
+  "who": "both",
+  "it": "Notte di tempesta, la catena si spezza!",
+  "id": "Malam badai, rantainya putus!",
+  "en": "A night of storm, the chain snaps!",
+  "sung": "Notte di tempesta, la catena si spezza!"
+ },
+ {
+  "section": "storm",
+  "who": "choir",
+  "it": "Gira, gira, gira!",
+  "id": "Putar, putar, putar!",
+  "en": "Turn, turn, turn!",
+  "sung": "Gira, gira, gira!"
+ },
+ {
+  "section": "storm",
+  "who": "both",
+  "it": "Le mani sulla ruota, Lucia porta l'olio!",
+  "id": "Tangan di roda, Lucia membawa minyak!",
+  "en": "Hands on the wheel, Lucia brings the oil!",
+  "sung": "Le mani sulla ruota, Lucia porta l'olio!"
+ },
+ {
+  "section": "storm",
+  "who": "choir",
+  "it": "Gira, gira, gira!",
+  "id": "Putar, putar, putar!",
+  "en": "Turn, turn, turn!",
+  "sung": "Gira, gira, gira!"
+ },
+ {
+  "section": "storm",
+  "who": "both",
+  "it": "Una vela, due vele, dieci vele tornano,",
+  "id": "Satu layar, dua layar, sepuluh layar kembali,",
+  "en": "One sail, two sails, ten sails come home,",
+  "sung": "Una vela, due vele, dieci vele tornano,"
+ },
+ {
+  "section": "storm",
+  "who": "both",
+  "it": "ma la vela di Nino non si vede.",
+  "id": "tapi layar Nino tak terlihat.",
+  "en": "but Nino's sail is nowhere to be seen.",
+  "sung": "ma la vela di Nino non si vede."
+ },
+ {
+  "section": "break",
+  "who": "lucia",
+  "it": "All'alba il mare ha riportato la sua barca,",
+  "id": "Saat fajar laut mengembalikan perahunya,",
+  "en": "At dawn the sea brought back his boat,",
+  "sung": "All'alba il mare ha riportato la sua barca,"
+ },
+ {
+  "section": "break",
+  "who": "lucia",
+  "it": "vuota, leggera, sulla sabbia.",
+  "id": "kosong, ringan, di atas pasir.",
+  "en": "empty and light upon the sand.",
+  "sung": "vuota, leggera, sulla sabbia."
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "it": "Finché c'è luce,",
+  "id": "Selama masih ada cahaya,",
+  "en": "As long as there is light,",
+  "sung": "Finché c'è luce,"
+ },
+ {
+  "section": "ch3",
+  "who": "choir",
+  "it": "torna a casa!",
+  "id": "pulanglah!",
+  "en": "come home!",
+  "sung": "torna a casa!"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "it": "figlio di un'altra,",
+  "id": "anak ibu yang lain,",
+  "en": "someone else's son,",
+  "sung": "figlio di un'altra,"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "it": "io resto qui.",
+  "id": "aku tetap di sini.",
+  "en": "I stay here.",
+  "sung": "io resto qui."
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "it": "Anche se il mio",
+  "id": "Meski anakku",
+  "en": "Even though mine",
+  "sung": "Anche se il mio"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "it": "non torna più,",
+  "id": "tak akan pulang lagi,",
+  "en": "will never come home,",
+  "sung": "non torna più,"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "it": "finché c'è luce...",
+  "id": "selama masih ada cahaya...",
+  "en": "as long as there is light...",
+  "sung": "finché c'è luce..."
+ },
+ {
+  "section": "ch3",
+  "who": "choir",
+  "it": "torna a casa!",
+  "id": "pulanglah!",
+  "en": "come home!",
+  "sung": "torna a casa!"
+ },
+ {
+  "section": "ch4",
+  "who": "both",
+  "it": "Finché c'è luce,",
+  "id": "Selama masih ada cahaya,",
+  "en": "As long as there is light,",
+  "sung": "Finché c'è luce,"
+ },
+ {
+  "section": "ch4",
+  "who": "choir",
+  "it": "torna a casa!",
+  "id": "pulanglah!",
+  "en": "come home!",
+  "sung": "torna a casa!"
+ },
+ {
+  "section": "ch4",
+  "who": "both",
+  "it": "finché c'è luce,",
+  "id": "selama masih ada cahaya,",
+  "en": "as long as there is light,",
+  "sung": "finché c'è luce,"
+ },
+ {
+  "section": "ch4",
+  "who": "both",
+  "it": "io resto qui...",
+  "id": "aku tetap di sini...",
+  "en": "I stay here...",
+  "sung": "io resto qui..."
+ },
+ {
+  "section": "outro",
+  "who": "lucia",
+  "it": "Accendi, Matteo. È sera.",
+  "id": "Nyalakan, Matteo. Sudah malam.",
+  "en": "Light it, Matteo. It is evening.",
+  "sung": "Accendi, Matteo. È sera."
+ }
+]

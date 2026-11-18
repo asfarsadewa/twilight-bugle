@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-village.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-village.prompt",
+  "prompt_sha256": "255054399644089f59cec3fb9dfd6dd970ef744e142ee21d33c61d4a6375dbfa",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "00ae5f6de4c0fd7e97f47d90236437f5af1d2c46d2445bef95efc5790053b985",
+  "image_size": [
+    2304,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.2998,
+  "generation_seconds": 48.0
+}

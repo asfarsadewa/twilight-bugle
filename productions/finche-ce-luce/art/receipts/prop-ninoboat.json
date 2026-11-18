@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-ninoboat.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-ninoboat.prompt",
+  "prompt_sha256": "b1964211ea6e5881cfc70e9808a236786d12b264d39cd52c406d55acb9957540",
+  "reference_sha256": "6f9535d22acf41903d15ae2651a7a3d62451676047111a610d5c95a1b1a3bfac",
+  "raw_sha256": "36b6ce6238631cfa7611241cf64f0875f36c748f104879b9db95342840dee3fd",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.4967,
+  "generation_seconds": 47.0
+}

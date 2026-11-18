@@ -1,0 +1,28 @@
+{
+ "tower_px": [
+  796,
+  1412
+ ],
+ "drums": [
+  {
+   "drum": 1,
+   "share": 0.2606,
+   "width_share": 1.0
+  },
+  {
+   "drum": 2,
+   "share": 0.2394,
+   "width_share": 1.0
+  },
+  {
+   "drum": 3,
+   "share": 0.2302,
+   "width_share": 1.0
+  },
+  {
+   "drum": 4,
+   "share": 0.2698,
+   "width_share": 1.0
+  }
+ ]
+}
