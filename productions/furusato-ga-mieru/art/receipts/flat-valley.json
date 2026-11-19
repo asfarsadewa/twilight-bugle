@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-valley.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-valley.prompt",
+  "prompt_sha256": "11d8e47027c7b27d84291db97ee6f67f31dfe9af981f3232f7ecdc5d5fc13f2e",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "13a5104fa9caef2876bd6b1e23cdab4fdda62f134a73b351ab38bd1901b43c7c",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.1603,
+  "generation_seconds": 34.0
+}

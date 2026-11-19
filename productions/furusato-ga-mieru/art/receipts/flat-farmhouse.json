@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-farmhouse.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-farmhouse.prompt",
+  "prompt_sha256": "cc1e1a6d4a95990ecebae15995d883f985c9e72625e1c34ebd301e5d2d5f500e",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "60a058be058270dd2a0904e0f1d3b8ed7f2e3f60513bacaf04171883ee30e2d8",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.2073,
+  "generation_seconds": 37.0
+}

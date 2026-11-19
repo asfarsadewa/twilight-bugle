@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "opaque",
+  "raw_output": "src/poster.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/poster.prompt",
+  "prompt_sha256": "eba33610a829b96d5554f41e276c727a306b58df9ca318e1c05a7055efb7fa4c",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "36394285f9709ea8a202f5c533a20de3d3d8a6317fbaa038a52ec3134bf20163",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.0,
+  "generation_seconds": 42.0
+}

@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-kichi.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-kichi.prompt",
+  "prompt_sha256": "b46d56635dfecad57ceb5e6d7b3581fddcc9b5d2a26b4c98aa13b3acf0396d4e",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "7d977464d50c7ddec45e0dc40e0bde8a73ddaf3221a6e432ae14e6660664aa3c",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.5371,
+  "generation_seconds": 48.0
+}

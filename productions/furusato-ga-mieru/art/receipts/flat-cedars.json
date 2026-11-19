@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-cedars.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-cedars.prompt",
+  "prompt_sha256": "ae02c3e17ae1d08eb15921fad60cde12f48fcc1507343d5ad247e9c25a9e7f15",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "49eecf545ae47705c2ed48f5562c117ade9826f592df40d46550ffeb9701bda8",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.1917,
+  "generation_seconds": 27.0
+}

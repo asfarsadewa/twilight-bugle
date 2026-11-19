@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-girls.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-girls.prompt",
+  "prompt_sha256": "31901fb148e4c7094b3ff7d971ad5d50db7d49f018a50f52bfc524e6d3dbd96d",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "b8ea9424463c94910cfa6e723c7a3e63abf06f49a1062ec75b77780f74582461",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.1967,
+  "generation_seconds": 35.0
+}

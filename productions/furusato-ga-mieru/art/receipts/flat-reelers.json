@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-reelers.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-reelers.prompt",
+  "prompt_sha256": "79d886ea18c4170694dcdf15f45aef396feebe812eaf89ca15eda559ea820bba",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "eecfafdf248b99fa53e88d31c97644a0d7c80fa63ba6545fe8ad37bd589a6b15",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.1996,
+  "generation_seconds": 34.0
+}

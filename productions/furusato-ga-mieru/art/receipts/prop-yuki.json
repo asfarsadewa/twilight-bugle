@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-yuki.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-yuki.prompt",
+  "prompt_sha256": "849185b90d126c47a512852197ad5f1a2a057ebaa8d27505343f44af144b89d7",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "5f7d885eaed676c56072fd5b01134e9fae2e9f2c5fd8108acdd3bab55b12863a",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.6077,
+  "generation_seconds": 38.0
+}

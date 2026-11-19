@@ -1,0 +1,413 @@
+{
+ "title": {
+  "ja": "ふるさとが見える",
+  "en": "I Can See Home",
+  "id": "Kampung Halaman Terlihat",
+  "zh": "看得见故乡"
+ },
+ "sung": "ja",
+ "voices": {
+  "hana": {
+   "name": "Hana",
+   "voice": "a clear, fragile young female voice",
+   "heard": "female"
+  },
+  "kichi": {
+   "name": "Kichi",
+   "voice": "a deep, warm male voice",
+   "heard": "male"
+  },
+  "choir": {
+   "name": "女工たち",
+   "voice": "the women's choir of the mill",
+   "heard": "female"
+  },
+  "both": {
+   "name": "Hana · Kichi",
+   "heard": "both"
+  }
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "label": "Intro",
+   "note": "instrumental"
+  },
+  {
+   "id": "v1",
+   "label": "Verse 1",
+   "lines": [
+    {
+     "who": "hana",
+     "ja": "十二の春に 峠を越えた",
+     "id": "Musim semi usia dua belas, kuseberangi celah gunung",
+     "en": "The spring I was twelve, I crossed the pass"
+    },
+    {
+     "who": "hana",
+     "ja": "わらじの紐を きつく結んで",
+     "id": "Kuikat tali sandal jeramiku erat-erat",
+     "en": "Tying my straw sandals tight"
+    },
+    {
+     "who": "hana",
+     "ja": "糸を引く手は まだ小さくて",
+     "id": "Tangan penarik benang masih begitu kecil",
+     "en": "The hands that would draw the thread were still small"
+    },
+    {
+     "who": "hana",
+     "ja": "ふるさとの山を 何度も振り返った",
+     "id": "Berkali-kali kutoleh gunung kampung halaman",
+     "en": "Again and again I looked back at the mountains of home"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "label": "Verse 2",
+   "lines": [
+    {
+     "who": "hana",
+     "ja": "湯気の中で 繭が踊る",
+     "id": "Di tengah uap, kepompong menari",
+     "en": "In the steam, the cocoons dance"
+    },
+    {
+     "who": "hana",
+     "ja": "指が割れても 糸は切らない",
+     "id": "Meski jariku pecah, benang tak kuputus",
+     "en": "Even when my fingers split, I never break the thread"
+    },
+    {
+     "who": "hana",
+     "ja": "月に一度の 手紙に書いた",
+     "id": "Dalam surat sebulan sekali kutulis",
+     "en": "In my letter, once a month, I wrote"
+    },
+    {
+     "who": "hana",
+     "ja": "「お米を買って 弟たちに」",
+     "id": "\"Belilah beras untuk adik-adikku\"",
+     "en": "\"Buy rice for my little brothers\""
+    }
+   ]
+  },
+  {
+   "id": "pre1",
+   "label": "The mill song",
+   "lines": [
+    {
+     "who": "choir",
+     "ja": "引け 引け 白い糸",
+     "id": "Tarik, tarik, benang putih",
+     "en": "Pull, pull, the white thread"
+    },
+    {
+     "who": "choir",
+     "ja": "引け 引け 白い糸",
+     "id": "Tarik, tarik, benang putih",
+     "en": "Pull, pull, the white thread"
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "hana",
+     "ja": "ああ ふるさとが見える",
+     "id": "Ah, kampung halaman terlihat",
+     "en": "Ah, I can see home"
+    },
+    {
+     "who": "choir",
+     "ja": "見える 見える",
+     "id": "Terlihat, terlihat",
+     "en": "I see it, I see it"
+    },
+    {
+     "who": "hana",
+     "ja": "雪の向こうに 母さんの灯",
+     "id": "Di balik salju, pelita ibu",
+     "en": "Beyond the snow, Mother's lamp"
+    },
+    {
+     "who": "hana",
+     "ja": "ああ ふるさとが見える",
+     "id": "Ah, kampung halaman terlihat",
+     "en": "Ah, I can see home"
+    },
+    {
+     "who": "choir",
+     "ja": "帰ろう 帰ろう",
+     "id": "Ayo pulang, ayo pulang",
+     "en": "Let's go home, let's go home"
+    }
+   ]
+  },
+  {
+   "id": "v3",
+   "label": "Verse 3",
+   "lines": [
+    {
+     "who": "hana",
+     "ja": "咳が止まらず 糸が赤く染まる",
+     "id": "Batuk tak berhenti, benang memerah",
+     "en": "The cough will not stop, and the thread turns red"
+    },
+    {
+     "who": "hana",
+     "ja": "咳が止まらず 糸が赤く染まる",
+     "id": "Batuk tak berhenti, benang memerah",
+     "en": "The cough will not stop, and the thread turns red"
+    },
+    {
+     "who": "hana",
+     "ja": "工場の門で 名前を消された",
+     "id": "Di gerbang pabrik, namaku dicoret",
+     "en": "At the mill gate, my name was struck out"
+    },
+    {
+     "who": "hana",
+     "ja": "戸板に乗せられ 峠の下へ",
+     "id": "Dibaringkan di papan pintu, dibawa ke kaki celah",
+     "en": "Laid on a door board, carried to the foot of the pass"
+    },
+    {
+     "who": "hana",
+     "ja": "兄さんの声が 雪の中で聞こえた",
+     "id": "Kudengar suara kakak di tengah salju",
+     "en": "I heard my brother's voice in the snow"
+    }
+   ]
+  },
+  {
+   "id": "v4",
+   "label": "Verse 4",
+   "lines": [
+    {
+     "who": "kichi",
+     "ja": "知らせを受けて 峠を走った",
+     "id": "Begitu kabar tiba, aku berlari melintasi celah",
+     "en": "When word came, I ran over the pass"
+    },
+    {
+     "who": "kichi",
+     "ja": "吹雪の中で 妹を背負った",
+     "id": "Di tengah badai salju kugendong adikku",
+     "en": "In the blizzard I took my sister on my back"
+    },
+    {
+     "who": "kichi",
+     "ja": "「軽くなったな」 笑ってみせた",
+     "id": "\"Kau jadi ringan,\" kataku sambil tersenyum",
+     "en": "\"You've grown light,\" I said, and made myself smile"
+    },
+    {
+     "who": "kichi",
+     "ja": "泣いたら足が 止まりそうだった",
+     "id": "Kalau aku menangis, kakiku akan berhenti",
+     "en": "If I had cried, my feet would have stopped"
+    }
+   ]
+  },
+  {
+   "id": "pre2",
+   "label": "The climbing song",
+   "lines": [
+    {
+     "who": "choir",
+     "ja": "登れ 登れ 白い峠",
+     "id": "Daki, daki, celah yang putih",
+     "en": "Climb, climb, the white pass"
+    },
+    {
+     "who": "choir",
+     "ja": "登れ 登れ 白い峠",
+     "id": "Daki, daki, celah yang putih",
+     "en": "Climb, climb, the white pass"
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "both",
+     "ja": "ああ ふるさとが見える",
+     "id": "Ah, kampung halaman terlihat",
+     "en": "Ah, I can see home"
+    },
+    {
+     "who": "choir",
+     "ja": "見える 見える",
+     "id": "Terlihat, terlihat",
+     "en": "I see it, I see it"
+    },
+    {
+     "who": "both",
+     "ja": "雪の向こうに 母さんの灯",
+     "id": "Di balik salju, pelita ibu",
+     "en": "Beyond the snow, Mother's lamp"
+    },
+    {
+     "who": "both",
+     "ja": "ああ ふるさとが見える",
+     "id": "Ah, kampung halaman terlihat",
+     "en": "Ah, I can see home"
+    },
+    {
+     "who": "choir",
+     "ja": "帰ろう 帰ろう",
+     "id": "Ayo pulang, ayo pulang",
+     "en": "Let's go home, let's go home"
+    }
+   ]
+  },
+  {
+   "id": "storm",
+   "label": "Bridge: the blizzard climb",
+   "lines": [
+    {
+     "who": "kichi",
+     "ja": "吹雪よ止まれ 夜よ明けろ",
+     "id": "Badai, berhentilah; malam, segeralah fajar",
+     "en": "Blizzard, stop; night, give way to dawn"
+    },
+    {
+     "who": "choir",
+     "ja": "登れ 登れ",
+     "id": "Daki, daki",
+     "en": "Climb, climb"
+    },
+    {
+     "who": "kichi",
+     "ja": "背中の妹が 小さく笑う",
+     "id": "Di punggungku adikku tersenyum kecil",
+     "en": "On my back, my sister smiles a little"
+    },
+    {
+     "who": "choir",
+     "ja": "登れ 登れ",
+     "id": "Daki, daki",
+     "en": "Climb, climb"
+    },
+    {
+     "who": "kichi",
+     "ja": "一歩 また一歩 峠の上へ",
+     "id": "Selangkah, selangkah lagi, ke puncak celah",
+     "en": "One step, and one more, to the top of the pass"
+    },
+    {
+     "who": "kichi",
+     "ja": "東の空が 白くなる",
+     "id": "Langit timur memutih",
+     "en": "The eastern sky turns white"
+    }
+   ]
+  },
+  {
+   "id": "break",
+   "label": "Break",
+   "lines": [
+    {
+     "who": "hana",
+     "ja": "兄さん 降ろして",
+     "id": "Kakak, turunkan aku",
+     "en": "Brother, put me down"
+    },
+    {
+     "who": "hana",
+     "ja": "ああ… 見える",
+     "id": "Ah... terlihat",
+     "en": "Ah... I can see it"
+    }
+   ]
+  },
+  {
+   "id": "ch3",
+   "label": "Final chorus",
+   "lines": [
+    {
+     "who": "hana",
+     "ja": "ああ ふるさとが見える",
+     "id": "Ah, kampung halaman terlihat",
+     "en": "Ah, I can see home"
+    },
+    {
+     "who": "choir",
+     "ja": "見える 見える",
+     "id": "Terlihat, terlihat",
+     "en": "I see it, I see it"
+    },
+    {
+     "who": "hana",
+     "ja": "雪の向こうに 母さんの灯",
+     "id": "Di balik salju, pelita ibu",
+     "en": "Beyond the snow, Mother's lamp"
+    },
+    {
+     "who": "kichi",
+     "ja": "ああ ふるさとが見える",
+     "id": "Ah, kampung halaman terlihat",
+     "en": "Ah, I can see home"
+    },
+    {
+     "who": "kichi",
+     "ja": "妹は そこで 眠った",
+     "id": "Di sana adikku tertidur",
+     "en": "There, my sister fell asleep"
+    }
+   ]
+  },
+  {
+   "id": "ch4",
+   "label": "Final chorus repeat",
+   "lines": [
+    {
+     "who": "kichi",
+     "ja": "ああ ふるさとが見える",
+     "id": "Ah, kampung halaman terlihat",
+     "en": "Ah, I can see home"
+    },
+    {
+     "who": "choir",
+     "ja": "帰ろう 帰ろう",
+     "id": "Ayo pulang, ayo pulang",
+     "en": "Let's go home, let's go home"
+    },
+    {
+     "who": "kichi",
+     "ja": "軽い体を 背負って 降りた",
+     "id": "Kugendong tubuhnya yang ringan, turun gunung",
+     "en": "I carried her light body down"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "label": "Outro",
+   "lines": [
+    {
+     "who": "kichi",
+     "ja": "春が来て 末の妹が わらじを結ぶ",
+     "id": "Musim semi tiba, adik bungsu mengikat sandal jeraminya",
+     "en": "Spring came, and my youngest sister ties her straw sandals"
+    },
+    {
+     "who": "kichi",
+     "ja": "峠の雪は まだ白い",
+     "id": "Salju di celah masih putih",
+     "en": "The snow on the pass is still white"
+    }
+   ]
+  }
+ ],
+ "subs": [
+  "ja",
+  "id"
+ ]
+}

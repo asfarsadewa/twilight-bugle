@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-hana-sit.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-hana-sit.prompt",
+  "prompt_sha256": "25f33da2abc54a770eb8feb5a5616db9031d8b9da1f151f78c100b6261d81a36",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "d9f8dfc39307be05c101d3993da6280619a37bfb831dc5276e868d871e4fde51",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.5424,
+  "generation_seconds": 44.0
+}

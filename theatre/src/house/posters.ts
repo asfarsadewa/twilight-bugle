@@ -12,9 +12,9 @@ const GAP = 0.32;
 /** Just in front of the proscenium wall. */
 const Z = -0.2;
 
-type Lang = 'zh' | 'en' | 'id' | 'fr' | 'jv' | 'ko' | 'it';
+type Lang = 'zh' | 'en' | 'id' | 'fr' | 'jv' | 'ko' | 'it' | 'ja';
 /** The two titles under the lead, by the lead language. */
-const UNDER: Record<Lang, [Lang, Lang]> = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'], ko: ['id', 'en'], it: ['id', 'en'] };
+const UNDER: Record<Lang, [Lang, Lang]> = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'], ko: ['id', 'en'], it: ['id', 'en'], ja: ['id', 'en'] };
 
 interface Slot {
   id: string | null;
@@ -204,10 +204,11 @@ export async function printPoster(p: Production): Promise<HTMLCanvasElement> {
   const lead = (p.master.sung ?? 'zh') as Lang;
   const rest = UNDER[lead];
   const title = (l: Lang) => p.title[l] ?? p.title.en;
-  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}${p.title.jv ?? ''}${p.title.ko ?? ''}${p.title.it ?? ''}`;
+  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}${p.title.jv ?? ''}${p.title.ko ?? ''}${p.title.it ?? ''}${p.title.ja ?? ''}`;
   await Promise.all([
     document.fonts.load('900 80px "Noto Serif SC"', all),
     document.fonts.load('900 80px "Noto Serif KR"', all),
+    document.fonts.load('900 80px "Noto Serif JP"', all),
     document.fonts.load('400 80px "Abril Fatface"', all),
     document.fonts.load('italic 40px "IM Fell English"', all),
     document.fonts.load('700 24px "Playfair Display SC"', 'THE TWILIGHT BUGLE'),
@@ -226,10 +227,10 @@ export async function printPoster(p: Production): Promise<HTMLCanvasElement> {
     g.globalAlpha = 1;
   };
   const face = (l: Lang, big: boolean) =>
-    l === 'zh' ? (px: number) => `900 ${px}px "Noto Serif SC", serif` : l === 'ko' ? (px: number) => `900 ${px}px "Noto Serif KR", serif` : big ? (px: number) => `400 ${px}px "Abril Fatface", serif` : (px: number) => `italic ${px}px "IM Fell English", serif`;
+    l === 'zh' ? (px: number) => `900 ${px}px "Noto Serif SC", serif` : l === 'ko' ? (px: number) => `900 ${px}px "Noto Serif KR", serif` : l === 'ja' ? (px: number) => `900 ${px}px "Noto Serif JP", serif` : big ? (px: number) => `400 ${px}px "Abril Fatface", serif` : (px: number) => `italic ${px}px "IM Fell English", serif`;
 
   // Top band: the title in the sung language.
-  const cjk = lead === 'zh' || lead === 'ko';
+  const cjk = lead === 'zh' || lead === 'ko' || lead === 'ja';
   const top = cjk ? title(lead) : title(lead).toUpperCase();
   fit(top, face(lead, true), cjk ? 88 : 76, 820);
   ink(top, 512, 74, INK, cjk ? '14px' : '2px');

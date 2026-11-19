@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-carry.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-carry.prompt",
+  "prompt_sha256": "d4620ac73095739dab10bc92602fe0419e074d368459707912ba5a4a50ab3ea6",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "54dff20f1f7571bfc87c3be326ca35bbab6f7c12343b3940576cf621eca4b42f",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.5308,
+  "generation_seconds": 72.0
+}

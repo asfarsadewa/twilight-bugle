@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-hana.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-hana.prompt",
+  "prompt_sha256": "2b4e8bceebf831c652c0fe30c6e861d641dc225480847f01f51a701c43edd8d6",
+  "reference_sha256": "9d420cfa6b26ee479013836553503f28207ba87d8d5edff267af50eddeeb0593",
+  "raw_sha256": "782afa13c7228a1f641569ef50bf8af264f82ea3b5c0d6d8ccc765c9531e5edc",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.7468,
+  "generation_seconds": 47.0
+}

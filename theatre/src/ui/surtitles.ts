@@ -10,7 +10,7 @@ const LEAD = 0.25;
 const TAIL = 1.4;
 const FADE = 0.3;
 
-type Lang = 'zh' | 'id' | 'en' | 'fr' | 'py' | 'jv' | 'ko' | 'it';
+type Lang = 'zh' | 'id' | 'en' | 'fr' | 'py' | 'jv' | 'ko' | 'it' | 'ja';
 
 export class Surtitles {
   private el: HTMLElement;
