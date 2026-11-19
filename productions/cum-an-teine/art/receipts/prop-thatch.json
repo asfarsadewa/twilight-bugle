@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-thatch.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-thatch.prompt",
+  "prompt_sha256": "59717ed4f45fddda85548f2fa8466e371871b6a51efb8170a27be4c6217b324d",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "38f670c15a24432fd9c75c9b0c5eed50b776763670d6122fbd3ef2e55da41a07",
+  "image_size": [
+    1536,
+    768
+  ],
+  "alpha_transparent_fraction": 0.4488,
+  "generation_seconds": 30.0
+}

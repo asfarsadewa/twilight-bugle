@@ -28,6 +28,7 @@ The theatre runs in the browser with Three.js. The same engine renders each show
 | XII | [Un dernier salut · One Last Bow · 最后的谢幕](productions/un-dernier-salut) | French, a duet | On their theatre's final night, a dancer and backstage clown turn rival steps into a means of holding one another up. Then they pack and leave. | Worn French gouache, cardboard marionettes and brass-pin limbs |
 | XIII | [Finché c'è luce · As Long as There Is Light · Selama Masih Ada Cahaya](productions/finche-ce-luce) | Italian, a duet with choir | A fishing village builds a lighthouse. On the night of the great storm its beam brings every boat home except the keepers' son's. The next evening they light it again. | An Italian maritime ex-voto of the 1800s |
 | XIV | [ふるさとが見える · I Can See Home · Kampung Halaman Terlihat](productions/furusato-ga-mieru) | Japanese, a duet with choir | A Meiji silk-mill girl falls ill. Her brother carries her over the snowy pass. At dawn on the summit she sees home. She dies there. | A Meiji colour woodblock print, nishiki-e |
+| XV | [Cùm an Teine · Keep the Fire · Jagalah Api](productions/cum-an-teine) | English with a Gaelic refrain, a duet with choir | The estate clears a Highland glen. A family carries the last ember of its hearth across the sea. The storm puts it out. On the new shore they strike a new fire. | A hand-tinted Victorian wood engraving |
 
 Each show has surtitles in two languages. If English is not one of them, a button on the programme adds it. Each show also has its own link, such as https://twilightbugle.asfarlab.fun/show/daybreak-vow.
 
@@ -40,6 +41,7 @@ Each show has surtitles in two languages. If English is not one of them, a butto
 | ![少年回声: the boys run with the ball on the gold court as the grown man watches](docs/images/shaonian-huisheng.jpg) | ![형은 여기 있다: old Chol behind a locked observation gate, the developed bank and sparse far shore divided by the river](docs/images/are-you-still-there.jpg) |
 | ![你给我的星空: the daughter traces stars into her living father's palm after the planetarium goes dark](docs/images/the-sky-you-gave-me.jpg) | ![Un dernier salut: the marionettes counterbalance on the red sash above the broken step](docs/images/un-dernier-salut.jpg) |
 | ![Finché c'è luce: Matteo turns the great wheel in the storm as Lucia climbs the stair with the oil](docs/images/finche-ce-luce.jpg) | ![ふるさとが見える: Kichi reaches for Hana on the summit at sunrise above the valley of their home](docs/images/furusato-ga-mieru.jpg) |
+| ![Cùm an Teine: Ewan holds the ember pot high on the deck as the great wave rears over him](docs/images/cum-an-teine.jpg) | |
 
 ## Inside the theatre
 

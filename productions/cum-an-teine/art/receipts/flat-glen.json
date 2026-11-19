@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-glen.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-glen.prompt",
+  "prompt_sha256": "1b31c9b92a7a3d616f684bf1ab313acf176bcc0ebfc3a38ce09c4723f9082a6c",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "dd8572ec51baffaa47f2429e9510d3d285312eadcef84d5686687d5917997ddb",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.3009,
+  "generation_seconds": 28.0
+}

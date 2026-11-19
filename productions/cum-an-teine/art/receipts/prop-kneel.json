@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-kneel.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-kneel.prompt",
+  "prompt_sha256": "412fb83260760ef6d7f83580d6c05677aa4607f72b7724a5a4ba316668e25273",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "f5c4f1db45a2e44a25e8eba873ec0c28150f10490cf3c438746c260785d31cc5",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.3692,
+  "generation_seconds": 38.0
+}

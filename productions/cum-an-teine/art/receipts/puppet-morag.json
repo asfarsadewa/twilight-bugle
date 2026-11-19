@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-morag.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-morag.prompt",
+  "prompt_sha256": "a994bb53c74b51e8ae5cb79d1b181044b16a5b5c7f2da2a669453a52f372ead5",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "2f20dff7e9ff176931915ceda610c19f193e44baeda9af9e3d71421c58d3e482",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.5453,
+  "generation_seconds": 45.0
+}

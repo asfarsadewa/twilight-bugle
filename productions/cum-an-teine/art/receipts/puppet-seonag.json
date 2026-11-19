@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-seonag.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-seonag.prompt",
+  "prompt_sha256": "00005078ac9356527288d1357a24615236b608fa7c0171fa6ad38294bd333e8e",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "efa460a72d1d53264973cdc9a0a23d244aee2c834ea6abfe9e0d9651f999a3de",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.493,
+  "generation_seconds": 48.0
+}

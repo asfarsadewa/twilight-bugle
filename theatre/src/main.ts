@@ -210,8 +210,8 @@ function placeWallButtons() {
 function fillBill(p: Production) {
   $('bill-no').textContent = `Programme ${roman(p.no)}`;
   $('bill-zh').textContent = p.title.zh;
-  // A French, Javanese, Korean, Italian or Japanese song leads with its own title. The English title then joins the Indonesian one.
-  const own = p.title.fr ?? p.title.jv ?? p.title.ko ?? p.title.it ?? p.title.ja;
+  // A French, Javanese, Korean, Italian, Japanese or Gaelic title leads. The English title then joins the Indonesian one.
+  const own = p.title.fr ?? p.title.jv ?? p.title.ko ?? p.title.it ?? p.title.ja ?? p.title.gd;
   $('bill-en').textContent = own ?? p.title.en;
   $('bill-id').textContent = own ? `${p.title.id} · ${p.title.en}` : p.title.id;
   $('bill-about').textContent = p.bill.about;

@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1024x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-morag-baby.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-morag-baby.prompt",
+  "prompt_sha256": "5e67d61fa159e15db9357e592b3612a23dcee7f5a36c8c0dd371b3aabe7df274",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "97799975170ba395b44af5d8340be411f58b41eb566cdf8c05b26a5adef8e61c",
+  "image_size": [
+    1024,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.5249,
+  "generation_seconds": 38.0
+}

@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-ewan.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-ewan.prompt",
+  "prompt_sha256": "768169ad811ed762d29bd8e39f32b184b4a604ddaec19d464526e226fda3c37c",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "7a082d43bbbf819c3cc2f6f12b84c5377ea887c3dc57bcc2e50b698fe9efc168",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.6405,
+  "generation_seconds": 47.0
+}

@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-seonag-sleep.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-seonag-sleep.prompt",
+  "prompt_sha256": "4b02db389be79096268721a454463ce53b45970b17807dfee2062cdaade9e057",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "ce3002b4b1d8d987222dc5c92d97c9d7dfa5d8b6d1078659f24dbac423990d10",
+  "image_size": [
+    1536,
+    768
+  ],
+  "alpha_transparent_fraction": 0.4134,
+  "generation_seconds": 34.0
+}

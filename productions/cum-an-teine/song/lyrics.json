@@ -1,0 +1,394 @@
+{
+ "title": {
+  "en": "Keep the Fire",
+  "gd": "Cùm an Teine",
+  "id": "Jagalah Api",
+  "zh": "守住炉火"
+ },
+ "sung": "en",
+ "voices": {
+  "ewan": {
+   "name": "Ewan",
+   "voice": "a warm young male tenor",
+   "heard": "male"
+  },
+  "morag": {
+   "name": "Morag",
+   "voice": "a clear female alto",
+   "heard": "female"
+  },
+  "choir": {
+   "name": "The women of the glen",
+   "voice": "the Gaelic women's choir",
+   "heard": "female"
+  },
+  "both": {
+   "name": "Ewan · Morag",
+   "heard": "both"
+  }
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "label": "Intro",
+   "note": "instrumental"
+  },
+  {
+   "id": "v1",
+   "label": "Verse 1",
+   "lines": [
+    {
+     "who": "ewan",
+     "en": "Two hundred winters on this stone",
+     "id": "Dua ratus musim dingin di atas batu ini",
+     "zh": "这块石头上，两百个冬天"
+    },
+    {
+     "who": "ewan",
+     "en": "The fire was never let to die",
+     "id": "Api itu tak pernah dibiarkan padam",
+     "zh": "炉火从未让它熄灭"
+    },
+    {
+     "who": "ewan",
+     "en": "My mother banked it every night",
+     "id": "Ibuku menimbunnya setiap malam",
+     "zh": "母亲每夜都把它封好"
+    },
+    {
+     "who": "ewan",
+     "en": "And the smoke went up to the sky",
+     "id": "Dan asapnya naik ke langit",
+     "zh": "炊烟升上天空"
+    }
+   ]
+  },
+  {
+   "id": "pre",
+   "label": "The waulking song",
+   "lines": [
+    {
+     "who": "morag",
+     "en": "Hò rò, beat the cloth",
+     "id": "Hò rò, pukullah kain",
+     "zh": "嚯啰，捶打布匹"
+    },
+    {
+     "who": "choir",
+     "en": "Hò rò, hò rò",
+     "id": "Hò rò, hò rò",
+     "zh": "嚯啰，嚯啰"
+    },
+    {
+     "who": "morag",
+     "en": "The wool is wet, the hands are raw",
+     "id": "Wolnya basah, tangan pun lecet",
+     "zh": "羊毛湿透，双手磨破"
+    },
+    {
+     "who": "choir",
+     "en": "Hò rò, hò rò",
+     "id": "Hò rò, hò rò",
+     "zh": "嚯啰，嚯啰"
+    }
+   ]
+  },
+  {
+   "id": "v2",
+   "label": "Verse 2",
+   "lines": [
+    {
+     "who": "morag",
+     "en": "They nailed the paper to the door",
+     "id": "Mereka memaku surat di pintu",
+     "zh": "他们把告示钉在门上"
+    },
+    {
+     "who": "morag",
+     "en": "They pulled the rooftree to the floor",
+     "id": "Mereka merobohkan tiang atap ke lantai",
+     "zh": "他们把房梁拉倒在地"
+    },
+    {
+     "who": "morag",
+     "en": "The thatch came down upon the bed",
+     "id": "Atap jerami runtuh menimpa ranjang",
+     "zh": "茅草塌落在床上"
+    },
+    {
+     "who": "morag",
+     "en": "\"Take the fire,\" my mother said",
+     "id": "\"Bawalah api itu,\" kata ibuku",
+     "zh": "\"带上炉火，\"母亲说"
+    }
+   ]
+  },
+  {
+   "id": "ch1",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    },
+    {
+     "who": "choir",
+     "en": "Cùm an teine",
+     "id": "Jagalah api",
+     "zh": "守住炉火"
+    },
+    {
+     "who": "both",
+     "en": "Over the water, over the sea",
+     "id": "Menyeberangi air, menyeberangi laut",
+     "zh": "越过水面，越过大海"
+    },
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    },
+    {
+     "who": "choir",
+     "en": "Cùm an teine",
+     "id": "Jagalah api",
+     "zh": "守住炉火"
+    },
+    {
+     "who": "both",
+     "en": "Carry the glen away with thee",
+     "id": "Bawalah lembah ini bersamamu",
+     "zh": "把山谷带在你身边"
+    }
+   ]
+  },
+  {
+   "id": "v3",
+   "label": "Verse 3",
+   "lines": [
+    {
+     "who": "ewan",
+     "en": "She slept the last night by the shore",
+     "id": "Malam terakhir ia tidur di tepi pantai",
+     "zh": "最后一夜，她睡在海岸边"
+    },
+    {
+     "who": "ewan",
+     "en": "Her hand upon the iron pot",
+     "id": "Tangannya di atas periuk besi",
+     "zh": "她的手搭在铁罐上"
+    },
+    {
+     "who": "ewan",
+     "en": "She did not wake to see the sail",
+     "id": "Ia tak bangun untuk melihat layar",
+     "zh": "她没有醒来看见船帆"
+    },
+    {
+     "who": "ewan",
+     "en": "We laid the hearthstone where she lay",
+     "id": "Kami letakkan batu tungku di tempat ia berbaring",
+     "zh": "我们把炉石放在她安息的地方"
+    }
+   ]
+  },
+  {
+   "id": "ch2",
+   "label": "Chorus",
+   "lines": [
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    },
+    {
+     "who": "choir",
+     "en": "Cùm an teine",
+     "id": "Jagalah api",
+     "zh": "守住炉火"
+    },
+    {
+     "who": "ewan",
+     "en": "Mother, I carry it over the sea",
+     "id": "Ibu, kubawa api ini menyeberangi laut",
+     "zh": "母亲，我带着它越过大海"
+    },
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    },
+    {
+     "who": "choir",
+     "en": "Cùm an teine",
+     "id": "Jagalah api",
+     "zh": "守住炉火"
+    },
+    {
+     "who": "both",
+     "en": "Carry the glen away with me",
+     "id": "Kubawa lembah ini bersamaku",
+     "zh": "把山谷带在我身边"
+    }
+   ]
+  },
+  {
+   "id": "storm",
+   "label": "Bridge: the storm",
+   "lines": [
+    {
+     "who": "ewan",
+     "en": "The sea came over, the sea came in",
+     "id": "Laut menerjang, laut pun masuk",
+     "zh": "海浪扑来，海水涌入"
+    },
+    {
+     "who": "choir",
+     "en": "Cùm an teine! Cùm an teine!",
+     "id": "Jagalah api! Jagalah api!",
+     "zh": "守住炉火！守住炉火！"
+    },
+    {
+     "who": "ewan",
+     "en": "I held it high above the wave",
+     "id": "Kuangkat tinggi di atas ombak",
+     "zh": "我把它高举过浪头"
+    },
+    {
+     "who": "ewan",
+     "en": "I held it high, I held it high",
+     "id": "Kuangkat tinggi, kuangkat tinggi",
+     "zh": "我高高举起，高高举起"
+    },
+    {
+     "who": "choir",
+     "en": "Cùm an teine!",
+     "id": "Jagalah api!",
+     "zh": "守住炉火！"
+    },
+    {
+     "who": "ewan",
+     "en": "And the fire went out",
+     "id": "Dan api itu pun padam",
+     "zh": "炉火还是熄灭了"
+    }
+   ]
+  },
+  {
+   "id": "break",
+   "label": "Break",
+   "note": "instrumental"
+  },
+  {
+   "id": "v4",
+   "label": "Verse 4",
+   "lines": [
+    {
+     "who": "morag",
+     "en": "Snow on a shore that has no name",
+     "id": "Salju di pantai tanpa nama",
+     "zh": "无名的海岸上落着雪"
+    },
+    {
+     "who": "morag",
+     "en": "No roof, no wall, no hearth, no flame",
+     "id": "Tanpa atap, tanpa dinding, tanpa tungku, tanpa nyala",
+     "zh": "没有屋顶，没有墙，没有炉，没有火"
+    },
+    {
+     "who": "morag",
+     "en": "I struck the flint, I struck again",
+     "id": "Kupukul batu api, kupukul lagi",
+     "zh": "我敲打火石，一次又一次"
+    },
+    {
+     "who": "morag",
+     "en": "He cupped his hands around the spark",
+     "id": "Ia menangkupkan tangan melindungi percikan",
+     "zh": "他双手拢住那点火星"
+    }
+   ]
+  },
+  {
+   "id": "ch3",
+   "label": "Final chorus",
+   "lines": [
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    },
+    {
+     "who": "both",
+     "en": "It is not her fire, but it is ours to keep",
+     "id": "Ini bukan apinya, tapi milik kita untuk dijaga",
+     "zh": "这不是她的火，却是我们要守的火"
+    },
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    },
+    {
+     "who": "both",
+     "en": "Mother, the glen is beyond the sea",
+     "id": "Ibu, lembah itu di seberang laut",
+     "zh": "母亲，山谷在大海那边"
+    },
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    },
+    {
+     "who": "choir",
+     "en": "Cùm an teine",
+     "id": "Jagalah api",
+     "zh": "守住炉火"
+    },
+    {
+     "who": "choir",
+     "en": "The fire she gave us is gone",
+     "id": "Api yang ia berikan telah tiada",
+     "zh": "她给我们的火已经熄灭"
+    },
+    {
+     "who": "both",
+     "en": "Keep the fire, keep the fire burning",
+     "id": "Jagalah api, jagalah agar tetap menyala",
+     "zh": "守住炉火，让炉火燃烧"
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "label": "Outro",
+   "lines": [
+    {
+     "who": "both",
+     "en": "Cùm an teine, a ghràidh",
+     "id": "Jagalah api, sayangku",
+     "zh": "守住炉火，我的爱"
+    },
+    {
+     "who": "both",
+     "en": "Cùm an teine, a ghràidh",
+     "id": "Jagalah api, sayangku",
+     "zh": "守住炉火，我的爱"
+    }
+   ]
+  }
+ ],
+ "subs": [
+  "id",
+  "zh"
+ ]
+}

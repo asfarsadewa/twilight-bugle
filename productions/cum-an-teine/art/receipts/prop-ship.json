@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-ship.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-ship.prompt",
+  "prompt_sha256": "48273fabb94dead143695e4f7dcf9e977e4c5cd74aca71a7e8799ef37ba505fc",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "e2d3eec3bab7982bffaac48aaba11b7ed1e7f6e629607cf3020877a730627ddb",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.6578,
+  "generation_seconds": 45.0
+}

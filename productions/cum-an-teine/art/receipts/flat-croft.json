@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-croft.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-croft.prompt",
+  "prompt_sha256": "87fa1effede1501fe03d4031104d7ed14076ec190a76494e21204cf8d0e07f44",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "2e36752f6a011c384b06da0df57a1adca8e213abee91c6691a3f3bbaa0bceaeb",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.5208,
+  "generation_seconds": 37.0
+}

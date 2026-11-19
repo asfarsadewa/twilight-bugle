@@ -35,7 +35,10 @@ const shows = await page.evaluate(async () => {
 });
 
 const FONTS = 'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:ital,wght@1,500&family=Cormorant+SC:wght@600&family=IM+Fell+English:ital@0;1&family=Neonderthaw&family=Noto+Serif+SC:wght@900&family=Noto+Serif+KR:wght@900&family=Noto+Serif+JP:wght@900&family=Playfair+Display+SC:wght@700&display=block';
-const roman = (n) => ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'][n] ?? String(n);
+const roman = (n) => ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX'][n] ?? String(n);
+// A Gaelic title leads. English and Indonesian follow it.
+const leadOf = (s) => s.title.gd ?? (s.sung === 'zh' ? s.title.zh : (s.title[s.sung] ?? s.title.en));
+const underOf = (s) => (s.title.gd ? ['en', 'id'] : UNDER[s.sung] ?? ['en', 'id']);
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const UNDER = { zh: ['en', 'id'], id: ['en', 'zh'], en: ['id', 'zh'], fr: ['zh', 'id'], jv: ['zh', 'en'], ko: ['id', 'en'], it: ['id', 'en'], ja: ['id', 'en'] };
 
@@ -67,8 +70,8 @@ await shoot(`<!doctype html><html><head><link rel="stylesheet" href="${FONTS}"><
 
 // Each show: its poster in a gilt frame on the damask wall, with its titles and its line from the programme.
 for (const s of shows) {
-  const lead = s.sung === 'zh' ? s.title.zh : (s.title[s.sung] ?? s.title.en);
-  const [a, b] = UNDER[s.sung] ?? ['en', 'id'];
+  const lead = leadOf(s);
+  const [a, b] = underOf(s);
   const leadCss = s.sung === 'zh' ? "font: 900 92px/1.05 'Noto Serif SC', serif; letter-spacing: 0.08em;" : s.sung === 'ko' ? "font: 900 88px/1.05 'Noto Serif KR', serif; letter-spacing: 0.04em;" : s.sung === 'ja' ? "font: 900 66px/1.05 'Noto Serif JP', serif; letter-spacing: 0.02em; white-space: nowrap;" : "font: 400 70px/1.02 'Abril Fatface', serif; text-transform: uppercase; letter-spacing: 0.01em;";
   await shoot(`<!doctype html><html><head><link rel="stylesheet" href="${FONTS}"><style>
     html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
@@ -98,8 +101,8 @@ for (const s of shows) {
 
 // The show list for the Worker: the tags of each show page.
 const meta = shows.map((s) => {
-  const lead = s.sung === 'zh' ? s.title.zh : (s.title[s.sung] ?? s.title.en);
-  const others = (UNDER[s.sung] ?? ['en', 'id']).map((k) => s.title[k]).filter(Boolean).join(' · ');
+  const lead = leadOf(s);
+  const others = underOf(s).map((k) => s.title[k]).filter(Boolean).join(' · ');
   return { id: s.id, no: s.no, title: `${lead} · ${others}`, description: s.about, image: `${SITE}/og/${s.id}.jpg`, url: `${SITE}/show/${s.id}` };
 });
 writeFileSync(join(ROOT, 'worker/shows.json'), JSON.stringify(meta, null, 1) + '\n');

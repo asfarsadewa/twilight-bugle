@@ -202,9 +202,10 @@ export async function printPoster(p: Production): Promise<HTMLCanvasElement> {
   g.drawImage(img, 0, 0, 1024, 1536);
 
   const lead = (p.master.sung ?? 'zh') as Lang;
-  const rest = UNDER[lead];
+  // A Gaelic title leads the poster. English and Indonesian go below it.
+  const rest: [Lang, Lang] = p.title.gd ? ['en', 'id'] : UNDER[lead];
   const title = (l: Lang) => p.title[l] ?? p.title.en;
-  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}${p.title.jv ?? ''}${p.title.ko ?? ''}${p.title.it ?? ''}${p.title.ja ?? ''}`;
+  const all = `${p.title.zh}${p.title.en}${p.title.id}${p.title.fr ?? ''}${p.title.jv ?? ''}${p.title.ko ?? ''}${p.title.it ?? ''}${p.title.ja ?? ''}${p.title.gd ?? ''}`;
   await Promise.all([
     document.fonts.load('900 80px "Noto Serif SC"', all),
     document.fonts.load('900 80px "Noto Serif KR"', all),
@@ -231,7 +232,7 @@ export async function printPoster(p: Production): Promise<HTMLCanvasElement> {
 
   // Top band: the title in the sung language.
   const cjk = lead === 'zh' || lead === 'ko' || lead === 'ja';
-  const top = cjk ? title(lead) : title(lead).toUpperCase();
+  const top = p.title.gd ? p.title.gd.toUpperCase() : cjk ? title(lead) : title(lead).toUpperCase();
   fit(top, face(lead, true), cjk ? 88 : 76, 820);
   ink(top, 512, 74, INK, cjk ? '14px' : '2px');
 

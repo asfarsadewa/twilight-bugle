@@ -1,0 +1,65 @@
+# Cùm an Teine
+
+The words as embedded in the recording. Indonesian and Chinese lines are in lines.json.
+
+[Intro: lone low whistle over wind and sea, the women's choir hums the chorus melody]
+[Verse 1: Ewan, warm and low, clàrsach harp]
+Two hundred winters on this stone
+The fire was never let to die
+My mother banked it every night
+And the smoke went up to the sky
+[Pre-Chorus: waulking song, Morag and the women's choir, driving bodhrán and hand claps]
+Hò rò, beat the cloth
+(Hò rò, hò rò)
+The wool is wet, the hands are raw
+(Hò rò, hò rò)
+[Verse 2: Morag, clear alto, low strings enter]
+They nailed the paper to the door
+They pulled the rooftree to the floor
+The thatch came down upon the bed
+"Take the fire," my mother said
+[Chorus: Ewan and Morag, the hook on a long rising note, the choir answers softly]
+Keep the fire, keep the fire burning
+(Cùm an teine)
+Over the water, over the sea
+Keep the fire, keep the fire burning
+(Cùm an teine)
+Carry the glen away with thee
+[Verse 3: Ewan, breaking, harp and solo cello]
+She slept the last night by the shore
+Her hand upon the iron pot
+She did not wake to see the sail
+We laid the hearthstone where she lay
+[Chorus: Ewan and Morag, fuller, uilleann pipes join]
+Keep the fire, keep the fire burning
+(Cùm an teine)
+Mother, I carry it over the sea
+Keep the fire, keep the fire burning
+(Cùm an teine)
+Carry the glen away with me
+[Bridge: the storm at sea, Highland pipes, pounding timpani, full strings, the choir chants]
+The sea came over, the sea came in
+(Cùm an teine! Cùm an teine!)
+I held it high above the wave
+I held it high, I held it high
+(Cùm an teine!)
+And the fire went out
+[Break: everything drops to wind and one harp note]
+[Verse 4: Morag, a whisper, alone]
+Snow on a shore that has no name
+No roof, no wall, no hearth, no flame
+I struck the flint, I struck again
+He cupped his hands around the spark
+[Final Chorus: Ewan and Morag together, full orchestra and choir, sung through tears]
+Keep the fire, keep the fire burning
+(Cùm an teine)
+It is not her fire, but it is ours to keep
+Keep the fire, keep the fire burning
+(Cùm an teine)
+Mother, the glen is beyond the sea
+Keep the fire, keep the fire burning
+(Cùm an teine)
+Mother, the glen is beyond the sea
+[Outro: Ewan and Morag share the last line softly, minor chord, then a lone low whistle]
+Cùm an teine, a ghràidh
+(The fire she gave us is gone)

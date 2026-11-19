@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-waulking.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-waulking.prompt",
+  "prompt_sha256": "ce7bd64fa4bbca8dd67349eda0da518cda6b19a9185da63959a2a41968c3c753",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "138b2b211462f719e8ffe4d098b6e3940c394a1d0c5d9cd0aab335ca5ddb9de6",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.1864,
+  "generation_seconds": 35.0
+}

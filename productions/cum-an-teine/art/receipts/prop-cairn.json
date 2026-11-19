@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1024x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-cairn.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-cairn.prompt",
+  "prompt_sha256": "b02fc018647a0f25f62bd97d15b3f2f5356e5e9eab0a3eb64f7927768628b448",
+  "reference_sha256": "8eb8ce59119ea691fb0bfa2d23a67e8c238e8c0522ddfed2412583c2d7e2a95a",
+  "raw_sha256": "dc3d73b3a2d9963548aab620b106f9b1f6814f7f665dbebabcf4b565e9da99ed",
+  "image_size": [
+    1024,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.7069,
+  "generation_seconds": 39.0
+}
