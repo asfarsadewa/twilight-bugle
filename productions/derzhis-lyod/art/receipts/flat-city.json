@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-city.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-city.prompt",
+  "prompt_sha256": "7335f4a5d71706e6023ff884d038c1ae6abbc0f245bf01b2db18a12ae76cab5c",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "cfabb348a5587db14eba4b21f5bb82bebd718e6efee8688ae6b649ba0623bbec",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.2538,
+  "generation_seconds": 35.0
+}

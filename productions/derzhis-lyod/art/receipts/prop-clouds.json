@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-clouds.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-clouds.prompt",
+  "prompt_sha256": "38478eb4f847454d6f03fadf0164bee1543b2de596001221747e58dc93265a19",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "1abc7b3c6fd0a13171e59eca9378f6c024f79bac7f8cfd3a181e91cc4e6d8aed",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.5632,
+  "generation_seconds": 30.0
+}

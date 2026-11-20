@@ -176,7 +176,7 @@ function tick(now: number) {
 
 // ---------------------------------------------------------------- posters and programmes
 
-const LANG = { zh: 'Mandarin', id: 'Bahasa Indonesia', en: 'English', fr: 'French', jv: 'Javanese', ko: 'Korean', it: 'Italian', ja: 'Japanese' } as const;
+const LANG = { zh: 'Mandarin', id: 'Bahasa Indonesia', en: 'English', fr: 'French', jv: 'Javanese', ko: 'Korean', it: 'Italian', ja: 'Japanese', ru: 'Russian' } as const;
 
 /** An invisible button over each poster, so a poster takes clicks, hover and keyboard focus. */
 function wallButton(p: Production) {
@@ -210,8 +210,8 @@ function placeWallButtons() {
 function fillBill(p: Production) {
   $('bill-no').textContent = `Programme ${roman(p.no)}`;
   $('bill-zh').textContent = p.title.zh;
-  // A French, Javanese, Korean, Italian, Japanese or Gaelic title leads. The English title then joins the Indonesian one.
-  const own = p.title.fr ?? p.title.jv ?? p.title.ko ?? p.title.it ?? p.title.ja ?? p.title.gd;
+  // A French, Javanese, Korean, Italian, Japanese, Russian or Gaelic title leads. The English title then joins the Indonesian one.
+  const own = p.title.fr ?? p.title.jv ?? p.title.ko ?? p.title.it ?? p.title.ja ?? p.title.ru ?? p.title.gd;
   $('bill-en').textContent = own ?? p.title.en;
   $('bill-id').textContent = own ? `${p.title.id} · ${p.title.en}` : p.title.id;
   $('bill-about').textContent = p.bill.about;

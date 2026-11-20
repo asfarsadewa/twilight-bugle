@@ -17,12 +17,13 @@ from pypinyin import lazy_pinyin
 
 GEMINI = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent"
 WORD = re.compile(r"[a-z]+")
-LANGS = {"zh": "Mandarin Chinese", "id": "Indonesian", "en": "English", "ja": "Japanese", "fr": "French", "ko": "Korean", "jv": "Javanese", "it": "Italian"}
+LANGS = {"zh": "Mandarin Chinese", "id": "Indonesian", "en": "English", "ja": "Japanese", "fr": "French", "ko": "Korean", "jv": "Javanese", "it": "Italian", "ru": "Russian"}
 # The voice a listener should hear for each singer, when lyrics.json does not say.
 EXPECT = {"prince": "male", "princess": "female", "both": "both"}
 HAN = re.compile(r"[㐀-鿿]")
 HANGUL = re.compile(r"[가-힣]")
 KANA_KANJI = re.compile(r"[぀-ヿ㐀-鿿]")
+CYRILLIC = re.compile(r"[а-я]+")
 
 
 def scribe(path, lang):
@@ -50,6 +51,9 @@ def tokens(text, lang):
     if lang == "ja":
         return KANA_KANJI.findall(text)
     plain = "".join(c for c in unicodedata.normalize("NFKD", text.lower()) if not unicodedata.combining(c))
+    # Russian: Cyrillic words. NFKD above folds "ё" to "е" and "й" to "и" on both sides.
+    if lang == "ru":
+        return CYRILLIC.findall(plain)
     return WORD.findall(plain.replace("œ", "oe").replace("æ", "ae"))
 
 

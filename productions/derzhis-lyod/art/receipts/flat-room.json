@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-room.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-room.prompt",
+  "prompt_sha256": "b792cd5cb4c5497f7f418f80c83445c0be505633c6666cf2260c665ae0d3a508",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "feb9c1ff54284052ffdf96a842e47e6e2826da0bdff12c9c39d92e010909f1bf",
+  "image_size": [
+    2304,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.2029,
+  "generation_seconds": 34.0
+}

@@ -142,7 +142,7 @@ export interface Line {
 export interface Master {
   take: string;
   /** The sung language. */
-  sung?: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko' | 'it' | 'ja';
+  sung?: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko' | 'it' | 'ja' | 'ru';
   duration: number;
   bpm: number;
   beats: number[];
@@ -167,8 +167,8 @@ export interface Production {
   id: string;
   /** The show number. The posters on the house wall hang in this order. */
   no: number;
-  /** Titles. A song in French, Javanese, Korean, Italian or Japanese adds its title in that language. A song with a Gaelic refrain adds its Gaelic title. */
-  title: { zh: string; en: string; id: string; fr?: string; jv?: string; ko?: string; it?: string; ja?: string; gd?: string };
+  /** Titles. A song in French, Javanese, Korean, Italian, Japanese or Russian adds its title in that language. A song with a Gaelic refrain adds its Gaelic title. */
+  title: { zh: string; en: string; id: string; fr?: string; jv?: string; ko?: string; it?: string; ja?: string; gd?: string; ru?: string };
   /** Poster art for the house wall. Plain bands at the top and the bottom take the printed titles. */
   poster: string;
   audio: string;
@@ -186,6 +186,6 @@ export interface Production {
   /** Singer names and colours for the surtitles. */
   voices: Record<string, { name: string; color: string }>;
   /** Which language leads the surtitles and which follows. English and pinyin are on demand. */
-  surtitles?: { main: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko' | 'it' | 'ja'; second: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko' | 'it' | 'ja' };
+  surtitles?: { main: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko' | 'it' | 'ja' | 'ru'; second: 'zh' | 'id' | 'en' | 'fr' | 'jv' | 'ko' | 'it' | 'ja' | 'ru' };
   cues(c: CueContext): void;
 }

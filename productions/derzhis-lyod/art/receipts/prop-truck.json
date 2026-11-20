@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1024",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-truck.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-truck.prompt",
+  "prompt_sha256": "9fd0fe04f443d1047434640e8331f57dd213a40d0ac9be019b7b4f6bd33e79e2",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "1b86bc4beba92bb78c934ccf9c846540bed75b5449d9d89f4004e693df53cd3f",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "alpha_transparent_fraction": 0.4369,
+  "generation_seconds": 42.0
+}

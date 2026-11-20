@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-alyosha.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-alyosha.prompt",
+  "prompt_sha256": "06928e8d8900dd15c0c71e27f7fec1ac33d136e72887f7db4a83dbb782875478",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "79948f6bf91d842c41ea430a7580e769b1dfd024114fa09971a1a81f5324704b",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.753,
+  "generation_seconds": 44.0
+}

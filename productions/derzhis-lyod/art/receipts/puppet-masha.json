@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/puppet-masha.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/puppet-masha.prompt",
+  "prompt_sha256": "ddc4f2396d6d7828fe7dc63dcbe12d333bc310b83a939521e972f0aead8cb8ae",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "e17c658b5b8e23e576610fd3bca1cc2bcef90dfb8bb732e08d4d1d1a9de3a12a",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.7414,
+  "generation_seconds": 41.0
+}

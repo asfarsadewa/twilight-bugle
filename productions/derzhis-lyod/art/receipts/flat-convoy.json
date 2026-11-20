@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-convoy.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-convoy.prompt",
+  "prompt_sha256": "a4322582020d586b64f21309f5365dd6b5f023e77cbe5c7384f23018cc26b6d6",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "ae3daee4c7348b6c4641b4e0f3d5718728c89a585a130dadd33d5ad11f0a9b35",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.1952,
+  "generation_seconds": 38.0
+}

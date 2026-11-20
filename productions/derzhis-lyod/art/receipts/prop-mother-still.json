@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "1536x1536",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/prop-mother-still.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/prop-mother-still.prompt",
+  "prompt_sha256": "b4c27df3c7efc2e0c4d6c91e7e8d65e48f4b542f6bae21440857a47d18656598",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "81f43cf99b84566355973f6bb13ebcb596f882484ba4c43a3b40b52deff5c36f",
+  "image_size": [
+    1536,
+    1536
+  ],
+  "alpha_transparent_fraction": 0.3383,
+  "generation_seconds": 47.0
+}

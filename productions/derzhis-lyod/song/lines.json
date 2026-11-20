@@ -1,0 +1,418 @@
+[
+ {
+  "section": "v1",
+  "who": "alyosha",
+  "ru": "Сто двадцать пять граммов хлеба",
+  "id": "Seratus dua puluh lima gram roti",
+  "en": "A hundred and twenty-five grams of bread",
+  "sung": "Сто двадцать пять граммов хлеба"
+ },
+ {
+  "section": "v1",
+  "who": "alyosha",
+  "ru": "Мама делит на троих",
+  "id": "Ibu membaginya untuk bertiga",
+  "en": "Mother divides it among three",
+  "sung": "Мама делит на троих"
+ },
+ {
+  "section": "v1",
+  "who": "alyosha",
+  "ru": "Свой кусок кладёт Машутке",
+  "id": "Bagiannya sendiri ia berikan pada Masha kecil",
+  "en": "She gives her own piece to little Masha",
+  "sung": "Свой кусок кладёт Машутке"
+ },
+ {
+  "section": "v1",
+  "who": "alyosha",
+  "ru": "«Я не голодна», — говорит",
+  "id": "\"Aku tidak lapar,\" katanya",
+  "en": "\"I am not hungry,\" she says",
+  "sung": "«Я не голодна», — говорит"
+ },
+ {
+  "section": "v2",
+  "who": "alyosha",
+  "ru": "По озеру, по белой ночи",
+  "id": "Melintasi danau, menembus malam putih",
+  "en": "Across the lake, through the white night",
+  "sung": "По озеру, по белой ночи"
+ },
+ {
+  "section": "v2",
+  "who": "alyosha",
+  "ru": "Идёт колонна без огней",
+  "id": "Konvoi berjalan tanpa lampu",
+  "en": "The convoy moves with no lights",
+  "sung": "Идёт колонна без огней"
+ },
+ {
+  "section": "v2",
+  "who": "alyosha",
+  "ru": "Мешки муки — туда, в блокаду",
+  "id": "Karung tepung ke sana, ke kota yang terkepung",
+  "en": "Sacks of flour go in, to the besieged city",
+  "sung": "Мешки муки — туда, в блокаду"
+ },
+ {
+  "section": "v2",
+  "who": "alyosha",
+  "ru": "Обратно — лица детей",
+  "id": "Kembalinya, wajah anak-anak",
+  "en": "Coming back, the faces of children",
+  "sung": "Обратно — лица детей"
+ },
+ {
+  "section": "pre",
+  "who": "alyosha",
+  "ru": "Дверь открыта, руки на руле",
+  "id": "Pintu terbuka, tangan di kemudi",
+  "en": "The door open, hands on the wheel",
+  "sung": "Дверь открыта, руки на руле"
+ },
+ {
+  "section": "pre",
+  "who": "choir",
+  "ru": "Дверь открыта",
+  "id": "Pintu terbuka",
+  "en": "The door open",
+  "sung": "Дверь открыта"
+ },
+ {
+  "section": "pre",
+  "who": "alyosha",
+  "ru": "Фонари горят на льду",
+  "id": "Lentera menyala di atas es",
+  "en": "Lanterns burn on the ice",
+  "sung": "Фонари горят на льду"
+ },
+ {
+  "section": "pre",
+  "who": "choir",
+  "ru": "Горят, горят",
+  "id": "Menyala, menyala",
+  "en": "Burning, burning",
+  "sung": "Горят, горят"
+ },
+ {
+  "section": "ch1",
+  "who": "alyosha",
+  "ru": "Держись, лёд, держись",
+  "id": "Bertahanlah, es, bertahanlah",
+  "en": "Hold, ice, hold",
+  "sung": "Держись, лёд, держись"
+ },
+ {
+  "section": "ch1",
+  "who": "choir",
+  "ru": "Держись, держись",
+  "id": "Bertahanlah, bertahanlah",
+  "en": "Hold on, hold on",
+  "sung": "Держись, держись"
+ },
+ {
+  "section": "ch1",
+  "who": "alyosha",
+  "ru": "Ещё один рейс, ещё одна жизнь",
+  "id": "Satu perjalanan lagi, satu nyawa lagi",
+  "en": "One more run, one more life",
+  "sung": "Ещё один рейс, ещё одна жизнь"
+ },
+ {
+  "section": "ch1",
+  "who": "alyosha",
+  "ru": "Держись, лёд, держись",
+  "id": "Bertahanlah, es, bertahanlah",
+  "en": "Hold, ice, hold",
+  "sung": "Держись, лёд, держись"
+ },
+ {
+  "section": "ch1",
+  "who": "choir",
+  "ru": "Держись, держись",
+  "id": "Bertahanlah, bertahanlah",
+  "en": "Hold on, hold on",
+  "sung": "Держись, держись"
+ },
+ {
+  "section": "ch1",
+  "who": "alyosha",
+  "ru": "Я вернусь за тобой, только дождись",
+  "id": "Aku akan kembali menjemputmu, tunggulah",
+  "en": "I will come back for you, just wait",
+  "sung": "Я вернусь за тобой, только дождись"
+ },
+ {
+  "section": "v3",
+  "who": "alyosha",
+  "ru": "Я вернулся в нашу комнату",
+  "id": "Aku kembali ke kamar kami",
+  "en": "I came back to our room",
+  "sung": "Я вернулся в нашу комнату"
+ },
+ {
+  "section": "v3",
+  "who": "alyosha",
+  "ru": "Лампа больше не горит",
+  "id": "Lampu tak lagi menyala",
+  "en": "The lamp burns no more",
+  "sung": "Лампа больше не горит"
+ },
+ {
+  "section": "v3",
+  "who": "alyosha",
+  "ru": "Мама спит под старой шалью",
+  "id": "Ibu tertidur di bawah selendang tuanya",
+  "en": "Mother sleeps under her old shawl",
+  "sung": "Мама спит под старой шалью"
+ },
+ {
+  "section": "v3",
+  "who": "alyosha",
+  "ru": "Хлеб нетронутый лежит",
+  "id": "Rotinya tergeletak tak tersentuh",
+  "en": "Her bread lies untouched",
+  "sung": "Хлеб нетронутый лежит"
+ },
+ {
+  "section": "v3",
+  "who": "alyosha",
+  "ru": "Я закутал Машу в одеяло",
+  "id": "Kubungkus Masha dengan selimut",
+  "en": "I wrapped Masha in a blanket",
+  "sung": "Я закутал Машу в одеяло"
+ },
+ {
+  "section": "v3",
+  "who": "alyosha",
+  "ru": "И повёз по льду, по льду",
+  "id": "Dan kubawa melintasi es, melintasi es",
+  "en": "And drove her over the ice, over the ice",
+  "sung": "И повёз по льду, по льду"
+ },
+ {
+  "section": "ch2",
+  "who": "alyosha",
+  "ru": "Держись, лёд, держись",
+  "id": "Bertahanlah, es, bertahanlah",
+  "en": "Hold, ice, hold",
+  "sung": "Держись, лёд, держись"
+ },
+ {
+  "section": "ch2",
+  "who": "alyosha",
+  "ru": "Держись, лёд, держись",
+  "id": "Bertahanlah, es, bertahanlah",
+  "en": "Hold, ice, hold",
+  "sung": "Держись, лёд, держись"
+ },
+ {
+  "section": "ch2",
+  "who": "choir",
+  "ru": "Держись, держись",
+  "id": "Bertahanlah, bertahanlah",
+  "en": "Hold on, hold on",
+  "sung": "Держись, держись"
+ },
+ {
+  "section": "ch2",
+  "who": "alyosha",
+  "ru": "Ещё один рейс, ещё одна жизнь",
+  "id": "Satu perjalanan lagi, satu nyawa lagi",
+  "en": "One more run, one more life",
+  "sung": "Ещё один рейс, ещё одна жизнь"
+ },
+ {
+  "section": "ch2",
+  "who": "alyosha",
+  "ru": "Держись, лёд, держись",
+  "id": "Bertahanlah, es, bertahanlah",
+  "en": "Hold, ice, hold",
+  "sung": "Держись, лёд, держись"
+ },
+ {
+  "section": "ch2",
+  "who": "choir",
+  "ru": "Держись, держись",
+  "id": "Bertahanlah, bertahanlah",
+  "en": "Hold on, hold on",
+  "sung": "Держись, держись"
+ },
+ {
+  "section": "ch2",
+  "who": "alyosha",
+  "ru": "Маша, не смотри назад, держись",
+  "id": "Masha, jangan menoleh ke belakang, bertahanlah",
+  "en": "Masha, do not look back, hold on",
+  "sung": "Маша, не смотри назад, держись"
+ },
+ {
+  "section": "thaw",
+  "who": "alyosha",
+  "ru": "Вода на льду, весна идёт",
+  "id": "Air di atas es, musim semi datang",
+  "en": "Water on the ice, spring is coming",
+  "sung": "Вода на льду, весна идёт"
+ },
+ {
+  "section": "thaw",
+  "who": "choir",
+  "ru": "Держись!",
+  "id": "Bertahanlah!",
+  "en": "Hold!",
+  "sung": "Держись!"
+ },
+ {
+  "section": "thaw",
+  "who": "alyosha",
+  "ru": "Лёд трещит, а город ждёт",
+  "id": "Es berderak, dan kota menunggu",
+  "en": "The ice cracks, and the city waits",
+  "sung": "Лёд трещит, а город ждёт"
+ },
+ {
+  "section": "thaw",
+  "who": "alyosha",
+  "ru": "Я довёз её до берега",
+  "id": "Kuantar dia sampai ke tepi",
+  "en": "I brought her to the shore",
+  "sung": "Я довёз её до берега"
+ },
+ {
+  "section": "thaw",
+  "who": "alyosha",
+  "ru": "И развернул машину назад",
+  "id": "Lalu kuputar truk itu kembali",
+  "en": "And turned the truck back",
+  "sung": "И развернул машину назад"
+ },
+ {
+  "section": "thaw",
+  "who": "choir",
+  "ru": "Держись!",
+  "id": "Bertahanlah!",
+  "en": "Hold!",
+  "sung": "Держись!"
+ },
+ {
+  "section": "thaw",
+  "who": "alyosha",
+  "ru": "Ещё один рейс",
+  "id": "Satu perjalanan lagi",
+  "en": "One more run",
+  "sung": "Ещё один рейс"
+ },
+ {
+  "section": "v4",
+  "who": "masha",
+  "ru": "Я помню свет твоей кабины",
+  "id": "Aku ingat cahaya kabinmu",
+  "en": "I remember the light of your cab",
+  "sung": "Я помню свет твоей кабины"
+ },
+ {
+  "section": "v4",
+  "who": "masha",
+  "ru": "Ты махал мне рукой с той стороны",
+  "id": "Kau melambai padaku dari seberang",
+  "en": "You waved to me from the far side",
+  "sung": "Ты махал мне рукой с той стороны"
+ },
+ {
+  "section": "v4",
+  "who": "masha",
+  "ru": "В апреле лёд не выдержал",
+  "id": "Di bulan April es tak bertahan",
+  "en": "In April the ice did not hold",
+  "sung": "В апреле лёд не выдержал"
+ },
+ {
+  "section": "v4",
+  "who": "masha",
+  "ru": "И не пустил тебя домой",
+  "id": "Dan tak membiarkanmu pulang",
+  "en": "And did not let you come home",
+  "sung": "И не пустил тебя домой"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "ru": "Держись, лёд, держись",
+  "id": "Bertahanlah, es, bertahanlah",
+  "en": "Hold, ice, hold",
+  "sung": "Держись, лёд, держись"
+ },
+ {
+  "section": "ch3",
+  "who": "choir",
+  "ru": "Держись, держись",
+  "id": "Bertahanlah, bertahanlah",
+  "en": "Hold on, hold on",
+  "sung": "Держись, держись"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "ru": "Ещё один рейс, ещё одна жизнь",
+  "id": "Satu perjalanan lagi, satu nyawa lagi",
+  "en": "One more run, one more life",
+  "sung": "Ещё один рейс, ещё одна жизнь"
+ },
+ {
+  "section": "ch3",
+  "who": "both",
+  "ru": "Держись, брат, держись",
+  "id": "Bertahanlah, kakak, bertahanlah",
+  "en": "Hold on, brother, hold on",
+  "sung": "Держись, брат, держись"
+ },
+ {
+  "section": "ch3",
+  "who": "choir",
+  "ru": "Держись, держись",
+  "id": "Bertahanlah, bertahanlah",
+  "en": "Hold on, hold on",
+  "sung": "Держись, держись"
+ },
+ {
+  "section": "ch3",
+  "who": "masha",
+  "ru": "Ты вернулся за мной, а я жду тебя всю жизнь",
+  "id": "Kau kembali menjemputku, dan aku menantimu seumur hidup",
+  "en": "You came back for me, and I wait for you all my life",
+  "sung": "Ты вернулся за мной, а я жду тебя всю жизнь"
+ },
+ {
+  "section": "outro",
+  "who": "masha",
+  "ru": "Ещё один рейс",
+  "id": "Satu perjalanan lagi",
+  "en": "One more run",
+  "sung": "Ещё один рейс"
+ },
+ {
+  "section": "outro",
+  "who": "choir",
+  "ru": "Держись!",
+  "id": "Bertahanlah!",
+  "en": "Hold!",
+  "sung": "Держись!"
+ },
+ {
+  "section": "outro",
+  "who": "masha",
+  "ru": "Ещё один рейс",
+  "id": "Satu perjalanan lagi",
+  "en": "One more run",
+  "sung": "Ещё один рейс"
+ },
+ {
+  "section": "outro",
+  "who": "choir",
+  "ru": "Держись!",
+  "id": "Bertahanlah!",
+  "en": "Hold!",
+  "sung": "Держись!"
+ }
+]

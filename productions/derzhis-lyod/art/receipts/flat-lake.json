@@ -1,0 +1,21 @@
+{
+  "model": "gpt-image-2.6-sunburst",
+  "mode": "edit",
+  "reference": "key-art.png",
+  "size": "2304x768",
+  "quality": "high",
+  "background": "transparent",
+  "raw_output": "src/flat-lake.png",
+  "generator": "bundled imagegen CLI",
+  "status": "complete",
+  "prompt": "prompts/flat-lake.prompt",
+  "prompt_sha256": "e558abf06582a5cf3394aa90ed4cd9a5cb51cd009da017c038b07fb70abec9c2",
+  "reference_sha256": "1d6d580e3420ae7f224ff4d291780963ff4e9f2b1863c94a685fd6acd6e98175",
+  "raw_sha256": "84bec75b348566094350d0964be8d21315fc7aa521c00f211e3bd440eebd5294",
+  "image_size": [
+    2304,
+    768
+  ],
+  "alpha_transparent_fraction": 0.248,
+  "generation_seconds": 32.0
+}
