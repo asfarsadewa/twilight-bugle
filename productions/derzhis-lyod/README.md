@@ -10,9 +10,9 @@ The surtitles show the Russian line and the Indonesian line. A button on the pro
 
 ## Song
 
-The producer supplied `Держись, лёд.mp3` on 19 November 2026: 4:03.2, Suno id `59ece9e9-25e6-4d3f-bd0c-a9551286ad5d`. `song/master.mp3` is an unchanged copy. `song/master-source.json` holds its hash and the embedded words.
+The producer supplied `Держись, лёд (1).mp3` on 20 November 2026: 4:04.9, Suno id `bd628c3c-efe0-4033-8e5d-6f26d242b989`. It replaces the take of 19 November, which was the wrong file. `song/master.mp3` is an unchanged copy. `song/master-source.json` holds its hash and the embedded words.
 
-The embedded words repeat some lines under doubled section tags. The Scribe transcript of the vocal stem shows the sung order. The sheet follows the recording, with 52 lines. Scribe gives word times only. No listening model reviewed the music. The producer gives the final musical earcheck. `song/timing-notes.md` lists the gaps the staging uses.
+The embedded words repeat some lines under doubled section tags. The Scribe transcript of the vocal stem shows the sung order. The sheet follows the recording, with 51 lines. Scribe gives word times only. No listening model reviewed the music. The producer gives the final musical earcheck. `song/timing-notes.md` lists the gaps the staging uses.
 
 The Suno handoff is in `song/suno-style.txt`, `song/suno-exclude.txt` and `song/suno-lyrics.txt`.
 

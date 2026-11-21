@@ -7,9 +7,11 @@ import importlib.util, json
 
 SONG = Path(__file__).resolve().parent
 TAKE = SONG / 'takes' / 'suno-final'
-# Hand fixes from the word times of the vocal stem. The hook of chorus 2 starts on a long held note at 110.7.
-# The choir's "Держись!" calls are single words. The outro holds the second one from 204.1 to 216.8.
-FIX = {24: (110.7, None), 32: (133.5, 134.3), 36: (144.9, 145.6), 49: (204.1, 216.8), 51: (226.96, 228.96)}
+# Hand fixes from the word times and the vocal energy of the stem. Scribe hears "По льду" for "Вода на льду" and
+# "свернул" for "развернул". The choir's "Держись!" calls are single words. The long notes of "Ещё один рейс" end
+# where the vocal energy drops.
+FIX = {30: (121.9, 124.6), 34: (137.6, 139.7), 35: (140.2, 141.0), 36: (141.2, 147.5), 47: (199.8, 206.5),
+       48: (224.0, 226.0), 49: (234.3, 239.4), 50: (240.4, 243.5)}
 
 
 def main():

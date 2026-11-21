@@ -3,8 +3,8 @@
   python productions/derzhis-lyod/song/import_final.py [--source <mp3>]
 
 The words embedded in the MP3 repeat some lines under doubled section tags. The Scribe transcript of the vocal stem
-shows the sung order. Chorus 2 opens with the hook twice. The outro sings "Ещё один рейс" twice, with the choir on
-"Держись". This sheet follows the recording. The script refuses a file whose embedded words do not hold every sheet
+shows the sung order. The choir calls "Держись! Держись!" in the bridge. The outro sings "Ещё один рейс" twice, with
+the choir on "Держись". This sheet follows the recording. The script refuses a file whose embedded words do not hold every sheet
 line. It copies the file unchanged into takes/suno-final and writes lyrics.json, lines.json, lyrics.md and
 master-source.json.
 """
@@ -41,6 +41,7 @@ T = {
     'Маша, не смотри назад, держись': ('Masha, jangan menoleh ke belakang, bertahanlah', 'Masha, do not look back, hold on'),
     'Вода на льду, весна идёт': ('Air di atas es, musim semi datang', 'Water on the ice, spring is coming'),
     'Держись!': ('Bertahanlah!', 'Hold!'),
+    'Держись! Держись!': ('Bertahanlah! Bertahanlah!', 'Hold! Hold!'),
     'Лёд трещит, а город ждёт': ('Es berderak, dan kota menunggu', 'The ice cracks, and the city waits'),
     'Я довёз её до берега': ('Kuantar dia sampai ke tepi', 'I brought her to the shore'),
     'И развернул машину назад': ('Lalu kuputar truk itu kembali', 'And turned the truck back'),
@@ -63,8 +64,8 @@ SECTIONS = [
     ('ch1', 'Chorus', [(HOOK, A), (ANS, C), (RUN, A), (HOOK, A), (ANS, C), ('Я вернусь за тобой, только дождись', A)]),
     ('v3', 'Verse 3', [('Я вернулся в нашу комнату', A), ('Лампа больше не горит', A), ('Мама спит под старой шалью', A), ('Хлеб нетронутый лежит', A),
                        ('Я закутал Машу в одеяло', A), ('И повёз по льду, по льду', A)]),
-    ('ch2', 'Chorus', [(HOOK, A), (HOOK, A), (ANS, C), (RUN, A), (HOOK, A), (ANS, C), ('Маша, не смотри назад, держись', A)]),
-    ('thaw', 'Bridge: the thaw', [('Вода на льду, весна идёт', A), ('Держись!', C), ('Лёд трещит, а город ждёт', A), ('Я довёз её до берега', A),
+    ('ch2', 'Chorus', [(HOOK, A), (ANS, C), (RUN, A), (HOOK, A), (ANS, C), ('Маша, не смотри назад, держись', A)]),
+    ('thaw', 'Bridge: the thaw', [('Вода на льду, весна идёт', A), ('Держись! Держись!', C), ('Лёд трещит, а город ждёт', A), ('Я довёз её до берега', A),
                                   ('И развернул машину назад', A), ('Держись!', C), ('Ещё один рейс', A)]),
     ('break', 'Break', []),
     ('v4', 'Verse 4', [('Я помню свет твоей кабины', M), ('Ты махал мне рукой с той стороны', M), ('В апреле лёд не выдержал', M), ('И не пустил тебя домой', M)]),
@@ -83,7 +84,7 @@ def write(p, x):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--source', type=Path, default=Path('C:/Users/asfar/Downloads/Держись, лёд.mp3'))
+    ap.add_argument('--source', type=Path, default=Path('C:/Users/asfar/Downloads/Держись, лёд (1).mp3'))
     a = ap.parse_args()
     info = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_format', '-of', 'json', str(a.source)], encoding='utf-8'))
     tags = info['format']['tags']
@@ -120,7 +121,7 @@ def main():
     write(SONG / 'master-source.json', {
         'take': 'suno-final', 'source_path': str(a.source), 'sha256': digest, 'bytes': a.source.stat().st_size,
         'duration_seconds': float(info['format']['duration']), 'suno_comment': tags.get('comment'), 'embedded_lyrics': embedded,
-        'arrangement_note': 'The embedded words repeat lines under doubled section tags. The Scribe transcript of the vocal stem confirms the sung order. Chorus 2 opens with the hook twice. The outro sings its last line twice.',
+        'arrangement_note': 'The embedded words repeat lines under doubled section tags. The Scribe transcript of the vocal stem confirms the sung order. The bridge has a double choir call. The outro sings its last line twice.',
         'voice_assignment': 'Intended roles from the lyric sheet. No automatic voice audit.',
     })
     (SONG / 'lyrics.md').write_text('# Держись, лёд\n\nRussian lyrics as embedded in the recording. Indonesian and English lines are in lines.json.\n\n' + embedded + '\n', encoding='utf-8')

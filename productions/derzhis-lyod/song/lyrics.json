@@ -218,12 +218,6 @@
      "en": "Hold, ice, hold"
     },
     {
-     "who": "alyosha",
-     "ru": "Держись, лёд, держись",
-     "id": "Bertahanlah, es, bertahanlah",
-     "en": "Hold, ice, hold"
-    },
-    {
      "who": "choir",
      "ru": "Держись, держись",
      "id": "Bertahanlah, bertahanlah",
@@ -267,9 +261,9 @@
     },
     {
      "who": "choir",
-     "ru": "Держись!",
-     "id": "Bertahanlah!",
-     "en": "Hold!"
+     "ru": "Держись! Держись!",
+     "id": "Bertahanlah! Bertahanlah!",
+     "en": "Hold! Hold!"
     },
     {
      "who": "alyosha",

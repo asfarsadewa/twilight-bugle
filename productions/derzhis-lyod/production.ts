@@ -139,7 +139,7 @@ function cues({ tl, section, line }: CueContext) {
     k.move('lamp.x', x + cab, t, dur, 'inOut');
   };
 
-  const v2 = L(4), pre = L(8), c1 = L(12), v3 = L(18), c2 = L(24), th = L(31), brk = E('thaw'), v4 = L(38), c3 = L(42), out = L(48);
+  const v2 = L(4), pre = L(8), c1 = L(12), v3 = L(18), c2 = L(24), th = L(30), brk = E('thaw'), v4 = L(37), c3 = L(41), out = L(47);
   const BEAT = 60 / master.bpm;
 
   // ---- preroll: the house settles. The traveller hangs closed.
@@ -287,25 +287,24 @@ function cues({ tl, section, line }: CueContext) {
   k.move('truck.turn', 1, L(17) + 0.4, 0.8);
   k.cam(L(17), 5, { z: 8.4, ly: 1.0, x: 0, lx: 0 });
 
-  // ---- the gap and verse 3: the city at night. The room again. The lamp is cold. Mother does not wake.
+  // ---- the gap and verse 3: the truck turns back to the city. The city rises. He walks home. The lamp is cold.
   const g3 = E('ch1');
-  drive(g3, 4, -3.8, 2.1, true);
-  lamp(g3 + 3.5, 0, -3.8, 0.55, TRUCK_Z, 0.6);
-  k.pop('truck', false, g3 + 4.2);
-  k.pop('masha', false, g3 + 1);
-  k.leave('posts', g3 + 1, 2.4, 'in');
-  k.leave('ice', g3 + 1, 2.4, 'in');
-  k.leave('clouds', g3 + 1, 3, 'in');
-  k.enter('city', g3 + 2, 4, 'out');
-  snow(g3 + 2, 0.3, 3);
-  sky(g3 + 2, 4, ...NIGHT, [0.4, 0.45, 0.3], 0.12);
-  night(g3 + 2, 3, 0.7);
-  follow(0, -2.9, g3 + 3, 3, 0.35, 0xb8c4e0, 1.0);
-  k.cam(g3 + 2, 9, { z: 8.6, ly: 1.1, x: 0, lx: 0 });
-  // He walks home through the city.
-  set(g3 + 5, [['alyosha.x', 3.2], ['alyosha.turn', 1], ['alyosha.head', 0]]);
-  k.pop('alyosha', true, g3 + 5.2);
-  walk('alyosha', g3 + 5.2, 5, 0.9, 'linear');
+  drive(L(17) + 1.4, g3 - L(17) + 1.2, -3.8, 2.1, true);
+  lamp(g3 + 2.2, 0, -3.8, 0.55, TRUCK_Z, 0.6);
+  k.pop('truck', false, g3 + 2.8);
+  k.pop('masha', false, g3 - 0.4);
+  k.enter('city', L(17) + 1, 3, 'out');
+  k.leave('posts', g3 - 1, 2, 'in');
+  k.leave('ice', g3 - 1, 2, 'in');
+  k.leave('clouds', g3 - 0.5, 2.4, 'in');
+  sky(g3 - 1, 3, ...NIGHT, [0.4, 0.45, 0.3], 0.12);
+  night(g3 - 1, 2.4, 0.7);
+  follow(0.6, -1.4, g3, 2, 0.4, 0xb8c4e0, 0.8);
+  k.cam(g3 - 1, 5, { z: 8.4, ly: 1.05, x: 0.3, lx: 0.3 });
+  // He walks home through the city, into the room.
+  set(g3, [['alyosha.x', 3.2], ['alyosha.turn', 1], ['alyosha.head', 0]]);
+  k.pop('alyosha', true, g3 + 0.2);
+  walk('alyosha', g3 + 0.2, 3.6, 0.9, 'out');
   // 18 I came back to our room — the room flies in. The stove is cold. Dark.
   k.leave('city', v3 - 1.6, 2, 'in');
   snow(v3 - 1.6, 0, 1.6);
@@ -356,22 +355,22 @@ function cues({ tl, section, line }: CueContext) {
   drive(c2 - 1, 6, -1.6, -3.8);
   lamp(c2 - 1, 0.55, -3.5, 0.55, TRUCK_Z + 0.1, 0.8);
   // The truck fights through: it stops at each hook and pushes on.
-  drive(L(26), 6, 0.5, -1.6);
-  k.downbeats(c2, L(30)).forEach((b, i) => {
+  drive(L(25), 6, 0.5, -1.6);
+  k.downbeats(c2, L(29)).forEach((b, i) => {
     k.move('ice.y', i % 2 ? 0.04 : -0.03, b, BEAT * 1.6, 'sine');
     k.move('posts.rz', i % 2 ? 0.6 : -0.6, b, BEAT * 1.6, 'sine');
   });
-  [L(24) + 1, L(26), L(29)].forEach((t) => k.flash('lamp', t, 0.85, 0.55, 0.2, 0.8));
+  [L(24) + 1, L(25), L(28)].forEach((t) => k.flash('lamp', t, 0.85, 0.55, 0.2, 0.8));
   follow(-0.6, -1.6, c2, 3, 0.55, 0xd8e0ff, 0.6);
   k.cam(c2, 10, { z: 7.8, ly: 1.05, x: -0.4, lx: -0.4 });
-  // 30 Masha, do not look back — the far shore comes up at the right. The train waits.
-  drive(L(29) - 0.4, 4, 1.15, 0.5);
-  k.enter('shore', L(29) - 1.5, 3, 'out');
-  k.leave('posts', L(29) - 1.5, 2.6, 'in');
+  // 29 Masha, do not look back — the far shore comes up at the right. The train waits.
+  drive(L(28) - 0.4, 4, 1.15, 0.5);
+  k.enter('shore', L(28) - 1.5, 3, 'out');
+  k.leave('posts', L(28) - 1.5, 2.6, 'in');
   set(0, [['shore.x', 1.6], ['train.x', 4.2]]);
-  k.pop('train', true, L(29) - 1);
-  k.move('train.x', 1.5, L(29) - 1, 4, 'out');
-  k.cam(L(29), 6, { z: 7.6, ly: 1.0, x: 0.8, lx: 0.9 });
+  k.pop('train', true, L(28) - 1);
+  k.move('train.x', 1.5, L(28) - 1, 4, 'out');
+  k.cam(L(28), 6, { z: 7.6, ly: 1.0, x: 0.8, lx: 0.9 });
 
   // ---- the bridge: the thaw. He brings her to the train. He turns the truck back onto the wet ice.
   snow(th - 1, 0.1, 3);
@@ -379,35 +378,35 @@ function cues({ tl, section, line }: CueContext) {
   tl.base('clouds.sway', 0.6);
   sky(th - 1, 4, ...THAW, [0.5, 0.55, 0.4], 0.14);
   day(th - 0.5, 3, 0.5, 0xe0e4f0);
-  // 31 Water on the ice, spring is coming — the thaw row comes up over the ice.
+  // 30 Water on the ice, spring is coming — the thaw row comes up over the ice.
   k.enter('thaw', th, 2.6, 'out');
   k.leave('ice', th + 0.6, 2, 'in');
-  k.flash('back', L(32), 0.6, 0.3, 0.05, 0.4);
-  // 33 The ice cracks, and the city waits — a crack: the thaw row jolts.
-  k.move('thaw.y', -0.06, L(33) + 0.5, 0.12, 'out');
-  k.move('thaw.y', 0, L(33) + 0.7, 0.6);
-  k.flash('back', L(33) + 0.5, 0.8, 0.3, 0.03, 0.5);
-  // 34 I brought her to the shore — Masha gets down and walks to the train.
-  set(L(34) - 0.4, [['masha.x', 0.75], ['masha.turn', 0], ['masha.z', 0.25], ['masha.y', 0]]);
-  k.pop('masha', true, L(34) - 0.2);
-  walk('masha', L(34), 2.4, 1.55);
-  set(L(34) - 0.4, [['alyosha.x', 0.55], ['alyosha.y', 0], ['alyosha.z', 0.3], ['alyosha.turn', 0], ['alyosha.head', 0], ['alyosha.armA', 0], ['alyosha.armB', 0], ['alyosha.rz', 0]]);
-  k.pop('alyosha', true, L(34) - 0.2);
+  k.flash('back', L(31), 0.6, 0.3, 0.05, 0.4);
+  // 32 The ice cracks, and the city waits — a crack: the thaw row jolts.
+  k.move('thaw.y', -0.06, L(32) + 0.5, 0.12, 'out');
+  k.move('thaw.y', 0, L(32) + 0.7, 0.6);
+  k.flash('back', L(32) + 0.5, 0.8, 0.3, 0.03, 0.5);
+  // 33 I brought her to the shore — Masha gets down and walks to the train.
+  set(L(33) - 0.4, [['masha.x', 0.75], ['masha.turn', 0], ['masha.z', 0.25], ['masha.y', 0]]);
+  k.pop('masha', true, L(33) - 0.2);
+  walk('masha', L(33), 2.4, 1.55);
+  set(L(33) - 0.4, [['alyosha.x', 0.55], ['alyosha.y', 0], ['alyosha.z', 0.3], ['alyosha.turn', 0], ['alyosha.head', 0], ['alyosha.armA', 0], ['alyosha.armB', 0], ['alyosha.rz', 0]]);
+  k.pop('alyosha', true, L(33) - 0.2);
   // He lifts his hand to her. She turns once.
-  k.move('alyosha.armA', 120, L(34) + 1.4, 1, 'out');
-  face('masha', L(34) + 2.6, true);
-  face('masha', L(35) + 0.4, false);
-  k.move('alyosha.armA', 0, L(35), 0.8);
-  follow(1.2, -1.2, L(34), 1.2, 0.6, 0xfff0e0, 0.7);
-  k.cam(L(34), 7, { z: 7.0, ly: 0.95, x: 0.9, lx: 1.0 });
-  // 35 And turned the truck back — he climbs in. The truck turns and drives out onto the wet ice.
-  k.pop('alyosha', false, L(35) + 1);
-  k.move('truck.turn', 1, L(35) + 0.8, 0.9);
-  drive(L(35) + 1.4, 5, -0.6, 1.15, true);
-  k.pop('masha', false, L(36));
-  // 37 One more run.
-  k.flash('lamp', L(37), 0.85, 0.55, 0.2, 1);
-  k.cam(L(35), 6, { z: 7.8, ly: 1.0, x: 0.2, lx: 0.2 });
+  k.move('alyosha.armA', 120, L(33) + 1.4, 1, 'out');
+  face('masha', L(33) + 2.6, true);
+  face('masha', L(34) + 0.4, false);
+  k.move('alyosha.armA', 0, L(34), 0.8);
+  follow(1.2, -1.2, L(33), 1.2, 0.6, 0xfff0e0, 0.7);
+  k.cam(L(33), 7, { z: 7.0, ly: 0.95, x: 0.9, lx: 1.0 });
+  // 34 And turned the truck back — he climbs in. The truck turns and drives out onto the wet ice.
+  k.pop('alyosha', false, L(34) + 1);
+  k.move('truck.turn', 1, L(34) + 0.8, 0.9);
+  drive(L(34) + 1.4, 5, -0.6, 1.15, true);
+  k.pop('masha', false, L(35));
+  // 36 One more run.
+  k.flash('lamp', L(36), 0.85, 0.55, 0.2, 1);
+  k.cam(L(34), 6, { z: 7.8, ly: 1.0, x: 0.2, lx: 0.2 });
 
   // ---- the break: the train goes. The truck on the thawing ice. The ice gives. The cab light goes under.
   k.move('train.x', 4.4, brk, 6, 'in');
@@ -443,15 +442,15 @@ function cues({ tl, section, line }: CueContext) {
   face('grown', v4 + 1.6, false);
   follow(-0.7, -1.15, v4 - 1, 2, 0.6, 0xffe0c0, 0.7);
   k.cam(v4 - 1, 10, { z: 7.4, ly: 0.95, x: -0.4, lx: -0.5 });
-  // 38 I remember the light of your cab — far on the water, a small gold light, for a moment.
-  lamp(L(38) + 0.4, 0.4, 1.6, 0.5, -3.0, 1.6);
-  k.look(L(39) + 1, 2, { lamp: 0 });
-  // 39 You waved to me from the far side — she lifts her hand to the light.
-  k.move('grown.armA', -110, L(39), 1.2, 'out');
-  k.move('grown.head', 8, L(39), 1.2);
-  // 40–41 In April the ice did not hold — her hand comes down to her heart.
-  k.move('grown.armA', -40, L(40) + 0.4, 1.4);
-  k.move('grown.head', -12, L(41), 1.4);
+  // 37 I remember the light of your cab — far on the water, a small gold light, for a moment.
+  lamp(L(37) + 0.4, 0.4, 1.6, 0.5, -3.0, 1.6);
+  k.look(L(38) + 1, 2, { lamp: 0 });
+  // 38 You waved to me from the far side — she lifts her hand to the light.
+  k.move('grown.armA', -110, L(38), 1.2, 'out');
+  k.move('grown.head', 8, L(38), 1.2);
+  // 39–40 In April the ice did not hold — her hand comes down to her heart.
+  k.move('grown.armA', -40, L(39) + 0.4, 1.4);
+  k.move('grown.head', -12, L(40), 1.4);
 
   // ---- final chorus: Hold on, brother. He is there on the far side, in the cold light of memory. She sings to him.
   set(c3 - 1.6, [['alyosha.x', 1.9], ['alyosha.y', 0.02], ['alyosha.z', -1.0], ['alyosha.turn', 1], ['alyosha.head', 0], ['alyosha.armA', 0], ['alyosha.armB', 0], ['alyosha.rz', 0], ['alyosha.s', 0.85]]);
@@ -463,18 +462,18 @@ function cues({ tl, section, line }: CueContext) {
   k.move('alyosha.armB', 120, c3 + 1, 1.2, 'out');
   k.move('alyosha.armB', 90, c3 + 3, 1.6, 'sine');
   k.move('alyosha.armB', 125, c3 + 5, 1.6, 'sine');
-  // 44 One more run — the far lanterns burn on the water.
-  lamp(L(44), 0.5, 1.9, 0.6, -2.0, 1.4);
+  // 43 One more run — the far lanterns burn on the water.
+  lamp(L(43), 0.5, 1.9, 0.6, -2.0, 1.4);
   follow(0.6, -1.1, c3, 2, 0.6, 0xfff0e0, 0.8);
   k.cam(c3, 8, { z: 7.8, ly: 1.0, x: 0.5, lx: 0.5 });
-  // 47 You came back for me, and I wait for you all my life — he lowers his hand and goes. She stays.
-  k.move('alyosha.armB', 0, L(47) + 1, 1.4);
-  face('alyosha', L(47) + 1.6, false);
-  k.move('alyosha.x', 3.6, L(47) + 2, 4, 'in');
-  hop('alyosha', L(47) + 2, 4);
-  k.look(L(47) + 2, 3, { lamp: 0, right: [0.1, 0xa8b8e0] });
-  k.move('grown.armA', -30, L(47) + 2.6, 2);
-  k.cam(L(47), 7, { z: 7.0, ly: 0.9, x: -0.4, lx: -0.5 });
+  // 46 You came back for me, and I wait for you all my life — he lowers his hand and goes. She stays.
+  k.move('alyosha.armB', 0, L(46) + 1, 1.4);
+  face('alyosha', L(46) + 1.6, false);
+  k.move('alyosha.x', 3.6, L(46) + 2, 4, 'in');
+  hop('alyosha', L(46) + 2, 4);
+  k.look(L(46) + 2, 3, { lamp: 0, right: [0.1, 0xa8b8e0] });
+  k.move('grown.armA', -30, L(46) + 2.6, 2);
+  k.cam(L(46), 7, { z: 7.0, ly: 0.9, x: -0.4, lx: -0.5 });
 
   // ---- outro: one more run. She stands at the water. The lantern road comes up across it, one light at a time.
   k.pop('alyosha', false, out - 4);
@@ -482,18 +481,23 @@ function cues({ tl, section, line }: CueContext) {
   night(out - 2, 6, 0.7);
   set(out - 3, [['posts.y', -0.25]]);
   k.enter('posts', out - 1, 5, 'out');
-  k.downbeats(out, L(50)).forEach((b, i) => { if (i % 2 === 0) k.flash('back', b, 0.4, 0.3, 0.2, 1.2); });
-  // 49 Hold — the long held note. She lifts her hand again.
-  k.move('grown.armA', -100, L(49) + 1, 2, 'out');
-  k.move('grown.head', 6, L(49) + 1, 2);
-  k.move('grown.armA', -40, L(49) + 9, 3);
-  // 50 One more run — one gold light, far on the water.
-  lamp(L(50), 0.45, 1.4, 0.45, -2.6, 2);
+  k.downbeats(out, L(49)).forEach((b, i) => { if (i % 2 === 0) k.flash('back', b, 0.4, 0.3, 0.2, 1.2); });
+  // The choir hums. She walks slowly along the lantern road, then stops and looks out over it.
+  walk('grown', L(47) + 7.5, 9, 0.35);
+  k.move('grown.head', -6, L(47) + 9, 3);
+  k.move('grown.head', 4, L(47) + 16, 2);
+  // 48 Hold — the long held note. She lifts her hand again.
+  k.move('grown.armA', -100, L(48) + 1, 2, 'out');
+  k.move('grown.head', 6, L(48) + 1, 2);
+  k.move('grown.armA', -40, L(48) + 9, 3);
+  // 49 One more run — one gold light, far on the water.
+  lamp(L(49), 0.45, 1.4, 0.45, -2.6, 2);
   follow(-0.7, -1.15, out, 2, 0.55, 0xffe4c4, 0.7);
+  follow(0.35, -1.15, L(47) + 7.5, 9, 0.55, 0xffe4c4, 0.7);
   k.cam(out, 14, { z: 8.0, ly: 0.95, x: 0, lx: 0 });
-  // 51 Hold — snow begins again. The light stays.
-  snow(L(51) - 1, 0.25, 3);
-  k.cam(L(51) - 2, 6, { z: 7.2, ly: 0.9, x: -0.2, lx: -0.2 });
+  // 50 Hold — snow begins again. The light stays.
+  snow(L(50) - 1, 0.25, 3);
+  k.cam(L(50) - 2, 6, { z: 7.2, ly: 0.9, x: -0.2, lx: -0.2 });
 
   // ---- the end: the traveller closes on the light. In the call, Alyosha and Masha bow together.
   tl.set('surtitles.i', 0, end - 3.6);

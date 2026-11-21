@@ -20,11 +20,8 @@ Russian lyrics as embedded in the recording. Indonesian and English lines are in
 (Горят, горят)
 [Chorus: Alyosha, the hook on a soaring long-held note, the choir answers]
 Держись, лёд, держись
-[Chorus: Alyosha, fuller, the women's choir joins]
-Держись, лёд, держись
 (Держись, держись)
 Ещё один рейс, ещё одна жизнь
-Держись, лёд, держись
 Держись, лёд, держись
 (Держись, держись)
 Я вернусь за тобой, только дождись
@@ -40,16 +37,12 @@ Russian lyrics as embedded in the recording. Indonesian and English lines are in
 (Держись, держись)
 Ещё один рейс, ещё одна жизнь
 Держись, лёд, держись
-[Chorus: Alyosha, fuller, the women's choir joins]
-Держись, лёд, держись
-(Держись, держись)
-Ещё один рейс, ещё одна жизнь
-Держись, лёд, держись
-Держись, лёд, держись
 (Держись, держись)
 Маша, не смотри назад, держись
 [Bridge: the spring thaw, pounding timpani, full strings, brass swell, the men's choir chants]
 Вода на льду, весна идёт
+[Chorus: Alyosha, fuller, the women's choir joins]
+Держись, лёд, держись
 (Держись! Держись!)
 Лёд трещит, а город ждёт
 Я довёз её до берега
@@ -69,11 +62,9 @@ Russian lyrics as embedded in the recording. Indonesian and English lines are in
 (Держись, держись)
 Ещё один рейс, ещё одна жизнь
 Держись, брат, держись
-Держись, брат, держись
 (Держись, держись)
 Ты вернулся за мной, а я жду тебя всю жизнь
 [Outro: Masha alone, softly, minor chord, then a lone bayan]
 Ещё один рейс
-[Outro: Masha alone, softly, minor chord, then a lone bayan]
-Ещё один рейс
-(Держись)
+[Chorus: Alyosha, fuller, the women's choir joins]
+Держись, лёд, держись
